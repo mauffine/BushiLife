@@ -26,7 +26,7 @@ public class RootQuery : IQuery
 
 	public override Set Get(string subquery="")
 	{
-		return (new Result(parent)).Get(query).Get(subquery);
+		return null; //(new Result(parent)).Get(query).Get(subquery);
 	}
 }
 
