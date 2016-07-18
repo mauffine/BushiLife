@@ -14,8 +14,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_CamForward;             // The current forward direction of the camera
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
+        private bool blocking;
+        private bool lAttack;
+        private bool HAttack;
 
-        
         private void Start()
         {
             // get the transform of the main camera
@@ -41,6 +43,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 m_Jump = Input.GetButton(this.playerNumber + " Jump");
             }
+            lAttack = Input.GetButtonDown(this.playerNumber + " LAttack");
+            HAttack = Input.GetButtonDown(this.playerNumber + " HAttack");
+            blocking = Input.GetButtonDown(this.playerNumber + " Block");
+
         }
 
 
@@ -50,8 +56,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             // read inputs
             float h = Input.GetAxis(this.playerNumber + " Horizontal");
             float v = Input.GetAxis(this.playerNumber + " Vertical");
-            bool crouch = Input.GetKey(KeyCode.C);
-            bool attack = Input.GetButton(this.playerNumber + " Attack");
+            bool crouch = Input.GetButton(this.playerNumber + " Block");
             // calculate move direction to pass to character
             if (m_Cam != null)
             {
@@ -70,7 +75,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 #endif
 
             // pass all parameters to the character control script
-            m_Character.Move(m_Move, crouch, m_Jump);
+            m_Character.Move(m_Move, crouch, m_Jump, lAttack, blocking, HAttack);
             m_Jump = false;
         }
     }
