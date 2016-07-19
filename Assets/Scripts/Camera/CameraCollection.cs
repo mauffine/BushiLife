@@ -30,7 +30,6 @@ public class CameraCollection : MonoBehaviour
 	void Start()
 	{
 		cameraGrid = GetComponent<DynamicGrid>();
-		this.Add(GameObject.Find("Player").transform, 1);
 	}
 
 	// Update is called once per frame
@@ -41,8 +40,6 @@ public class CameraCollection : MonoBehaviour
 
 	void Validate()
 	{
-		Debug.Log("Validate");
-		Debug.Break();
 		this.cameraGrid.size = this.GetSize();
 		for (int index = 0; index < this.cameraGrid.size; index++)
 		{
@@ -54,8 +51,6 @@ public class CameraCollection : MonoBehaviour
 
 	void Add(Transform player, int playerNumber)
 	{
-		Debug.Log("Add");
-		Debug.Break();
 		var newCamera = GameObject.Instantiate(cameraPrefab);
 
 		newCamera.GetComponentInChildren<CameraController>().Init(player, playerNumber);
