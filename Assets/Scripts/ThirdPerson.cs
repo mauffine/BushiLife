@@ -80,7 +80,12 @@ public class ThirdPerson : MonoBehaviour
         }
         if (animStateMach.currentAnimation == CustomAnimationState.LightAttack)
         {
-            m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.lightAttackMoveSpeed);
+            //m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.lightAttackMoveSpeed);
+            LA1Hurtbox.active = true;
+        }
+        if (animStateMach.currentAnimation == CustomAnimationState.LightAttack2)
+        {
+            //m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.lightAttackMoveSpeed);
             LA1Hurtbox.active = true;
         }
         else if (animStateMach.currentAnimation == CustomAnimationState.HeavyAttack)
@@ -152,13 +157,14 @@ public class ThirdPerson : MonoBehaviour
 			m_IsGrounded = true;
 			//m_Animator.applyRootMotion = true;
             this.doubleJump = true;
+            m_Animator.SetBool("Jump", false);
         }
 		else
 		{
 			m_IsGrounded = false;
 			m_GroundNormal = Vector3.up;
-			//m_Animator.applyRootMotion = false;
-		}
+            //m_Animator.applyRootMotion = false;
+        }
 	}
     void LightAttack()
     {

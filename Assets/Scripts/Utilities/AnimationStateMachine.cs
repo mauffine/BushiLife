@@ -20,6 +20,8 @@ public class AnimationStateMachine : MonoBehaviour {
     [SerializeField]
     float lightAttackTime;
     [SerializeField]
+    float lightAttackTime2;
+    [SerializeField]
     float heavyAttackTime;
     [SerializeField]
     float dodgeTime;
@@ -162,8 +164,7 @@ public class AnimationStateMachine : MonoBehaviour {
                     if (currentAnimation != CustomAnimationState.LightAttack &&
                         currentAnimation != CustomAnimationState.HeavyAttack && currentAnimation != CustomAnimationState.Dodge)
                     {
-                        //TODO: add jump animations
-                        this.animator.SetBool("Walking", true);
+                        this.animator.SetBool("Jump", true);
                         this.currentAnimation = CustomAnimationState.Jump;
                         return true;
                     }

@@ -296,7 +296,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11439266, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
       propertyPath: m_JumpPower
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11439266, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
       propertyPath: LA1Hurtbox
