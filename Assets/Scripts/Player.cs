@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-public class ThirdPersonUserControl : MonoBehaviour
+
+[RequireComponent(typeof(ThirdPerson))]
+public class Player : MonoBehaviour
 {
     public string playerNumber;
-
-    private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
+    
+    private ThirdPerson m_Character; // A reference to the ThirdPersonCharacter on the object
     private AnimationStateMachine animStateMach;
     private Transform m_Cam;                  // A reference to the main camera in the scenes transform
     private Vector3 m_CamForward;             // The current forward direction of the camera
@@ -15,6 +17,8 @@ public class ThirdPersonUserControl : MonoBehaviour
     private bool dodge;
     private bool lAttack;
     private bool HAttack;
+
+
 
     private void Start()
     {
@@ -31,7 +35,7 @@ public class ThirdPersonUserControl : MonoBehaviour
         }
 
         // get the third person character ( this should never be null due to require component )
-        m_Character = GetComponent<ThirdPersonCharacter>();
+        m_Character = GetComponent<ThirdPerson>();
         animStateMach = GetComponent<AnimationStateMachine>();
     }
 

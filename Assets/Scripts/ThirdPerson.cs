@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ThirdPersonCharacter : MonoBehaviour
+public class ThirdPerson : MonoBehaviour
 {
 	[SerializeField] float m_MovingTurnSpeed = 360;
 	[SerializeField] float m_StationaryTurnSpeed = 180;

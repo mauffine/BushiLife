@@ -14,10 +14,14 @@ public class Character : MonoBehaviour
 
 		// eg. stats.attack.use = UseAttack;
 	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		
-	}
+    void Update()
+    {
+
+    }
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.CompareTag("HurtBox"))
+            stats.health.Decrease(10);//col.GetComponent<Stats>().attack.val);
+    }
+
 }

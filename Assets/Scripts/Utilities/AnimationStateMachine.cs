@@ -115,7 +115,14 @@ public class AnimationStateMachine : MonoBehaviour {
                 }
             case (CustomAnimationState.Lightattack):
                 {
-                    if (currentAnimation != CustomAnimationState.Dodge &&
+                    if (currentAnimation == CustomAnimationState.Lightattack)
+                    {
+                        this.animator.SetTrigger("LightAttack2");
+                        this.currentAnimation = CustomAnimationState.Lightattack;
+                        this.animationTimer = 0;
+                        return true;
+                    }
+                    else if (currentAnimation != CustomAnimationState.Dodge &&
                         currentAnimation != CustomAnimationState.Heavyattack)
                     {
                         this.animator.SetTrigger("LightAttack");
@@ -145,6 +152,7 @@ public class AnimationStateMachine : MonoBehaviour {
                         //TODO: add jump animations
                         this.animator.SetBool("Walking", true);
                         this.currentAnimation = CustomAnimationState.Jump;
+                        return true;
                     }
                 }
                 break;
