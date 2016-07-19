@@ -5,7 +5,6 @@ using System.Collections;
 public class Character : MonoBehaviour
 {
 	public Stats stats;
-	
 
 	// Use this for initialization
 	void Start ()
@@ -17,11 +16,6 @@ public class Character : MonoBehaviour
     void Update()
     {
 
-    }
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.CompareTag("HurtBox"))
-            stats.health.Decrease(10);//col.GetComponent<Stats>().attack.val);
     }
 
 }
