@@ -160,6 +160,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &284481223 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 144096, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+  m_PrefabInternal: {fileID: 750612621}
 --- !u!1 &441753566
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +239,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &691965348 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 107790, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+  m_PrefabInternal: {fileID: 750612621}
 --- !u!1 &713960136 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 121182, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
@@ -290,6 +298,14 @@ Prefab:
       propertyPath: m_JumpPower
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11439266, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: LA1Hurtbox
+      value: 
+      objectReference: {fileID: 691965348}
+    - target: {fileID: 11439266, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: HAHurtbox
+      value: 
+      objectReference: {fileID: 284481223}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
   m_IsPrefabParent: 0

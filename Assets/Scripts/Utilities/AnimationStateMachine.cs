@@ -4,8 +4,9 @@ public enum CustomAnimationState
 {
     Walking,
     Running,
-    Lightattack,
-    Heavyattack,
+    LightAttack,
+    LightAttack2,
+    HeavyAttack,
     Block,
     Dodge,
     Idle,
@@ -46,7 +47,7 @@ public class AnimationStateMachine : MonoBehaviour {
                     }
                     break;
                 }
-            case (CustomAnimationState.Lightattack):
+            case (CustomAnimationState.LightAttack):
                 {
                     if (animationTimer > lightAttackTime)
                     {
@@ -54,7 +55,15 @@ public class AnimationStateMachine : MonoBehaviour {
                     }
                     break;
                 }
-            case (CustomAnimationState.Heavyattack):
+            case (CustomAnimationState.LightAttack2):
+                {
+                    if (animationTimer > lightAttackTime)
+                    {
+                        this.currentAnimation = CustomAnimationState.Idle;
+                    }
+                    break;
+                }
+            case (CustomAnimationState.HeavyAttack):
                 {
                     if (animationTimer > heavyAttackTime)
                     {
@@ -103,8 +112,8 @@ public class AnimationStateMachine : MonoBehaviour {
                 }
             case (CustomAnimationState.Dodge):
                 {
-                    if (currentAnimation != CustomAnimationState.Lightattack &&
-                        currentAnimation != CustomAnimationState.Heavyattack && currentAnimation != CustomAnimationState.Dodge)
+                    if (currentAnimation != CustomAnimationState.LightAttack &&
+                        currentAnimation != CustomAnimationState.HeavyAttack && currentAnimation != CustomAnimationState.Dodge)
                     {
                         this.animator.SetTrigger("Dodge");
                         this.currentAnimation = CustomAnimationState.Dodge;
@@ -113,32 +122,36 @@ public class AnimationStateMachine : MonoBehaviour {
                     }
                     break;
                 }
-            case (CustomAnimationState.Lightattack):
+            case (CustomAnimationState.LightAttack):
                 {
-                    if (currentAnimation == CustomAnimationState.Lightattack)
-                    {
-                        this.animator.SetTrigger("LightAttack2");
-                        this.currentAnimation = CustomAnimationState.Lightattack;
-                        this.animationTimer = 0;
-                        return true;
-                    }
-                    else if (currentAnimation != CustomAnimationState.Dodge &&
-                        currentAnimation != CustomAnimationState.Heavyattack)
+                    if (currentAnimation != CustomAnimationState.Dodge &&
+                        currentAnimation != CustomAnimationState.HeavyAttack)
                     {
                         this.animator.SetTrigger("LightAttack");
-                        this.currentAnimation = CustomAnimationState.Lightattack;
+                        this.currentAnimation = CustomAnimationState.LightAttack;
                         this.animationTimer = 0;
                         return true;
                     }
                     break;
                 }
-            case (CustomAnimationState.Heavyattack):
+            case (CustomAnimationState.LightAttack2):
+                {
+                    if (currentAnimation == CustomAnimationState.LightAttack)
+                    {
+                        this.animator.SetTrigger("LightAttack2");
+                        this.currentAnimation = CustomAnimationState.LightAttack2;
+                        this.animationTimer = 0;
+                        return true;
+                    }
+                }
+                break;
+            case (CustomAnimationState.HeavyAttack):
                 {
                     if (currentAnimation != CustomAnimationState.Dodge &&
-                        currentAnimation != CustomAnimationState.Lightattack)
+                        currentAnimation != CustomAnimationState.LightAttack)
                     {
                         this.animator.SetTrigger("HeavyAttack");
-                        this.currentAnimation = CustomAnimationState.Heavyattack;
+                        this.currentAnimation = CustomAnimationState.HeavyAttack;
                         this.animationTimer = 0;
                         return true;
                     }
@@ -146,8 +159,8 @@ public class AnimationStateMachine : MonoBehaviour {
                 }
             case (CustomAnimationState.Jump):
                 {
-                    if (currentAnimation != CustomAnimationState.Lightattack &&
-                        currentAnimation != CustomAnimationState.Heavyattack && currentAnimation != CustomAnimationState.Dodge)
+                    if (currentAnimation != CustomAnimationState.LightAttack &&
+                        currentAnimation != CustomAnimationState.HeavyAttack && currentAnimation != CustomAnimationState.Dodge)
                     {
                         //TODO: add jump animations
                         this.animator.SetBool("Walking", true);

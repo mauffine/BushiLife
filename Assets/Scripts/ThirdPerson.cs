@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class ThirdPerson : MonoBehaviour
 {
 	[SerializeField] float m_MovingTurnSpeed = 360;
@@ -13,6 +13,12 @@ public class ThirdPerson : MonoBehaviour
     [SerializeField] float speed = 3f;
     [SerializeField] float lightAttackMoveSpeed = 5f;
     [SerializeField] float heavyAttackMoveSpeed = 5f;
+    [SerializeField] float dodgeSpeed = 5f;
+    [SerializeField] GameObject LA1Hurtbox;
+    [SerializeField] GameObject LA2Hurtbox;
+    [SerializeField] GameObject HAHurtbox;
+
+
     Rigidbody m_Rigidbody;
 	Animator m_Animator;
 	bool m_IsGrounded;
@@ -29,7 +35,8 @@ public class ThirdPerson : MonoBehaviour
     bool hAttack;
     bool block;
     bool doubleJump;
-
+    //IDictionary 
+    
     AnimationStateMachine animStateMach;
 	void Start()
 	{
@@ -71,13 +78,19 @@ public class ThirdPerson : MonoBehaviour
         {
             animStateMach.SetAnimation(CustomAnimationState.Idle);
         }
-        if (animStateMach.currentAnimation == CustomAnimationState.Lightattack)
+        if (animStateMach.currentAnimation == CustomAnimationState.LightAttack)
         {
             m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.lightAttackMoveSpeed);
+            LA1Hurtbox.active = true;
         }
-        else if (animStateMach.currentAnimation == CustomAnimationState.Heavyattack)
+        else if (animStateMach.currentAnimation == CustomAnimationState.HeavyAttack)
         {
             m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.heavyAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.heavyAttackMoveSpeed);
+            HAHurtbox.active = true;
+        }
+        else if (animStateMach.currentAnimation == CustomAnimationState.Dodge)
+        {
+            m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.dodgeSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.dodgeSpeed);
         }
         else if (animStateMach.currentAnimation == CustomAnimationState.Block)
         {
@@ -147,5 +160,34 @@ public class ThirdPerson : MonoBehaviour
 			//m_Animator.applyRootMotion = false;
 		}
 	}
+    void LightAttack()
+    {
+
+    }
+    void HeavyAttack()
+    {
+
+    }
+    void Dodge()
+    {
+
+    }
+    void Block()
+    {
+
+    }
+    void Walk()
+    {
+
+    }
+    void Run()
+    {
+
+    }
+    void Idle()
+    {
+
+    }
+
 }
 

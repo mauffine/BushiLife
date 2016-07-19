@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
         lAttack = Input.GetButtonDown(this.playerNumber + " LAttack");
         HAttack = Input.GetButtonDown(this.playerNumber + " HAttack");
         blocking = Input.GetButtonDown(this.playerNumber + " Block");
+        dodge = Input.GetButtonDown(this.playerNumber + " Dodge");
         UpdateAnimator();
 
     }
@@ -89,11 +90,15 @@ public class Player : MonoBehaviour
         }
         else if (lAttack)
         {
-            this.animStateMach.SetAnimation(CustomAnimationState.Lightattack);
+            if (this.animStateMach.currentAnimation != CustomAnimationState.LightAttack)
+                this.animStateMach.SetAnimation(CustomAnimationState.LightAttack);
+            else
+                this.animStateMach.SetAnimation(CustomAnimationState.LightAttack2);
+
         }
         else if (HAttack)
         {
-            this.animStateMach.SetAnimation(CustomAnimationState.Heavyattack);
+            this.animStateMach.SetAnimation(CustomAnimationState.HeavyAttack);
         }
         else if (blocking)
         {
