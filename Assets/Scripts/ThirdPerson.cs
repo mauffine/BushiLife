@@ -1,5 +1,8 @@
 using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
+
+public delegate void AnimResponse();
+
 public class ThirdPerson : MonoBehaviour
 {
 	[SerializeField] float m_MovingTurnSpeed = 360;
@@ -17,6 +20,8 @@ public class ThirdPerson : MonoBehaviour
     [SerializeField] GameObject LA1Hurtbox;
     [SerializeField] GameObject LA2Hurtbox;
     [SerializeField] GameObject HAHurtbox;
+    [SerializeField] GameObject JumpAttaclHB;
+
 
 
     Rigidbody m_Rigidbody;
@@ -35,7 +40,10 @@ public class ThirdPerson : MonoBehaviour
     bool hAttack;
     bool block;
     bool doubleJump;
-    //IDictionary 
+
+    bool attacking;
+    bool rolling;
+    //Dictionary<CustomAnimationState,>
     
     AnimationStateMachine animStateMach;
 	void Start()
@@ -50,8 +58,16 @@ public class ThirdPerson : MonoBehaviour
 		m_OrigGroundCheckDistance = m_GroundCheckDistance;
         doubleJump = true;
         animStateMach = GetComponent<AnimationStateMachine>();
+        attacking = false;
+        rolling = false;
     }
-
+    void Update()
+    {
+        if (animStateMach.currentAnimation == CustomAnimationState.Jump && m_IsGrounded)
+        {
+            animStateMach.SetAnimation(CustomAnimationState.Idle);
+        }        
+    }
     public void Move(Vector3 move, bool _jump)
     {
         // convert the world relative moveInput vector into a local-relative
@@ -74,42 +90,24 @@ public class ThirdPerson : MonoBehaviour
         {
             HandleAirborneMovement(_jump);
         }
-        if (animStateMach.currentAnimation == CustomAnimationState.Jump && m_IsGrounded)
-        {
-            animStateMach.SetAnimation(CustomAnimationState.Idle);
-        }
-        if (animStateMach.currentAnimation == CustomAnimationState.LightAttack)
-        {
-            //m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.lightAttackMoveSpeed);
-            LA1Hurtbox.active = true;
-        }
-        if (animStateMach.currentAnimation == CustomAnimationState.LightAttack2)
-        {
-            //m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.lightAttackMoveSpeed);
-            LA1Hurtbox.active = true;
-        }
-        else if (animStateMach.currentAnimation == CustomAnimationState.HeavyAttack)
-        {
-            m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.heavyAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.heavyAttackMoveSpeed);
-            HAHurtbox.active = true;
-        }
-        else if (animStateMach.currentAnimation == CustomAnimationState.Dodge)
+
+        if (rolling)
         {
             m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.dodgeSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.dodgeSpeed);
         }
-        else if (animStateMach.currentAnimation == CustomAnimationState.Block)
+        else if (attacking)
         {
-            m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
+            m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.lightAttackMoveSpeed);
         }
-        else if (animStateMach.currentAnimation == CustomAnimationState.Walking)
+        if (animStateMach.currentAnimation == CustomAnimationState.Walking)
         {
             m_Rigidbody.velocity = new Vector3(transform.forward.x * this.speed, m_Rigidbody.velocity.y, transform.forward.z * this.speed);
         }
         else if (animStateMach.currentAnimation == CustomAnimationState.Idle)
         {
             m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
-        }
 
+        }
     }
 
 
@@ -131,6 +129,7 @@ public class ThirdPerson : MonoBehaviour
 			m_IsGrounded = false;
 			//m_Animator.applyRootMotion = false;
 			m_GroundCheckDistance = 0.1f;
+            this.animStateMach.SetAnimation(CustomAnimationState.Jump);
 		}
 	}
 
@@ -166,25 +165,54 @@ public class ThirdPerson : MonoBehaviour
             //m_Animator.applyRootMotion = false;
         }
 	}
-    void LightAttack()
+    void StartLAttack1()
     {
 
+        m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
+        LA1Hurtbox.SetActive(true);
+        this.attacking = true;
     }
-    void HeavyAttack()
+    void EndLAttack1()
     {
-
+        LA1Hurtbox.SetActive(false);
+        this.attacking = false;
     }
-    void Dodge()
+    void StartLAttack2()
     {
-
+        m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
+        LA2Hurtbox.SetActive(true);
+        this.attacking = true;
+        //m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.lightAttackMoveSpeed);
+    }
+    void EndLAttack2()
+    {
+        LA2Hurtbox.SetActive(false);
+        this.attacking = false;
+    }
+    void StartHeavyAttack()
+    {
+        HAHurtbox.SetActive(true);
+    }
+    void EndHeavyAttack()
+    {
+        HAHurtbox.SetActive(false);
+    }
+    void BeginRoll()
+    {
+        //m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
+        rolling = true;
+    }
+    void EndRoll()
+    {
+        rolling = false;
     }
     void Block()
     {
-
+        m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
     }
     void Walk()
     {
-
+        m_Rigidbody.velocity = new Vector3(transform.forward.x * this.speed, m_Rigidbody.velocity.y, transform.forward.z * this.speed);
     }
     void Run()
     {
@@ -192,8 +220,15 @@ public class ThirdPerson : MonoBehaviour
     }
     void Idle()
     {
-
+        m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
     }
-
+    void JumpAttackStart()
+    {
+        JumpAttaclHB.SetActive(true);
+    }
+    void JumpAttackEnd()
+    {
+        JumpAttaclHB.SetActive(false);
+    }
 }
 

@@ -17,14 +17,10 @@ public class AnimationStateMachine : MonoBehaviour {
     [SerializeField]
     Animator animator;
 
-    [SerializeField]
-    float lightAttackTime;
-    [SerializeField]
-    float lightAttackTime2;
-    [SerializeField]
-    float heavyAttackTime;
-    [SerializeField]
-    float dodgeTime;
+    public float lightAttackTime;
+    public float lightAttackTime2;
+    public float heavyAttackTime;
+    public float dodgeTime;
 
     float animationTimer;
 
@@ -59,7 +55,7 @@ public class AnimationStateMachine : MonoBehaviour {
                 }
             case (CustomAnimationState.LightAttack2):
                 {
-                    if (animationTimer > lightAttackTime)
+                    if (animationTimer > lightAttackTime2)
                     {
                         this.currentAnimation = CustomAnimationState.Idle;
                     }
@@ -118,6 +114,8 @@ public class AnimationStateMachine : MonoBehaviour {
                         currentAnimation != CustomAnimationState.HeavyAttack && currentAnimation != CustomAnimationState.Dodge)
                     {
                         this.animator.SetTrigger("Dodge");
+                        this.animator.SetBool("Running", false);
+                        this.animator.SetBool("Walking", false);
                         this.currentAnimation = CustomAnimationState.Dodge;
                         this.animationTimer = 0;
                         return true;
@@ -127,8 +125,14 @@ public class AnimationStateMachine : MonoBehaviour {
             case (CustomAnimationState.LightAttack):
                 {
                     if (currentAnimation != CustomAnimationState.Dodge &&
-                        currentAnimation != CustomAnimationState.HeavyAttack)
+                        currentAnimation != CustomAnimationState.HeavyAttack &&
+                        currentAnimation != CustomAnimationState.LightAttack2)
                     {
+                        if (currentAnimation == CustomAnimationState.Walking || currentAnimation == CustomAnimationState.Running || currentAnimation == CustomAnimationState.Jump)
+                        {
+                            this.animator.SetBool("Running", false);
+                            this.animator.SetBool("Walking", false);
+                        }
                         this.animator.SetTrigger("LightAttack");
                         this.currentAnimation = CustomAnimationState.LightAttack;
                         this.animationTimer = 0;

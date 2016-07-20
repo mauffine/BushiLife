@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (!m_Jump)
+        if (!m_Jump && !dodge)
         {
             m_Jump = Input.GetButton(this.playerNumber + " Jump");
         }

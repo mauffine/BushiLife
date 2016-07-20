@@ -22,6 +22,7 @@ public class Character : MonoBehaviour
     {
         if (col.CompareTag("HurtBox"))
             stats.health.Decrease(10);//col.GetComponent<Stats>().attack.val);
+        //TODO: put hurtboxes on seperate layer
     }
 
 }
