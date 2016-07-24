@@ -85,6 +85,46 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &55787259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 55787260}
+  - 65: {fileID: 55787261}
+  m_Layer: 0
+  m_Name: Swordbox
+  m_TagString: HurtBox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &55787260
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55787259}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.329, y: -0, z: 0}
+  m_LocalScale: {x: 0.6149589, y: 0.03680618, z: 0.05930757}
+  m_Children: []
+  m_Father: {fileID: 1895373213}
+  m_RootOrder: 1
+--- !u!65 &55787261
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55787259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &201277296
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +326,26 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 193838, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 144096, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 148638, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 107790, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439266, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: Swordbox
+      value: 
+      objectReference: {fileID: 55787259}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
   m_IsPrefabParent: 0
@@ -340,7 +400,7 @@ GameObject:
   - 33: {fileID: 1132088479}
   - 65: {fileID: 1132088478}
   - 23: {fileID: 1132088477}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: HurtBox
   m_Icon: {fileID: 0}
@@ -621,6 +681,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &1895373213 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 475858, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+  m_PrefabInternal: {fileID: 750612621}
 --- !u!1 &1997532897
 GameObject:
   m_ObjectHideFlags: 0

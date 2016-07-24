@@ -21,6 +21,7 @@ public class ThirdPerson : MonoBehaviour
     [SerializeField] GameObject LA2Hurtbox;
     [SerializeField] GameObject HAHurtbox;
     [SerializeField] GameObject JumpAttaclHB;
+    [SerializeField] GameObject Swordbox;
 
 
 
@@ -170,28 +171,29 @@ public class ThirdPerson : MonoBehaviour
 
         m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
         LA1Hurtbox.SetActive(true);
-        this.attacking = true;
+        //this.attacking = true;
     }
     void EndLAttack1()
     {
         LA1Hurtbox.SetActive(false);
+        Swordbox.SetActive(false);
         this.attacking = false;
     }
     void StartLAttack2()
     {
         m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
-        LA2Hurtbox.SetActive(true);
+        Swordbox.SetActive(true);
         this.attacking = true;
         //m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.lightAttackMoveSpeed);
     }
     void EndLAttack2()
     {
-        LA2Hurtbox.SetActive(false);
+        Swordbox.SetActive(false);
         this.attacking = false;
     }
     void StartHeavyAttack()
     {
-        HAHurtbox.SetActive(true);
+        Swordbox.SetActive(true);
     }
     void EndHeavyAttack()
     {
