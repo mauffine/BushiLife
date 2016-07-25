@@ -166,6 +166,13 @@ public class ThirdPerson : MonoBehaviour
             //m_Animator.applyRootMotion = false;
         }
 	}
+    public bool ReceiveHit(Collider _col)
+    {
+        if (this.rolling || this.block)
+            return false;
+        return true;
+    }
+
     void StartLAttack1()
     {
 

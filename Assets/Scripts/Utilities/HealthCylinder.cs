@@ -2,16 +2,16 @@
 using System.Collections;
 
 public class HealthCylinder : MonoBehaviour {
-    float max, current;
-
+    [SerializeField] float max;
+    float current;
 	// Use this for initialization 
 	void Start () {
-	
+        current = max;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+        //UpdateHPBar(this.current - Time.deltaTime);
 	}
     public void UpdateHPBar(float _newVal)
     {
