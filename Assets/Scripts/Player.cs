@@ -41,7 +41,6 @@ public class Player : MonoBehaviour
         blocking = Input.GetButtonDown(this.playerNumber + " Block");
         dodge = Input.GetButtonDown(this.playerNumber + " Dodge");
         UpdateAnimator();
-
     }
 
 
@@ -84,7 +83,6 @@ public class Player : MonoBehaviour
                 this.animStateMach.SetAnimation(CustomAnimationState.LightAttack);
             else
                 this.animStateMach.SetAnimation(CustomAnimationState.LightAttack2);
-
         }
         else if (HAttack)
         {

@@ -125,11 +125,11 @@ public class ThirdPerson : MonoBehaviour
 		// check whether conditions are right to allow a jump:
 		if (jump && m_IsGrounded)
 		{
-            m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
+
             //m_Rigidbody.AddForce(Vector3.up * 3, ForceMode.Impulse);
-			m_IsGrounded = false;
-			//m_Animator.applyRootMotion = false;
-			m_GroundCheckDistance = 0.1f;
+
+            //m_Animator.applyRootMotion = false;
+           
             this.animStateMach.SetAnimation(CustomAnimationState.Jump);
 		}
 	}
@@ -231,6 +231,12 @@ public class ThirdPerson : MonoBehaviour
     void JumpAttackEnd()
     {
         JumpAttaclHB.SetActive(false);
+    }
+    void Jump()
+    {
+        m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
+        m_IsGrounded = false;
+        m_GroundCheckDistance = 0.1f;
     }
 }
 
