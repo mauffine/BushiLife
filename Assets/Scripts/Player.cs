@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class Player : MonoBehaviour
 {
     public string playerNumber;
-    
+    public Camera myCamera;
     private ThirdPerson m_Character; // A reference to the ThirdPersonCharacter on the object
     private AnimationStateMachine animStateMach;
     private Transform m_Cam;                  // A reference to the main camera in the scenes transform
@@ -23,17 +23,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         // get the transform of the main camera
-        if (Camera.main != null)
-        {
-            m_Cam = Camera.main.transform;
-        }
-        else
-        {
-            Debug.LogWarning(
-                "Warning: no main camera found. Third person character needs a Camera tagged \"MainCamera\", for camera-relative controls.");
-            // we use self-relative controls in this case, which probably isn't what the user wants, but hey, we warned them!
-        }
-
+        this.m_Cam = this.myCamera.transform;
         // get the third person character ( this should never be null due to require component )
         m_Character = GetComponent<ThirdPerson>();
         animStateMach = GetComponent<AnimationStateMachine>();
