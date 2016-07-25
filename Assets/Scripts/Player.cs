@@ -40,6 +40,8 @@ public class Player : MonoBehaviour
         HAttack = Input.GetButtonDown(this.playerNumber + " HAttack");
         blocking = Input.GetButtonDown(this.playerNumber + " Block");
         dodge = Input.GetButtonDown(this.playerNumber + " Dodge");
+
+
         UpdateAnimator();
     }
 
