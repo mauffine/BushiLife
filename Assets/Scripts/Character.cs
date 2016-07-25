@@ -17,5 +17,10 @@ public class Character : MonoBehaviour
     {
 
     }
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.CompareTag("HurtBox") )
+            stats.health.Decrease(10);//col.GetComponent<Stats>().attack.val);
+    }
 
 }
