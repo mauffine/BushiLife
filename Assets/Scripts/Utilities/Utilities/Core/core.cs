@@ -71,7 +71,7 @@ public class The
 
 	public static bool Same(params object[] objects)
 	{
-		var types = objects.Select(o => o.GetType()).ToArray();
+		var types = objects.Select(o => Same(o.GetType(), typeof(System.Type)) ? o : o.GetType()).ToArray();
 
 		return Same(types);
 	}

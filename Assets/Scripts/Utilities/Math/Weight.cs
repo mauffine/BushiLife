@@ -7,7 +7,7 @@ public class Weight
 {
 	public float value;
 
-	public delegate void Operator(Weight weight);
+	public delegate void Operator(float weight);
 
 	private Dictionary<string, Operator> operations = new Dictionary<string, Operator>();
 
@@ -16,14 +16,37 @@ public class Weight
 		this.Init(value);
 	}
 
-	public Weight(Weight value)
+	/// <summary>
+	/// Credit: http://stackoverflow.com/a/11065781
+	/// </summary>
+	/// <param name="weight"></param>
+	public static implicit operator float(Weight weight)
 	{
-		this.Init(value.value);
+		return weight.value;
+	}
+
+	/// <summary>
+	/// Credit: http://stackoverflow.com/a/11065781
+	/// </summary>
+	/// <param name="weight"></param>
+	public static implicit operator Weight(float weight)
+	{
+		return new Weight(weight);
 	}
 
 	public Operator Do(string operation)
 	{
 		return operations[operation];
+	}
+
+	public static bool operator >(Weight left, Weight right)
+	{
+		return (float)left > (float)right;
+	}
+
+	public static bool operator <(Weight left, Weight right)
+	{
+		return (float)left < (float)right;
 	}
 
 	public void Init(float value)
@@ -39,7 +62,7 @@ public class Weight
 		};
 	}
 
-	public Weight Inverse
+	public float Inverse
 	{
 		get
 		{
@@ -47,45 +70,9 @@ public class Weight
 		}
 	}
 
-	public static Weight Make(float value)
-	{
-		Weight newWeight = new Weight(value);
-
-		return newWeight;
-	}
-
-	public static Weight Make(object value)
-	{
-		Weight newWeight = null;
-
-		if (The.Same(value.GetType(), typeof(Weight)))
-		{
-			newWeight = new Weight(value as Weight);
-		}
-		else
-		{
-			var strValue = value.ToString();
-			var flValue = float.Parse(strValue);
-
-			newWeight = new Weight(flValue);
-		}
-
-		return newWeight;
-	}
-
-	public void Scale(Weight weight)
-	{
-		this.Scale(weight.value);
-	}
-
 	public void Scale(float weight)
 	{
 		this.value *= weight;
-	}
-
-	public void Add(Weight weight)
-	{
-		this.Add(weight.value);
 	}
 
 	public void Add(float weight)
@@ -93,20 +80,24 @@ public class Weight
 		this.value += weight;
 	}
 
-	public void Remove(Weight weight)
-	{
-		this.Add(weight.value);
-	}
-
 	public void Remove(float weight)
 	{
 		this.Add(-weight);
 	}
 
-	public void Distance(Weight other)
+	public void Distance(float weight)
 	{
-		float result = Mathf.Abs(this.value - other.value);
+		float result = Mathf.Abs(this.value - weight);
 
 		value = result;
+	}
+
+	public Weight Scaled(float scale)
+	{
+		var result = this.Clone();
+
+		result.Scale(scale);
+
+		return result;
 	}
 }

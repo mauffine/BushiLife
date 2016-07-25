@@ -10,7 +10,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 /// Provides a method for performing a deep copy of an object.
 /// Binary Serialization is used to perform the copy.
 /// </summary>
-public static class ObjectCopier
+public static class ObjectExtensions
 {
 	/// <summary>
 	/// Perform a deep Copy of the object.
@@ -39,6 +39,11 @@ public static class ObjectCopier
 			stream.Seek(0, SeekOrigin.Begin);
 			return (T)formatter.Deserialize(stream);
 		}
+	}
+
+	public static bool IsA<T>(this T source, string stringType)
+	{
+		return The.Same(typeof(T), The.Type(stringType));
 	}
 }
 

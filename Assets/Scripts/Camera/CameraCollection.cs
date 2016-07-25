@@ -11,7 +11,7 @@ public class CameraCollection : MonoBehaviour
 	List<CameraController> GetCameras()
 	{
 		var result = new List<CameraController>(transform.childCount);
-		
+
 		for (int index = 0; index < transform.childCount; index++)
 		{
 			var child = transform.GetChild(index);
@@ -30,6 +30,31 @@ public class CameraCollection : MonoBehaviour
 	void Start()
 	{
 		cameraGrid = GetComponent<DynamicGrid>();
+
+		Add(gameObject.transform, 0);
+		Add(gameObject.transform, 1);
+		Add(gameObject.transform, 2);
+		Add(gameObject.transform, 3);
+		Add(gameObject.transform, 4);
+		Add(gameObject.transform, 5);
+		Add(gameObject.transform, 1);
+		Add(gameObject.transform, 2);
+		Add(gameObject.transform, 3);
+		Add(gameObject.transform, 4);
+		Add(gameObject.transform, 5);
+		Add(gameObject.transform, 1);
+		Add(gameObject.transform, 2);
+		Add(gameObject.transform, 3);
+		Add(gameObject.transform, 4);
+		Add(gameObject.transform, 5);
+		Add(gameObject.transform, 1);
+		Add(gameObject.transform, 2);
+		Add(gameObject.transform, 3);
+		Add(gameObject.transform, 4);
+		Add(gameObject.transform, 5);
+		Add(gameObject.transform, 3);
+		Add(gameObject.transform, 4);
+		Add(gameObject.transform, 5);
 	}
 
 	// Update is called once per frame
@@ -57,6 +82,13 @@ public class CameraCollection : MonoBehaviour
 
 		newCamera.transform.parent = this.transform;
 
-		this.Validate();
+		try
+		{
+			this.Validate();
+		}
+		catch (KeyNotFoundException error)
+		{
+			Debug.LogWarning("Invalid Splitscreen Split! for " + GetSize().ToString() + " cameras");
+		}
 	}
 }

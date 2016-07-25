@@ -4,11 +4,69 @@ using System.Collections.Generic;
 
 
 [System.Serializable]
-public class State
+public class State : Weight
 {
+	[System.Serializable]
+	public class Body : Dictionary<string, State>
+	{
+		public static Body Empty
+		{
+			get
+			{
+				return new Body();
+			}
+		}
 
-	Weight value;
-	public Dictionary<string, State> body;
+		public Body(params object[] args)
+		{
+			string currentName = "";
+			Weight currentItem = 1f;
+
+			foreach (var item in args)
+			{
+				if (item.IsA("string"))
+				{
+					Push(currentName, currentItem);
+
+					currentName = (string)item;
+
+					continue;
+				}
+				else
+				{
+					currentItem = (Weight)item;
+					Push(currentName, currentItem);
+				}
+
+				currentName = "";
+			}
+		}
+
+		private void Push(string name, Weight value)
+		{
+			if (name != "")
+				this.Add(name, (State)value);
+		}
+
+		private void Push(string name)
+		{
+			if (name != "")
+				this.Add(name, 1f);
+		}
+	}
+
+	public Body body = Body.Empty;
+
+	public void Clamp(Weight min, Weight max)
+	{
+		foreach (var namedSubstate in body)
+		{
+			if (namedSubstate.Value < min || namedSubstate.Value > max)
+			{
+				body.Remove(namedSubstate.Key);
+			}
+		}
+	}
 
 	public bool IsEmpty
 	{
@@ -18,37 +76,32 @@ public class State
 		}
 	}
 
-	public State(object weight, Dictionary<string, State> state)
+	public State(float weight, Body body) : base(weight)
 	{
-		if (The.Same(weight.GetType(), typeof(Weight)))
-		{
-			this.Init(weight as Weight, state);
-		}
-		else
-		{
-			this.Init(float.Parse(weight.ToString()), state);
-		}
+		this.Init(body);
 	}
 
-	public State(float weight, Dictionary<string, State> state)
+	/// <summary>
+	/// Credit: http://stackoverflow.com/a/11065781
+	/// </summary>
+	/// <param name="weight"></param>
+	public static implicit operator State(float weight)
 	{
-		this.Init(weight, state);
+		return new State(weight);
 	}
 
-	public State(Weight weight, Dictionary<string, State> state)
+	public State(float weight) : base(weight)
 	{
-		this.Init(weight, state);
 	}
 
-	public void Init(Weight weight, Dictionary<string, State> state)
+	public new State Scaled(float scale)
 	{
-		this.value = weight;
-		this.body = state;
+		return (State)base.Scaled(scale);
 	}
 
-	public void Init(float weight, Dictionary<string, State> state)
+	public void Init(Body body)
 	{
-		Init(new Weight(weight), state);
+		this.body = body;
 	}
 
 	/// </summary>
@@ -76,16 +129,14 @@ public class State
 			return this.body[name];
 		}
 		else
-		{ 
+		{
 			return null;
 		}
 	}
 
 	public bool Has(float accuracy, State state)
 	{
-		state.value.Scale(accuracy);
-
-		//TODO
+		state.Scale(accuracy);
 
 		return false;
 
@@ -106,7 +157,7 @@ public class State
 		}
 		else
 		{
-			var newState = new State(0f, new Dictionary<string, State>());
+			State newState = 0f;
 
 			this.body.Add(name, newState);
 
@@ -121,11 +172,11 @@ public class State
 
 	public void Apply(State other, string operation)
 	{
-		this.value.Do(operation)(other.value);
+		this.Do(operation)(other.value);
 
 		if (!other.IsEmpty)
 		{
-			var otherBody = other.ScaledBody(this.value.Inverse);
+			var otherBody = other.ScaledBody(this.Inverse);
 
 			AddBody(otherBody);
 		}
@@ -147,11 +198,9 @@ public class State
 		}
 	}
 
-
-
 	public void Subtract(State other)
 	{
-
+		this.Apply(other, "Remove");
 	}
 
 	public static State Add(State left, State right)
@@ -163,19 +212,9 @@ public class State
 		return left;
 	}
 
-	//public static State Intersect(State left, State right)
-	//{
-	//	var intersection = left.Add(right);
-	//}
-
-	public void Scale(Weight scale)
+	public List<KeyValuePair<string, State>> ScaledBody(float scale)
 	{
-		this.value.Scale(scale);
-	}
-
-	public List<KeyValuePair<string, State>> ScaledBody(Weight scale)
-	{
-		scale.Scale(this.value);
+		scale *= value;
 
 		var result = new List<KeyValuePair<string, State>>(this.body.Keys.Count);
 
@@ -186,15 +225,6 @@ public class State
 
 			result.Add(newState);
 		}
-
-		return result;
-	}
-
-	public State Scaled(Weight scale)
-	{
-		var result = this.Clone();
-
-		result.Scale(scale);
 
 		return result;
 	}
