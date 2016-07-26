@@ -43,7 +43,6 @@ public class Player : MonoBehaviour
 
 
         UpdateAnimator();
-
     }
 
 
@@ -86,7 +85,6 @@ public class Player : MonoBehaviour
                 this.animStateMach.SetAnimation(CustomAnimationState.LightAttack);
             else
                 this.animStateMach.SetAnimation(CustomAnimationState.LightAttack2);
-
         }
         else if (HAttack)
         {

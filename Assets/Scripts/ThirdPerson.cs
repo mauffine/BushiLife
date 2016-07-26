@@ -94,15 +94,15 @@ public class ThirdPerson : MonoBehaviour
 
         if (rolling)
         {
-            m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.dodgeSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.dodgeSpeed);
+            m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * Time.deltaTime * this.dodgeSpeed, m_Rigidbody.velocity.y, transform.forward.z * Time.deltaTime * this.dodgeSpeed);
         }
         else if (attacking)
         {
-            m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.lightAttackMoveSpeed);
+            
         }
         if (animStateMach.currentAnimation == CustomAnimationState.Walking)
         {
-            m_Rigidbody.velocity = new Vector3(transform.forward.x * this.speed, m_Rigidbody.velocity.y, transform.forward.z * this.speed);
+            m_Rigidbody.velocity = new Vector3(transform.forward.x * Time.deltaTime * this.speed, m_Rigidbody.velocity.y, transform.forward.z * Time.deltaTime * this.speed);
         }
         else if (animStateMach.currentAnimation == CustomAnimationState.Idle)
         {
@@ -126,10 +126,8 @@ public class ThirdPerson : MonoBehaviour
 		if (jump && m_IsGrounded)
 		{
             m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
-            //m_Rigidbody.AddForce(Vector3.up * 3, ForceMode.Impulse);
-			m_IsGrounded = false;
-			//m_Animator.applyRootMotion = false;
-			m_GroundCheckDistance = 0.1f;
+            m_IsGrounded = false;
+            m_GroundCheckDistance = 0.1f;
             this.animStateMach.SetAnimation(CustomAnimationState.Jump);
 		}
 	}
@@ -155,7 +153,6 @@ public class ThirdPerson : MonoBehaviour
 		{
 			m_GroundNormal = hitInfo.normal;
 			m_IsGrounded = true;
-			//m_Animator.applyRootMotion = true;
             this.doubleJump = true;
             m_Animator.SetBool("Jump", false);
         }
@@ -163,15 +160,23 @@ public class ThirdPerson : MonoBehaviour
 		{
 			m_IsGrounded = false;
 			m_GroundNormal = Vector3.up;
-            //m_Animator.applyRootMotion = false;
         }
 	}
+    public bool CheckIFrames(Collider _col)
+    {
+        Vector3 colDir = _col.transform.position - transform.position;
+        float angle = Vector3.Angle(colDir, transform.forward);
+        if (this.rolling || this.block && angle < 45 || _col.GetComponent<Character>() == null)
+            return false;
+        return true;
+    }
+
     void StartLAttack1()
     {
 
         m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
         LA1Hurtbox.SetActive(true);
-        //this.attacking = true;
+        this.attacking = true;
     }
     void EndLAttack1()
     {
@@ -181,7 +186,7 @@ public class ThirdPerson : MonoBehaviour
     }
     void StartLAttack2()
     {
-        m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
+        m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * Time.deltaTime * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * Time.deltaTime * this.lightAttackMoveSpeed);
         Swordbox.SetActive(true);
         this.attacking = true;
         //m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * this.lightAttackMoveSpeed);
@@ -190,6 +195,7 @@ public class ThirdPerson : MonoBehaviour
     {
         Swordbox.SetActive(false);
         this.attacking = false;
+        m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
     }
     void StartHeavyAttack()
     {
@@ -201,16 +207,21 @@ public class ThirdPerson : MonoBehaviour
     }
     void BeginRoll()
     {
-        //m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
         rolling = true;
     }
     void EndRoll()
     {
         rolling = false;
     }
-    void Block()
+    void StartBlock()
     {
         m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
+        block = true;
+    }
+    void EndBlock()
+    {
+        block = false;
+
     }
     void Walk()
     {
@@ -231,6 +242,14 @@ public class ThirdPerson : MonoBehaviour
     void JumpAttackEnd()
     {
         JumpAttaclHB.SetActive(false);
+    }
+    void Jump()
+    {
+        
+    }
+    void Die()
+    {
+
     }
 }
 
