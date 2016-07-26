@@ -16,14 +16,25 @@ public class TestState : MonoBehaviour
 				"idle", 1f
 				)
 			);
-		input = new State(1f, new State.Body(0f,
+		input = new State(1f, new State.Body(1f,
 				"jump",
 				"forwards",
 				"backwards",
-				"left",
-				"right"				
+				0f,
+					"left",
+					"right"				
 				)
 			);
+
+		if (input.Has(0.3f, "jump", "backwards"))
+		{
+			Debug.Log("Jump & Backwards");
+		}
+
+		if (input.Has(0.3f, "left", "right"))
+		{
+			Debug.Log("Left & Right");
+		}
 	}
 
 	// Update is called once per frame

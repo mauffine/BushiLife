@@ -4,6 +4,8 @@ using System.IO;
 using System.Collections;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Linq.Expressions;
+
 
 /// <summary>
 /// Reference Article http://www.codeproject.com/KB/tips/SerializedObjectCloner.aspx
@@ -43,7 +45,7 @@ public static class ObjectExtensions
 
 	public static bool IsA<T>(this T source, string stringType)
 	{
-		return The.Same(typeof(T), The.Type(stringType));
+		return The.Same(source.GetType(), The.Type(stringType));
 	}
 }
 

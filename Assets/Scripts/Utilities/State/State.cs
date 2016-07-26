@@ -24,7 +24,7 @@ public class State : Weight
 
 			foreach (var item in args)
 			{
-				if (item.IsA("string"))
+					if (item.IsA("String"))
 				{
 					Push(currentName, currentItem);
 
@@ -134,13 +134,36 @@ public class State : Weight
 		}
 	}
 
-	public bool Has(float accuracy, State state)
+	public bool Has(Vector2 accuracyRange, State state)
 	{
-		state.Scale(accuracy);
+		var diff = State.Apply(state, this, "Remove");
 
-		return false;
+		diff.Clamp(accuracyRange[0], accuracyRange[1]);
 
+		// this has state if state is in this (with accuracy of accuracyRange)
+		return diff.body.Count == state.body.Count;
 	}
+
+	public bool Has(Vector2 accuracyRange, params object[] body)
+	{
+		var state = new State(1f, new State.Body(body));
+
+		return Has(accuracyRange, state);
+	}
+
+	public bool Has(Weight accuracy, params object[] body)
+	{
+		var state = new State(1f, new State.Body(body));
+
+		return Has(accuracy, state);
+	}
+
+	public bool Has(Weight accuracy, State state)
+	{
+		return this.Has(new Vector2(-accuracy, accuracy), state);
+	}
+
+
 
 	public void Add(string name, State subState)
 	{
@@ -153,7 +176,7 @@ public class State : Weight
 
 		if (state != null)
 		{
-			state.Apply(subState, "Add");
+			state.Apply(subState, operation);
 		}
 		else
 		{
@@ -208,6 +231,15 @@ public class State : Weight
 		left = left.Clone();
 
 		left.Add(right);
+
+		return left;
+	}
+
+	public static State Apply(State left, State right, string operation)
+	{
+		left = left.Clone();
+
+		left.Apply(right, operation);
 
 		return left;
 	}
