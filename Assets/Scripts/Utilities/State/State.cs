@@ -7,8 +7,10 @@ using System.Collections.Generic;
 public class State : Weight
 {
 	[System.Serializable]
-	public class Body : Dictionary<string, State>
+	public class Body : Dictionary<string, Weight>
 	{
+		public string defaultOperator = "Add";
+
 		public static Body Empty
 		{
 			get
@@ -24,7 +26,7 @@ public class State : Weight
 
 			foreach (var item in args)
 			{
-					if (item.IsA("String"))
+				if (item.IsA("String"))
 				{
 					Push(currentName, currentItem);
 
@@ -42,16 +44,52 @@ public class State : Weight
 			}
 		}
 
-		private void Push(string name, Weight value)
+		public void PushMany(params object[] args)
+		{
+			PushMany("", 1f, new Queue<object>(args));
+		}
+
+		private void PushMany(string name, Weight weight, Queue<object> args)
+		{
+			Push(name, weight);
+
+			if (args.Peek().IsA("string"))
+			{
+				name = (string)args.Dequeue();	
+			}
+			else
+			{
+				weight = (Weight)args.Dequeue();
+			}
+
+			PushMany(name, weight, args);
+		}
+
+		public void Push(string name, Weight value)
 		{
 			if (name != "")
 				this.Add(name, (State)value);
 		}
 
-		private void Push(string name)
+		public void Push(string name)
 		{
 			if (name != "")
 				this.Add(name, 1f);
+		}
+
+		public void Apply(string name, Weight value, string strOperator="Add")
+		{
+			if (name != "")
+			{
+				if (this.ContainsKey(name))
+				{
+					this[name].Do(strOperator)(value);
+				}
+				else
+				{
+					value = 
+				}
+			}
 		}
 	}
 

@@ -66,7 +66,7 @@ public class The
 
 	static The()
 	{
-
+		Add("string", Syst)
 	}
 
 	/// <summary>
