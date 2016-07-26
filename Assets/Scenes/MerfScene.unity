@@ -468,6 +468,10 @@ Prefab:
       propertyPath: health.range.y
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 11499668, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: blockTime
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
   m_IsPrefabParent: 0

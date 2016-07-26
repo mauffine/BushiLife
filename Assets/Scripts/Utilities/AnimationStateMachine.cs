@@ -21,6 +21,7 @@ public class AnimationStateMachine : MonoBehaviour {
     public float lightAttackTime2;
     public float heavyAttackTime;
     public float dodgeTime;
+    public float blockTime;
 
     float animationTimer;
 
@@ -69,6 +70,14 @@ public class AnimationStateMachine : MonoBehaviour {
                     }
                     break;
                 }
+            case (CustomAnimationState.Block):
+                {
+                    if (animationTimer > blockTime)
+                    {
+                        this.currentAnimation = CustomAnimationState.Idle;
+                    }
+                    break;
+                }
             default:
                 break;
         }
@@ -111,7 +120,8 @@ public class AnimationStateMachine : MonoBehaviour {
             case (CustomAnimationState.Dodge):
                 {
                     if (currentAnimation != CustomAnimationState.LightAttack &&
-                        currentAnimation != CustomAnimationState.HeavyAttack && currentAnimation != CustomAnimationState.Dodge)
+                        currentAnimation != CustomAnimationState.HeavyAttack && currentAnimation != CustomAnimationState.Dodge
+                         && currentAnimation != CustomAnimationState.Block)
                     {
                         this.animator.SetTrigger("Dodge");
                         this.animator.SetBool("Running", false);
@@ -126,7 +136,8 @@ public class AnimationStateMachine : MonoBehaviour {
                 {
                     if (currentAnimation != CustomAnimationState.Dodge &&
                         currentAnimation != CustomAnimationState.HeavyAttack &&
-                        currentAnimation != CustomAnimationState.LightAttack2)
+                        currentAnimation != CustomAnimationState.LightAttack2
+                         && currentAnimation != CustomAnimationState.Block)
                     {
                         if (currentAnimation == CustomAnimationState.Walking || currentAnimation == CustomAnimationState.Running || currentAnimation == CustomAnimationState.Jump)
                         {
@@ -154,7 +165,8 @@ public class AnimationStateMachine : MonoBehaviour {
             case (CustomAnimationState.HeavyAttack):
                 {
                     if (currentAnimation != CustomAnimationState.Dodge &&
-                        currentAnimation != CustomAnimationState.LightAttack)
+                        currentAnimation != CustomAnimationState.LightAttack
+                         && currentAnimation != CustomAnimationState.Block)
                     {
                         this.animator.SetTrigger("HeavyAttack");
                         this.currentAnimation = CustomAnimationState.HeavyAttack;
@@ -166,7 +178,8 @@ public class AnimationStateMachine : MonoBehaviour {
             case (CustomAnimationState.Jump):
                 {
                     if (currentAnimation != CustomAnimationState.LightAttack &&
-                        currentAnimation != CustomAnimationState.HeavyAttack && currentAnimation != CustomAnimationState.Dodge)
+                         currentAnimation != CustomAnimationState.HeavyAttack && currentAnimation != CustomAnimationState.Dodge
+                         && currentAnimation != CustomAnimationState.Block)
                     {
                         this.animator.SetBool("Jump", true);
                         this.currentAnimation = CustomAnimationState.Jump;
@@ -174,7 +187,19 @@ public class AnimationStateMachine : MonoBehaviour {
                     }
                 }
                 break;
-
+            case (CustomAnimationState.Block):
+                {
+                    if (currentAnimation != CustomAnimationState.LightAttack &&
+                        currentAnimation != CustomAnimationState.HeavyAttack && currentAnimation != CustomAnimationState.Dodge
+                        && currentAnimation != CustomAnimationState.Block)
+                    {
+                        this.animator.SetTrigger("Block");
+                        this.currentAnimation = CustomAnimationState.Block;
+                        this.animationTimer = 0;
+                        return true;
+                    }
+                }
+                break;
             default:
                 break;
 

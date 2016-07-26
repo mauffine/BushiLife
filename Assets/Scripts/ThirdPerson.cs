@@ -125,11 +125,9 @@ public class ThirdPerson : MonoBehaviour
 		// check whether conditions are right to allow a jump:
 		if (jump && m_IsGrounded)
 		{
-
-            //m_Rigidbody.AddForce(Vector3.up * 3, ForceMode.Impulse);
-
-            //m_Animator.applyRootMotion = false;
-           
+            m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
+            m_IsGrounded = false;
+            m_GroundCheckDistance = 0.1f;
             this.animStateMach.SetAnimation(CustomAnimationState.Jump);
 		}
 	}
@@ -155,7 +153,6 @@ public class ThirdPerson : MonoBehaviour
 		{
 			m_GroundNormal = hitInfo.normal;
 			m_IsGrounded = true;
-			//m_Animator.applyRootMotion = true;
             this.doubleJump = true;
             m_Animator.SetBool("Jump", false);
         }
@@ -163,12 +160,13 @@ public class ThirdPerson : MonoBehaviour
 		{
 			m_IsGrounded = false;
 			m_GroundNormal = Vector3.up;
-            //m_Animator.applyRootMotion = false;
         }
 	}
-    public bool ReceiveHit(Collider _col)
+    public bool CheckIFrames(Collider _col)
     {
-        if (this.rolling || this.block)
+        Vector3 colDir = _col.transform.position - transform.position;
+        float angle = Vector3.Angle(colDir, transform.forward);
+        if (this.rolling || this.block && angle < 45)
             return false;
         return true;
     }
@@ -178,7 +176,7 @@ public class ThirdPerson : MonoBehaviour
 
         m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
         LA1Hurtbox.SetActive(true);
-        //this.attacking = true;
+        this.attacking = true;
     }
     void EndLAttack1()
     {
@@ -215,9 +213,15 @@ public class ThirdPerson : MonoBehaviour
     {
         rolling = false;
     }
-    void Block()
+    void StartBlock()
     {
         m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
+        block = true;
+    }
+    void EndBlock()
+    {
+        block = false;
+
     }
     void Walk()
     {
@@ -241,9 +245,7 @@ public class ThirdPerson : MonoBehaviour
     }
     void Jump()
     {
-        m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
-        m_IsGrounded = false;
-        m_GroundCheckDistance = 0.1f;
+        
     }
 }
 
