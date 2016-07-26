@@ -398,6 +398,7 @@ GameObject:
   - 4: {fileID: 435006}
   - 33: {fileID: 3303692}
   - 23: {fileID: 2365154}
+  - 114: {fileID: 11436472}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1103,6 +1104,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11477176}
+--- !u!114 &11436472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70263bdfd1307a442aa80c2cfcb0239b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max: 100
 --- !u!114 &11439266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1116,19 +1129,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovingTurnSpeed: 360
   m_StationaryTurnSpeed: 180
-  m_JumpPower: 14
+  m_JumpPower: 10
   m_GravityMultiplier: 2
   m_RunCycleLegOffset: 0.2
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.1
-  speed: 3
-  lightAttackMoveSpeed: 5
+  speed: 200
+  lightAttackMoveSpeed: 500
   heavyAttackMoveSpeed: 0
-  dodgeSpeed: 5
+  dodgeSpeed: 350
   LA1Hurtbox: {fileID: 107790}
   LA2Hurtbox: {fileID: 0}
-  HAHurtbox: {fileID: 0}
+  HAHurtbox: {fileID: 144096}
   JumpAttaclHB: {fileID: 193838}
   Swordbox: {fileID: 199972}
 --- !u!114 &11477176
@@ -1146,8 +1159,8 @@ MonoBehaviour:
     val: 10
     range: {x: 0, y: 10}
   health:
-    val: 1
-    range: {x: 0, y: 1}
+    val: 100
+    range: {x: 0, y: 100}
   experience:
     val: 20
     range: {x: 0, y: 100}
@@ -1166,10 +1179,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9553796}
-  lightAttackTime: 0.4
-  lightAttackTime2: 0.5
+  lightAttackTime: 1
+  lightAttackTime2: 1
   heavyAttackTime: 1
   dodgeTime: 1
+  blockTime: 0.6
   currentAnimation: 0
 --- !u!136 &13639442
 CapsuleCollider:

@@ -345,6 +345,9 @@ GameObject:
   - 33: {fileID: 1132088479}
   - 65: {fileID: 1132088478}
   - 23: {fileID: 1132088477}
+  - 114: {fileID: 1132088482}
+  - 114: {fileID: 1132088481}
+  - 114: {fileID: 1132088483}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: HurtBox
@@ -362,7 +365,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2f7e7f9ac697f0843b5cf5fbb0a8d9cc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -403,12 +406,58 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1132088476}
-  m_LocalRotation: {x: 0.25360888, y: 0, z: 0, w: 0.9673069}
-  m_LocalPosition: {x: 0.0875566, y: 0.531, z: 3.192}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
+  m_LocalPosition: {x: 9.9, y: 0.531, z: 3.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1132088481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1132088476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c26a84c167f7d45b76318ed4c4c25c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+--- !u!114 &1132088482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1132088476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8ea8370dc2e4448a987f605e7c5299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack:
+    val: 10
+    range: {x: 0, y: 10}
+  health:
+    val: 1
+    range: {x: 0, y: 1}
+  experience:
+    val: 20
+    range: {x: 0, y: 100}
+  level:
+    val: 20
+    range: {x: 0, y: 100}
+--- !u!114 &1132088483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1132088476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc2bcbd16b2378449dabaa34a09c2a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1341062459 stripped
 Transform:
   m_PrefabParentObject: {fileID: 458952, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
@@ -471,6 +520,30 @@ Prefab:
     - target: {fileID: 11499668, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
       propertyPath: blockTime
       value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439266, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: m_JumpPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439266, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: speed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439266, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: lightAttackMoveSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499668, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: lightAttackTime2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499668, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: lightAttackTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439266, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
+      propertyPath: dodgeSpeed
+      value: 350
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cf62a617ddeda14f846ae9e94854c32, type: 2}
