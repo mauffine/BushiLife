@@ -23,8 +23,6 @@ public class ThirdPerson : MonoBehaviour
     [SerializeField] GameObject JumpAttaclHB;
     [SerializeField] GameObject Swordbox;
 
-
-
     Rigidbody m_Rigidbody;
 	Animator m_Animator;
 	bool m_IsGrounded;
@@ -111,13 +109,12 @@ public class ThirdPerson : MonoBehaviour
         }
     }
 
-
 	void HandleAirborneMovement(bool jump)
 	{
         // apply extra gravity from multiplier:
         Vector3 extraGravityForce = (Physics.gravity * m_GravityMultiplier) - Physics.gravity;
         m_Rigidbody.AddForce(extraGravityForce);
-		m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
+		m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : .1f;
 	}
     
 	void HandleGroundedMovement(bool jump)
@@ -127,7 +124,7 @@ public class ThirdPerson : MonoBehaviour
 		{
             m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
             m_IsGrounded = false;
-            m_GroundCheckDistance = 0.1f;
+            m_GroundCheckDistance = .1f;
             this.animStateMach.SetAnimation(CustomAnimationState.Jump);
 		}
 	}
@@ -138,7 +135,6 @@ public class ThirdPerson : MonoBehaviour
 		float turnSpeed = Mathf.Lerp(m_StationaryTurnSpeed, m_MovingTurnSpeed, m_ForwardAmount);
 		transform.Rotate(0, m_TurnAmount * turnSpeed * Time.deltaTime, 0);
 	}
-
 
 	void CheckGroundStatus()
 	{
