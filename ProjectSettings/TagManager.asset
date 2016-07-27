@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HurtBox
   - Character
+  - Player Spawner
   layers:
   - Default
   - TransparentFX

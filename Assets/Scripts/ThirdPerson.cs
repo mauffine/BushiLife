@@ -22,6 +22,7 @@ public class ThirdPerson : MonoBehaviour
     [SerializeField] GameObject HAHurtbox;
     [SerializeField] GameObject JumpAttaclHB;
     [SerializeField] GameObject Swordbox;
+    [SerializeField] GameObject blood;
 
     Rigidbody m_Rigidbody;
 	Animator m_Animator;
@@ -162,8 +163,10 @@ public class ThirdPerson : MonoBehaviour
     {
         Vector3 colDir = _col.transform.position - transform.position;
         float angle = Vector3.Angle(colDir, transform.forward);
-        if (this.rolling || this.block && angle < 45 || _col.GetComponent<Character>() == null)
+        if (this.rolling || (this.block && angle < 45) || _col.GetComponentInParent<Character>() == null)
             return false;
+        //TODO:fix dis shit
+        //Instantiate(blood, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), blood.transform.rotation);//AngleAxis(-90, Vector3.right));
         return true;
     }
 

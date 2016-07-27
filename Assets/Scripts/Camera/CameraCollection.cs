@@ -10,13 +10,7 @@ public class CameraCollection : MonoBehaviour
 
 	List<CameraController> GetCameras()
 	{
-		var result = new List<CameraController>(transform.childCount);
-
-		for (int index = 0; index < transform.childCount; index++)
-		{
-			var child = transform.GetChild(index);
-			result.Add(child.GetComponentInChildren<CameraController>());
-		}
+        var result = new List<CameraController>(GetComponentsInChildren<CameraController>());
 
 		return result;
 	}
@@ -30,31 +24,6 @@ public class CameraCollection : MonoBehaviour
 	void Start()
 	{
 		cameraGrid = GetComponent<DynamicGrid>();
-
-		Add(gameObject.transform, 0);
-		Add(gameObject.transform, 1);
-		Add(gameObject.transform, 2);
-		Add(gameObject.transform, 3);
-		Add(gameObject.transform, 4);
-		Add(gameObject.transform, 5);
-		Add(gameObject.transform, 1);
-		Add(gameObject.transform, 2);
-		Add(gameObject.transform, 3);
-		Add(gameObject.transform, 4);
-		Add(gameObject.transform, 5);
-		Add(gameObject.transform, 1);
-		Add(gameObject.transform, 2);
-		Add(gameObject.transform, 3);
-		Add(gameObject.transform, 4);
-		Add(gameObject.transform, 5);
-		Add(gameObject.transform, 1);
-		Add(gameObject.transform, 2);
-		Add(gameObject.transform, 3);
-		Add(gameObject.transform, 4);
-		Add(gameObject.transform, 5);
-		Add(gameObject.transform, 3);
-		Add(gameObject.transform, 4);
-		Add(gameObject.transform, 5);
 	}
 
 	// Update is called once per frame
@@ -74,14 +43,14 @@ public class CameraCollection : MonoBehaviour
 		}
 	}
 
-	void Add(Transform player, int playerNumber)
+	public void Add(GameObject player, int playerNumber)
 	{
 		var newCamera = GameObject.Instantiate(cameraPrefab);
 
-		newCamera.GetComponentInChildren<CameraController>().Init(player, playerNumber);
+		newCamera.GetComponentInChildren<CameraController>().Init(player.transform, playerNumber);
 
 		newCamera.transform.parent = this.transform;
-
+        player.GetComponent<Player>().SetCamera(newCamera.GetComponentInChildren<Camera>());
 		try
 		{
 			this.Validate();

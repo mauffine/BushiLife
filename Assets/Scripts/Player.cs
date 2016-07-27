@@ -17,13 +17,11 @@ public class Player : MonoBehaviour
     private bool dodge;
     private bool lAttack;
     private bool HAttack;
-
-
-
-    private void Start()
+    
+    private void Awake()
     {
         // get the transform of the main camera
-        this.m_Cam = this.myCamera.transform;
+        //this.m_Cam = this.myCamera.transform;
         // get the third person character ( this should never be null due to require component )
         m_Character = GetComponent<ThirdPerson>();
         animStateMach = GetComponent<AnimationStateMachine>();
@@ -106,5 +104,14 @@ public class Player : MonoBehaviour
         {
             this.animStateMach.SetAnimation(CustomAnimationState.Idle);
         }
+    }
+    public void SetPlayerNumber(int _playernum)
+    {
+        this.playerNumber = "P" + _playernum.ToString();
+    }
+    public void SetCamera(Camera _camera)
+    {
+        this.myCamera = _camera;
+        this.m_Cam = this.myCamera.transform;
     }
 }

@@ -26,7 +26,7 @@ public class Character : MonoBehaviour
     }
     void OnTriggerEnter(Collider col)
     {
-        Character otherCharacter = col.GetComponent<Character>();
+        Character otherCharacter = col.GetComponentInParent<Character>();
 
         if (col.CompareTag("HurtBox") && GetComponent<ThirdPerson>().CheckIFrames(col))
         {
