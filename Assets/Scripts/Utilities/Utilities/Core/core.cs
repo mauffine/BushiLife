@@ -57,16 +57,21 @@ public class A
 public class The
 {
 	private static Dictionary<string, System.Type> typeCache = new Dictionary<string, System.Type>();
-	private static Dictionary<string, string> aliases = new Dictionary<string, string>();
+	private static Dictionary<string, string> typeAliases = new Dictionary<string, string>();
 	
-	public static void Add(string alias, System.Type type)
+	public static void Alias(string alias, System.Type type)
 	{
-		aliases.Add(alias, type.FullName);
+		typeAliases.Add(alias, type.FullName);
 	}
 
 	static The()
 	{
-		Add("string", Syst)
+		Alias("string", typeof(string));
+		Alias("float", typeof(float));
+		Alias("double", typeof(double));
+		Alias("int", typeof(int));
+		Alias("bool", typeof(bool));
+		Alias("long", typeof(long));
 	}
 
 	/// <summary>
@@ -82,9 +87,9 @@ public class The
 		if (_depth > 10)
 			throw new System.Exception("Too deep bro");
 
-		if (aliases.ContainsKey(typeName))
+		if (typeAliases.ContainsKey(typeName))
 		{
-			return Type(aliases[typeName], _depth + 1);
+			return Type(typeAliases[typeName], _depth + 1);
 		}
 
 		lock (typeCache)

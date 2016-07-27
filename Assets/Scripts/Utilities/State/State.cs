@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class State : Weight
 {
 	[System.Serializable]
-	public class Body : Dictionary<string, Weight>
+	public class Body : Dictionary<string, State>
 	{
 		public string defaultOperator = "Add";
 
@@ -21,27 +21,11 @@ public class State : Weight
 
 		public Body(params object[] args)
 		{
-			string currentName = "";
-			Weight currentItem = 1f;
+			PushMany(args);
+		}
 
-			foreach (var item in args)
-			{
-				if (item.IsA("String"))
-				{
-					Push(currentName, currentItem);
-
-					currentName = (string)item;
-
-					continue;
-				}
-				else
-				{
-					currentItem = (Weight)item;
-					Push(currentName, currentItem);
-				}
-
-				currentName = "";
-			}
+		public Body()
+		{
 		}
 
 		public void PushMany(params object[] args)
@@ -49,9 +33,9 @@ public class State : Weight
 			PushMany("", 1f, new Queue<object>(args));
 		}
 
-		private void PushMany(string name, Weight weight, Queue<object> args)
+		private void PushMany(string name, State state, Queue<object> args)
 		{
-			Push(name, weight);
+			Push(name, state);
 
 			if (args.Peek().IsA("string"))
 			{
@@ -59,16 +43,16 @@ public class State : Weight
 			}
 			else
 			{
-				weight = (Weight)args.Dequeue();
+				state = (State)((Weight)args.Dequeue());
 			}
 
-			PushMany(name, weight, args);
+			PushMany(name, state, args);
 		}
 
-		public void Push(string name, Weight value)
+		public void Push(string name, State value)
 		{
 			if (name != "")
-				this.Add(name, (State)value);
+				this.Add(name, value);
 		}
 
 		public void Push(string name)
@@ -77,17 +61,13 @@ public class State : Weight
 				this.Add(name, 1f);
 		}
 
-		public void Apply(string name, Weight value, string strOperator="Add")
+		public void Apply(string name, State value, string strOperator="Add")
 		{
 			if (name != "")
 			{
 				if (this.ContainsKey(name))
 				{
 					this[name].Do(strOperator)(value);
-				}
-				else
-				{
-					value = 
 				}
 			}
 		}

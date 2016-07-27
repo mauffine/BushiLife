@@ -10,7 +10,7 @@ public class CameraVertical : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-      float v = Input.GetAxis(this.playerNumber + " Camera Vertical");
-      this.transform.Rotate(new Vector3(v * 2, 0, 0));
+//      float v = Input.GetAxis(this.playerNumber + " Camera Vertical");
+  //    this.transform.Rotate(new Vector3(v * 2, 0, 0));
     }
 }

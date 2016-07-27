@@ -46,6 +46,7 @@ public static class ObjectExtensions
 	public static bool IsA<T>(this T source, string stringType)
 	{
 		return The.Same(source.GetType(), The.Type(stringType));
+		
 	}
 }
 

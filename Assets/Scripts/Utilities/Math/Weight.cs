@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections;k
 using System.Collections.Generic;
 
 [System.Serializable]
-public class Weight
+public class Weight : BaseWeight
 {
 	public float value;
 
