@@ -164,7 +164,7 @@ public class The
 		return Same(The.Types(objects));
 	}
 
-	public static object Result(object self, MethodInfo method, object[] parms)
+	public static object Result(object self, MethodInfo method, params object[] parms)
 	{
 		return method.Invoke(self, parms);
 	}

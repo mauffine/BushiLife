@@ -24,7 +24,7 @@ public class Triggerer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        // Facebook is not legal in australie
     }
 
     void OnTriggerEnter(Collider col)

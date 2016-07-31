@@ -6,74 +6,12 @@ using System.Collections.Generic;
 [System.Serializable]
 public class State : Weight
 {
-	[System.Serializable]
-	public class Body : Dictionary<string, State>
-	{
-		public string defaultOperator = "Add";
+    class Weight.Map
+    {
 
-		public static Body Empty
-		{
-			get
-			{
-				return new Body();
-			}
-		}
+    }
 
-		public Body(params object[] args)
-		{
-			PushMany(args);
-		}
-
-		public Body()
-		{
-		}
-
-		public void PushMany(params object[] args)
-		{
-			PushMany("", 1f, new Queue<object>(args));
-		}
-
-		private void PushMany(string name, State state, Queue<object> args)
-		{
-			Push(name, state);
-
-			if (args.Peek().IsA("string"))
-			{
-				name = (string)args.Dequeue();	
-			}
-			else
-			{
-				state = (State)((Weight)args.Dequeue());
-			}
-
-			PushMany(name, state, args);
-		}
-
-		public void Push(string name, State value)
-		{
-			if (name != "")
-				this.Add(name, value);
-		}
-
-		public void Push(string name)
-		{
-			if (name != "")
-				this.Add(name, 1f);
-		}
-
-		public void Apply(string name, State value, string strOperator="Add")
-		{
-			if (name != "")
-			{
-				if (this.ContainsKey(name))
-				{
-					this[name].Do(strOperator)(value);
-				}
-			}
-		}
-	}
-
-	public Body body = Body.Empty;
+	public Weight.Map body = Weight.Map.Empty;
 
 	public void Clamp(Weight min, Weight max)
 	{
@@ -86,7 +24,8 @@ public class State : Weight
 		}
 	}
 
-	public bool IsEmpty
+	public override
+        bool IsEmpty
 	{
 		get
 		{
@@ -94,7 +33,7 @@ public class State : Weight
 		}
 	}
 
-	public State(float weight, Body body) : base(weight)
+	public State(float weight, Weight.Map body) : base(weight)
 	{
 		this.Init(body);
 	}
@@ -117,7 +56,7 @@ public class State : Weight
 		return (State)base.Scaled(scale);
 	}
 
-	public void Init(Body body)
+	public void Init(Weight.Map body)
 	{
 		this.body = body;
 	}
