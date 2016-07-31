@@ -78,6 +78,8 @@ ModelImporter:
     7400032: L_AttackCombo
     7400034: Hit
     7400036: JumpAttackLand
+    7400038: Dead
+    7400040: Spawn
     9500000: //RootNode
     13700000: ChibiKai:pCube6
     13700002: pCube7
@@ -713,7 +715,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -726,7 +728,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.456013
+      - time: 0.24749282
         functionName: StartLAttack2
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
@@ -734,7 +736,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.57158357
+      - time: 0.35185263
         functionName: EndLAttack2
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
@@ -897,7 +899,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.98085403
+        functionName: JumpAttackStart
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -1217,7 +1227,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.15121952
+        functionName: RunningSlashStart
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.74898076
+        functionName: RunningSlashEnd
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -1374,7 +1400,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.479038
+      - time: 0.4497697
         functionName: StartLAttack2
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
@@ -1382,7 +1408,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.6640217
+      - time: 0.5859729
         functionName: EndLAttack2
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
@@ -1527,6 +1553,170 @@ ModelImporter:
       takeName: chibu7
       firstFrame: 305
       lastFrame: 329
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.17048256
+        functionName: JumpAttackEnd
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Chibi_Root_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT/Chibi_LKnee_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT/Chibi_LKnee_JNT/Chibi_Lfoot_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT/Chibi_Rknee_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT/Chibi_Rknee_JNT/Chibi_Rfoot_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT/Chibi_LFingers_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Neck_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT/Chibi_Top_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT/Chibi_Rfinger_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT/Chibi_Rfinger_JNT/Sword_Hilt
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT/Chibi_Rfinger_JNT/Sword_Hilt/Sword_Tip
+        weight: 1
+      - path: ChibiKai:pCube6
+        weight: 1
+      - path: pCube7
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Dead
+      takeName: Take 001
+      firstFrame: 500
+      lastFrame: 550
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Chibi_Root_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT/Chibi_LKnee_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT/Chibi_LKnee_JNT/Chibi_Lfoot_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT/Chibi_Rknee_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT/Chibi_Rknee_JNT/Chibi_Rfoot_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT/Chibi_LFingers_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Neck_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT/Chibi_Top_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT/Chibi_Rfinger_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT/Chibi_Rfinger_JNT/Sword_Hilt
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT/Chibi_Rfinger_JNT/Sword_Hilt/Sword_Tip
+        weight: 1
+      - path: ChibiKai:pCube6
+        weight: 1
+      - path: pCube7
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Spawn
+      takeName: Take 001
+      firstFrame: 561
+      lastFrame: 586
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

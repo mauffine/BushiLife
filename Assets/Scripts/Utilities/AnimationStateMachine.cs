@@ -10,7 +10,8 @@ public enum CustomAnimationState
     Block,
     Dodge,
     Idle,
-    Jump
+    Jump,
+    Dead
 };
 public class AnimationStateMachine : MonoBehaviour {
     
@@ -139,13 +140,13 @@ public class AnimationStateMachine : MonoBehaviour {
                         currentAnimation != CustomAnimationState.LightAttack2
                          && currentAnimation != CustomAnimationState.Block)
                     {
-                        if (currentAnimation == CustomAnimationState.Walking || currentAnimation == CustomAnimationState.Running || currentAnimation == CustomAnimationState.Jump)
+                        if (currentAnimation == CustomAnimationState.Walking || currentAnimation == CustomAnimationState.Jump)
                         {
-                            this.animator.SetBool("Running", false);
                             this.animator.SetBool("Walking", false);
                         }
                         this.animator.SetTrigger("LightAttack");
-                        this.currentAnimation = CustomAnimationState.LightAttack;
+                        if (!(currentAnimation == CustomAnimationState.Running))
+                            this.currentAnimation = CustomAnimationState.LightAttack;
                         this.animationTimer = 0;
                         return true;
                     }
@@ -198,6 +199,12 @@ public class AnimationStateMachine : MonoBehaviour {
                         this.animationTimer = 0;
                         return true;
                     }
+                }
+                break;
+            case (CustomAnimationState.Dead):
+                {
+                    this.currentAnimation = CustomAnimationState.Dead;
+                    this.animator.SetTrigger("Dead");
                 }
                 break;
             default:

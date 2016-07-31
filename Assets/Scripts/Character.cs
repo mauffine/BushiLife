@@ -18,7 +18,10 @@ public class Character : MonoBehaviour
     }
     void Update()
     {
-
+        if (stats.health.val <= 0)
+        {
+            GetComponent<ThirdPerson>().Die();
+        }
     }
     void TakeDamage(Stat self, Stat other, Transform location)
     {
