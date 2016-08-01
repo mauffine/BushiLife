@@ -160,6 +160,7 @@ public class ThirdPerson : MonoBehaviour
         else
         {
             m_IsGrounded = false;
+            //this.animStateMach.SetAnimation(CustomAnimationState.Jump);
             m_GroundNormal = Vector3.up;
         }
     }
@@ -252,7 +253,7 @@ public class ThirdPerson : MonoBehaviour
             this.animStateMach.SetAnimation(CustomAnimationState.Dead);
             this.m_Rigidbody.useGravity = false;
             this.m_Capsule.enabled = false;
-            this.m_Rigidbody.velocity = Vector3.zero;
+            this.m_Rigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         }
     }
 }

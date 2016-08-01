@@ -1140,9 +1140,6 @@ MonoBehaviour:
   heavyAttackMoveSpeed: 0
   dodgeSpeed: 350
   runningModifier: 2
-  LA1Hurtbox: {fileID: 107790}
-  LA2Hurtbox: {fileID: 0}
-  HAHurtbox: {fileID: 144096}
   JumpAttaclHB: {fileID: 193838}
   Swordbox: {fileID: 199972}
   blood: {fileID: 142682, guid: f04f171fc22f7014eaff48b13104ec44, type: 2}

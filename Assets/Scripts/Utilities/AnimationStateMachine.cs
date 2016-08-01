@@ -85,6 +85,8 @@ public class AnimationStateMachine : MonoBehaviour {
 	}
     public bool SetAnimation(CustomAnimationState _setState)
     {
+        if (currentAnimation == CustomAnimationState.Dead)
+            return false;
         switch (_setState)
         {
             case (CustomAnimationState.Walking):

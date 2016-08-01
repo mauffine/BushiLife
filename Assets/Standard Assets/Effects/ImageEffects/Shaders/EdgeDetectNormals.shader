@@ -287,7 +287,7 @@ Subshader {
 	  ZTest Always Cull Off ZWrite Off
 
       CGPROGRAM
-      #pragma vertex vertRobert
+      #pragma vertex vertThin
       #pragma fragment fragRobert
       ENDCG
   }
