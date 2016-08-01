@@ -16,9 +16,9 @@ public class SpawnPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if (Input.GetKeyDown(KeyCode.Return))
+	    if (Input.GetKeyDown(KeyCode.Return) && this.players.Count < respawns.Length)
         {
-            players.Add((GameObject)Instantiate(playerPrefab, this.respawns[Random.Range(0, respawns.Length)].transform.position, Quaternion.identity));
+            players.Add((GameObject)Instantiate(playerPrefab, this.respawns[this.players.Count].transform.position, Quaternion.identity));//Random.Range(0, respawns.Length)].transform.position, Quaternion.identity));
             players[players.Count - 1].GetComponent<Player>().SetPlayerNumber(this.players.Count);
             cameraGenerator.GetComponent<CameraCollection>().Add(players[players.Count - 1], this.players.Count);
         }

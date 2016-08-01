@@ -18,9 +18,6 @@ public class ThirdPerson : MonoBehaviour
     [SerializeField] float heavyAttackMoveSpeed = 5f;
     [SerializeField] float dodgeSpeed = 5f;
     [SerializeField] float runningModifier = 2f;
-    [SerializeField] GameObject LA1Hurtbox;
-    [SerializeField] GameObject LA2Hurtbox;
-    [SerializeField] GameObject HAHurtbox;
     [SerializeField] GameObject JumpAttaclHB;
     [SerializeField] GameObject Swordbox;
     [SerializeField] GameObject blood;
@@ -48,7 +45,7 @@ public class ThirdPerson : MonoBehaviour
     AnimationStateMachine animStateMach;
     void Start()
     {
-        m_Animator = GetComponent<Animator>();
+        m_Animator = GetComponentInChildren<Animator>();
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Capsule = GetComponent<CapsuleCollider>();
         m_CapsuleHeight = m_Capsule.height;
@@ -176,20 +173,6 @@ public class ThirdPerson : MonoBehaviour
         //Instantiate(blood, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), blood.transform.rotation);//AngleAxis(-90, Vector3.right));
         return true;
     }
-
-    void StartLAttack1()
-    {
-
-        m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0);
-        LA1Hurtbox.SetActive(true);
-        this.attacking = true;
-    }
-    void EndLAttack1()
-    {
-        LA1Hurtbox.SetActive(false);
-        Swordbox.SetActive(false);
-        this.attacking = false;
-    }
     void StartLAttack2()
     {
         m_Rigidbody.velocity = m_Rigidbody.velocity = new Vector3(transform.forward.x * Time.deltaTime * this.lightAttackMoveSpeed, m_Rigidbody.velocity.y, transform.forward.z * Time.deltaTime * this.lightAttackMoveSpeed);
@@ -209,7 +192,7 @@ public class ThirdPerson : MonoBehaviour
     }
     void EndHeavyAttack()
     {
-        HAHurtbox.SetActive(false);
+        Swordbox.SetActive(false);
     }
     void BeginRoll()
     {
@@ -267,6 +250,9 @@ public class ThirdPerson : MonoBehaviour
         {
             dead = true;
             this.animStateMach.SetAnimation(CustomAnimationState.Dead);
+            this.m_Rigidbody.useGravity = false;
+            this.m_Capsule.enabled = false;
+            this.m_Rigidbody.velocity = Vector3.zero;
         }
     }
 }

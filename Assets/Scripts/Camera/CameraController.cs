@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour
 	{
         this.transform.position = this.target.transform.position;
 
-		float h = Input.GetAxis(this.strPlayerNumber + " Camera Horizontal") * 2f;
+		float h = Input.GetAxis(this.strPlayerNumber + " Camera Horizontal") * 3f;
         this.transform.Rotate(Vector3.up * h);
     }
 
