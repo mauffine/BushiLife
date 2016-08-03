@@ -75,70 +75,62 @@ public class Weight
         }
     }
 
-    public class OperatorBox : List<string>
+    public class Operator
     {
-        public string positive
+        public Weight weight;
+        public float power;
+
+        private object function;
+
+        public Operator(Weight weight, string function, float power)
         {
-            get
-            {
-                return this[0];
-            }
-            set
-            {
-                this[0] = value;
-            }
-        }
-        public string negative
-        {
-            get
-            {
-                return this[negativeIndex];
-            }
-            set
-            {
-                this[negativeIndex] = value;
-            }
+            this.power = power;
+            this.weight = weight;
+
+            this.function = weight.Function(function);
         }
 
-        private int negativeIndex
-        {
-            get
-            {
-                return this.Count - 1;
-            }
-        }
-
-        public OperatorBox(params string[] names) : base(names)
-        {
-        }
-
-        public bool TryDo(Weight self, Weight other, int index = 0)
-        {
-
-        }
-
-        public void Do(Weight self, Weight other, int index=0)
+        public void Do(float weight)
         {
             The.Result(
-                    self, 
-                    (System.Reflection.MethodInfo)The.Method(this[index], self.GetType()), 
-                    (float)other
+                    weight,
+                    (System.Reflection.MethodInfo)function,
+                        (float)weight,
+                        power
                 );
         }
 
-        public string Opposite(string name)
+        public class Box : Map
         {
-            return this.Find(value => name == value);
+            public string function;
+
+            public float positive = 1f;
+            public float negative = -1f;
+
+            public Box(params object[] args) : base(args)
+            {
+            }
+
+            public void Make(Weight self, string operation)
+            {
+                return new Operator(self.Function(, this[operation]);
+            }
+
+            public string Opposite(string name)
+            {
+                return this.Find(value => name == value);
+            }
         }
+
     }
 
     #endregion
 
     public float value;
 
-	public delegate void Operator(float weight);
+	public delegate void OperatorFunction(float weight);
 
-    public static List<OperatorBox> operators = null;
+    public static List<Operator.Box> operators = null;
 
 	public Weight(float value)
 	{
@@ -153,11 +145,16 @@ public class Weight
         };
     }
 
-	/// <summary>
-	/// Credit: http://stackoverflow.com/a/11065781
-	/// </summary>
-	/// <param name="weight"></param>
-	public static implicit operator float(Weight weight)
+    public object Function(string name)
+    {
+        return The.Method(name, this.GetType());
+    }
+
+    /// <summary>
+    /// Credit: http://stackoverflow.com/a/11065781
+    /// </summary>
+    /// <param name="weight"></param>
+    public static implicit operator float(Weight weight)
 	{
 		return weight.value;
     }
@@ -222,12 +219,24 @@ public class Weight
         return operations.ind
     }
 
-	public void Scale(float weight)
+	public void Scale(float weight, float power=1f)
 	{
-		this.value *= weight;
+        if (power == 1f)
+        {
+            this.value *= weight;
+        }
+        else if (power == -1f)
+        {
+            this.value /= weight;
+        }
+        else
+        {
+            this.value *= Mathf.Pow(weight, power);
+        }
+        
 	}
 
-	public void Add(float weight)
+	public void Join(float weight)
 	{
 		this.value += weight;
 	}
