@@ -33,25 +33,51 @@ public class Weight
         public void PushMany(params object[] args)
         {
             PushMany("", 1f, new Queue<object>(args));
-        }
+		}
 
-        private void PushMany(string name, Weight weight, Queue<object> args)
-        {
-            Push(name, weight);
+		private void PushMany(string name, Weight weight, Queue<object> args)
+		{
+			if (args.Count == 0)
+			{
+				return;
+			}
 
-            if (args.Peek().IsA("string"))
-            {
-                name = (string)args.Dequeue();
-            }
-            else
-            {
-                weight = (Weight)args.Dequeue();
-            }
+			if (!args.Peek().IsA("string"))
+			{
+				Push(name, weight);
+				name = (string)args.Dequeue();
+			}
+			else
+			{
+				weight = (Weight)args.Dequeue();
+				Push(name, weight);
+			}
 
-            PushMany(name, weight, args);
-        }
+			PushMany(name, weight, args);
+		}
 
-        public void Push(string name, Weight value)
+		private void PushMany(Weight weight, string name, Queue<object> args)
+		{
+			if (args.Count == 0)
+			{
+				return;
+			}
+
+			if (!args.Peek().IsA("string"))
+			{
+				name = (string)args.Dequeue();
+				Push(name, weight);
+			}
+			else
+			{
+				Push(name, weight);
+				weight = (Weight)args.Dequeue();
+			}
+
+			PushMany(weight, name, args);
+		}
+
+		public void Push(string name, Weight value)
         {
             if (name != "")
                 this.Add(name, value);
@@ -111,6 +137,11 @@ public class Weight
             {
             }
 
+			public static Box Signed(string positive, string negative)
+			{
+				return new Box(positive, 1f, negative, -1f);
+			}
+
             public void Make(Weight self, string operation)
             {
                 return new Operator(self.Function(, this[operation]);
@@ -140,8 +171,8 @@ public class Weight
     static Weight()
     {
         operators = new List<OperatorBox>() {
-            new OperatorBox("Add", "Remove"),
-            new OperatorBox("Multiply", "Divide")
+            OperatorBox.Signed("Add", "Remove"),
+            OperatorBox.Signed("Multiply", "Divide")
         };
     }
 
@@ -176,7 +207,8 @@ public class Weight
 		return new Weight(weight);
 	}
 
-	public Operator Do(string operation)
+
+	public void Do(string function, params object[] args)
 	{
 		return operations[operation].function;
 	}
