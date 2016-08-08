@@ -26,6 +26,14 @@ public class Weight
             PushMany(args);
         }
 
+        public Map(List<Weight> values, params string[] names)
+        {
+            for (int i = 0; i < names.Length; i++)
+            {
+                this.Push(names[i], values[i % values.Count]);
+            }
+        }
+
         public Map()
         {
         }
@@ -57,7 +65,7 @@ public class Weight
 		}
 
 		private void PushMany(Weight weight, string name, Queue<object> args)
-		{
+		{ 
 			if (args.Count == 0)
 			{
 				return;
@@ -103,20 +111,19 @@ public class Weight
 
     public class Operator
     {
-        public Weight weight;
         public float power;
-
         private object function;
 
-        public Operator(Weight weight, string function, float power)
+        public List<Mod> mods = null;
+
+        public Operator(string function, float power)
         {
             this.power = power;
-            this.weight = weight;
 
-            this.function = weight.Function(function);
+            this.function = Weight.Function(function);
         }
 
-        public void Do(float weight)
+        public void Apply(float weight)
         {
             The.Result(
                     weight,
@@ -126,6 +133,11 @@ public class Weight
                 );
         }
 
+        public class Mod : Operator
+        {
+            public Mod(string )
+        }
+
         public class Box : Map
         {
             public string function;
@@ -133,23 +145,39 @@ public class Weight
             public float positive = 1f;
             public float negative = -1f;
 
+            List<Box> children = new List<Box>();
+
             public Box(params object[] args) : base(args)
             {
             }
 
-			public static Box Signed(string positive, string negative)
+            public Box(params string[] names) : 
+                base(
+                    new List<Weight> { 1f, -1f }, 
+                    names
+                )
+            {
+
+            }
+
+            public static Box Signed(string positive, string negative)
 			{
 				return new Box(positive, 1f, negative, -1f);
 			}
 
-            public void Make(Weight self, string operation)
+            public Operator The(string operation)
             {
-                return new Operator(self.Function(, this[operation]);
+                return new Operator(operation, this[operation]);
             }
 
-            public string Opposite(string name)
+            public float Opposite(string name)
             {
-                return this.Find(value => name == value);
+                return Opposite(this[name]);
+            }
+
+            public static float Opposite(float power)
+            {
+                return power * -1f;
             }
         }
 
@@ -170,15 +198,17 @@ public class Weight
 
     static Weight()
     {
-        operators = new List<OperatorBox>() {
-            OperatorBox.Signed("Add", "Remove"),
-            OperatorBox.Signed("Multiply", "Divide")
-        };
+        //operators = new List<OperatorBox>() {
+            //Operator.Box.Signed("Add", "Remove"),
+            //Operator.Box.Signed("Multiply", "Divide"),
+        //};
+
+        //var x = new Operator.Box("Add", "Remove", "Multiply", "Divide")
     }
 
-    public object Function(string name)
+    public static object Function(string name)
     {
-        return The.Method(name, this.GetType());
+        return The.Method(name, typeof(Weight));
     }
 
     /// <summary>
@@ -227,13 +257,13 @@ public class Weight
 	{
 		this.value = value;
 
-		operations = new Dictionary<string, Operator>()
-		{
-			{  },
-			{ "Remove", this.Remove },
-			{ "Scale", this.Scale },
-			{ "Distance", this.Distance }
-		};
+		//operations = new Dictionary<string, Operator>()
+		//{
+			////{  },
+			////{ "Remove", this.Remove },
+			////{ "Scale", this.Scale },
+			////{ "Distance", this.Distance }
+		//};
 
 
 	}
@@ -246,9 +276,9 @@ public class Weight
 		}
 	}
 
-    public string InverseOperation(string operation)
+    public string Apply(float value, string operation, params string[] modifiers)
     {
-        return operations.ind
+
     }
 
 	public void Scale(float weight, float power=1f)
@@ -275,7 +305,7 @@ public class Weight
 
 	public void Remove(float weight)
 	{
-		this.Add(-weight);
+		//this.Add(-weight);
 	}
 
 	public void Distance(float weight)
