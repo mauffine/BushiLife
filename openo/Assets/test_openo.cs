@@ -2,15 +2,10 @@
 using System.Collections;
 
 public class test_openo : MonoBehaviour {
-	openo o;
+	bool isTrue = false;
 	// Use this for initialization
 	void Start () {
-		o = new openo(this);
-		var name = o.o("Test");
-		var realName = name.Get("name");
-		Debug.Log(realName.GetType());
-		Debug.Log(realName.value);
-		Debug.Log("test");
+		isTrue = this.o("Test").o("test", 50).As<bool>();
 	}
 	
 	// Update is called once per frame
@@ -18,10 +13,9 @@ public class test_openo : MonoBehaviour {
 	
 	}
 
-	bool Test(string name)
+	bool Test(string name, int size)
 	{
-		throw new System.Exception();
-		Debug.Log("name");
+		Debug.Log(size);
 		return true;
 	}
 }

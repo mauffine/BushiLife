@@ -116,7 +116,7 @@ public class The
 				| System.Reflection.BindingFlags.Public);
 
 		return info;
-	}
+	} 
 
 
 	public static bool Same(System.Type a, System.Type b)

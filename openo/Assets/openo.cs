@@ -27,7 +27,7 @@ public class openo
 					  parent.value.GetType()
 					  ))
 		{
-
+			this.parent = parent;
 		}
 
 		public f(string name, object function, openo parent)
@@ -37,7 +37,7 @@ public class openo
 					  parent.Type()
 					  ))
 		{
-
+			this.parent = parent;
 		}
 
 		public override openo Get(object request)
@@ -45,9 +45,9 @@ public class openo
 			object result;
 
 			if (request is object[])
-				result = The.Result(this.parent, (MethodInfo)this.value, (object[])request);
+				result = The.Result(this.parent.value, (MethodInfo)this.value, (object[])request);
 			else
-				result = The.Result(this.parent, (MethodInfo)this.value, request);
+				result = The.Result(this.parent.value, (MethodInfo)this.value, request);
 
 			return new openo(result);
 		}
@@ -96,6 +96,11 @@ public class openo
 	public openo(object value)
 	{
 		this.value = value;
+	}
+
+	public T As<T>()
+	{
+		return (T)this.value;
 	}
 
 	/// <summary>
@@ -179,7 +184,7 @@ public class openo
 
 	private openo TryGetVar(string name)
 	{
-		var function = The.Method(name, value.GetType());
+		var function = The.Value(name, value.GetType());
 
 		if (function != null)
 		{

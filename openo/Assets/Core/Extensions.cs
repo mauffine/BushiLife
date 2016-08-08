@@ -46,27 +46,39 @@ public static class ObjectExtensions
 	public static bool IsA<T>(this T source, string stringType)
 	{
 		return The.Same(source.GetType(), The.Type(stringType));
-		
+
 	}
 
-	public static bool HasMethod(this object objectToCheck, string methodName)
+
+	public static openo o(this object self, params object[] args)
 	{
-		try
+		if (args.Length > 1)
 		{
-			var type = objectToCheck.GetType();
-			var result = type.GetMethod(methodName);
-
-			if (result != null)
-				return true;
+			if (self is openo)
+				return ((openo)self).Get(args);
+			else
+			{
+				return (new openo((self)).Get(args));
+			}
 		}
-		catch (System.Reflection.AmbiguousMatchException)
+		else if (args.Length == 1)
 		{
-			// ambiguous means there is more than one result,
-			// which means: a method with that name does exist
-			return true;
+			if (self is openo)
+				return ((openo)self).Get(args[0]);
+			else
+			{
+				return (new openo((self)).Get(args[0]));
+			}
 		}
-
-		return false;
+		else
+		{
+			if (self is openo)
+				return ((openo)self).Get();
+			else
+			{
+				return (new openo((self)).Get());
+			}
+		}
 	}
 }
 
