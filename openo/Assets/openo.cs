@@ -10,32 +10,30 @@ using MethodInfo = System.Reflection.MethodInfo;
 /// </summary>
 public class openo
 {
+
 	public object value;
+
+
 
 	/// <summary>
 	/// open-function!
 	/// </summary>
 	public class f : openo
 	{
-		public string name;
 		public openo parent;
 
 		public f(string name, openo parent)
 			: base(
 				  The.Method(
 					  name,
-					  parent.value.GetType()
+					  parent.Type()
 					  ))
 		{
 			this.parent = parent;
 		}
 
 		public f(string name, object function, openo parent)
-			: base(
-				  The.Method(
-					  name,
-					  parent.Type()
-					  ))
+			: base(function)
 		{
 			this.parent = parent;
 		}
@@ -50,6 +48,35 @@ public class openo
 				result = The.Result(this.parent.value, (MethodInfo)this.value, request);
 
 			return new openo(result);
+		}
+	}   /// <summary>
+		/// open-function!
+		/// </summary>
+	public class v : openo
+	{
+		public object variable;
+		public openo parent;
+
+		public v(string name, openo parent)
+			: base(null)
+		{
+			this.parent = parent;
+
+			this.variable = The.Variable(name, this.parent.Type());
+			this.value = The.Value((System.Reflection.FieldInfo)this.variable, this.parent.value);
+
+		}
+
+		public v(object variable, openo parent)
+			: base(The.Value((System.Reflection.FieldInfo)variable, parent.value))
+		{
+			this.parent = parent;
+			this.variable = variable;
+		}
+
+		public override void Set(object request)
+		{
+			Make.The.Variable((System.Reflection.FieldInfo)this.value, this.parent.value, request);
 		}
 	}
 
@@ -92,6 +119,10 @@ public class openo
 		return System.Convert.ToSingle(o.value);
 	}
 
+	public virtual void Set(object request)
+	{
+		// do nothing
+	}
 
 	public openo(object value)
 	{
@@ -106,22 +137,37 @@ public class openo
 	/// <summary>
 	/// reveal! (with this.Get)
 	/// </summary>
-	public virtual openo o(openo request)
-	{
-		return this.Get(request);
-	}
-
-	/// <summary>
-	/// reveal! (with this.Get)
-	/// </summary>
 	public static openo O(openo request)
 	{
 		return new openo(request);
 	}
 
-	public virtual openo Get(params object[] request)
+	public virtual openo Get(object[] request)
 	{
-		return Get((openo)request);
+		return this.Get((object)request);
+	}
+
+	public virtual T Get<T>()
+	{
+		return (T)this.value;
+	}
+
+	public virtual openo Get()
+	{
+		return this; // by default
+	}
+
+	public virtual openo FirstMatch(params object[] requests)
+	{
+		openo result;
+
+		foreach (var r in requests)
+		{
+			result = Get(r);
+			if (result != null)
+				return result;
+		}
+		return null;
 	}
 
 	public virtual openo Get(object request)
@@ -133,11 +179,11 @@ public class openo
 		{
 			var strRequest = (string)request;
 
-			result = TryGetVar(strRequest);
+			result = this.TryGetVar(strRequest);
 			if (result != null)
 				return result;
 
-			result = TryGetFunction(strRequest);
+			result = this.TryGetFunction(strRequest);
 			if (result != null)
 				return result;
 
@@ -145,14 +191,14 @@ public class openo
 
 			if (int.TryParse(strRequest, out intRequest))
 			{
-				result = TryGetIndex(intRequest);
+				result = this.TryGetIndex(intRequest);
 				if (result != null)
 					return result;
 			}
 		}
 		else if (request is int)
 		{
-			result = TryGetIndex((int)request);
+			result = this.TryGetIndex((int)request);
 			if (result != null)
 				return result;
 		}
@@ -165,9 +211,20 @@ public class openo
 		return Get(request.value);
 	}
 
-	private openo TryGetIndex(int name)
+	private openo TryGetIndex(int index)
 	{
-		return null;
+		IList col = this.value as IList;
+
+		return new openo(col[index]);
+	}
+
+	public int Length()
+	{
+		ICollection col = this.value as ICollection;
+		if (col != null)
+			return col.Count;
+		else
+			return -1;
 	}
 
 	private openo TryGetFunction(string name)
@@ -184,11 +241,11 @@ public class openo
 
 	private openo TryGetVar(string name)
 	{
-		var function = The.Value(name, value.GetType());
+		var variable = The.Variable(name, value.GetType());
 
-		if (function != null)
+		if (variable != null)
 		{
-			return new f(name, function, this);
+			return new v(variable, this);
 		}
 
 		return null;

@@ -4,7 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
+
 using MethodInfo = System.Reflection.MethodInfo;
+using FieldInfo = System.Reflection.FieldInfo;
+using Reflection = System.Reflection;
 
 
 
@@ -40,6 +43,11 @@ public class An
 	}
 }
 
+public class Empty
+{
+
+}
+
 public class A
 {
 	public static T New<T>(params object[] parms)
@@ -48,6 +56,17 @@ public class A
 	}
 
 	public delegate T Make<T>(params object[] parms);
+}
+
+public class Make
+{
+	public class The
+	{
+		public static void Variable(FieldInfo variable, object parent, object value)
+		{
+			variable.SetValue(parent, value);
+		}
+	}
 }
 
 public class The
@@ -116,7 +135,19 @@ public class The
 				| System.Reflection.BindingFlags.Public);
 
 		return info;
-	} 
+	}
+
+
+	// source: http://stackoverflow.com/a/8442803
+	public static object Variable(string name, System.Type type)
+	{
+		return type.GetField(name, Reflection.BindingFlags.NonPublic | Reflection.BindingFlags.Instance);
+	}
+
+	public static object Value(FieldInfo variable, object parent)
+	{
+		return variable.GetValue(parent);
+	}
 
 
 	public static bool Same(System.Type a, System.Type b)

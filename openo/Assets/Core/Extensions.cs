@@ -73,10 +73,41 @@ public static class ObjectExtensions
 		else
 		{
 			if (self is openo)
-				return ((openo)self).Get();
+				return ((openo)self);
 			else
 			{
-				return (new openo((self)).Get());
+				return (new openo((self)));
+			}
+		}
+	}
+
+	public static openo os(this object self, params object[] args)
+	{
+		if (args.Length > 1)
+		{
+			if (self is openo)
+				return ((openo)self).FirstMatch(args);
+			else
+			{
+				return (new openo((self)).FirstMatch(args));
+			}
+		}
+		else if (args.Length == 1)
+		{
+			if (self is openo)
+				return ((openo)self).Get(args[0]);
+			else
+			{
+				return (new openo((self)).Get(args[0]));
+			}
+		}
+		else
+		{
+			if (self is openo)
+				return ((openo)self);
+			else
+			{
+				return (new openo((self)));
 			}
 		}
 	}

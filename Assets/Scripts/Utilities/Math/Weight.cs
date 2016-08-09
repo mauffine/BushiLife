@@ -192,7 +192,7 @@ public class Weight
 
     public virtual bool IsEmpty
     {
-        get
+        get	
         {
             return true;
         }
