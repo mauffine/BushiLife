@@ -2380,7 +2380,7 @@ MonoBehaviour:
     val: 10
     range: {x: 0, y: 10}
   health:
-    val: 10
+    val: 100
     range: {x: 0, y: 1}
   experience:
     val: 20
@@ -3563,6 +3563,10 @@ Prefab:
       propertyPath: blood
       value: 
       objectReference: {fileID: 142682, guid: f04f171fc22f7014eaff48b13104ec44, type: 2}
+    - target: {fileID: 0}
+      propertyPath: health.val
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 182586}
