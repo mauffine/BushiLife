@@ -10,10 +10,7 @@ using MethodInfo = System.Reflection.MethodInfo;
 /// </summary>
 public class openo
 {
-
 	public object value;
-
-
 
 	/// <summary>
 	/// open-function!
@@ -87,7 +84,6 @@ public class openo
 		}
 	}
 
-
 	/// <summary>
 	/// Credit: http://stackoverflow.com/a/11065781
 	/// </summary>
@@ -157,7 +153,7 @@ public class openo
 		return this; // by default
 	}
 
-	public virtual openo FirstMatch(params object[] requests)
+	public virtual openo FirstMatch(object[] requests)
 	{
 		openo result;
 
@@ -215,16 +211,19 @@ public class openo
 	{
 		IList col = this.value as IList;
 
+		if (col == null)
+			return this;
+
 		return new openo(col[index]);
 	}
 
 	public int Length()
-	{
+	{`
 		ICollection col = this.value as ICollection;
 		if (col != null)
 			return col.Count;
 		else
-			return -1;
+			return 1;
 	}
 
 	private openo TryGetFunction(string name)

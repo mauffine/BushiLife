@@ -4,43 +4,25 @@ using System;
 
 public abstract class Set : openo
 {
-	public virtual int Size
+	public openo First
 	{
 		get
 		{
-			return 0;
+			return this.o(0);
 		}
 	}
 
-	public Set First
+	public openo Last
 	{
 		get
 		{
-			return this.Get(0);
+			return this.o(this.Length() - 1);
 		}
 	}
 
-	public Set Last
+	public Set(object value)
+		: base(value)
 	{
-		get
-		{
-			return this.Get(Size - 1);
-		}
-	}
-
-	public Set()
-		: base(null)
-	{
-		
-	}
-
-	public abstract Set Get(int index);
-
-	public virtual Set Get(string name)
-	{
-		if (name == "")
-			return this;
-		else
-			throw new Exception("Invalid name");
+		public void 
 	}
 }
