@@ -2,9 +2,7 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-namespace UnityStandardAssets.Characters.ThirdPerson
-{
-    [RequireComponent(typeof (ThirdPersonCharacter))]
+[RequireComponent(typeof (ThirdPersonCharacter))]
     public class ThirdPersonUserControl : MonoBehaviour
     {
         public string playerNumber;
@@ -54,7 +52,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
             // read inputs
             float h = Input.GetAxis(this.playerNumber + " Horizontal");
-            float v = Input.GetAxis(this.playerNumber + " Vertical");
+            float v = -Input.GetAxis(this.playerNumber + " Vertical");
 
             // calculate move direction to pass to character
             if (m_Cam != null)
@@ -88,4 +86,3 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             this.m_Cam = this.myCamera.transform;
         }
     }
-}
