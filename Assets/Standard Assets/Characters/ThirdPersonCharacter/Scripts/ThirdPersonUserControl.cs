@@ -40,7 +40,11 @@ using UnityStandardAssets.CrossPlatformInput;
 
         private void Update()
         {
-            if (!m_Jump)
+        //TODO Finish additional input.
+        if (!lAttack)
+            lAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " LightAttack");
+
+        if (!m_Jump)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Jump");
             }
