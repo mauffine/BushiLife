@@ -7,7 +7,8 @@ using MethodInfo = System.Reflection.MethodInfo;
 /// <summary>
 /// open-object: a wrapper to peel open a .NET object, 
 /// revealing its members as strings with reflection
-/// </summary>
+/// </summary
+[System.Serializable]
 public class openo
 {
 	public object value;
@@ -15,6 +16,7 @@ public class openo
 	/// <summary>
 	/// open-function!
 	/// </summary>
+	[System.Serializable]
 	public class f : openo
 	{
 		public openo parent;
@@ -49,6 +51,7 @@ public class openo
 	}   /// <summary>
 		/// open-function!
 		/// </summary>
+	[System.Serializable]
 	public class v : openo
 	{
 		public object variable;
@@ -77,6 +80,7 @@ public class openo
 		}
 	}
 
+	[System.Serializable]
 	public class tuple : openo
 	{
 		public tuple(params object[] values) : base(values)
@@ -228,7 +232,7 @@ public class openo
 
 	private openo TryGetFunction(string name)
 	{
-		var function = The.Method(name, value.GetType());
+		var function = The.Method(name, this.value.GetType());
 
 		if (function != null)
 		{
@@ -240,7 +244,7 @@ public class openo
 
 	private openo TryGetVar(string name)
 	{
-		var variable = The.Variable(name, value.GetType());
+		var variable = The.Variable(name, this.value.GetType());
 
 		if (variable != null)
 		{
@@ -249,11 +253,6 @@ public class openo
 
 		return null;
 	}
-
-	//public virtual openo Get(int index)
-	//{
-	//	// TODO
-	//}
 
 	public System.Type Type()
 	{

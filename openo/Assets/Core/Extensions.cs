@@ -110,6 +110,7 @@ public static class ObjectExtensions
 			}
 		}
 	}
+	
 }
 
 public static class Vector2Extensions
