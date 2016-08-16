@@ -146,6 +146,8 @@ ModelImporter:
     7400040: NewAnim_MovingSlashRight2
     7400042: NewAnim_MovingSlashLeft1
     7400044: NewAnim_MovingSlashLeft2
+    7400046: NewAnim_HeavyAttack1
+    7400048: NewAnim_HeavyAttack2
     9500000: //RootNode
     13700000: Belt
     13700002: Belt_Flap_l
@@ -180,7 +182,7 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'New_Anims11' has import animation warnings that
+    animationImportWarnings: "\nClip 'New_Anims13' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
       improve retargeting quality.\n\t'Chibi_collar_JNT' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n"
@@ -1685,7 +1687,7 @@ ModelImporter:
       name: NewAnim_LiteAttack2
       takeName: New_Anims10
       firstFrame: 291
-      lastFrame: 302
+      lastFrame: 308
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1808,8 +1810,8 @@ ModelImporter:
     - serializedVersion: 16
       name: NewAnim_LiteAttack3
       takeName: New_Anims10
-      firstFrame: 303
-      lastFrame: 316
+      firstFrame: 309
+      lastFrame: 326
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1932,8 +1934,8 @@ ModelImporter:
     - serializedVersion: 16
       name: NewAnim_LiteAttack4
       takeName: New_Anims10
-      firstFrame: 318
-      lastFrame: 333
+      firstFrame: 327
+      lastFrame: 342
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -2056,8 +2058,8 @@ ModelImporter:
     - serializedVersion: 16
       name: NewAnim_LiteAttack5
       takeName: New_Anims10
-      firstFrame: 335
-      lastFrame: 363
+      firstFrame: 343
+      lastFrame: 364
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -2809,6 +2811,254 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Chibi_model2
+        weight: 0
+      - path: Chibi_Root_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT/Chibi_LKnee_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT/Chibi_LKnee_JNT/Chibi_Lfoot_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT/Chibi_Rknee_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT/Chibi_Rknee_JNT/Chibi_Rfoot_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT/Chibi_LFingers_JNT
+        weight: 0
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT/Chibi_Top_JNT
+        weight: 0
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT/Chibi_Rfinger_JNT
+        weight: 0
+      - path: firstlayer
+        weight: 0
+      - path: firstlayer/Belt
+        weight: 0
+      - path: firstlayer/Belt_Flap_l
+        weight: 0
+      - path: firstlayer/Belt_Flap_r
+        weight: 0
+      - path: firstlayer/Belt_Knot
+        weight: 0
+      - path: firstlayer/Leg_Pants
+        weight: 0
+      - path: firstlayer/Leg_Pants1
+        weight: 0
+      - path: pCube10
+        weight: 0
+      - path: pPlane1
+        weight: 0
+      - path: pPlane2
+        weight: 0
+      - path: secondlayer
+        weight: 0
+      - path: secondlayer/gloves_l
+        weight: 0
+      - path: secondlayer/gloves_l1
+        weight: 0
+      - path: secondlayer/Hair_Helmet
+        weight: 0
+      - path: secondlayer/Hair_Helmet/Hair_Dude
+        weight: 0
+      - path: secondlayer/Helmet
+        weight: 0
+      - path: thirdlayer
+        weight: 0
+      - path: thirdlayer/flaparmor01
+        weight: 0
+      - path: thirdlayer/flaparmor02
+        weight: 0
+      - path: thirdlayer/flaparmor03
+        weight: 0
+      - path: thirdlayer/flaparmor04
+        weight: 0
+      - path: thirdlayer/helmetthing01
+        weight: 0
+      - path: thirdlayer/helmetthing02
+        weight: 0
+      - path: thirdlayer/shoulderpad_l
+        weight: 0
+      - path: thirdlayer/shoulderpad_r
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: NewAnim_HeavyAttack1
+      takeName: New_Anims13
+      firstFrame: 455
+      lastFrame: 502
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Chibi_model2
+        weight: 0
+      - path: Chibi_Root_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT/Chibi_LKnee_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_LThigh_JNT/Chibi_LKnee_JNT/Chibi_Lfoot_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT/Chibi_Rknee_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_RThigh_JNT/Chibi_Rknee_JNT/Chibi_Rfoot_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT/Chibi_LFingers_JNT
+        weight: 0
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT/Chibi_Top_JNT
+        weight: 0
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT
+        weight: 1
+      - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT/Chibi_Rfinger_JNT
+        weight: 0
+      - path: firstlayer
+        weight: 0
+      - path: firstlayer/Belt
+        weight: 0
+      - path: firstlayer/Belt_Flap_l
+        weight: 0
+      - path: firstlayer/Belt_Flap_r
+        weight: 0
+      - path: firstlayer/Belt_Knot
+        weight: 0
+      - path: firstlayer/Leg_Pants
+        weight: 0
+      - path: firstlayer/Leg_Pants1
+        weight: 0
+      - path: pCube10
+        weight: 0
+      - path: pPlane1
+        weight: 0
+      - path: pPlane2
+        weight: 0
+      - path: secondlayer
+        weight: 0
+      - path: secondlayer/gloves_l
+        weight: 0
+      - path: secondlayer/gloves_l1
+        weight: 0
+      - path: secondlayer/Hair_Helmet
+        weight: 0
+      - path: secondlayer/Hair_Helmet/Hair_Dude
+        weight: 0
+      - path: secondlayer/Helmet
+        weight: 0
+      - path: thirdlayer
+        weight: 0
+      - path: thirdlayer/flaparmor01
+        weight: 0
+      - path: thirdlayer/flaparmor02
+        weight: 0
+      - path: thirdlayer/flaparmor03
+        weight: 0
+      - path: thirdlayer/flaparmor04
+        weight: 0
+      - path: thirdlayer/helmetthing01
+        weight: 0
+      - path: thirdlayer/helmetthing02
+        weight: 0
+      - path: thirdlayer/shoulderpad_l
+        weight: 0
+      - path: thirdlayer/shoulderpad_r
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: NewAnim_HeavyAttack2
+      takeName: New_Anims13
+      firstFrame: 503
+      lastFrame: 528
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
