@@ -37,7 +37,8 @@ public class ThirdPersonCharacter : MonoBehaviour
 	}
 
 
-	public void Move(Vector3 move, bool jump, bool dodge)
+    public void Move(Vector3 move, bool jump, bool lAttack = false, bool dodge = false, 
+        bool run = false)
 	{
 		// convert the world relative moveInput vector into a local-relative
 		// turn amount and forward amount required to head in the desired
@@ -48,8 +49,9 @@ public class ThirdPersonCharacter : MonoBehaviour
 		move = Vector3.ProjectOnPlane(move, m_GroundNormal);
 		m_TurnAmount = Mathf.Atan2(move.x, move.z);
 		m_ForwardAmount = move.z;
-
-		ApplyExtraTurnRotation();
+        if (run)
+            m_ForwardAmount *= 2;
+            ApplyExtraTurnRotation();
 
 		// control and velocity handling is different when grounded and airborne:
 		if (m_IsGrounded)
@@ -63,10 +65,10 @@ public class ThirdPersonCharacter : MonoBehaviour
             
 
 		// send input and other state parameters to the animator
-		UpdateAnimator(move, dodge);
+		UpdateAnimator(move, dodge, lAttack);
 	}
         
-	void UpdateAnimator(Vector3 move, bool dodge)
+	void UpdateAnimator(Vector3 move, bool dodge, bool lAttack)
 	{
 		// update the animator parameters
 		m_Animator.SetFloat("Speed", m_ForwardAmount, 0.1f, Time.deltaTime);
@@ -81,6 +83,13 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             if (dodge)
                 m_Animator.SetTrigger("Dodge");
+            if (lAttack)
+            {
+                m_Animator.SetTrigger("Light Attack");
+                int comboNum = m_Animator.GetInteger("Combo");
+                if (comboNum < 5)
+                    m_Animator.SetInteger("Combo", comboNum + 1);
+            }
         }
 
 		// calculate which leg is behind, so as to leave that leg trailing in the jump animation
@@ -172,5 +181,9 @@ public class ThirdPersonCharacter : MonoBehaviour
 			m_Animator.applyRootMotion = false;
 		}
 	}
+    public void ClearCombo()
+    {
+        m_Animator.SetInteger("Combo", 0);
+    }
 }
 

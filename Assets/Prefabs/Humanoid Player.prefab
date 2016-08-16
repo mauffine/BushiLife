@@ -927,7 +927,7 @@ MonoBehaviour:
   m_RunCycleLegOffset: 0.2
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 0.3
+  m_GroundCheckDistance: 0.4
   swordbox: {fileID: 190600}
   jumpAttackHB: {fileID: 144302}
 --- !u!114 &11474526

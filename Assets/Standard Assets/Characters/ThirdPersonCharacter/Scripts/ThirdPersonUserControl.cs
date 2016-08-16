@@ -67,10 +67,11 @@ public class ThirdPersonUserControl : MonoBehaviour
             //  we use world-relative directions in the case of no main camera
             m_Move = v*Vector3.forward + h*Vector3.right;
         }
-
         // pass all parameters to the character control script
-        m_Character.Move(m_Move, m_Jump, this.dodge);
+        m_Character.Move(m_Move, m_Jump, this.lAttack, this.dodge, this.run);
 
+        if (this.m_Move == Vector3.zero)
+            this.run = false;
         m_Jump      = false;
         lAttack     = false;
         HAttack     = false;
@@ -87,6 +88,9 @@ public class ThirdPersonUserControl : MonoBehaviour
             dodge = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Dodge");
         if (!blocking)
             blocking = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Block");
+        if (!run)
+            run = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Run");
+
     }
 
     public void SetPlayerNumber(int _playernum)
