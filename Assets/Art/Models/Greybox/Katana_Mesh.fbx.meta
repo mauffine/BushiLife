@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: 2a78e881ec13c9745b3c80719cca0ed3
-timeCreated: 1471226788
+guid: 1ffa0bd1eda200740a47ed650959587f
+timeCreated: 1471227719
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pPlane1
-    100004: pPlane3
     400000: //RootNode
-    400002: pPlane1
-    400004: pPlane3
-    2300000: pPlane1
-    2300002: pPlane3
-    3300000: pPlane1
-    3300002: pPlane3
-    4300000: pPlane1
-    4300002: pPlane3
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: sword1
   materials:
     importMaterials: 1
     materialName: 0
@@ -41,7 +34,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 20
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

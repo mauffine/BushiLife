@@ -959,13 +959,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 423496}
   - 95: {fileID: 9575618}
-  - 114: {fileID: 11466110}
-  - 114: {fileID: 11420532}
   - 114: {fileID: 11401652}
   - 114: {fileID: 11437200}
   - 114: {fileID: 11488586}
   - 54: {fileID: 5437284}
   - 136: {fileID: 13688792}
+  - 114: {fileID: 11406866}
+  - 114: {fileID: 11444256}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -2351,8 +2351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c26a84c167f7d45b76318ed4c4c25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 0}
---- !u!114 &11420532
+  stats: {fileID: 11437200}
+--- !u!114 &11406866
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2360,11 +2360,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 182586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
+  m_Script: {fileID: 11500000, guid: 36d00852e5e1182468920643d2305ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumber: P1
-  myCamera: {fileID: 0}
+  m_MovingTurnSpeed: 360
+  m_StationaryTurnSpeed: 180
+  m_JumpPower: 12
+  m_GravityMultiplier: 2
+  m_RunCycleLegOffset: 0.2
+  m_MoveSpeedMultiplier: 1
+  m_AnimSpeedMultiplier: 1
+  m_GroundCheckDistance: 0.1
+  speed: 300
+  lightAttackMoveSpeed: 5
+  heavyAttackMoveSpeed: 5
+  dodgeSpeed: 500
+  runningModifier: 2
+  JumpAttaclHB: {fileID: 117932}
+  Swordbox: {fileID: 179894}
+  blood: {fileID: 0}
 --- !u!114 &11437200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2388,6 +2402,19 @@ MonoBehaviour:
   level:
     val: 20
     range: {x: 0, y: 100}
+--- !u!114 &11444256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230130a185c22b04f9a5c5cc1d7a19f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNumber: P1
+  myCamera: {fileID: 0}
 --- !u!114 &11454050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2400,33 +2427,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max: 100
---- !u!114 &11466110
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 180
-  m_JumpPower: 10
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 0.1
-  speed: 200
-  lightAttackMoveSpeed: 500
-  heavyAttackMoveSpeed: 0
-  dodgeSpeed: 350
-  runningModifier: 2
-  JumpAttaclHB: {fileID: 117932}
-  Swordbox: {fileID: 179894}
-  blood: {fileID: 142682, guid: f04f171fc22f7014eaff48b13104ec44, type: 2}
 --- !u!114 &11488586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3549,7 +3549,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: dodgeSpeed
-      value: 350
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: JumpAttaclHB
@@ -3566,6 +3566,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: health.val
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11437200}
+    - target: {fileID: 0}
+      propertyPath: playerNumber
+      value: P1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

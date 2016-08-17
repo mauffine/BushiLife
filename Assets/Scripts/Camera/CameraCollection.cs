@@ -50,7 +50,7 @@ public class CameraCollection : MonoBehaviour
 		newCamera.GetComponentInChildren<CameraController>().Init(player.transform, playerNumber);
 
 		newCamera.transform.parent = this.transform;
-        player.GetComponent<Player>().SetCamera(newCamera.GetComponentInChildren<Camera>());
+        player.GetComponent<ThirdPersonUserControl>().SetCamera(newCamera.GetComponentInChildren<Camera>());
 		try
 		{
 			this.Validate();
