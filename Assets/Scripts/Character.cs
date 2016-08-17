@@ -20,7 +20,7 @@ public class Character : MonoBehaviour
     {
         if (stats.health.val <= 0)
         {
-            GetComponent<ThirdPerson>().Die();
+            //GetComponent<ThirdPerson>().Die();
         }
     }
     void TakeDamage(Stat self, Stat other, Transform location)
@@ -31,7 +31,7 @@ public class Character : MonoBehaviour
     {
         Character otherCharacter = col.GetComponentInParent<Character>();
 
-        if (col.CompareTag("HurtBox") && GetComponent<ThirdPerson>().CheckIFrames(col))
+        if (col.CompareTag("HurtBox")) //&& GetComponent<Third>().CheckIFrames(col))
         {
             stats.health.recieve(stats.health, otherCharacter.stats.attack, this.transform);  //col.GetComponent<Stats>().attack.val);
             GetComponentInChildren<HealthCylinder>().UpdateHPBar(stats.health.val);

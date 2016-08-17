@@ -473,7 +473,7 @@ GameObject:
   - 114: {fileID: 11457512}
   - 114: {fileID: 11439868}
   m_Layer: 0
-  m_Name: Humanoid Player
+  m_Name: Player 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -506,7 +506,7 @@ GameObject:
   - 65: {fileID: 6512898}
   m_Layer: 0
   m_Name: Swordbox
-  m_TagString: Untagged
+  m_TagString: HurtBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1198,7 +1198,7 @@ BoxCollider:
   m_GameObject: {fileID: 190600}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.11846364, y: 0.137874, z: 1.2745879}
   m_Center: {x: 0.00027178854, y: -0.000034591867, z: 0.36646813}

@@ -26,7 +26,7 @@ public class ThirdPersonCharacter : MonoBehaviour
 	Vector3 m_GroundNormal;
 	CapsuleCollider m_Capsule;
 
-	void Start()
+    void Start()
 	{
 		m_Animator = GetComponent<Animator>();
 		m_Rigidbody = GetComponent<Rigidbody>();
@@ -161,11 +161,7 @@ public class ThirdPersonCharacter : MonoBehaviour
 
 	void CheckGroundStatus()
 	{
-		RaycastHit hitInfo;
-#if UNITY_EDITOR
-		// helper to visualise the ground check ray in the scene view
-		Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance));
-#endif
+        RaycastHit hitInfo;
 		// 0.1f is a small offset to start the ray from inside the character
 		// it is also good to note that the transform position in the sample assets is at the base of the character
 		if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
@@ -180,10 +176,25 @@ public class ThirdPersonCharacter : MonoBehaviour
 			m_GroundNormal = Vector3.up;
 			m_Animator.applyRootMotion = false;
 		}
-	}
+#if UNITY_EDITOR
+        // helper to visualise the ground check ray in the scene view
+        if (hitInfo.point != Vector3.zero)
+            Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance), Color.blue);
+        else
+            Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance), Color.red);
+#endif
+    }
     public void ClearCombo()
     {
         m_Animator.SetInteger("Combo", 0);
+    }
+    public void TurnSwordOn()
+    {
+        swordbox.SetActive(true);
+    }
+    public void TurnSwordOff()
+    {
+        swordbox.SetActive(false);
     }
 }
 
