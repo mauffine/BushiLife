@@ -15,6 +15,7 @@ public class ThirdPersonCharacter : MonoBehaviour
 	[SerializeField] float m_GroundCheckDistance = 0.1f;
     [SerializeField] GameObject swordbox;
     [SerializeField] GameObject jumpAttackHB;
+    [SerializeField] ParticleSystem blood;
 
 	Rigidbody m_Rigidbody;
 	Animator m_Animator;
@@ -26,6 +27,7 @@ public class ThirdPersonCharacter : MonoBehaviour
 	Vector3 m_GroundNormal;
 	CapsuleCollider m_Capsule;
 
+    float timer;
     void Start()
 	{
 		m_Animator = GetComponent<Animator>();
@@ -36,8 +38,14 @@ public class ThirdPersonCharacter : MonoBehaviour
 		m_OrigGroundCheckDistance = m_GroundCheckDistance;
 	}
 
-
-    public void Move(Vector3 move, bool jump, bool lAttack = false, bool dodge = false, 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Bleed();
+        }
+    }
+    public void Move(Vector3 move, bool jump, bool lAttack = false, bool hAttack = false, bool dodge = false, 
         bool run = false)
 	{
 		// convert the world relative moveInput vector into a local-relative
@@ -47,7 +55,10 @@ public class ThirdPersonCharacter : MonoBehaviour
 			move = transform.InverseTransformDirection(move);
 		CheckGroundStatus();
 		move = Vector3.ProjectOnPlane(move, m_GroundNormal);
-		m_TurnAmount = Mathf.Atan2(move.x, move.z);
+#if UNITY_EDITOR
+        Debug.DrawLine(transform.position, transform.position + m_Rigidbody.velocity / 4, Color.white);
+#endif
+        m_TurnAmount = Mathf.Atan2(move.x, move.z);
 		m_ForwardAmount = move.z;
         if (run)
             m_ForwardAmount *= 2;
@@ -65,10 +76,10 @@ public class ThirdPersonCharacter : MonoBehaviour
             
 
 		// send input and other state parameters to the animator
-		UpdateAnimator(move, dodge, lAttack);
+		UpdateAnimator(move, dodge, lAttack, hAttack);
 	}
         
-	void UpdateAnimator(Vector3 move, bool dodge, bool lAttack)
+	void UpdateAnimator(Vector3 move, bool dodge, bool lAttack, bool hAttack)
 	{
 		// update the animator parameters
 		m_Animator.SetFloat("Speed", m_ForwardAmount, 0.1f, Time.deltaTime);
@@ -87,7 +98,14 @@ public class ThirdPersonCharacter : MonoBehaviour
             {
                 m_Animator.SetTrigger("Light Attack");
                 int comboNum = m_Animator.GetInteger("Combo");
-                if (comboNum < 5)
+                if (comboNum < 1)
+                    m_Animator.SetInteger("Combo", comboNum + 1);
+            }
+            else if (hAttack)
+            {
+                m_Animator.SetTrigger("Heavy Attack");
+                int comboNum = m_Animator.GetInteger("Combo");
+                if (comboNum < 1)
                     m_Animator.SetInteger("Combo", comboNum + 1);
             }
         }
@@ -184,6 +202,17 @@ public class ThirdPersonCharacter : MonoBehaviour
             Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance), Color.red);
 #endif
     }
+    //bool CheckIFrames(Collider _col)
+    //{
+    //    if ()
+    //    return true
+    //}
+    public void Bleed()
+    {
+        blood.Emit(10);
+    }
+
+    //Mecanim events
     public void ClearCombo()
     {
         m_Animator.SetInteger("Combo", 0);
@@ -191,10 +220,12 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void TurnSwordOn()
     {
         swordbox.SetActive(true);
+        m_Animator.SetInteger("Combo", m_Animator.GetInteger("Combo") - 1);
     }
     public void TurnSwordOff()
     {
         swordbox.SetActive(false);
     }
+
 }
 

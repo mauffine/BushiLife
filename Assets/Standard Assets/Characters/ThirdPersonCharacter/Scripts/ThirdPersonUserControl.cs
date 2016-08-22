@@ -16,22 +16,22 @@ public class ThirdPersonUserControl : MonoBehaviour
     private bool blocking;
     private bool dodge;
     private bool lAttack;
-    private bool HAttack;
+    private bool hAttack;
     private bool run;
 
     private void Start()
     {
         // get the transform of the main camera
-        if (Camera.main != null)
-        {
-            m_Cam = Camera.main.transform;
-        }
-        else
-        {
-            Debug.LogWarning(
-                "Warning: no main camera found. Third person character needs a Camera tagged \"MainCamera\", for camera-relative controls.");
-            // we use self-relative controls in this case, which probably isn't what the user wants, but hey, we warned them!
-        }
+        //if (Camera.main != null)
+        //{
+        //    m_Cam = Camera.main.transform;
+        //}
+        //else
+        //{
+        //    Debug.LogWarning(
+        //        "Warning: no main camera found. Third person character needs a Camera tagged \"MainCamera\", for camera-relative controls.");
+        //    // we use self-relative controls in this case, which probably isn't what the user wants, but hey, we warned them!
+        //}
 
         // get the third person character ( this should never be null due to require component )
         m_Character = GetComponent<ThirdPersonCharacter>();
@@ -68,13 +68,13 @@ public class ThirdPersonUserControl : MonoBehaviour
             m_Move = v*Vector3.forward + h*Vector3.right;
         }
         // pass all parameters to the character control script
-        m_Character.Move(m_Move, m_Jump, this.lAttack, this.dodge, this.run);
+        m_Character.Move(m_Move, m_Jump, this.lAttack, this.hAttack, this.dodge, this.run);
 
         if (this.m_Move == Vector3.zero)
             this.run = false;
         m_Jump      = false;
         lAttack     = false;
-        HAttack     = false;
+        hAttack     = false;
         blocking    = false;
         dodge       = false;
     }
@@ -82,8 +82,8 @@ public class ThirdPersonUserControl : MonoBehaviour
     {
         if (!lAttack)
             lAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " LAttack");
-        if (!HAttack)
-            HAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " HAttack");
+        if (!hAttack)
+            hAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " HAttack");
         if (!dodge)
             dodge = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Dodge");
         if (!blocking)

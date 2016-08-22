@@ -35,6 +35,7 @@ public class Character : MonoBehaviour
         {
             stats.health.recieve(stats.health, otherCharacter.stats.attack, this.transform);  //col.GetComponent<Stats>().attack.val);
             GetComponentInChildren<HealthCylinder>().UpdateHPBar(stats.health.val);
+            //GetComponent<ThirdPersonCharacter>().Bleed();
         }
     }
 
