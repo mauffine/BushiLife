@@ -91,6 +91,13 @@ public class ThirdPersonCharacter : MonoBehaviour
         if (!m_IsGrounded)
         {
             m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
+            if (hAttack)
+            {
+                m_Animator.SetTrigger("Heavy Attack");
+                int comboNum = m_Animator.GetInteger("Combo");
+                if (comboNum < 1)
+                    m_Animator.SetInteger("Combo", comboNum + 1);
+            }
         }
         else
         {
@@ -214,6 +221,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     }
     public void Die()
     {
+        m_Animator.SetBool("Dead", true);
 
     }
     //Mecanim events
