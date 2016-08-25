@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44994837, g: 0.5000497, b: 0.57601154, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1225,30 +1225,6 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-<<<<<<< HEAD
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &201277299
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 201277296}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &201277300
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 201277296}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!1 &218955872
-=======
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
@@ -1261,7 +1237,6 @@ Transform:
     m_Extent: {x: 0.13491048, y: 0.08044055, z: 0.13538063}
   m_DirtyAABB: 0
 --- !u!1 &143305483
->>>>>>> Merff_edits
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100178, guid: 7dab80e78b724b8418ee01ec9b75ca6f, type: 3}
@@ -2188,13 +2163,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 4
---- !u!1 &459772894
-=======
   m_RootOrder: 10
 --- !u!1 &252473136
->>>>>>> Merff_edits
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2259,15 +2229,9 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 6
---- !u!114 &459772896
-MonoBehaviour:
-=======
   m_RootOrder: 13
 --- !u!1 &268078399
 GameObject:
->>>>>>> Merff_edits
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 190112, guid: 2b20cd0ffe0720144bbfcca8c8fcecd2, type: 2}
   m_PrefabInternal: {fileID: 300963746}
@@ -2567,16 +2531,6 @@ BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 480734996}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.14, y: -9.88, z: 30.39}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
---- !u!1 &494740722
-=======
   m_GameObject: {fileID: 331276003}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -2585,7 +2539,6 @@ BoxCollider:
   m_Size: {x: 0.01, y: 0.01, z: 0.01}
   m_Center: {x: 0.000000007450581, y: -0.0000000018626451, z: 0}
 --- !u!1 &360614949
->>>>>>> Merff_edits
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100044, guid: 7dab80e78b724b8418ee01ec9b75ca6f, type: 3}
@@ -5843,10 +5796,6 @@ Transform:
   - {fileID: 494740723}
   - {fileID: 9670013}
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 2
---- !u!1 &824062942
-=======
   m_RootOrder: 1
 --- !u!1 &824062942
 GameObject:
@@ -8110,7 +8059,6 @@ MeshCollider:
   m_Convex: 0
   m_Mesh: {fileID: 4300124, guid: 7dab80e78b724b8418ee01ec9b75ca6f, type: 3}
 --- !u!1 &1072968802
->>>>>>> Merff_edits
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 183528, guid: 2b20cd0ffe0720144bbfcca8c8fcecd2, type: 2}
@@ -9721,43 +9669,8 @@ MeshRenderer:
 --- !u!33 &1266127501
 MeshFilter:
   m_ObjectHideFlags: 0
-<<<<<<< HEAD
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1132088476}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1132088480
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1132088476}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 9.9, y: 0.531, z: 3.19}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
---- !u!114 &1132088481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1132088476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4c26a84c167f7d45b76318ed4c4c25c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stats: {fileID: 0}
---- !u!114 &1132088482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-=======
   m_PrefabParentObject: {fileID: 3300012, guid: 7dab80e78b724b8418ee01ec9b75ca6f,
     type: 3}
->>>>>>> Merff_edits
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1266127498}
   m_Mesh: {fileID: 4300160, guid: 7dab80e78b724b8418ee01ec9b75ca6f, type: 3}
@@ -11454,11 +11367,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450234, guid: 45ccf5a7ea9e45b4daca11e2a9b28df7, type: 2}
       propertyPath: m_LocalPosition.z
-<<<<<<< HEAD
-      value: 9.63
-=======
       value: 0
->>>>>>> Merff_edits
       objectReference: {fileID: 0}
     - target: {fileID: 450234, guid: 45ccf5a7ea9e45b4daca11e2a9b28df7, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11483,14 +11392,6 @@ Prefab:
     - target: {fileID: 184318, guid: 45ccf5a7ea9e45b4daca11e2a9b28df7, type: 2}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 2a78e881ec13c9745b3c80719cca0ed3, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3f5c96efcecee3241860c82733dfb978, type: 2}
-    - target: {fileID: 400002, guid: 2a78e881ec13c9745b3c80719cca0ed3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.686
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45ccf5a7ea9e45b4daca11e2a9b28df7, type: 2}
@@ -13522,8 +13423,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.0100000035
   m_Center: {x: 0.000000005122274, y: 0, z: -0.0000000055879354}
-<<<<<<< HEAD
-=======
 --- !u!1 &1906328999
 GameObject:
   m_ObjectHideFlags: 0
@@ -13700,7 +13599,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.021459863, y: 0.0137768015, z: 0.12284058}
     m_Extent: {x: 0.25223053, y: 0.22282907, z: 0.1995393}
   m_DirtyAABB: 0
->>>>>>> Merff_edits
 --- !u!1 &1948589293
 GameObject:
   m_ObjectHideFlags: 0

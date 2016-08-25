@@ -1,16 +1,21 @@
-﻿Shader "Custom/CelShadingForward" {
+﻿Shader "Custom/CelShadingForwardWithAlpha" {
 	Properties{
 		_Color("Color", Color) = (1, 1, 1, 1)
-		_MainTex("Albedo (RGB)", 2D) = "white" {}
+		_MainTex("Albedo (RGBA)", 2D) = "white" {}
 	}
 		SubShader{
 		Tags{
-		"RenderType" = "Opaque"
+
+		"RenderType" = "Transparent"
+		"Queue" = "Transparent"
 	}
+		Blend SrcAlpha OneMinusSrcAlpha
 		LOD 200
 
+
+
 		CGPROGRAM 
-		#pragma surface surf CelShadingForward 
+		#pragma surface surf CelShadingForward alpha
 		#pragma target 3.0
 
 		half4 LightingCelShadingForward(SurfaceOutput s, half3 lightDir, half atten) {
@@ -32,9 +37,10 @@
 
 	void surf(Input IN, inout SurfaceOutput o) {
 		// Albedo comes from a texture tinted by color
-		fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
+		fixed4 texColor = tex2D(_MainTex, IN.uv_MainTex);
+		fixed4 c = texColor * _Color;
 		o.Albedo = c.rgb;
-		o.Alpha = c.a;
+		o.Alpha = texColor.a;
 	}
 	ENDCG
 	}
