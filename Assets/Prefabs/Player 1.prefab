@@ -485,11 +485,11 @@ GameObject:
   - 95: {fileID: 9580488}
   - 54: {fileID: 5484270}
   - 136: {fileID: 13671682}
-  - 114: {fileID: 11474526}
   - 114: {fileID: 11451038}
   - 114: {fileID: 11457512}
   - 114: {fileID: 11439868}
   - 82: {fileID: 82000013793976132}
+  - 114: {fileID: 114000011503908290}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -1382,19 +1382,6 @@ MonoBehaviour:
   level:
     val: 20
     range: {x: 0, y: 100}
---- !u!114 &11474526
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNumber: 
-  myCamera: {fileID: 0}
 --- !u!136 &13621164
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -4279,3 +4266,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114000011503908290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2febbcb738c854f9570d52c4d4e20e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNumber: P1
+  myCamera: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
