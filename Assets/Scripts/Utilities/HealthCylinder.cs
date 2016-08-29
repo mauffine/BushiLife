@@ -20,5 +20,7 @@ public class HealthCylinder : MonoBehaviour {
     {
         this.current = _newVal;
         transform.localScale = new Vector3(transform.localScale.x, (this.current / this.max) * this.scaleOffset , transform.localScale.z);
+        if (transform.localScale.y < 0)
+            transform.localScale = new Vector3(transform.localScale.x, 0, transform.localScale.z);
     }
 }

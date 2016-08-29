@@ -16,10 +16,6 @@ public class Character : MonoBehaviour
     }
     void Update()
     {
-        if (stats.health.val <= 0)
-        {
-            //GetComponent<ThirdPerson>().Die();
-        }
     }
     void TakeDamage(Stat self, Stat other, Transform location)
     {
@@ -48,6 +44,11 @@ public class Character : MonoBehaviour
             }
             GetComponentInChildren<HealthCylinder>().UpdateHPBar(stats.health.val);
             GetComponent<ThirdPersonCharacter>().Bleed();
+
+            if (stats.health.val <= 0)
+            {
+                GetComponent<ThirdPersonCharacter>().Die();
+            }
         }
     }
 

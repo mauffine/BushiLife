@@ -30,6 +30,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     CapsuleCollider m_Capsule;
     float timer;
     bool invincible;
+    bool blocking = false;
+
     void Start()
     {
         m_Animator = GetComponent<Animator>();
@@ -47,8 +49,8 @@ public class ThirdPersonCharacter : MonoBehaviour
             Bleed();
         }
     }
-    public void Move(Vector3 move, bool jump, bool lAttack = false, bool hAttack = false, bool dodge = false,
-        bool run = false)
+    public void Move(Vector3 move, bool jump, bool lAttack = false, bool hAttack = false, bool block = false,
+        bool dodge = false, bool run = false)
     {
         // convert the world relative moveInput vector into a local-relative
         // turn amount and forward amount required to head in the desired
@@ -213,6 +215,11 @@ public class ThirdPersonCharacter : MonoBehaviour
     }
     public bool CheckIFrames(Collider _col)
     {
+        Vector3 colDir = _col.transform.position - transform.position;
+        Debug.DrawLine(transform.position, _col.transform.position);
+        float angle = Vector3.Angle(colDir, transform.forward);
+        if (this.blocking && angle < 45)
+            return true;
         return this.invincible;
     }
     public void Bleed()
@@ -222,7 +229,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void Die()
     {
         m_Animator.SetBool("Dead", true);
-
+        this.invincible = true;
     }
     //Mecanim events
     public void ClearCombo()
@@ -253,5 +260,22 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         invincible = false;
     }
+    public void JumpAttackOn()
+    {
+        this.jumpAttackHB.SetActive(true);
+    }
+    public void JumpAttackOff()
+    {
+        this.jumpAttackHB.SetActive(false);
+    }
+    public void BlockOn()
+    {
+        blocking = true;
+    }
+    public void BlockOff()
+    {
+        blocking = false;
+    }
+
 }
 
