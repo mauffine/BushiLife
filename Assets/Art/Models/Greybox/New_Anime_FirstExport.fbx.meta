@@ -159,7 +159,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -170,10 +170,10 @@ ModelImporter:
     animationRetargetingWarnings: "\nRetargeting quality report for clip 'New_Anims5':\n\tLeftLowerLeg
       average position error 5.3 mm and maximum position error 31.4 mm at time 3:
       0 (57.6%) Frame 72\n\tLeftFoot average position error 0.6 mm and maximum position
-      error 2.8 mm at time 2:22 (56.0%) Frame 70\n\tRightLowerLeg average position
-      error 3.6 mm and maximum position error 26.8 mm at time 3:10 (65.6%) Frame 82\n\tRightFoot
-      average position error 0.3 mm and maximum position error 1.1 mm at time 1:21
-      (36.0%) Frame 45\n\tLeftUpperArm average position error 35.8 mm and maximum
+      error 2.8 mm at time 2: 3 (40.8%) Frame 51\n\tRightLowerLeg average position
+      error 3.6 mm and maximum position error 26.8 mm at time 1:22 (36.8%) Frame 46\n\tRightFoot
+      average position error 0.3 mm and maximum position error 1.1 mm at time 3: 9
+      (64.8%) Frame 81\n\tLeftUpperArm average position error 35.8 mm and maximum
       position error 100.2 mm at time 1: 1 (20.0%) Frame 25\n\tLeftLowerArm average
       position error 18.2 mm and maximum position error 50.9 mm at time 1:13 (29.6%)
       Frame 37\n\tLeftHand average position error 9.3 mm and maximum position error
@@ -182,7 +182,7 @@ ModelImporter:
       average position error 16.0 mm and maximum position error 44.3 mm at time 1:16
       (32.0%) Frame 40\n\tRightHand average position error 5.8 mm and maximum position
       error 23.6 mm at time 0:10 (8.0%) Frame 10\n\tHead average position error 36.3
-      mm and maximum position error 72.3 mm at time 2: 6 (43.2%) Frame 54\n"
+      mm and maximum position error 72.3 mm at time 3:18 (72.0%) Frame 90\n"
     animationDoRetargetingWarnings: 1
     animationCompression: 3
     animationRotationError: 0.5
@@ -762,7 +762,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 20
+    globalScale: 10
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -978,72 +978,72 @@ ModelImporter:
       scale: {x: 0.45455477, y: 0.45455477, z: 0.45455477}
       transformModified: 1
     - name: nurbsCircle4
-      position: {x: -0.12398945, y: 0.3491171, z: 0.002157125}
+      position: {x: -0.061994724, y: 0.17455855, z: 0.0010785625}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: nurbsCircle5
-      position: {x: -0.033631455, y: -0.17304851, z: 0.0040751603}
+      position: {x: -0.016815728, y: -0.086524256, z: 0.0020375801}
       rotation: {x: -0.07477397, y: -0.052583754, z: 0.99511653, w: 0.037240468}
       scale: {x: 0.51623505, y: 0.51623505, z: 0.51623505}
       transformModified: 1
     - name: nurbsCircle6
-      position: {x: -0, y: 0.36245114, z: 0}
+      position: {x: -0, y: 0.18122557, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: nurbsCircle2
-      position: {x: 0.0032273727, y: 0.15757197, z: -0.022527717}
+      position: {x: 0.0016136863, y: 0.078785986, z: -0.0112638585}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: nurbsCircle9
-      position: {x: -0.0019116672, y: 0.14922616, z: 0.0077140136}
+      position: {x: -0.0009558336, y: 0.07461308, z: 0.0038570068}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: nurbsCircle10
-      position: {x: -6.508214e-14, y: 0.112339325, z: 0.013756222}
+      position: {x: -3.254107e-14, y: 0.056169663, z: 0.006878111}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: nurbsCircle11
-      position: {x: -0.13254967, y: 0.019483423, z: 0}
+      position: {x: -0.06627484, y: 0.009741711, z: 0}
       rotation: {x: 0, y: -0, z: -0.6277344, w: 0.77842754}
       scale: {x: 0.36600608, y: 0.36600608, z: 0.36600608}
       transformModified: 1
     - name: nurbsCircle12
-      position: {x: -0.02302265, y: -0.34928817, z: 0}
+      position: {x: -0.011511325, y: -0.17464408, z: 0}
       rotation: {x: 0.032335006, y: 0.029191643, z: 0.5942818, w: 0.80307627}
       scale: {x: 2.7321951, y: 2.7321951, z: 2.7321951}
       transformModified: 1
     - name: nurbsCircle13
-      position: {x: -0.1623253, y: -0.028938323, z: -7.0138334e-15}
+      position: {x: -0.08116265, y: -0.014469162, z: -3.5069167e-15}
       rotation: {x: 0.00042483205, y: 0.022956803, z: -0.018497668, w: 0.99956524}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: nurbsCircle14
-      position: {x: 0.13541551, y: 0.020407448, z: 5.8286706e-17}
+      position: {x: 0.067707755, y: 0.010203724, z: 2.9143353e-17}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: nurbsCircle15
-      position: {x: 0.12012232, y: -0.028644556, z: 5.193068e-15}
+      position: {x: 0.06006116, y: -0.014322278, z: 2.596534e-15}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: nurbsCircle16
-      position: {x: 0.122894384, y: -0.01754991, z: 5.3346215e-15}
+      position: {x: 0.061447192, y: -0.008774955, z: 2.6673108e-15}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: nurbsCircle8
-      position: {x: 0.13181871, y: 0.34552082, z: 0.002157125}
+      position: {x: 0.065909356, y: 0.17276041, z: 0.0010785625}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: nurbsCircle7
-      position: {x: 0.025774168, y: -0.17505161, z: 0.0040751603}
+      position: {x: 0.012887084, y: -0.08752581, z: 0.0020375801}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
@@ -1093,117 +1093,117 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Root_JNT
-      position: {x: 0.0016328582, y: 0.35181648, z: 0.002157125}
+      position: {x: 0.0008164291, y: 0.17590824, z: 0.0010785625}
       rotation: {x: 0.47686157, y: -0.55211717, z: -0.44705254, w: 0.5176038}
       scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
       transformModified: 1
     - name: Chibi_Spine_JNT
-      position: {x: -0.1291798, y: 0.016491627, z: -0.0014377224}
+      position: {x: -0.0645899, y: 0.008245814, z: -0.0007188612}
       rotation: {x: -0.9910863, y: 0.099049576, z: -0.0041325246, w: 0.08899487}
       scale: {x: 1.0000001, y: 1.0000002, z: 0.99999905}
       transformModified: 1
     - name: joint1
-      position: {x: -0.09789706, y: 0.016515257, z: -0.0027967482}
+      position: {x: -0.04894853, y: 0.008257628, z: -0.0013983741}
       rotation: {x: 0.33549532, y: -0.44263002, z: 0.5420169, w: 0.6306657}
       scale: {x: 1.0000002, y: 0.99999905, z: 1.0000005}
       transformModified: 1
     - name: Chibi_collar_JNT
-      position: {x: -6.2450043e-18, y: 0.08480441, z: -2.1857516e-17}
+      position: {x: -3.1225022e-18, y: 0.042402204, z: -1.0928758e-17}
       rotation: {x: 0.5694099, y: -0.50197184, z: -0.49802488, w: 0.419247}
       scale: {x: 1, y: 1.0000004, z: 1.0000012}
       transformModified: 1
     - name: Chibi_Neck_JNT
-      position: {x: -0.062407706, y: 7.2164494e-17, z: -7.124021e-18}
+      position: {x: -0.031203853, y: 3.6082247e-17, z: -3.5620105e-18}
       rotation: {x: -0.42844886, y: 0.5625225, z: -0.42844895, w: -0.56252253}
       scale: {x: 0.9999995, y: 0.9999998, z: 0.9999995}
       transformModified: 1
     - name: Chibi_Head_JNT
-      position: {x: -4.63802e-14, y: 0.05179286, z: -4.7682095e-17}
+      position: {x: -2.31901e-14, y: 0.02589643, z: -2.3841048e-17}
       rotation: {x: 0.54432243, y: -0.45134586, z: -0.54432243, w: 0.45134592}
       scale: {x: 1.000001, y: 1.0000005, z: 1.0000007}
       transformModified: 1
     - name: Chibi_Top_JNT
-      position: {x: -0.5307528, y: 2.0709303e-15, z: 4.9621496e-12}
+      position: {x: -0.2653764, y: 1.0354652e-15, z: 2.4810748e-12}
       rotation: {x: 0, y: -0.000000029802315, z: 0.015347224, w: 0.9998823}
       scale: {x: 1.0000002, y: 1.0000004, z: 1}
       transformModified: 1
     - name: Chibi_LShoulder_JNT
-      position: {x: -0.019483432, y: 0.0000011275653, z: 0.117495194}
+      position: {x: -0.009741716, y: 0.00000056378263, z: 0.058747597}
       rotation: {x: -0.48568112, y: 0.5139201, z: 0.51389194, w: 0.48571086}
       scale: {x: 0.999999, y: 1.0000011, z: 0.99999964}
       transformModified: 1
     - name: Chibi_LElbow_JNT
-      position: {x: -0.12854621, y: -0.0028713434, z: -2.0649601e-17}
+      position: {x: -0.064273104, y: -0.0014356717, z: -1.03248006e-17}
       rotation: {x: 0.043316465, y: -0.004624028, z: -0.027174963, w: 0.9986811}
       scale: {x: 1.0000001, y: 0.99999934, z: 1.0000002}
       transformModified: 1
     - name: Chibi_LArtm_JNT
-      position: {x: -0.11490751, y: -0.0036326079, z: -0.002280085}
+      position: {x: -0.057453755, y: -0.0018163039, z: -0.0011400426}
       rotation: {x: 0.004044623, y: 0.022601796, z: -0.03633467, w: 0.99907595}
       scale: {x: 1.0000005, y: 1.0000002, z: 0.9999999}
       transformModified: 1
     - name: Chibi_LFingers_JNT
-      position: {x: -0.09136744, y: -0.013511905, z: -0.0047054533}
+      position: {x: -0.04568372, y: -0.0067559527, z: -0.0023527266}
       rotation: {x: 0.00000008422646, y: -0.000000003725289, z: -0.7550692, w: 0.6556451}
       scale: {x: 0.99999964, y: 0.99999976, z: 1.0000001}
       transformModified: 1
     - name: Chibi_Rshoulder_JNT
-      position: {x: -0.020407448, y: 0.0000011810403, z: -0.12149106}
+      position: {x: -0.010203724, y: 0.00000059052013, z: -0.06074553}
       rotation: {x: -0.48075277, y: 0.5185334, z: -0.51850563, w: -0.48078263}
       scale: {x: 1.000001, y: 0.9999993, z: 1.0000002}
       transformModified: 1
     - name: Chibi_Relbow_JNT
-      position: {x: -0.12349041, y: -2.7718776e-17, z: 1.5343089e-17}
+      position: {x: -0.061745204, y: -1.3859388e-17, z: 7.671544e-18}
       rotation: {x: 0.0000000021118929, y: 0.000000029727374, z: -0.04610568, w: 0.9989366}
       scale: {x: 1.0000006, y: 0.99999994, z: 1}
       transformModified: 1
     - name: Chibi_Rhand_JNT
-      position: {x: -0.11855677, y: 0.0053345943, z: -2.4303922e-16}
+      position: {x: -0.059278384, y: 0.0026672971, z: -1.2151961e-16}
       rotation: {x: 0.00000007330304, y: -0.000000019995602, z: -0.0020176244, w: 0.99999803}
       scale: {x: 0.9999995, y: 1.0000001, z: 0.99999976}
       transformModified: 1
     - name: Chibi_Rfinger_JNT
-      position: {x: -0.09095138, y: 0.0014910793, z: 4.5681646e-16}
+      position: {x: -0.04547569, y: 0.00074553967, z: 2.2840823e-16}
       rotation: {x: 0.43374243, y: -0.55845106, z: -0.5063473, w: 0.49357107}
       scale: {x: 0.99999994, y: 1.0000002, z: 1.0000002}
       transformModified: 1
     - name: Chibi_LThigh_JNT
-      position: {x: 0.007313243, y: 0.0067553115, z: 0.11993928}
+      position: {x: 0.0036566216, y: 0.0033776558, z: 0.05996964}
       rotation: {x: -0.018199427, y: 0.76921093, z: 0.629564, w: 0.107853696}
       scale: {x: 1.0000002, y: 1.0000001, z: 1.0000004}
       transformModified: 1
     - name: Chibi_LKnee_JNT
-      position: {x: -0.17633341, y: -1.7260498e-17, z: -5.0653924e-17}
+      position: {x: -0.088166706, y: -8.630249e-18, z: -2.5326962e-17}
       rotation: {x: -0.12819107, y: -0.06840698, z: 0.05435626, w: 0.9878932}
       scale: {x: 0.9999994, y: 0.9999992, z: 1}
       transformModified: 1
     - name: joint2
-      position: {x: -0.10051428, y: 0.000000005699995, z: -1.0756371e-11}
+      position: {x: -0.05025714, y: 0.0000000028499976, z: -5.3781853e-12}
       rotation: {x: 0.21479325, y: 0.020926017, z: -0.02148919, w: 0.9761989}
       scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
       transformModified: 1
     - name: Chibi_Lfoot_JNT
-      position: {x: -0.073552124, y: -0.00030216438, z: 0.016422622}
+      position: {x: -0.036776062, y: -0.00015108219, z: 0.008211311}
       rotation: {x: 0.14058581, y: 0.015959302, z: 0.041296866, w: 0.9890781}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_RThigh_JNT
-      position: {x: 0.0050850916, y: -0.008692581, z: -0.1216851}
+      position: {x: 0.0025425458, y: -0.0043462906, z: -0.06084255}
       rotation: {x: -0.00072583556, y: 0.73897725, z: -0.6664643, w: -0.09867842}
       scale: {x: 0.99999994, y: 0.99999994, z: 0.9999994}
       transformModified: 1
     - name: Chibi_Rknee_JNT
-      position: {x: -0.17698583, y: -1.5439038e-17, z: 1.1865508e-16}
+      position: {x: -0.088492915, y: -7.719519e-18, z: 5.932754e-17}
       rotation: {x: 0.19096394, y: 0.028124137, z: 0.001720369, w: 0.9811926}
       scale: {x: 0.99999976, y: 0.99999934, z: 1}
       transformModified: 1
     - name: joint3
-      position: {x: -0.102464914, y: -0.00000000701121, z: 0.0000000084260385}
+      position: {x: -0.051232457, y: -0.000000003505605, z: 0.0000000042130193}
       rotation: {x: -0.09251671, y: -0.013459669, z: -0.000000029802326, w: 0.9956202}
       scale: {x: 0.99999976, y: 0.99999964, z: 0.9999995}
       transformModified: 1
     - name: Chibi_Rfoot_JNT
-      position: {x: -0.07270871, y: -0.005051027, z: -0.01599918}
+      position: {x: -0.036354356, y: -0.0025255135, z: -0.00799959}
       rotation: {x: -0.113559045, y: -0.021508612, z: -0.04241797, w: 0.9923923}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
