@@ -472,7 +472,7 @@ GameObject:
   - 114: {fileID: 11451038}
   - 114: {fileID: 11457512}
   - 114: {fileID: 11439868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player 3
   m_TagString: Player
   m_Icon: {fileID: 0}

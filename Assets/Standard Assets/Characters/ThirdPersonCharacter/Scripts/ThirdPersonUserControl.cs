@@ -97,6 +97,33 @@ public class ThirdPersonUserControl : MonoBehaviour
     {
         this.playerNumber = "P" + _playernum.ToString();
     }
+
+    public string Fullname(string input)
+    {
+        return this.playerNumber + " " + input;
+    }
+
+    public bool IsButtonDown(string name)
+    {
+        return CrossPlatformInputManager.GetButtonDown(Fullname(name));
+    }
+
+    public bool IsButtonReleased(string name)
+    {
+        if (CrossPlatformInputManager.GetButtonUp(Fullname(name)))
+        {
+            print(name + " button RELEASED!!!");
+            return true;
+        }
+
+        return false;
+    }
+
+    public float Axis(string name)
+    {
+        return CrossPlatformInputManager.GetAxis(Fullname(name));
+    }
+
     public void SetCamera(Camera _camera)
     {
         this.myCamera = _camera;

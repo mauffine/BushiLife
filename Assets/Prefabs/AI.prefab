@@ -221,7 +221,7 @@ GameObject:
   - 114: {fileID: 114000013003692572}
   - 82: {fileID: 82000012050373654}
   - 114: {fileID: 114000011667126938}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AI
   m_TagString: AI
   m_Icon: {fileID: 0}
