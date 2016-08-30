@@ -60,7 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042938e9c174ac74bb68a6084d2d06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLeadDist: 5
+  leadDist: 4
+  passiveLeadDist: 3
 --- !u!195 &195000013780910388
 NavMeshAgent:
   m_ObjectHideFlags: 1

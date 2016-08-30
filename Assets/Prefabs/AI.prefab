@@ -1476,6 +1476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: P1
   myCamera: {fileID: 0}
+  isPassive: 0
   navNodeTemplate: {fileID: 1000010882527372, guid: 06aa818ef690ae445a1e5b41ca6f3472,
     type: 2}
   target: {x: 0, y: 0, z: 0}

@@ -19,6 +19,8 @@ public class AIController : MonoBehaviour
     private bool hAttack;
     private bool run;
 
+    public bool isPassive;
+
     public GameObject navNodeTemplate;
     GameObject navNode;
 
@@ -26,6 +28,7 @@ public class AIController : MonoBehaviour
 
     private void Start()
     {
+        this.isPassive = true;
         // get the transform of the main camera
         //if (Camera.main != null)
         //{
@@ -48,10 +51,23 @@ public class AIController : MonoBehaviour
 
     private void Update()
     {
+        if (this.tag == "Dead")
+            return;
         CheckActions();
         if (!this.m_Jump)
         {
-            this.m_Jump = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Jump");
+            //this.m_Jump = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Jump");
+        }
+
+        if (this.isPassive)
+        {
+            this.m_Character.m_MovingTurnSpeed = 831.6f;
+            this.m_Character.m_StationaryTurnSpeed = 415.8f;
+        }
+        else
+        {
+            this.m_Character.m_MovingTurnSpeed = 576f;
+            this.m_Character.m_StationaryTurnSpeed = 288f;
         }
     }
 
@@ -59,6 +75,8 @@ public class AIController : MonoBehaviour
     // Fixed update is called in sync with physics
     private void FixedUpdate()
     {
+        if (this.tag == "Dead")
+            return;
         // read inputs
         float h = Input.GetAxis(this.playerNumber + " Horizontal");
         float v = -Input.GetAxis(this.playerNumber + " Vertical");
@@ -82,7 +100,8 @@ public class AIController : MonoBehaviour
             this.m_Move = Vector3.zero;
         // pass all parameters to the character control script
         this.m_Character.Move(this.m_Move, this.m_Jump, this.lAttack, this.hAttack, this.dodge, this.run);
-
+        if (this.isPassive)
+            this.run = false;
         if (this.m_Move == Vector3.zero)
             this.run = false;
         this.m_Jump = false;
@@ -96,7 +115,7 @@ public class AIController : MonoBehaviour
         if (!this.lAttack)
         {
 
-            this.lAttack = (this.transform.position - this.target).magnitude < 0.7f;
+            this.lAttack = !this.isPassive && ((this.transform.position - this.target).magnitude < 0.7f);
         }
         //if (!hAttack)
         //    hAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " HAttack");
