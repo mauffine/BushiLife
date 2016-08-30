@@ -34,12 +34,12 @@ public class ThirdPersonCharacter : MonoBehaviour
 
     void Start()
     {
-        m_Animator = GetComponent<Animator>();
-        m_Rigidbody = GetComponent<Rigidbody>();
-        m_Capsule = GetComponent<CapsuleCollider>();
+        this.m_Animator = GetComponent<Animator>();
+        this.m_Rigidbody = GetComponent<Rigidbody>();
+        this.m_Capsule = GetComponent<CapsuleCollider>();
 
-        m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-        m_OrigGroundCheckDistance = m_GroundCheckDistance;
+        this.m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        this.m_OrigGroundCheckDistance = this.m_GroundCheckDistance;
     }
 
     void Update()
@@ -56,20 +56,20 @@ public class ThirdPersonCharacter : MonoBehaviour
         // turn amount and forward amount required to head in the desired
         // direction.
         if (move.magnitude > 1f) move.Normalize();
-        move = transform.InverseTransformDirection(move);
+        move = this.transform.InverseTransformDirection(move);
         CheckGroundStatus();
-        move = Vector3.ProjectOnPlane(move, m_GroundNormal);
+        move = Vector3.ProjectOnPlane(move, this.m_GroundNormal);
 #if UNITY_EDITOR
-        Debug.DrawLine(transform.position, transform.position + m_Rigidbody.velocity / 4, Color.white);
+        Debug.DrawLine(this.transform.position, this.transform.position + this.m_Rigidbody.velocity / 4, Color.white);
 #endif
-        m_TurnAmount = Mathf.Atan2(move.x, move.z);
-        m_ForwardAmount = move.z;
+        this.m_TurnAmount = Mathf.Atan2(move.x, move.z);
+        this.m_ForwardAmount = move.z;
         if (run)
-            m_ForwardAmount *= 2;
+            this.m_ForwardAmount *= 2;
         ApplyExtraTurnRotation();
 
         // control and velocity handling is different when grounded and airborne:
-        if (m_IsGrounded)
+        if (this.m_IsGrounded)
         {
             HandleGroundedMovement(jump);
         }
@@ -86,38 +86,38 @@ public class ThirdPersonCharacter : MonoBehaviour
     void UpdateAnimator(Vector3 move, bool dodge, bool lAttack, bool hAttack)
     {
         // update the animator parameters
-        m_Animator.SetFloat("Speed", m_ForwardAmount, 0.1f, Time.deltaTime);
-        m_Animator.SetFloat("Rotation", m_TurnAmount, 0.1f, Time.deltaTime);
-        m_Animator.SetBool("OnGround", m_IsGrounded);
+        this.m_Animator.SetFloat("Speed", this.m_ForwardAmount, 0.1f, Time.deltaTime);
+        this.m_Animator.SetFloat("Rotation", this.m_TurnAmount, 0.1f, Time.deltaTime);
+        this.m_Animator.SetBool("OnGround", this.m_IsGrounded);
 
-        if (!m_IsGrounded)
+        if (!this.m_IsGrounded)
         {
-            m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
+            this.m_Animator.SetFloat("Jump", this.m_Rigidbody.velocity.y);
             if (hAttack)
             {
-                m_Animator.SetTrigger("Heavy Attack");
-                int comboNum = m_Animator.GetInteger("Combo");
+                this.m_Animator.SetTrigger("Heavy Attack");
+                int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
-                    m_Animator.SetInteger("Combo", comboNum + 1);
+                    this.m_Animator.SetInteger("Combo", comboNum + 1);
             }
         }
         else
         {
             if (dodge)
-                m_Animator.SetTrigger("Dodge");
+                this.m_Animator.SetTrigger("Dodge");
             if (lAttack)
             {
-                m_Animator.SetTrigger("Light Attack");
-                int comboNum = m_Animator.GetInteger("Combo");
+                this.m_Animator.SetTrigger("Light Attack");
+                int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
-                    m_Animator.SetInteger("Combo", comboNum + 1);
+                    this.m_Animator.SetInteger("Combo", comboNum + 1);
             }
             else if (hAttack)
             {
-                m_Animator.SetTrigger("Heavy Attack");
-                int comboNum = m_Animator.GetInteger("Combo");
+                this.m_Animator.SetTrigger("Heavy Attack");
+                int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
-                    m_Animator.SetInteger("Combo", comboNum + 1);
+                    this.m_Animator.SetInteger("Combo", comboNum + 1);
             }
         }
 
@@ -126,18 +126,18 @@ public class ThirdPersonCharacter : MonoBehaviour
         // and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)
         float runCycle =
             Mathf.Repeat(
-                m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime + m_RunCycleLegOffset, 1);
+                this.m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime + this.m_RunCycleLegOffset, 1);
 
         // the anim speed multiplier allows the overall speed of walking/running to be tweaked in the inspector,
         // which affects the movement speed because of the root motion.
-        if (m_IsGrounded && move.magnitude > 0)
+        if (this.m_IsGrounded && move.magnitude > 0)
         {
-            m_Animator.speed = m_AnimSpeedMultiplier;
+            this.m_Animator.speed = this.m_AnimSpeedMultiplier;
         }
         else
         {
             // don't use that while airborne
-            m_Animator.speed = 1;
+            this.m_Animator.speed = 1;
         }
     }
 
@@ -145,31 +145,31 @@ public class ThirdPersonCharacter : MonoBehaviour
     void HandleAirborneMovement()
     {
         // apply extra gravity from multiplier:
-        Vector3 extraGravityForce = (Physics.gravity * m_GravityMultiplier) - Physics.gravity;
-        m_Rigidbody.AddForce(extraGravityForce);
+        Vector3 extraGravityForce = (Physics.gravity * this.m_GravityMultiplier) - Physics.gravity;
+        this.m_Rigidbody.AddForce(extraGravityForce);
 
-        m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
+        this.m_GroundCheckDistance = this.m_Rigidbody.velocity.y < 0 ? this.m_OrigGroundCheckDistance : 0.01f;
     }
 
 
     void HandleGroundedMovement(bool jump)
     {
         // check whether conditions are right to allow a jump:
-        if (jump && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
+        if (jump && this.m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
         {
             // jump!
-            m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
-            m_IsGrounded = false;
-            m_Animator.applyRootMotion = false;
-            m_GroundCheckDistance = 0.1f;
+            this.m_Rigidbody.velocity = new Vector3(this.m_Rigidbody.velocity.x, this.m_JumpPower, this.m_Rigidbody.velocity.z);
+            this.m_IsGrounded = false;
+            this.m_Animator.applyRootMotion = false;
+            this.m_GroundCheckDistance = 0.1f;
         }
     }
 
     void ApplyExtraTurnRotation()
     {
         // help the character turn faster (this is in addition to root rotation in the animation)
-        float turnSpeed = Mathf.Lerp(m_StationaryTurnSpeed, m_MovingTurnSpeed, m_ForwardAmount);
-        transform.Rotate(0, m_TurnAmount * turnSpeed * Time.deltaTime, 0);
+        float turnSpeed = Mathf.Lerp(this.m_StationaryTurnSpeed, this.m_MovingTurnSpeed, this.m_ForwardAmount);
+        this.transform.Rotate(0, this.m_TurnAmount * turnSpeed * Time.deltaTime, 0);
     }
 
 
@@ -177,13 +177,13 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         // we implement this function to override the default root motion.
         // this allows us to modify the positional speed before it's applied.
-        if (m_IsGrounded && Time.deltaTime > 0)
+        if (this.m_IsGrounded && Time.deltaTime > 0)
         {
-            Vector3 v = (m_Animator.deltaPosition * m_MoveSpeedMultiplier) / Time.deltaTime;
+            Vector3 v = (this.m_Animator.deltaPosition * this.m_MoveSpeedMultiplier) / Time.deltaTime;
 
             // we preserve the existing y part of the current velocity.
-            v.y = m_Rigidbody.velocity.y;
-            m_Rigidbody.velocity = v;
+            v.y = this.m_Rigidbody.velocity.y;
+            this.m_Rigidbody.velocity = v;
         }
     }
 
@@ -193,24 +193,24 @@ public class ThirdPersonCharacter : MonoBehaviour
         RaycastHit hitInfo;
         // 0.1f is a small offset to start the ray from inside the character
         // it is also good to note that the transform position in the sample assets is at the base of the character
-        if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
+        if (Physics.Raycast(this.transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, this.m_GroundCheckDistance))
         {
-            m_GroundNormal = hitInfo.normal;
-            m_IsGrounded = true;
-            m_Animator.applyRootMotion = true;
+            this.m_GroundNormal = hitInfo.normal;
+            this.m_IsGrounded = true;
+            this.m_Animator.applyRootMotion = true;
         }
         else
         {
-            m_IsGrounded = false;
-            m_GroundNormal = Vector3.up;
-            m_Animator.applyRootMotion = false;
+            this.m_IsGrounded = false;
+            this.m_GroundNormal = Vector3.up;
+            this.m_Animator.applyRootMotion = false;
         }
 #if UNITY_EDITOR
         // helper to visualise the ground check ray in the scene view
         if (hitInfo.point != Vector3.zero)
-            Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance), Color.blue);
+            Debug.DrawLine(this.transform.position + (Vector3.up * 0.1f), this.transform.position + (Vector3.up * 0.1f) + (Vector3.down * this.m_GroundCheckDistance), Color.blue);
         else
-            Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance), Color.red);
+            Debug.DrawLine(this.transform.position + (Vector3.up * 0.1f), this.transform.position + (Vector3.up * 0.1f) + (Vector3.down * this.m_GroundCheckDistance), Color.red);
 #endif
     }
     public bool CheckIFrames(Collider _col)
@@ -224,7 +224,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     }
     public void Bleed()
     {
-        blood.Emit(20);
+        this.blood.Emit(20);
     }
     public void Die()
     {
@@ -234,31 +234,31 @@ public class ThirdPersonCharacter : MonoBehaviour
     //Mecanim events
     public void ClearCombo()
     {
-        m_Animator.SetInteger("Combo", 0);
+        this.m_Animator.SetInteger("Combo", 0);
     }
     public void TurnSwordOn()
     {
-        swordbox.SetActive(true);
-        m_Animator.SetInteger("Combo", m_Animator.GetInteger("Combo") - 1);
+        this.swordbox.SetActive(true);
+        this.m_Animator.SetInteger("Combo", this.m_Animator.GetInteger("Combo") - 1);
     }
     public void HeavySword()
     {
-        swordbox.SetActive(true);
+        this.swordbox.SetActive(true);
         this.heavyAttack = true;
-        m_Animator.SetInteger("Combo", m_Animator.GetInteger("Combo") - 1);
+        this.m_Animator.SetInteger("Combo", this.m_Animator.GetInteger("Combo") - 1);
     }
     public void TurnSwordOff()
     {
-        swordbox.SetActive(false);
+        this.swordbox.SetActive(false);
         this.heavyAttack = false;
     }
     public void StartIFrames()
     {
-        invincible = true;
+        this.invincible = true;
     }
     public void EndIFrames()
     {
-        invincible = false;
+        this.invincible = false;
     }
     public void JumpAttackOn()
     {
