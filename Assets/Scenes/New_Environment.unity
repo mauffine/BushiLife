@@ -8544,7 +8544,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011323875044, guid: 4ec634c9683804f4cacbb69989d9ba9e, type: 2}
       propertyPath: m_RootOrder
-      value: 34
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ec634c9683804f4cacbb69989d9ba9e, type: 2}
@@ -13398,6 +13398,52 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300076, guid: c8be5b05ddc80c648ac001468b2cd57e, type: 3}
+--- !u!1001 &842525684
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000010513852160, guid: bbe6b861e928fb549834437716507e17, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 65.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010513852160, guid: bbe6b861e928fb549834437716507e17, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010513852160, guid: bbe6b861e928fb549834437716507e17, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010513852160, guid: bbe6b861e928fb549834437716507e17, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.11598908
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010513852160, guid: bbe6b861e928fb549834437716507e17, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.1215132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010513852160, guid: bbe6b861e928fb549834437716507e17, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.7130786
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010513852160, guid: bbe6b861e928fb549834437716507e17, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.6806615
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010513852160, guid: bbe6b861e928fb549834437716507e17, type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011484903288, guid: bbe6b861e928fb549834437716507e17, type: 2}
+      propertyPath: m_Name
+      value: Invisible Wall
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bbe6b861e928fb549834437716507e17, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &844134796
 GameObject:
   m_ObjectHideFlags: 0
