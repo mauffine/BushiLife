@@ -30,8 +30,7 @@ public class CameraController : MonoBehaviour
 	void Update ()
 	{
         this.transform.position = this.target.transform.position;
-
-		float h = Input.GetAxis(this.strPlayerNumber + " Camera Horizontal") * 3f;
+        float h = Input.GetAxis(this.strPlayerNumber + " Camera Horizontal") * 300f * Time.deltaTime;
         this.transform.Rotate(Vector3.up * h);
     }
 
