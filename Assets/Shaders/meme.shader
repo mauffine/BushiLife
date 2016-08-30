@@ -12,7 +12,6 @@
 		CGPROGRAM 
 		#pragma surface surf CelShadingForward 
 		#pragma target 3.0
-
 		half4 LightingCelShadingForward(SurfaceOutput s, half3 lightDir, half atten) {
 		half NdotL = dot(s.Normal, lightDir);
 		if (NdotL <= 0.0) NdotL = 0.6;

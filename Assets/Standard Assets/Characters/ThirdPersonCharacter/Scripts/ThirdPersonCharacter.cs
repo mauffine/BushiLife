@@ -229,6 +229,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void Die()
     {
         m_Animator.SetBool("Dead", true);
+        this.swordbox.SetActive(false);
+        this.jumpAttackHB.SetActive(false);
         this.invincible = true;
     }
     //Mecanim events
