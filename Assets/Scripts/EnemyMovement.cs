@@ -33,7 +33,8 @@ public class EnemyMovement : MonoBehaviour {
 		var players = new List<GameObject>(GameObject.FindGameObjectsWithTag("Player"));
 		players.Sort((t1, t2) => SocketContainer.Closer(t1.transform, t2.transform, this.transform));
 
-		this.agent.SetDestination(players[0].transform.position);
+        if (this.agent.enabled)
+    		this.agent.SetDestination(players[0].transform.position);
 	}
 
     void Teleport(Vector3 position)
