@@ -16,6 +16,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] GameObject swordbox;
     [SerializeField] GameObject jumpAttackHB;
     [SerializeField] ParticleSystem blood;
+    [SerializeField] int blockAngle = 180;
 
     public bool heavyAttack;
 
@@ -80,10 +81,10 @@ public class ThirdPersonCharacter : MonoBehaviour
 
 
         // send input and other state parameters to the animator
-        UpdateAnimator(move, dodge, lAttack, hAttack);
+        UpdateAnimator(move, dodge, lAttack, hAttack, block);
     }
 
-    void UpdateAnimator(Vector3 move, bool dodge, bool lAttack, bool hAttack)
+    void UpdateAnimator(Vector3 move, bool dodge, bool lAttack, bool hAttack, bool block)
     {
         // update the animator parameters
         this.m_Animator.SetFloat("Speed", this.m_ForwardAmount, 0.1f, Time.deltaTime);
@@ -105,6 +106,10 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             if (dodge)
                 this.m_Animator.SetTrigger("Dodge");
+            if (block)
+            {
+                this.m_Animator.SetTrigger("Block");
+            }
             if (lAttack)
             {
                 this.m_Animator.SetTrigger("Light Attack");
@@ -215,10 +220,12 @@ public class ThirdPersonCharacter : MonoBehaviour
     }
     public bool CheckIFrames(Collider _col)
     {
+        //check if the character should take damage from an attack 
+        //(Technically checks if the character shouldn't take damage tho)
         Vector3 colDir = _col.transform.position - transform.position;
         Debug.DrawLine(transform.position, _col.transform.position);
         float angle = Vector3.Angle(colDir, transform.forward);
-        if (this.blocking && angle < 45)
+        if (this.blocking && angle < blockAngle / 2)
             return true;
         return this.invincible;
     }
@@ -233,6 +240,11 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.jumpAttackHB.SetActive(false);
         this.invincible = true;
         this.tag = "Dead";
+        var script = gameObject.GetComponent<ThirdPersonUserControl>();
+        if (script != null)
+        {
+            gameObject.GetComponent<ThirdPersonUserControl>().enabled = false;
+        }
     }
     //Mecanim events
     public void ClearCombo()
@@ -247,6 +259,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void HeavySword()
     {
         this.swordbox.SetActive(true);
+        //set this so the enemy takes 3x damage
         this.heavyAttack = true;
         this.m_Animator.SetInteger("Combo", this.m_Animator.GetInteger("Combo") - 1);
     }

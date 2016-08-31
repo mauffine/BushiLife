@@ -7,13 +7,12 @@
 		Tags{
 
 		"RenderType" = "Transparent"
+		"IgnoreProjector" = "True"
 		"Queue" = "Transparent"
 	}
 		Blend SrcAlpha OneMinusSrcAlpha
 		LOD 200
-
-
-
+		
 		CGPROGRAM 
 		#pragma surface surf CelShadingForward alpha
 		#pragma target 3.0
