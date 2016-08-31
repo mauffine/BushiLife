@@ -10,6 +10,9 @@ public class EnemySpawner : MonoBehaviour
     Timer timer = new Timer();
     public float spawnDelay;
 
+    int numEnemies;
+    public int maxEnemies;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -36,8 +39,12 @@ public class EnemySpawner : MonoBehaviour
 
 	void SpawnEnemy()
 	{
-		var pos = this.spawnpointGenerator.RandomSpawnPoint();
+        if (this.numEnemies < this.maxEnemies)
+        {
+            this.numEnemies++;
+            var pos = this.spawnpointGenerator.RandomSpawnPoint();
 
-		GameObject.Instantiate(this.enemyPrefab, pos, this.enemyPrefab.transform.rotation);
-	}
+            GameObject.Instantiate(this.enemyPrefab, pos, this.enemyPrefab.transform.rotation);
+        }
+    }
 }

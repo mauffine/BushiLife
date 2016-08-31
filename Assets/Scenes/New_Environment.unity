@@ -394,7 +394,8 @@ MonoBehaviour:
   spawnEnemy: 0
   enemyPrefab: {fileID: 1000011910051264, guid: 6dc356b4d4ddc4b4e9dc92157869e4e6,
     type: 2}
-  spawnDelay: 2
+  spawnDelay: 0
+  maxEnemies: 100
 --- !u!4 &16342194
 Transform:
   m_ObjectHideFlags: 0
@@ -3439,7 +3440,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dad4d350bcf5c0488c3f402fa4bd2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!4 &189758941
 Transform:
   m_ObjectHideFlags: 0

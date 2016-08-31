@@ -18,8 +18,17 @@ public class AIController : MonoBehaviour
     private bool lAttack;
     private bool hAttack;
     private bool run;
-
     public bool isPassive;
+
+    private bool IsNearPlayer
+    {
+        get
+        {
+            return this.nearbyPlayers > 0;
+        }
+    }
+
+    private int nearbyPlayers;
 
     public GameObject navNodeTemplate;
     GameObject navNode;
@@ -115,7 +124,7 @@ public class AIController : MonoBehaviour
         if (!this.lAttack)
         {
 
-            this.lAttack = !this.isPassive && ((this.transform.position - this.target).magnitude < 0.7f);
+            this.lAttack = !this.isPassive && this.IsNearPlayer;
         }
         //if (!hAttack)
         //    hAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " HAttack");
@@ -136,5 +145,17 @@ public class AIController : MonoBehaviour
     {
         this.myCamera = _camera;
         this.m_Cam = this.myCamera.transform;
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "Player")
+            this.nearbyPlayers++;
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.tag == "Player")
+            this.nearbyPlayers--;
     }
 }

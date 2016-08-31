@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public class CameraController : MonoBehaviour
@@ -7,35 +8,35 @@ public class CameraController : MonoBehaviour
     [SerializeField] Transform target;
     public string strPlayerNumber;
 
-	Camera camera;
+    Camera camera;
 
     // Use this for initialization
-    void Start ()
-	{
+    void Start()
+    {
     }
 
-	public void Init(Transform target, int playerNumber)
-	{
-		camera = GetComponentInChildren<Camera>();
-		this.strPlayerNumber = "P" + playerNumber.ToString();
-		this.target = target;
-	}
+    public void Init(Transform target, int playerNumber)
+    {
+        this.camera = GetComponentInChildren<Camera>();
+        this.strPlayerNumber = "P" + playerNumber.ToString();
+        this.target = target;
+    }
 
-	void FindRect(int numPlayers)
-	{
+    void FindRect(int numPlayers)
+    {
 
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         this.transform.position = this.target.transform.position;
         float h = Input.GetAxis(this.strPlayerNumber + " Camera Horizontal") * 300f * Time.deltaTime;
         this.transform.Rotate(Vector3.up * h);
     }
 
-	public void SetRect(Rect rectangle)
-	{
-		camera.rect = rectangle;
-	}
+    public void SetRect(Rect rectangle)
+    {
+        this.camera.rect = rectangle;
+    }
 }

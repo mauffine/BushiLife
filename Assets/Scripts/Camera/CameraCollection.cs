@@ -5,51 +5,51 @@ using System.Collections.Generic;
 [RequireComponent(typeof(DynamicGrid))]
 public class CameraCollection : MonoBehaviour
 {
-	public GameObject cameraPrefab;
-	private DynamicGrid cameraGrid;
+    public GameObject cameraPrefab;
+    private DynamicGrid cameraGrid;
 
-	List<CameraController> GetCameras()
-	{
+    List<CameraController> GetCameras()
+    {
         var result = new List<CameraController>(GetComponentsInChildren<CameraController>());
 
-		return result;
-	}
+        return result;
+    }
 
-	int GetSize()
-	{
-		return this.GetCameras().Count;
-	}
+    int GetSize()
+    {
+        return this.GetCameras().Count;
+    }
 
-	// Use this for initialization
-	void Start()
-	{
-		cameraGrid = GetComponent<DynamicGrid>();
-	}
+    // Use this for initialization
+    void Start()
+    {
+        cameraGrid = GetComponent<DynamicGrid>();
+    }
 
-	// Update is called once per frame
-	void Update()
-	{
+    // Update is called once per frame
+    void Update()
+    {
 
-	}
+    }
 
-	void Validate()
-	{
-		this.cameraGrid.size = this.GetSize();
-		for (int index = 0; index < this.cameraGrid.size; index++)
-		{
-			var cameras = this.GetCameras();
+    void Validate()
+    {
+        this.cameraGrid.size = this.GetSize();
+        for (int index = 0; index < this.cameraGrid.size; index++)
+        {
+            var cameras = this.GetCameras();
 
-			cameras[index].SetRect(this.cameraGrid.GetRect(index));
-		}
-	}
+            cameras[index].SetRect(this.cameraGrid.GetRect(index));
+        }
+    }
 
-	public void Add(GameObject player, int playerNumber)
-	{
-		var newCamera = GameObject.Instantiate(cameraPrefab);
+    public void Add(GameObject player, int playerNumber)
+    {
+        var newCamera = GameObject.Instantiate(cameraPrefab);
 
-		newCamera.GetComponentInChildren<CameraController>().Init(player.transform, playerNumber);
+        newCamera.GetComponentInChildren<CameraController>().Init(player.transform, playerNumber);
 
-		newCamera.transform.parent = this.transform;
+        newCamera.transform.parent = this.transform;
 
         var controller = player.GetComponent<ThirdPersonUserControl>();
         if (controller == null)
@@ -59,14 +59,14 @@ public class CameraCollection : MonoBehaviour
         }
         else
             controller.SetCamera(newCamera.GetComponentInChildren<Camera>());
-        
+
         try
-		{
-			this.Validate();
-		}
-		catch (KeyNotFoundException error)
-		{
-			Debug.LogWarning("Invalid Splitscreen Split! for " + GetSize().ToString() + " cameras");
-		}
-	}
+        {
+            this.Validate();
+        }
+        catch (KeyNotFoundException error)
+        {
+            Debug.LogWarning("Invalid Splitscreen Split! for " + GetSize().ToString() + " cameras");
+        }
+    }
 }

@@ -11,8 +11,8 @@ public class EnemyMovement : MonoBehaviour
     public float passiveLeadDist;
     Timer wanderTimer = new Timer();
     float wanderTime = 1f;
+    float minLeadDist = 0.3f;
 
-    Vector3 direction;
     void Start()
     {
     }
@@ -22,22 +22,38 @@ public class EnemyMovement : MonoBehaviour
         this.agent = GetComponent<NavMeshAgent>();
         this.ai = ai;
         this.currentLeadDist = this.passiveLeadDist;
+
+        this.ValidatePosition();
     }
 
     void Update()
     {
         this.UpdateDestination();
 
+        this.ValidatePosition();
+    }
+
+    void ValidatePosition()
+    {
         this.ai.target = this.transform.position;
-        if ((this.ai.transform.position - this.transform.position).magnitude > this.currentLeadDist)
+
+        var displacement = this.transform.position - this.ai.transform.position;
+
+        var currentDistance = displacement.magnitude;
+        var direction = displacement.normalized;
+
+        if (currentDistance > this.currentLeadDist || currentDistance < this.minLeadDist)
         {
-            Teleport(this.ai.transform.position);
+            Teleport(this.ai.transform.position + direction * this.minLeadDist);
         }
     }
 
     void UpdateDestination()
     {
         var players = new List<GameObject>(GameObject.FindGameObjectsWithTag("Player"));
+        if (players.Contains(this.ai.gameObject))
+            players.Remove(this.ai.gameObject);
+
         if (players.Count > 0)
         {
             if (this.wanderTimer.running)
@@ -51,6 +67,7 @@ public class EnemyMovement : MonoBehaviour
             this.ai.isPassive = false;
 
             players.Sort((t1, t2) => SocketContainer.Closer(t1.transform, t2.transform, this.transform));
+            
 
             if (this.agent.enabled)
                 if (this.agent.isOnNavMesh)
