@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] Transform target;
     public string strPlayerNumber;
+    public ThirdPersonUserControl controller;
 
     Camera camera;
 
@@ -20,6 +21,7 @@ public class CameraController : MonoBehaviour
         this.camera = GetComponentInChildren<Camera>();
         this.strPlayerNumber = "P" + playerNumber.ToString();
         this.target = target;
+        this.controller = target.GetComponent<ThirdPersonUserControl>();
     }
 
     void FindRect(int numPlayers)
@@ -30,9 +32,12 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = this.target.transform.position;
-        float h = Input.GetAxis(this.strPlayerNumber + " Camera Horizontal") * 300f * Time.deltaTime;
-        this.transform.Rotate(Vector3.up * h);
+        if (!this.controller.IsButtonDown("Target"))
+        {
+            this.transform.position = this.target.transform.position;
+            float h = Input.GetAxis(this.strPlayerNumber + " Camera Horizontal") * 300f * Time.deltaTime;
+            this.transform.Rotate(Vector3.up * h);
+        }
     }
 
     public void SetRect(Rect rectangle)

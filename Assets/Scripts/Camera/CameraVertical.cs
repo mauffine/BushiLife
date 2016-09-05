@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class CameraVertical : MonoBehaviour {
     string playerNumber;
@@ -10,7 +11,10 @@ public class CameraVertical : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-      float v = Input.GetAxis(this.playerNumber + " Camera Vertical") * 50f * Time.deltaTime;
-      this.transform.Rotate(new Vector3(v * 3f, 0, 0));
+        if (!CrossPlatformInputManager.GetButton(this.playerNumber + " Target"))
+        {
+            float v = Input.GetAxis(this.playerNumber + " Camera Vertical") * 50f * Time.deltaTime;
+            this.transform.Rotate(new Vector3(v * 3f, 0, 0));
+        }
     }
 }

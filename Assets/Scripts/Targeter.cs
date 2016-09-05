@@ -1,91 +1,87 @@
-﻿//using UnityEngine;
-//using System.Collections;
-//using System.Collections.Generic;
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
-//[ RequireComponent(typeof(LineRenderer))]
-//public class Targeter : MonoBehaviour {
-//    LineRenderer line = null;
-//    ThirdPersonUserControl controller;
-//    Collider collider;
-//    Vector3 aim;
-    
-//    private List<Transform> targets = new List<Transform>();
+[RequireComponent(typeof(LineRenderer))]
+public class Targeter : MonoBehaviour
+{
+    LineRenderer line = null;
+    public ThirdPersonUserControl controller;
+    Collider collider;
+    Vector3 aim;
 
-//    public Transform target;
+    private List<Transform> targets = new List<Transform>();
 
-
-//    void Start()
-//    {
-//        this.line = GetComponent<LineRenderer>();
-//        this.collider = GetComponent<Collider>();
-//    }
-
-//    public void Init(ThirdPersonUserControl controller)
-//    {
-//        this.controller = controller;
-//    }
-	
-//	// Update is called once per frame
-//	void Update ()
-//    {
-//	    if (this.controller.IsButtonDown("Target"))
-//        {
-//            UpdateAim();
-
-//            this.line.enabled = true;
-//        }
-
-//        if (this.targets.Count > 0)
-//        {
-//            if (this.target != null)
-//            {
-//                this.line.SetPositions(new Vector3[] { this.transform.position, this.targets[0].position });
-//            }
-//        }
+    public Transform target;
 
 
-//	}
+    void Start()
+    {
+        this.line = GetComponent<LineRenderer>();
+        this.collider = GetComponent<Collider>();
+    }
 
-//    void UpdateAim()
-//    {
-//        this.target = null;
+    public void Init(ThirdPersonUserControl controller)
+    {
+        this.controller = controller;
+    }
 
-//        var vertical = this.controller.Axis("Camera Vertical");
-//        var horizontal = this.controller.Axis("Camera Horizontal");
-//        this.aim = vertical * Vector3.forward + horizontal * Vector3.right;
+    // Update is called once per frame
+    void Update()
+    {
+        var test = this.controller.IsButtonDown("Target");
 
-//        var distance = this.aim.magnitude;
+        if (this.controller.IsButtonDown("Target"))
+        {
+            UpdateAim();
 
-//        this.aim.Normalize();
+            this.line.enabled = true;
+        }
 
+        if (this.targets.Count > 0)
+        {
+            if (this.target != null)
+            {
+                this.line.SetPositions(new Vector3[] { this.transform.position, this.targets[0].position });
+            }
+        }
 
+        print(Score(this.target));
+    }
 
-//        this.collider.enabled = true;
-//        (this.collider as SphereCollider).radius = distance * 20f;
-//    }
+    void UpdateAim()
+    {
+     //   this.target = null;
 
-//    // If a new enemy enters the trigger, add it to the list of targets
-//    void OnTriggerEnter(Collider other)
-//    {
-//        this.targets.Add(other.transform);
-//        this.targets.Sort((t1, t2) => Score(t1).CompareTo(Score(t2)) * -1);
-//    }
+        var vertical = this.controller.Axis("Camera Vertical");
+        var horizontal = this.controller.Axis("Camera Horizontal");
+        this.aim = vertical * Vector3.forward + horizontal * Vector3.right;
 
-//    private float Score(Transform target)
-//    {
-//        var offset = target.position - this.transform.position;
-//        var distance = offset.magnitude;
-//        var angle = Quaternion.FromToRotation(this.aim, offset).eulerAngles.y;
+        var distance = this.aim.magnitude;
 
-//        return distance / angle;
-//    }
+      //  this.collider.enabled = true;
+      //  (this.collider as SphereCollider).radius = distance * 100f;
+    }
 
-//    // When an enemy exits the trigger, remove it from the list
-//    void OnTriggerExit(Collider other)
-//    {
-//        this.targets.Remove(other.transform);
-//    }
-//}
+    // If a new enemy enters the trigger, add it to the list of targets
+    void OnTriggerEnter(Collider other)
+    {
+     //   this.targets.Add(other.transform);
+     //   this.targets.Sort((t1, t2) => Score(t1).CompareTo(Score(t2)) * -1);
+    }
 
+    private float Score(Transform target)
+    {
+        var offset = target.position - this.transform.position;
+        var distance = offset.magnitude;
+        var angle = Quaternion.FromToRotation(this.aim.normalized, offset.normalized).eulerAngles.y;
 
-//}
+        return distance / Mathf.Pow(angle, 1.0f + this.aim.magnitude);
+    }
+
+    // When an enemy exits the trigger, remove it from the list
+    void OnTriggerExit(Collider other)
+    {
+      //  this.targets.Remove(other.transform);
+    }
+}

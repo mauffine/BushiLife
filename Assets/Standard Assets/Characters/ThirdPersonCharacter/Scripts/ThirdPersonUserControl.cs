@@ -9,7 +9,7 @@ public class ThirdPersonUserControl : MonoBehaviour
     public Camera myCamera;
 
     private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
-    private Transform m_Cam;                  // A reference to the main camera in the scenes transform
+    public Transform m_Cam;                  // A reference to the main camera in the scenes transform
     private Vector3 m_CamForward;             // The current forward direction of the camera
     private Vector3 m_Move;
     private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
@@ -105,7 +105,8 @@ public class ThirdPersonUserControl : MonoBehaviour
 
     public bool IsButtonDown(string name)
     {
-        return CrossPlatformInputManager.GetButtonDown(Fullname(name));
+        var result = CrossPlatformInputManager.GetButton(Fullname(name));
+        return result;
     }
 
     public bool IsButtonReleased(string name)
