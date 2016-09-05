@@ -21,10 +21,10 @@ TagManager:
   - HurtBox
   - Environment
   - Player
-  - 
-  - 
-  - 
-  - 
+  - P1GUI
+  - P2GUI
+  - P3GUI
+  - P4GUI
   - 
   - 
   - 

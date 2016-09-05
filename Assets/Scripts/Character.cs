@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
 	{
         this.stats = GetComponent<Stats>();
         this.stats.health.recieve = this.TakeDamage;
+        this.stats.stamina.recieve = this.TakeDamage;
     }
     void Update()
     {

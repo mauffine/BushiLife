@@ -1358,6 +1358,11 @@ MonoBehaviour:
   swordbox: {fileID: 190600}
   jumpAttackHB: {fileID: 144302}
   blood: {fileID: 19896682}
+  blockAngle: 180
+  lightAtackStamDrain: 20
+  heavyAttackStamDrain: 30
+  rollStamDrain: 0
+  stamRecharge: 0
   heavyAttack: 0
 --- !u!114 &11457512
 MonoBehaviour:
@@ -1381,6 +1386,9 @@ MonoBehaviour:
     range: {x: 0, y: 100}
   level:
     val: 20
+    range: {x: 0, y: 100}
+  stamina:
+    val: 100
     range: {x: 0, y: 100}
 --- !u!114 &11474526
 MonoBehaviour:

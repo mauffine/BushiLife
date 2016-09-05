@@ -13,10 +13,18 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] float m_MoveSpeedMultiplier = 1f;
     [SerializeField] float m_AnimSpeedMultiplier = 1f;
     [SerializeField] float m_GroundCheckDistance = 0.1f;
+
     [SerializeField] GameObject swordbox;
     [SerializeField] GameObject jumpAttackHB;
+
     [SerializeField] ParticleSystem blood;
+
     [SerializeField] int blockAngle = 180;
+
+    [SerializeField] float lightAtackStamDrain;
+    [SerializeField] float heavyAttackStamDrain;
+    [SerializeField] float rollStamDrain;
+    [SerializeField] float stamRecharge;
 
     public bool heavyAttack;
 
@@ -29,25 +37,26 @@ public class ThirdPersonCharacter : MonoBehaviour
     float m_ForwardAmount;
     Vector3 m_GroundNormal;
     CapsuleCollider m_Capsule;
-    float timer;
-    bool invincible;
+    
+    bool invincible = false;
     bool blocking = false;
-
+    bool rechargingStam = true;
+    Stat stamina;
     void Start()
     {
         this.m_Animator = GetComponent<Animator>();
         this.m_Rigidbody = GetComponent<Rigidbody>();
         this.m_Capsule = GetComponent<CapsuleCollider>();
-
+        this.stamina = GetComponent<Character>().stats.stamina;
         this.m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         this.m_OrigGroundCheckDistance = this.m_GroundCheckDistance;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (this.rechargingStam && this.stamina.val <= 100)
         {
-            Bleed();
+            this.stamina.Increase(Time.deltaTime * 15);
         }
     }
     public void Move(Vector3 move, bool jump, bool lAttack = false, bool hAttack = false, bool block = false,
@@ -94,7 +103,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         if (!this.m_IsGrounded)
         {
             this.m_Animator.SetFloat("Jump", this.m_Rigidbody.velocity.y);
-            if (hAttack)
+            if (hAttack && stamina.val > heavyAttackStamDrain)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
@@ -110,7 +119,7 @@ public class ThirdPersonCharacter : MonoBehaviour
             {
                 this.m_Animator.SetTrigger("Block");
             }
-            if (lAttack)
+            if (lAttack && stamina.val > lightAtackStamDrain)
             {
                 this.m_Animator.SetTrigger("Light Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
@@ -255,6 +264,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         this.swordbox.SetActive(true);
         this.m_Animator.SetInteger("Combo", this.m_Animator.GetInteger("Combo") - 1);
+        this.stamina.Decrease(this.lightAtackStamDrain);
+        this.rechargingStam = false;
     }
     public void HeavySword()
     {
@@ -262,11 +273,14 @@ public class ThirdPersonCharacter : MonoBehaviour
         //set this so the enemy takes 3x damage
         this.heavyAttack = true;
         this.m_Animator.SetInteger("Combo", this.m_Animator.GetInteger("Combo") - 1);
+        this.stamina.Decrease(this.heavyAttackStamDrain);
+        this.rechargingStam = false;
     }
     public void TurnSwordOff()
     {
         this.swordbox.SetActive(false);
         this.heavyAttack = false;
+        this.rechargingStam = true;
     }
     public void StartIFrames()
     {
