@@ -58,7 +58,7 @@ Shader "Toon/Basic" {
 		Tags{ "Queue" = "Transparent" "RenderType" = "Transparent" } //Change this
 		Pass{
 		Name "BASE"
-		//Cull Off //Remove this
+		Cull Off //Remove this
 		//Cull Back
 		Blend SrcAlpha OneMinusSrcAlpha //Add this
 		SetTexture[_MainTex]{
