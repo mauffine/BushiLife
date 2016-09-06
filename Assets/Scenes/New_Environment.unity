@@ -386,7 +386,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 16342192}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a51e080d43331043930fc292f3243dc, type: 3}
   m_Name: 
@@ -4531,11 +4531,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1108003416}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &251498263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6912,6 +6912,8 @@ MonoBehaviour:
   heavyAttackStamDrain: 0
   rollStamDrain: 0
   stamRecharge: 0
+  rechargeRate: 15
+  runStamDrain: 15
   heavyAttack: 0
 --- !u!114 &458365204
 MonoBehaviour:

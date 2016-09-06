@@ -21,10 +21,12 @@ public class ThirdPersonCharacter : MonoBehaviour
 
     [SerializeField] int blockAngle = 180;
 
-    [SerializeField] float lightAtackStamDrain;
-    [SerializeField] float heavyAttackStamDrain;
+    [SerializeField] float lightAtackStamDrain = 10;
+    [SerializeField] float heavyAttackStamDrain = 25;
     [SerializeField] float rollStamDrain;
     [SerializeField] float stamRecharge;
+    [SerializeField] float rechargeRate = 15;
+    [SerializeField] float runStamDrain = 15;
 
     public bool heavyAttack;
 
@@ -40,6 +42,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     
     bool invincible = false;
     bool blocking = false;
+    bool canRoll;
     bool rechargingStam = true;
     Stat stamina;
     void Start()
@@ -56,7 +59,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         if (this.rechargingStam && this.stamina.val <= 100)
         {
-            this.stamina.Increase(Time.deltaTime * 15);
+            this.stamina.Increase(Time.deltaTime * rechargeRate);
         }
     }
     public void Move(Vector3 move, bool jump, bool lAttack = false, bool hAttack = false, bool block = false,
@@ -74,8 +77,15 @@ public class ThirdPersonCharacter : MonoBehaviour
 #endif
         this.m_TurnAmount = Mathf.Atan2(move.x, move.z);
         this.m_ForwardAmount = move.z;
-        if (run)
+        if (run && this.stamina.val > 0 && m_IsGrounded)
+        {
+            if (this.rechargingStam)
+                this.rechargingStam = false;
             this.m_ForwardAmount *= 2;
+            this.stamina.Decrease(runStamDrain * Time.deltaTime);
+        }
+        else if (!this.rechargingStam && m_IsGrounded)
+            rechargingStam = true;
         ApplyExtraTurnRotation();
 
         // control and velocity handling is different when grounded and airborne:
@@ -113,7 +123,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         }
         else
         {
-            if (dodge)
+            if (dodge && this.canRoll && this.stamina.val > this.rollStamDrain)
                 this.m_Animator.SetTrigger("Dodge");
             if (block)
             {
@@ -126,7 +136,7 @@ public class ThirdPersonCharacter : MonoBehaviour
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
             }
-            else if (hAttack)
+            else if (hAttack && this.stamina.val > heavyAttackStamDrain)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
@@ -235,7 +245,14 @@ public class ThirdPersonCharacter : MonoBehaviour
         Debug.DrawLine(transform.position, _col.transform.position);
         float angle = Vector3.Angle(colDir, transform.forward);
         if (this.blocking && angle < blockAngle / 2)
+        {
+            if (_col.GetComponentInParent<ThirdPersonCharacter>().heavyAttack)
+                stamina.Decrease(_col.GetComponentInParent<Character>().stats.attack.val * 3);
+            else
+                stamina.Decrease(_col.GetComponentInParent<Character>().stats.attack.val);
+
             return true;
+        }
         return this.invincible;
     }
     public void Bleed()
@@ -259,6 +276,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void ClearCombo()
     {
         this.m_Animator.SetInteger("Combo", 0);
+        canRoll = true;
     }
     public void TurnSwordOn()
     {
@@ -266,6 +284,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.m_Animator.SetInteger("Combo", this.m_Animator.GetInteger("Combo") - 1);
         this.stamina.Decrease(this.lightAtackStamDrain);
         this.rechargingStam = false;
+        this.canRoll = false;
     }
     public void HeavySword()
     {
@@ -275,6 +294,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.m_Animator.SetInteger("Combo", this.m_Animator.GetInteger("Combo") - 1);
         this.stamina.Decrease(this.heavyAttackStamDrain);
         this.rechargingStam = false;
+        this.canRoll = false;
     }
     public void TurnSwordOff()
     {
@@ -285,18 +305,26 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void StartIFrames()
     {
         this.invincible = true;
+        this.stamina.Decrease(rollStamDrain);
+        this.rechargingStam = false;
+        this.canRoll = false;
     }
     public void EndIFrames()
     {
         this.invincible = false;
+        this.rechargingStam = true;
+        this.canRoll = true;
     }
     public void JumpAttackOn()
     {
         this.jumpAttackHB.SetActive(true);
+        this.stamina.Decrease(heavyAttackStamDrain);
+        this.rechargingStam = false;
     }
     public void JumpAttackOff()
     {
         this.jumpAttackHB.SetActive(false);
+        this.rechargingStam = true; 
     }
     public void BlockOn()
     {
