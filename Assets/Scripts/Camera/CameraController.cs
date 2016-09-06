@@ -8,6 +8,8 @@ public class CameraController : MonoBehaviour
     [SerializeField] Transform target;
     public string strPlayerNumber;
     public ThirdPersonUserControl controller;
+    public Vector3 look;
+
 
     Camera camera;
 
@@ -32,12 +34,24 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!this.controller.IsButtonDown("Target"))
-        {
-            this.transform.position = this.target.transform.position;
-            float h = Input.GetAxis(this.strPlayerNumber + " Camera Horizontal") * 300f * Time.deltaTime;
-            this.transform.Rotate(Vector3.up * h);
-        }
+        //if (!this.controller.IsButtonDown("Target"))
+        //{
+        //}
+
+        this.transform.position = this.target.transform.position;
+        float h = Input.GetAxis(this.strPlayerNumber + " Camera Horizontal");
+
+
+        var vertical = this.controller.Axis("Camera Vertical");
+        var horizontal = this.controller.Axis("Camera Horizontal");
+        this.look = vertical * Vector3.back + horizontal * Vector3.right;
+
+        if (this.look.magnitude < 0.2f)
+            return;
+
+        var angles = this.transform.rotation.eulerAngles;
+
+        this.transform.rotation = Quaternion.Euler(angles.x, Quaternion.LookRotation(this.look, Vector3.up).eulerAngles.y + this.target.rotation.eulerAngles.y, angles.z);
     }
 
     public void SetRect(Rect rectangle)

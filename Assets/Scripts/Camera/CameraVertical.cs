@@ -4,17 +4,30 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class CameraVertical : MonoBehaviour {
     string playerNumber;
+    CameraController controller;
+    float previousMagnitude = 0f;
+
 	// Use this for initialization
 	void Start () {
-        playerNumber = GetComponentInParent<CameraController>().strPlayerNumber;
+        this.controller = GetComponentInParent<CameraController>();
+        this.playerNumber = this.controller.strPlayerNumber;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (!CrossPlatformInputManager.GetButton(this.playerNumber + " Target"))
+        //if (!CrossPlatformInputManager.GetButton(this.playerNumber + " Target"))
+        //{
+        //}
+
+        var currentMagnitude = this.controller.look.magnitude;
+
+        if (currentMagnitude > this.previousMagnitude)
         {
-            float v = Input.GetAxis(this.playerNumber + " Camera Vertical") * 50f * Time.deltaTime;
-            this.transform.Rotate(new Vector3(v * 3f, 0, 0));
+            var angles = this.transform.rotation.eulerAngles;
+
+            this.transform.rotation = Quaternion.Euler(Mathf.Lerp(90f, 25f, currentMagnitude), angles.y, angles.z);
         }
+
+        this.previousMagnitude = currentMagnitude;
     }
 }

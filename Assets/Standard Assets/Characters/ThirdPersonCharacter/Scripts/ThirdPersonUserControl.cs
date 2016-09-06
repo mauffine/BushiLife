@@ -64,9 +64,10 @@ public class ThirdPersonUserControl : MonoBehaviour
         }
         else
         {
-            //  we use world-relative directions in the case of no main camera
-            m_Move = v*Vector3.forward + h*Vector3.right;
         }
+            // calculate player relative direction to move:
+            m_CamForward = Vector3.Scale(this.transform.forward, new Vector3(1, 0, 1)).normalized;
+            m_Move = v * m_CamForward + h * Vector3.right;
         // pass all parameters to the character control script
         m_Character.Move(m_Move, m_Jump, this.lAttack, this.hAttack, this.blocking, this.dodge, this.run);
 
