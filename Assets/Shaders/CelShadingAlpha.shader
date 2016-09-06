@@ -1,48 +1,40 @@
-﻿Shader "Custom/CelShadingForwardWithAlpha" {
-	Properties{
-		_Color("Color", Color) = (1, 1, 1, 1)
-		_MainTex("Albedo (RGBA)", 2D) = "white" {}
-	}
-		SubShader{
-		Tags{
-
-		"RenderType" = "Transparent"
-		"Queue" = "Transparent"
-	}
-		Blend SrcAlpha OneMinusSrcAlpha
-		LOD 200
-
-
-
-		CGPROGRAM 
-		#pragma surface surf CelShadingForward alpha
-		#pragma target 3.0
-
-		half4 LightingCelShadingForward(SurfaceOutput s, half3 lightDir, half atten) {
-		half NdotL = dot(s.Normal, lightDir);
-		if (NdotL <= 0.0) NdotL = 0;
-		else NdotL = 1;
-		half4 c;
-		c.rgb = s.Albedo * _LightColor0.rgb * (NdotL * atten * 2);
-		c.a = s.Alpha;
-		return c;
-	}
-
-	sampler2D _MainTex;
-	fixed4 _Color;
-
-	struct Input {
-		float2 uv_MainTex;
-	};
-
-	void surf(Input IN, inout SurfaceOutput o) {
-		// Albedo comes from a texture tinted by color
-		fixed4 texColor = tex2D(_MainTex, IN.uv_MainTex);
-		fixed4 c = texColor * _Color;
-		o.Albedo = c.rgb;
-		o.Alpha = texColor.a;
-	}
-	ENDCG
-	}
-		FallBack "Diffuse"
+﻿CGINCLUDE
+#include "UnityCG.cginc"
+struct appdata {
+	float4 vertex : POSITION;
+	float3 normal : NORMAL;
+};
+struct v2f {
+	float4 pos : POSITION;
+	float4 color : COLOR;
+};
+uniform float4 _Color; //Add This
+uniform float _Outline;
+uniform float4 _OutlineColor;
+v2f vert(appdata v) {
+	v2f o;
+	o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+	float3 norm = mul((float3x3)UNITY_MATRIX_IT_MV, v.normal);
+	norm.x *= UNITY_MATRIX_P[0][0];
+	norm.y *= UNITY_MATRIX_P[1][1];
+	o.pos.xy += norm.xy * o.pos.z * _Outline;
+	o.color = float4(_OutlineColor.rgb, _Color.a); //Change this
+	return o;
 }
+SubShader{
+	Tags{ "Queue" = "Transparent" "RenderType" = "Transparent" } //Change this if you like
+	UsePass "Toon/Basic/BASE"
+	Pass{
+	Name "OUTLINE"
+	Tags{ "LightMode" = "Always" }
+	Cull Front
+	ZWrite On
+	ColorMask RGB
+	Blend SrcAlpha OneMinusSrcAlpha
+	CGPROGRAM
+#pragma vertex vert
+#pragma exclude_renderers gles xbox360 ps3
+	ENDCG
+	SetTexture[_MainTex]{ combine primary }
+}
+Fallback "Toon/Basic"
