@@ -46,7 +46,7 @@ public class CameraController : MonoBehaviour
         var horizontal = this.controller.Axis("Camera Horizontal");
         this.look = vertical * Vector3.back + horizontal * Vector3.right;
 
-        if (this.look.magnitude < 0.2f)
+        if (this.look.magnitude < 0.01f)
             return;
 
         var angles = this.transform.rotation.eulerAngles;
