@@ -21,10 +21,10 @@ public class ThirdPersonCharacter : MonoBehaviour
 
     [SerializeField] int blockAngle = 180;
 
-    [SerializeField] float lightAtackStamDrain = 10;
+    [SerializeField] float lightAtackStamDrain = 5;
     [SerializeField] float heavyAttackStamDrain = 25;
-    [SerializeField] float rollStamDrain;
-    [SerializeField] float stamRecharge;
+    [SerializeField] float rollStamDrain = 10;
+    [SerializeField] float stamRecharge = 2;
     [SerializeField] float rechargeRate = 15;
     [SerializeField] float runStamDrain = 15;
 
@@ -42,7 +42,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     
     bool invincible = false;
     bool blocking = false;
-    bool canRoll;
+    bool canRoll = true;
     bool rechargingStam = true;
     Stat stamina;
     void Start()
@@ -61,6 +61,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             this.stamina.Increase(Time.deltaTime * rechargeRate);
         }
+        this.stamina.Validate();
     }
     public void Move(Vector3 move, bool jump, bool lAttack = false, bool hAttack = false, bool block = false,
         bool dodge = false, bool run = false)

@@ -19,7 +19,7 @@ public class SpawnPlayer : MonoBehaviour {
 	void Update () {
 	    if (Input.GetKeyDown(KeyCode.Return) && this.players.Count < respawns.Length)
         {
-            players.Add((GameObject)Instantiate(playerPrefab[this.players.Count], this.respawns[this.players.Count].transform.position, Quaternion.identity));//Random.Range(0, respawns.Length)].transform.position, Quaternion.identity));
+            players.Add((GameObject)Instantiate(playerPrefab[this.players.Count], this.respawns[this.players.Count].transform.position, Quaternion.identity));
             var player = players[players.Count - 1].GetComponent<ThirdPersonUserControl>();
             if (player != null)
                 player.SetPlayerNumber(this.players.Count);
