@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.199827, g: 0.6197591, b: 0.9705882, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientIntensity: 0.408
-  m_AmbientMode: 1
+  m_AmbientMode: 0
   m_SkyboxMaterial: {fileID: 2100000, guid: a7a77a76496df0347b6ad1f6937bc5de, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2276789, g: 0.38797143, b: 0.7440796, a: 1}
+  m_IndirectSpecularColor: {r: 0.090354405, g: 0.1547305, b: 0.29952806, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -11508,62 +11508,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300076, guid: c8be5b05ddc80c648ac001468b2cd57e, type: 3}
---- !u!1001 &839238894
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000014211009592, guid: 7f9af31e49289ba41b7c4ca78a111013, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -103.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014211009592, guid: 7f9af31e49289ba41b7c4ca78a111013, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -18.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014211009592, guid: 7f9af31e49289ba41b7c4ca78a111013, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -137.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014211009592, guid: 7f9af31e49289ba41b7c4ca78a111013, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014211009592, guid: 7f9af31e49289ba41b7c4ca78a111013, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014211009592, guid: 7f9af31e49289ba41b7c4ca78a111013, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014211009592, guid: 7f9af31e49289ba41b7c4ca78a111013, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014211009592, guid: 7f9af31e49289ba41b7c4ca78a111013, type: 2}
-      propertyPath: m_RootOrder
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013414498950, guid: 7f9af31e49289ba41b7c4ca78a111013, type: 2}
-      propertyPath: m_Name
-      value: Terrain (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 218000013262868098, guid: 7f9af31e49289ba41b7c4ca78a111013,
-        type: 2}
-      propertyPath: m_MaterialType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 218000013262868098, guid: 7f9af31e49289ba41b7c4ca78a111013,
-        type: 2}
-      propertyPath: m_MaterialTemplate
-      value: 
-      objectReference: {fileID: 2100000, guid: 458eee5231015734a9587121fb97851c, type: 2}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7f9af31e49289ba41b7c4ca78a111013, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &844134796
 GameObject:
   m_ObjectHideFlags: 0
@@ -25712,7 +25656,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.484
+    m_Strength: 0.62
     m_Bias: 0.058
     m_NormalBias: 0.4
     m_NearPlane: 0.35
@@ -25734,10 +25678,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1688622345}
-  m_LocalRotation: {x: -0.69570595, y: 0.269624, z: -0.25660175, w: -0.614371}
+  m_LocalRotation: {x: -0.7031375, y: 0.24960198, z: -0.27408022, w: -0.60677564}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 96.70099, y: -12.494995, z: -328.963}
+  m_LocalEulerAnglesHint: {x: 98.086, y: -36.28299, z: -352.667}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
