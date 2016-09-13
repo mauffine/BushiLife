@@ -1016,6 +1016,7 @@ MonoBehaviour:
   stamRecharge: 2
   rechargeRate: 15
   runStamDrain: 15
+  trail: {fileID: 114000013639281706}
   heavyAttack: 0
 --- !u!114 &11457512
 MonoBehaviour:
@@ -3828,7 +3829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4000010283809732
 Transform:
   m_ObjectHideFlags: 1

@@ -1,4 +1,5 @@
 using UnityEngine;
+using Xft;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CapsuleCollider))]
@@ -13,6 +14,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] float m_MoveSpeedMultiplier = 1f;
     [SerializeField] float m_AnimSpeedMultiplier = 1f;
     [SerializeField] float m_GroundCheckDistance = 0.1f;
+    [SerializeField] float airControl = 1000;
+    [SerializeField] float maxArialSpeed = 10;
 
     [SerializeField] GameObject swordbox;
     [SerializeField] GameObject jumpAttackHB;
@@ -27,6 +30,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] float stamRecharge = 2;
     [SerializeField] float rechargeRate = 15;
     [SerializeField] float runStamDrain = 15;
+
+    [SerializeField] XWeaponTrail trail;
 
     public bool heavyAttack;
 
@@ -53,6 +58,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.stamina = GetComponent<Character>().stats.stamina;
         this.m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         this.m_OrigGroundCheckDistance = this.m_GroundCheckDistance;
+        this.trail.Deactivate();
     }
 
     void Update()
@@ -72,7 +78,11 @@ public class ThirdPersonCharacter : MonoBehaviour
         if (move.magnitude > 1f) move.Normalize();
         move = this.transform.InverseTransformDirection(move);
         CheckGroundStatus();
-        move = Vector3.ProjectOnPlane(move, this.m_GroundNormal);
+        if (this.m_IsGrounded)
+            move = Vector3.ProjectOnPlane(move, this.m_GroundNormal);
+        else
+            move = Vector3.ProjectOnPlane(move, Vector3.up);
+
 #if UNITY_EDITOR
         Debug.DrawLine(this.transform.position, this.transform.position + this.m_Rigidbody.velocity / 4, Color.white);
 #endif
@@ -85,7 +95,7 @@ public class ThirdPersonCharacter : MonoBehaviour
             this.m_ForwardAmount *= 2;
             this.stamina.Decrease(runStamDrain * Time.deltaTime);
         }
-        else if (!this.rechargingStam && m_IsGrounded)
+        else if (!this.rechargingStam && m_IsGrounded && !run)
             rechargingStam = true;
         ApplyExtraTurnRotation();
 
@@ -128,7 +138,11 @@ public class ThirdPersonCharacter : MonoBehaviour
                 this.m_Animator.SetTrigger("Dodge");
             if (block)
             {
-                this.m_Animator.SetTrigger("Block");
+                this.m_Animator.SetBool("Block", true);
+            }
+            else
+            {
+                this.m_Animator.SetBool("Block", false);
             }
             if (lAttack && stamina.val > lightAtackStamDrain)
             {
@@ -165,18 +179,15 @@ public class ThirdPersonCharacter : MonoBehaviour
             this.m_Animator.speed = 1;
         }
     }
-
-
     void HandleAirborneMovement()
     {
         // apply extra gravity from multiplier:
         Vector3 extraGravityForce = (Physics.gravity * this.m_GravityMultiplier) - Physics.gravity;
         this.m_Rigidbody.AddForce(extraGravityForce);
-
+        if (this.m_Rigidbody.velocity.magnitude < this.maxArialSpeed)
+            this.m_Rigidbody.AddForce(this.transform.forward * this.m_ForwardAmount * this.airControl * Time.deltaTime, ForceMode.Acceleration);
         this.m_GroundCheckDistance = this.m_Rigidbody.velocity.y < 0 ? this.m_OrigGroundCheckDistance : 0.01f;
     }
-
-
     void HandleGroundedMovement(bool jump)
     {
         // check whether conditions are right to allow a jump:
@@ -211,8 +222,6 @@ public class ThirdPersonCharacter : MonoBehaviour
             this.m_Rigidbody.velocity = v;
         }
     }
-
-
     void CheckGroundStatus()
     {
         RaycastHit hitInfo;
@@ -252,7 +261,13 @@ public class ThirdPersonCharacter : MonoBehaviour
             else
                 stamina.Decrease(_col.GetComponentInParent<Character>().stats.attack.val);
 
-            return true;
+            if (stamina.val <= 0)
+            {
+                this.m_Animator.SetTrigger("Block Break");
+                return false;
+            }
+            else
+                return true;
         }
         return this.invincible;
     }
@@ -277,11 +292,14 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void ClearCombo()
     {
         this.m_Animator.SetInteger("Combo", 0);
+        this.trail.Deactivate();
         canRoll = true;
+
     }
     public void TurnSwordOn()
     {
         this.swordbox.SetActive(true);
+        this.trail.Activate();
         this.m_Animator.SetInteger("Combo", this.m_Animator.GetInteger("Combo") - 1);
         this.stamina.Decrease(this.lightAtackStamDrain);
         this.rechargingStam = false;
@@ -290,6 +308,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void HeavySword()
     {
         this.swordbox.SetActive(true);
+        this.trail.Activate();
         //set this so the enemy takes 3x damage
         this.heavyAttack = true;
         this.m_Animator.SetInteger("Combo", this.m_Animator.GetInteger("Combo") - 1);
@@ -335,6 +354,5 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         blocking = false;
     }
-
 }
 
