@@ -1,0 +1,1826 @@
+fileFormatVersion: 2
+guid: 0ca38389cb766f84994f42d9e8aef15e
+timeCreated: 1473745861
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bandit_collar_JNT
+    100004: Bandit_Head_JNT
+    100006: Bandit_LArtm_JNT
+    100008: Bandit_LElbow_JNT
+    100010: Bandit_LFingers_JNT
+    100012: Bandit_Lfoot_JNT
+    100014: Bandit_LKnee_JNT
+    100016: Bandit_LShoulder_JNT
+    100018: Bandit_LThigh_JNT
+    100020: Bandit_Neck_JNT
+    100022: Bandit_Relbow_JNT
+    100024: Bandit_Rfinger_JNT
+    100026: Bandit_Rfoot_JNT
+    100028: Bandit_Rhand_JNT
+    100030: Bandit_Rknee_JNT
+    100032: Bandit_Root_JNT
+    100034: Bandit_Rshoulder_JNT
+    100036: Bandit_RThigh_JNT
+    100038: Bandit_Spine2_JNT
+    100040: Bandit_Spine_JNT
+    100042: Bandit_Top_JNT
+    100044: polySurface1
+    100046: polySurface10
+    100048: polySurface11
+    100050: polySurface12
+    100052: polySurface13
+    100054: polySurface14
+    100056: polySurface15
+    100058: polySurface16
+    100060: polySurface17
+    100062: polySurface18
+    100064: polySurface18 1
+    100066: polySurface21
+    100068: polySurface21 1
+    100070: polySurface22
+    100072: polySurface23
+    100074: polySurface8
+    100076: polySurface9
+    100078: transform1
+    100080: transform10
+    100082: transform11
+    100084: transform12
+    100086: transform13
+    100088: transform14
+    100090: transform15
+    100092: transform2
+    100094: transform3
+    100096: transform4
+    100098: transform5
+    100100: transform6
+    100102: transform7
+    100104: transform8
+    100106: transform9
+    400000: //RootNode
+    400002: Bandit_collar_JNT
+    400004: Bandit_Head_JNT
+    400006: Bandit_LArtm_JNT
+    400008: Bandit_LElbow_JNT
+    400010: Bandit_LFingers_JNT
+    400012: Bandit_Lfoot_JNT
+    400014: Bandit_LKnee_JNT
+    400016: Bandit_LShoulder_JNT
+    400018: Bandit_LThigh_JNT
+    400020: Bandit_Neck_JNT
+    400022: Bandit_Relbow_JNT
+    400024: Bandit_Rfinger_JNT
+    400026: Bandit_Rfoot_JNT
+    400028: Bandit_Rhand_JNT
+    400030: Bandit_Rknee_JNT
+    400032: Bandit_Root_JNT
+    400034: Bandit_Rshoulder_JNT
+    400036: Bandit_RThigh_JNT
+    400038: Bandit_Spine2_JNT
+    400040: Bandit_Spine_JNT
+    400042: Bandit_Top_JNT
+    400044: polySurface1
+    400046: polySurface10
+    400048: polySurface11
+    400050: polySurface12
+    400052: polySurface13
+    400054: polySurface14
+    400056: polySurface15
+    400058: polySurface16
+    400060: polySurface17
+    400062: polySurface18
+    400064: polySurface18 1
+    400066: polySurface21
+    400068: polySurface21 1
+    400070: polySurface22
+    400072: polySurface23
+    400074: polySurface8
+    400076: polySurface9
+    400078: transform1
+    400080: transform10
+    400082: transform11
+    400084: transform12
+    400086: transform13
+    400088: transform14
+    400090: transform15
+    400092: transform2
+    400094: transform3
+    400096: transform4
+    400098: transform5
+    400100: transform6
+    400102: transform7
+    400104: transform8
+    400106: transform9
+    4300000: polySurface18
+    4300002: polySurface21
+    7400000: Bandit_Run
+    7400002: Bandit_RunLeft
+    7400004: Bandit_RunRight
+    7400006: Bandit_StrafeForward
+    7400008: Bandit_StrafeLeft
+    7400010: Bandit_StrafeRight
+    7400012: Bandit_StrafeBack
+    7400014: Bandit_Attacklight
+    7400016: Bandit_HeavtAttack
+    9500000: //RootNode
+    13700000: polySurface18
+    13700002: polySurface21
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Bandit Animations2' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Bandit_collar_JNT' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Bandit_Run
+      takeName: Bandit Animations2
+      firstFrame: 10
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bandit_Root_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT/Bandit_Lfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT/Bandit_Rfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT/Bandit_LFingers_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT/Bandit_Top_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT/Bandit_Rfinger_JNT
+        weight: 0
+      - path: polySurface1
+        weight: 0
+      - path: polySurface1/polySurface8
+        weight: 0
+      - path: polySurface1/polySurface8/transform7
+        weight: 0
+      - path: polySurface1/polySurface9
+        weight: 0
+      - path: polySurface1/polySurface9/transform8
+        weight: 0
+      - path: polySurface1/polySurface10
+        weight: 0
+      - path: polySurface1/polySurface10/transform6
+        weight: 0
+      - path: polySurface1/polySurface11
+        weight: 0
+      - path: polySurface1/polySurface11/transform3
+        weight: 0
+      - path: polySurface1/polySurface12
+        weight: 0
+      - path: polySurface1/polySurface12/transform4
+        weight: 0
+      - path: polySurface1/polySurface13
+        weight: 0
+      - path: polySurface1/polySurface13/transform2
+        weight: 0
+      - path: polySurface1/polySurface14
+        weight: 0
+      - path: polySurface1/polySurface14/transform5
+        weight: 0
+      - path: polySurface1/polySurface15
+        weight: 0
+      - path: polySurface1/polySurface15/transform9
+        weight: 0
+      - path: polySurface1/polySurface16
+        weight: 0
+      - path: polySurface1/polySurface16/transform10
+        weight: 0
+      - path: polySurface1/polySurface17
+        weight: 0
+      - path: polySurface1/polySurface17/transform11
+        weight: 0
+      - path: polySurface1/polySurface18 1
+        weight: 0
+      - path: polySurface1/polySurface18 1/transform12
+        weight: 0
+      - path: polySurface1/polySurface21 1
+        weight: 0
+      - path: polySurface1/polySurface21 1/transform15
+        weight: 0
+      - path: polySurface1/polySurface22
+        weight: 0
+      - path: polySurface1/polySurface22/transform14
+        weight: 0
+      - path: polySurface1/polySurface23
+        weight: 0
+      - path: polySurface1/polySurface23/transform13
+        weight: 0
+      - path: polySurface1/transform1
+        weight: 0
+      - path: polySurface18
+        weight: 0
+      - path: polySurface21
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Bandit_RunLeft
+      takeName: Bandit Animations2
+      firstFrame: 28
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bandit_Root_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT/Bandit_Lfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT/Bandit_Rfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT/Bandit_LFingers_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT/Bandit_Top_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT/Bandit_Rfinger_JNT
+        weight: 0
+      - path: polySurface1
+        weight: 0
+      - path: polySurface1/polySurface8
+        weight: 0
+      - path: polySurface1/polySurface8/transform7
+        weight: 0
+      - path: polySurface1/polySurface9
+        weight: 0
+      - path: polySurface1/polySurface9/transform8
+        weight: 0
+      - path: polySurface1/polySurface10
+        weight: 0
+      - path: polySurface1/polySurface10/transform6
+        weight: 0
+      - path: polySurface1/polySurface11
+        weight: 0
+      - path: polySurface1/polySurface11/transform3
+        weight: 0
+      - path: polySurface1/polySurface12
+        weight: 0
+      - path: polySurface1/polySurface12/transform4
+        weight: 0
+      - path: polySurface1/polySurface13
+        weight: 0
+      - path: polySurface1/polySurface13/transform2
+        weight: 0
+      - path: polySurface1/polySurface14
+        weight: 0
+      - path: polySurface1/polySurface14/transform5
+        weight: 0
+      - path: polySurface1/polySurface15
+        weight: 0
+      - path: polySurface1/polySurface15/transform9
+        weight: 0
+      - path: polySurface1/polySurface16
+        weight: 0
+      - path: polySurface1/polySurface16/transform10
+        weight: 0
+      - path: polySurface1/polySurface17
+        weight: 0
+      - path: polySurface1/polySurface17/transform11
+        weight: 0
+      - path: polySurface1/polySurface18 1
+        weight: 0
+      - path: polySurface1/polySurface18 1/transform12
+        weight: 0
+      - path: polySurface1/polySurface21 1
+        weight: 0
+      - path: polySurface1/polySurface21 1/transform15
+        weight: 0
+      - path: polySurface1/polySurface22
+        weight: 0
+      - path: polySurface1/polySurface22/transform14
+        weight: 0
+      - path: polySurface1/polySurface23
+        weight: 0
+      - path: polySurface1/polySurface23/transform13
+        weight: 0
+      - path: polySurface1/transform1
+        weight: 0
+      - path: polySurface18
+        weight: 0
+      - path: polySurface21
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Bandit_RunRight
+      takeName: Bandit Animations2
+      firstFrame: 46
+      lastFrame: 62
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bandit_Root_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT/Bandit_Lfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT/Bandit_Rfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT/Bandit_LFingers_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT/Bandit_Top_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT/Bandit_Rfinger_JNT
+        weight: 0
+      - path: polySurface1
+        weight: 0
+      - path: polySurface1/polySurface8
+        weight: 0
+      - path: polySurface1/polySurface8/transform7
+        weight: 0
+      - path: polySurface1/polySurface9
+        weight: 0
+      - path: polySurface1/polySurface9/transform8
+        weight: 0
+      - path: polySurface1/polySurface10
+        weight: 0
+      - path: polySurface1/polySurface10/transform6
+        weight: 0
+      - path: polySurface1/polySurface11
+        weight: 0
+      - path: polySurface1/polySurface11/transform3
+        weight: 0
+      - path: polySurface1/polySurface12
+        weight: 0
+      - path: polySurface1/polySurface12/transform4
+        weight: 0
+      - path: polySurface1/polySurface13
+        weight: 0
+      - path: polySurface1/polySurface13/transform2
+        weight: 0
+      - path: polySurface1/polySurface14
+        weight: 0
+      - path: polySurface1/polySurface14/transform5
+        weight: 0
+      - path: polySurface1/polySurface15
+        weight: 0
+      - path: polySurface1/polySurface15/transform9
+        weight: 0
+      - path: polySurface1/polySurface16
+        weight: 0
+      - path: polySurface1/polySurface16/transform10
+        weight: 0
+      - path: polySurface1/polySurface17
+        weight: 0
+      - path: polySurface1/polySurface17/transform11
+        weight: 0
+      - path: polySurface1/polySurface18 1
+        weight: 0
+      - path: polySurface1/polySurface18 1/transform12
+        weight: 0
+      - path: polySurface1/polySurface21 1
+        weight: 0
+      - path: polySurface1/polySurface21 1/transform15
+        weight: 0
+      - path: polySurface1/polySurface22
+        weight: 0
+      - path: polySurface1/polySurface22/transform14
+        weight: 0
+      - path: polySurface1/polySurface23
+        weight: 0
+      - path: polySurface1/polySurface23/transform13
+        weight: 0
+      - path: polySurface1/transform1
+        weight: 0
+      - path: polySurface18
+        weight: 0
+      - path: polySurface21
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Bandit_StrafeForward
+      takeName: Bandit Animations2
+      firstFrame: 63
+      lastFrame: 103
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bandit_Root_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT/Bandit_Lfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT/Bandit_Rfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT/Bandit_LFingers_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT/Bandit_Top_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT/Bandit_Rfinger_JNT
+        weight: 0
+      - path: polySurface1
+        weight: 0
+      - path: polySurface1/polySurface8
+        weight: 0
+      - path: polySurface1/polySurface8/transform7
+        weight: 0
+      - path: polySurface1/polySurface9
+        weight: 0
+      - path: polySurface1/polySurface9/transform8
+        weight: 0
+      - path: polySurface1/polySurface10
+        weight: 0
+      - path: polySurface1/polySurface10/transform6
+        weight: 0
+      - path: polySurface1/polySurface11
+        weight: 0
+      - path: polySurface1/polySurface11/transform3
+        weight: 0
+      - path: polySurface1/polySurface12
+        weight: 0
+      - path: polySurface1/polySurface12/transform4
+        weight: 0
+      - path: polySurface1/polySurface13
+        weight: 0
+      - path: polySurface1/polySurface13/transform2
+        weight: 0
+      - path: polySurface1/polySurface14
+        weight: 0
+      - path: polySurface1/polySurface14/transform5
+        weight: 0
+      - path: polySurface1/polySurface15
+        weight: 0
+      - path: polySurface1/polySurface15/transform9
+        weight: 0
+      - path: polySurface1/polySurface16
+        weight: 0
+      - path: polySurface1/polySurface16/transform10
+        weight: 0
+      - path: polySurface1/polySurface17
+        weight: 0
+      - path: polySurface1/polySurface17/transform11
+        weight: 0
+      - path: polySurface1/polySurface18 1
+        weight: 0
+      - path: polySurface1/polySurface18 1/transform12
+        weight: 0
+      - path: polySurface1/polySurface21 1
+        weight: 0
+      - path: polySurface1/polySurface21 1/transform15
+        weight: 0
+      - path: polySurface1/polySurface22
+        weight: 0
+      - path: polySurface1/polySurface22/transform14
+        weight: 0
+      - path: polySurface1/polySurface23
+        weight: 0
+      - path: polySurface1/polySurface23/transform13
+        weight: 0
+      - path: polySurface1/transform1
+        weight: 0
+      - path: polySurface18
+        weight: 0
+      - path: polySurface21
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Bandit_StrafeLeft
+      takeName: Bandit Animations2
+      firstFrame: 104
+      lastFrame: 151
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bandit_Root_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT/Bandit_Lfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT/Bandit_Rfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT/Bandit_LFingers_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT/Bandit_Top_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT/Bandit_Rfinger_JNT
+        weight: 0
+      - path: polySurface1
+        weight: 0
+      - path: polySurface1/polySurface8
+        weight: 0
+      - path: polySurface1/polySurface8/transform7
+        weight: 0
+      - path: polySurface1/polySurface9
+        weight: 0
+      - path: polySurface1/polySurface9/transform8
+        weight: 0
+      - path: polySurface1/polySurface10
+        weight: 0
+      - path: polySurface1/polySurface10/transform6
+        weight: 0
+      - path: polySurface1/polySurface11
+        weight: 0
+      - path: polySurface1/polySurface11/transform3
+        weight: 0
+      - path: polySurface1/polySurface12
+        weight: 0
+      - path: polySurface1/polySurface12/transform4
+        weight: 0
+      - path: polySurface1/polySurface13
+        weight: 0
+      - path: polySurface1/polySurface13/transform2
+        weight: 0
+      - path: polySurface1/polySurface14
+        weight: 0
+      - path: polySurface1/polySurface14/transform5
+        weight: 0
+      - path: polySurface1/polySurface15
+        weight: 0
+      - path: polySurface1/polySurface15/transform9
+        weight: 0
+      - path: polySurface1/polySurface16
+        weight: 0
+      - path: polySurface1/polySurface16/transform10
+        weight: 0
+      - path: polySurface1/polySurface17
+        weight: 0
+      - path: polySurface1/polySurface17/transform11
+        weight: 0
+      - path: polySurface1/polySurface18 1
+        weight: 0
+      - path: polySurface1/polySurface18 1/transform12
+        weight: 0
+      - path: polySurface1/polySurface21 1
+        weight: 0
+      - path: polySurface1/polySurface21 1/transform15
+        weight: 0
+      - path: polySurface1/polySurface22
+        weight: 0
+      - path: polySurface1/polySurface22/transform14
+        weight: 0
+      - path: polySurface1/polySurface23
+        weight: 0
+      - path: polySurface1/polySurface23/transform13
+        weight: 0
+      - path: polySurface1/transform1
+        weight: 0
+      - path: polySurface18
+        weight: 0
+      - path: polySurface21
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Bandit_StrafeRight
+      takeName: Bandit Animations2
+      firstFrame: 152
+      lastFrame: 195
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bandit_Root_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT/Bandit_Lfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT/Bandit_Rfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT/Bandit_LFingers_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT/Bandit_Top_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT/Bandit_Rfinger_JNT
+        weight: 0
+      - path: polySurface1
+        weight: 0
+      - path: polySurface1/polySurface8
+        weight: 0
+      - path: polySurface1/polySurface8/transform7
+        weight: 0
+      - path: polySurface1/polySurface9
+        weight: 0
+      - path: polySurface1/polySurface9/transform8
+        weight: 0
+      - path: polySurface1/polySurface10
+        weight: 0
+      - path: polySurface1/polySurface10/transform6
+        weight: 0
+      - path: polySurface1/polySurface11
+        weight: 0
+      - path: polySurface1/polySurface11/transform3
+        weight: 0
+      - path: polySurface1/polySurface12
+        weight: 0
+      - path: polySurface1/polySurface12/transform4
+        weight: 0
+      - path: polySurface1/polySurface13
+        weight: 0
+      - path: polySurface1/polySurface13/transform2
+        weight: 0
+      - path: polySurface1/polySurface14
+        weight: 0
+      - path: polySurface1/polySurface14/transform5
+        weight: 0
+      - path: polySurface1/polySurface15
+        weight: 0
+      - path: polySurface1/polySurface15/transform9
+        weight: 0
+      - path: polySurface1/polySurface16
+        weight: 0
+      - path: polySurface1/polySurface16/transform10
+        weight: 0
+      - path: polySurface1/polySurface17
+        weight: 0
+      - path: polySurface1/polySurface17/transform11
+        weight: 0
+      - path: polySurface1/polySurface18 1
+        weight: 0
+      - path: polySurface1/polySurface18 1/transform12
+        weight: 0
+      - path: polySurface1/polySurface21 1
+        weight: 0
+      - path: polySurface1/polySurface21 1/transform15
+        weight: 0
+      - path: polySurface1/polySurface22
+        weight: 0
+      - path: polySurface1/polySurface22/transform14
+        weight: 0
+      - path: polySurface1/polySurface23
+        weight: 0
+      - path: polySurface1/polySurface23/transform13
+        weight: 0
+      - path: polySurface1/transform1
+        weight: 0
+      - path: polySurface18
+        weight: 0
+      - path: polySurface21
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Bandit_StrafeBack
+      takeName: Bandit Animations2
+      firstFrame: 196
+      lastFrame: 238
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bandit_Root_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT/Bandit_Lfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT/Bandit_Rfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT/Bandit_LFingers_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT/Bandit_Top_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT/Bandit_Rfinger_JNT
+        weight: 0
+      - path: polySurface1
+        weight: 0
+      - path: polySurface1/polySurface8
+        weight: 0
+      - path: polySurface1/polySurface8/transform7
+        weight: 0
+      - path: polySurface1/polySurface9
+        weight: 0
+      - path: polySurface1/polySurface9/transform8
+        weight: 0
+      - path: polySurface1/polySurface10
+        weight: 0
+      - path: polySurface1/polySurface10/transform6
+        weight: 0
+      - path: polySurface1/polySurface11
+        weight: 0
+      - path: polySurface1/polySurface11/transform3
+        weight: 0
+      - path: polySurface1/polySurface12
+        weight: 0
+      - path: polySurface1/polySurface12/transform4
+        weight: 0
+      - path: polySurface1/polySurface13
+        weight: 0
+      - path: polySurface1/polySurface13/transform2
+        weight: 0
+      - path: polySurface1/polySurface14
+        weight: 0
+      - path: polySurface1/polySurface14/transform5
+        weight: 0
+      - path: polySurface1/polySurface15
+        weight: 0
+      - path: polySurface1/polySurface15/transform9
+        weight: 0
+      - path: polySurface1/polySurface16
+        weight: 0
+      - path: polySurface1/polySurface16/transform10
+        weight: 0
+      - path: polySurface1/polySurface17
+        weight: 0
+      - path: polySurface1/polySurface17/transform11
+        weight: 0
+      - path: polySurface1/polySurface18 1
+        weight: 0
+      - path: polySurface1/polySurface18 1/transform12
+        weight: 0
+      - path: polySurface1/polySurface21 1
+        weight: 0
+      - path: polySurface1/polySurface21 1/transform15
+        weight: 0
+      - path: polySurface1/polySurface22
+        weight: 0
+      - path: polySurface1/polySurface22/transform14
+        weight: 0
+      - path: polySurface1/polySurface23
+        weight: 0
+      - path: polySurface1/polySurface23/transform13
+        weight: 0
+      - path: polySurface1/transform1
+        weight: 0
+      - path: polySurface18
+        weight: 0
+      - path: polySurface21
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Bandit_Attacklight
+      takeName: Bandit Animations2
+      firstFrame: 239
+      lastFrame: 272
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bandit_Root_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT/Bandit_Lfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT/Bandit_Rfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT/Bandit_LFingers_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT/Bandit_Top_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT/Bandit_Rfinger_JNT
+        weight: 0
+      - path: polySurface1
+        weight: 0
+      - path: polySurface1/polySurface8
+        weight: 0
+      - path: polySurface1/polySurface8/transform7
+        weight: 0
+      - path: polySurface1/polySurface9
+        weight: 0
+      - path: polySurface1/polySurface9/transform8
+        weight: 0
+      - path: polySurface1/polySurface10
+        weight: 0
+      - path: polySurface1/polySurface10/transform6
+        weight: 0
+      - path: polySurface1/polySurface11
+        weight: 0
+      - path: polySurface1/polySurface11/transform3
+        weight: 0
+      - path: polySurface1/polySurface12
+        weight: 0
+      - path: polySurface1/polySurface12/transform4
+        weight: 0
+      - path: polySurface1/polySurface13
+        weight: 0
+      - path: polySurface1/polySurface13/transform2
+        weight: 0
+      - path: polySurface1/polySurface14
+        weight: 0
+      - path: polySurface1/polySurface14/transform5
+        weight: 0
+      - path: polySurface1/polySurface15
+        weight: 0
+      - path: polySurface1/polySurface15/transform9
+        weight: 0
+      - path: polySurface1/polySurface16
+        weight: 0
+      - path: polySurface1/polySurface16/transform10
+        weight: 0
+      - path: polySurface1/polySurface17
+        weight: 0
+      - path: polySurface1/polySurface17/transform11
+        weight: 0
+      - path: polySurface1/polySurface18 1
+        weight: 0
+      - path: polySurface1/polySurface18 1/transform12
+        weight: 0
+      - path: polySurface1/polySurface21 1
+        weight: 0
+      - path: polySurface1/polySurface21 1/transform15
+        weight: 0
+      - path: polySurface1/polySurface22
+        weight: 0
+      - path: polySurface1/polySurface22/transform14
+        weight: 0
+      - path: polySurface1/polySurface23
+        weight: 0
+      - path: polySurface1/polySurface23/transform13
+        weight: 0
+      - path: polySurface1/transform1
+        weight: 0
+      - path: polySurface18
+        weight: 0
+      - path: polySurface21
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Bandit_HeavtAttack
+      takeName: Bandit Animations2
+      firstFrame: 273
+      lastFrame: 327
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bandit_Root_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_LThigh_JNT/Bandit_LKnee_JNT/Bandit_Lfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_RThigh_JNT/Bandit_Rknee_JNT/Bandit_Rfoot_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_LShoulder_JNT/Bandit_LElbow_JNT/Bandit_LArtm_JNT/Bandit_LFingers_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Neck_JNT/Bandit_Head_JNT/Bandit_Top_JNT
+        weight: 0
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT
+        weight: 1
+      - path: Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT/Bandit_Rfinger_JNT
+        weight: 0
+      - path: polySurface1
+        weight: 0
+      - path: polySurface1/polySurface8
+        weight: 0
+      - path: polySurface1/polySurface8/transform7
+        weight: 0
+      - path: polySurface1/polySurface9
+        weight: 0
+      - path: polySurface1/polySurface9/transform8
+        weight: 0
+      - path: polySurface1/polySurface10
+        weight: 0
+      - path: polySurface1/polySurface10/transform6
+        weight: 0
+      - path: polySurface1/polySurface11
+        weight: 0
+      - path: polySurface1/polySurface11/transform3
+        weight: 0
+      - path: polySurface1/polySurface12
+        weight: 0
+      - path: polySurface1/polySurface12/transform4
+        weight: 0
+      - path: polySurface1/polySurface13
+        weight: 0
+      - path: polySurface1/polySurface13/transform2
+        weight: 0
+      - path: polySurface1/polySurface14
+        weight: 0
+      - path: polySurface1/polySurface14/transform5
+        weight: 0
+      - path: polySurface1/polySurface15
+        weight: 0
+      - path: polySurface1/polySurface15/transform9
+        weight: 0
+      - path: polySurface1/polySurface16
+        weight: 0
+      - path: polySurface1/polySurface16/transform10
+        weight: 0
+      - path: polySurface1/polySurface17
+        weight: 0
+      - path: polySurface1/polySurface17/transform11
+        weight: 0
+      - path: polySurface1/polySurface18 1
+        weight: 0
+      - path: polySurface1/polySurface18 1/transform12
+        weight: 0
+      - path: polySurface1/polySurface21 1
+        weight: 0
+      - path: polySurface1/polySurface21 1/transform15
+        weight: 0
+      - path: polySurface1/polySurface22
+        weight: 0
+      - path: polySurface1/polySurface22/transform14
+        weight: 0
+      - path: polySurface1/polySurface23
+        weight: 0
+      - path: polySurface1/polySurface23/transform13
+        weight: 0
+      - path: polySurface1/transform1
+        weight: 0
+      - path: polySurface18
+        weight: 0
+      - path: polySurface21
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Bandit_Root_JNT
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_LThigh_JNT
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_RThigh_JNT
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_LKnee_JNT
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_Rknee_JNT
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_Lfoot_JNT
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_Rfoot_JNT
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_Spine_JNT
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_Spine2_JNT
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_Neck_JNT
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_Head_JNT
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_LShoulder_JNT
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_Rshoulder_JNT
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_LElbow_JNT
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_Relbow_JNT
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_LArtm_JNT
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bandit_Rhand_JNT
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Bandit_Animated(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface8
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform7
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface9
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform8
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface10
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform6
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface11
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface12
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface13
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface14
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform5
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface15
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform9
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface16
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform10
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface17
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform11
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface18 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform12
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface21 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform15
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface22
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform14
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface23
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform13
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface18
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface21
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Root_JNT
+      position: {x: -0.000114088965, y: 0.021773934, z: 0.00010785624}
+      rotation: {x: 0.47686154, y: -0.55211717, z: -0.44705254, w: 0.5176039}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Spine_JNT
+      position: {x: -0.005485638, y: 0.0010885359, z: -0.00009790254}
+      rotation: {x: 0.9910863, y: -0.09904953, z: 0.004132578, w: -0.08899494}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Spine2_JNT
+      position: {x: -0.003549952, y: 0.00005681387, z: -0.000083003964}
+      rotation: {x: 0.4239898, y: -0.44717115, z: 0.5418872, w: 0.57151455}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_collar_JNT
+      position: {x: 0.000016749214, y: 0.004494654, z: -0.0002013329}
+      rotation: {x: 0.49998555, y: -0.5000145, z: -0.49998555, w: 0.5000145}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Neck_JNT
+      position: {x: -0.0031203853, y: 3.6082247e-18, z: -3.5620106e-19}
+      rotation: {x: 0.9909714, y: -0.13407366, z: -8.2096435e-18, w: 6.0679495e-17}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Head_JNT
+      position: {x: -0.0024098565, y: 0.0006524077, z: -3.1860926e-15}
+      rotation: {x: -1.5107984e-16, y: -1.2527365e-16, z: -0.09297659, w: 0.9956683}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Top_JNT
+      position: {x: -0.02832103, y: 0.0017475192, z: 1.18682e-13}
+      rotation: {x: 0, y: 0, z: 0.015347365, w: 0.9998822}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_LShoulder_JNT
+      position: {x: -0.00097417156, y: 0.00000005637827, z: 0.0066274838}
+      rotation: {x: -0.4796204, y: 0.5195809, z: 0.5195531, w: 0.47965038}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_LElbow_JNT
+      position: {x: -0.00640595, y: -6.938361e-18, z: -9.534692e-19}
+      rotation: {x: 0.043311983, y: -0.00446409, z: -0.032526344, w: 0.99852204}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_LArtm_JNT
+      position: {x: -0.008296838, y: -0.00056195987, z: 0.000049310525}
+      rotation: {x: 0.0040445635, y: 0.0226017, z: -0.036334638, w: 0.9990759}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_LFingers_JNT
+      position: {x: -0.0020484163, y: -0.00032226814, z: 0.00002992151}
+      rotation: {x: 0, y: 0, z: -0.7550692, w: 0.6556451}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Rshoulder_JNT
+      position: {x: -0.0010203724, y: 0.000000059052006, z: -0.006770775}
+      rotation: {x: -0.4807528, y: 0.51853323, z: -0.5185054, w: -0.48078284}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Relbow_JNT
+      position: {x: -0.0061745206, y: -1.3859388e-18, z: 7.671544e-19}
+      rotation: {x: 3.0872987e-15, y: -1.9898429e-17, z: -0.04610566, w: 0.9989366}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Rhand_JNT
+      position: {x: -0.0062070577, y: -4.3107877e-18, z: -1.110223e-18}
+      rotation: {x: 2.9979793e-15, y: 1.1641621e-16, z: -0.0020175942, w: 0.999998}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Rfinger_JNT
+      position: {x: -0.004010009, y: 2.879641e-17, z: -5.551115e-19}
+      rotation: {x: -0.43374243, y: 0.558451, z: 0.5063473, w: -0.4935711}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_LThigh_JNT
+      position: {x: 0.002425314, y: 0.00014531352, z: 0.0062621254}
+      rotation: {x: -0.01819951, y: 0.769211, z: 0.629564, w: 0.107853755}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_LKnee_JNT
+      position: {x: -0.008823778, y: 0.000036300375, z: 0.0003052663}
+      rotation: {x: -0.12819113, y: -0.06840699, z: 0.05435638, w: 0.9878932}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Lfoot_JNT
+      position: {x: -0.008392267, y: -0.00015817425, z: 0.0012823052}
+      rotation: {x: 0.14058584, y: 0.015959302, z: 0.041296873, w: 0.9890781}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_RThigh_JNT
+      position: {x: 0.0024832592, y: -0.0006965519, z: -0.006501682}
+      rotation: {x: -0.00072590366, y: 0.73897725, z: -0.6664643, w: -0.0986784}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Rknee_JNT
+      position: {x: -0.008856371, y: 0.000047497404, z: -0.00030372618}
+      rotation: {x: 0.1909639, y: 0.028124148, z: 0.0017204206, w: 0.9811926}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bandit_Rfoot_JNT
+      position: {x: -0.008376678, y: -0.00014553983, z: -0.0006234251}
+      rotation: {x: -0.113559045, y: -0.021508612, z: -0.04241797, w: 0.9923923}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
