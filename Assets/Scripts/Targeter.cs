@@ -68,7 +68,7 @@ public class Targeter : MonoBehaviour
 
         var vertical = this.controller.Axis("Camera Vertical");
         var horizontal = this.controller.Axis("Camera Horizontal");
-        this.aim = vertical * Vector3.back + horizontal * Vector3.right;
+        this.aim = vertical * Vector3.back + horizontal * Vector3.left;
 
         var distance = this.aim.magnitude;
 

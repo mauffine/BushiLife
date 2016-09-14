@@ -44,14 +44,16 @@ public class CameraController : MonoBehaviour
 
         var vertical = this.controller.Axis("Camera Vertical");
         var horizontal = this.controller.Axis("Camera Horizontal");
-        this.look = vertical * Vector3.back + horizontal * Vector3.right;
+        this.look = vertical * Vector3.back + horizontal * Vector3.left;
+
 
         if (this.look.magnitude < 0.01f)
             return;
 
         var angles = this.transform.rotation.eulerAngles;
 
-        this.transform.rotation = Quaternion.Euler(angles.x, Quaternion.LookRotation(this.look, Vector3.up).eulerAngles.y + this.target.rotation.eulerAngles.y, angles.z);
+        this.controller.offset = Quaternion.LookRotation(this.look, Vector3.up).eulerAngles.y + this.target.rotation.eulerAngles.y;
+        this.transform.rotation = Quaternion.Euler(angles.x, this.controller.offset, angles.z);
     }
 
     public void SetRect(Rect rectangle)

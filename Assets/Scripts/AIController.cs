@@ -81,7 +81,7 @@ public class AIController : MonoBehaviour
     }
 
 
-    // Fixed update is called in sync with physics
+    // Fixed update is called in sync with physics'
     private void FixedUpdate()
     {
         if (this.tag == "Dead")

@@ -378,7 +378,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &16342193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1000011910051264, guid: 6dc356b4d4ddc4b4e9dc92157869e4e6,
     type: 2}
   spawnDelay: 0
-  maxEnemies: 50
+  maxEnemies: 150
 --- !u!4 &16342194
 Transform:
   m_ObjectHideFlags: 0

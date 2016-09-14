@@ -18,6 +18,7 @@ public class ThirdPersonUserControl : MonoBehaviour
     private bool lAttack;
     private bool hAttack;
     private bool run;
+    public float offset;
 
     private void Start()
     {
@@ -59,12 +60,18 @@ public class ThirdPersonUserControl : MonoBehaviour
         if (m_Cam != null)
         {
             // calculate camera relative direction to move:
-            m_CamForward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;
+            this.m_CamForward = Vector3.Scale(this.m_Cam.forward, new Vector3(1, 0, 1)).normalized;
+            var quat = Quaternion.LookRotation(m_CamForward);
+            this.m_CamForward = (quat * Quaternion.Euler(0, -this.offset, 0)) * Vector3.forward;
+
             m_Move = v*m_CamForward + h*m_Cam.right;
         }
         else
         {
         }
+
+        m_Move = v * Vector3.forward + h * Vector3.right;
+
             // calculate player relative direction to move:
        //     m_CamForward = Vector3.Scale(this.transform.forward, new Vector3(1, 0, 1)).normalized;
        //     m_Move = v * m_CamForward + h * Vector3.right;
