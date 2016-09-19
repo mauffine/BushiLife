@@ -64,7 +64,7 @@ public class Stats : MonoBehaviour {
     public Stat health = new Stat(1, 0, 1);
 	public Stat experience = new Stat(20, 0, 100);
 	public Stat level = new Stat(20, 0, 100);
-
+    public Stat stamina = new Stat(100, 0, 100);
 	// Use this for initialization
 	void Start () {
 	}

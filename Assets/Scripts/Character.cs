@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
 	{
         this.stats = GetComponent<Stats>();
         this.stats.health.recieve = this.TakeDamage;
+        this.stats.stamina.recieve = this.TakeDamage;
     }
     void Update()
     {
@@ -42,7 +43,9 @@ public class Character : MonoBehaviour
                 this.stats.health.recieve = this.TakeDamage;
                 this.stats.health.recieve(this.stats.health, otherCharacter.stats.attack, this.transform);
             }
-            GetComponentInChildren<HealthCylinder>().UpdateHPBar(this.stats.health.val);
+            HealthCylinder healthThing = GetComponentInChildren<HealthCylinder>();
+            if (healthThing != null)
+                healthThing.UpdateHPBar(this.stats.health.val);
             GetComponent<ThirdPersonCharacter>().Bleed();
 
             if (stats.health.val <= 0)

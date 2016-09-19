@@ -51,9 +51,11 @@ public class CameraCollection : MonoBehaviour
     {
         var newCamera = GameObject.Instantiate(cameraPrefab);
 
-        newCamera.GetComponentInChildren<CameraController>().Init(player.transform, playerNumber);
-
-        newCamera.transform.parent = this.transform;
+		newCamera.GetComponentInChildren<CameraController>().Init(player.transform, playerNumber);
+        StatUIScript[] statTexts = newCamera.GetComponentsInChildren<StatUIScript>();
+        foreach (StatUIScript uiText in statTexts)
+            uiText.SetCharacter(player);
+		newCamera.transform.parent = this.transform;
 
         var controller = player.GetComponent<ThirdPersonUserControl>();
         if (controller == null)

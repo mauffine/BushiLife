@@ -6,6 +6,7 @@ using System;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] Transform target;
+    [SerializeField] float verticalOffset;
     public string strPlayerNumber;
     public ThirdPersonUserControl controller;
     public Vector3 look;
