@@ -10,8 +10,6 @@ public class CameraController : MonoBehaviour
     public string strPlayerNumber;
     public ThirdPersonUserControl controller;
     public Vector3 look;
-    [SerializeField]
-    float verticalOffset;
     
     Vector3 totalOffset;
 
