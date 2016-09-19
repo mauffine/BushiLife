@@ -19,6 +19,7 @@ public class ThirdPersonUserControl : MonoBehaviour
     private bool hAttack;
     private bool run;
     public float offset;
+    public Targeter targeter;
 
     private void Start()
     {
@@ -36,6 +37,7 @@ public class ThirdPersonUserControl : MonoBehaviour
 
         // get the third person character ( this should never be null due to require component )
         m_Character = GetComponent<ThirdPersonCharacter>();
+        this.targeter = GetComponentInChildren<Targeter>();
     }
 
 
@@ -61,16 +63,34 @@ public class ThirdPersonUserControl : MonoBehaviour
         {
             // calculate camera relative direction to move:
             this.m_CamForward = Vector3.Scale(this.m_Cam.forward, new Vector3(1, 0, 1)).normalized;
-            var quat = Quaternion.LookRotation(m_CamForward);
-            this.m_CamForward = (quat * Quaternion.Euler(0, -this.offset, 0)) * Vector3.forward;
+         //   var quat = Quaternion.LookRotation(m_CamForward);
+       //     this.m_CamForward = (quat * Quaternion.Euler(0, -this.offset, 0)) * Vector3.forward;
 
-            m_Move = v*m_CamForward + h*m_Cam.right;
+            var rot = v*m_CamForward + h * m_Cam.right;
+
+            //if (this.targeter.target != null)
+            //{
+            //    //var look = this.targeter.target.position - this.transform.position;
+            //    //print(this.targeter.target);
+            //    //look = look.normalized;
+
+            //    //m_Move = v * look + h * Vector3.Cross(look, Vector3.up);
+
+
+            //    m_Move = rot.magnitude * Vector3.forward;
+
+            //    this.transform.parent.rotation = Quaternion.LookRotation(rot);
+            //}
+            //else
+            //{
+                m_Move = rot;
+            //}
         }
         else
         {
         }
 
-        m_Move = v * Vector3.forward + h * Vector3.right;
+     //   m_Move = v * Vector3.forward + h * Vector3.right;
 
             // calculate player relative direction to move:
        //     m_CamForward = Vector3.Scale(this.transform.forward, new Vector3(1, 0, 1)).normalized;

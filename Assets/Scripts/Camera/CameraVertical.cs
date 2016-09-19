@@ -16,9 +16,13 @@ public class CameraVertical : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (controller.controller.IsButtonDown("Target"))
+        {
+
         var currentMagnitude = this.controller.look.magnitude;
 
-        if (currentMagnitude > this.previousMagnitude)
+        if (true)//currentMagnitude > this.previousMagnitude)
         {
             var angles = this.transform.rotation.eulerAngles;
 
@@ -30,5 +34,12 @@ public class CameraVertical : MonoBehaviour {
         }
 
         this.previousMagnitude = currentMagnitude;
+        }
+        else
+        {
+
+            float v = Input.GetAxis(this.playerNumber + " Camera Vertical") * 50f * Time.deltaTime;
+            this.transform.Rotate(new Vector3(v * 3f, 0, 0));
+        }
     }
 }

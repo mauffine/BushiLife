@@ -21,11 +21,7 @@ public class Targeter : MonoBehaviour
         this.line = GetComponentInChildren<LineRenderer>();
         this.collider = GetComponent<Collider>();
         this.look = this.transform.parent;
-    }
-
-    public void Init(ThirdPersonUserControl controller)
-    {
-        this.controller = controller;
+        this.controller = GetComponentInParent<ThirdPersonUserControl>();
     }
 
     // Update is called once per frame
@@ -38,24 +34,22 @@ public class Targeter : MonoBehaviour
             UpdateAim();
             UpdateLine();
         }
-
-        print(Score(this.target, true));
     }
 
     void UpdateLine()
     {
         if (this.targets.Count > 0)
         {
+            this.target = this.targets[0];
+
             if (this.target != null)
             {
                 this.line.enabled = true;
                 this.line.SetPositions(new Vector3[] { this.transform.position, this.targets[0].position });
             }
-         //   print(Score(this.targets[0]));
         }
         else
         {
-          //  print(Score(this.target));
             //  this.line.enabled = true;
             //  this.line.SetPositions(new Vector3[] { this.transform.position, this.target.position });
         }
@@ -87,6 +81,8 @@ public class Targeter : MonoBehaviour
 
     private float Score(Transform target, bool isOther = false)
     {
+        print(target);
+        print(look);
         var offset = target.position - this.look.position;
         var distance = offset.magnitude;
 

@@ -24,6 +24,7 @@ public class CameraCollection : MonoBehaviour
     void Start()
     {
         cameraGrid = GetComponent<DynamicGrid>();
+        print(cameraGrid);
     }
 
     // Update is called once per frame
@@ -34,6 +35,9 @@ public class CameraCollection : MonoBehaviour
 
     void Validate()
     {
+        if (cameraGrid == null)
+            cameraGrid = GetComponent<DynamicGrid>();
+        print(cameraGrid);
         this.cameraGrid.size = this.GetSize();
         for (int index = 0; index < this.cameraGrid.size; index++)
         {

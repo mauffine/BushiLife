@@ -1605,6 +1605,8 @@ MonoBehaviour:
   playerNumber: P1
   myCamera: {fileID: 0}
   m_Cam: {fileID: 0}
+  offset: 0
+  targeter: {fileID: 0}
 --- !u!114 &114000013355515732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1617,7 +1619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 114000012850437622}
-  look: {fileID: 0}
+  test: {fileID: 0}
   target: {fileID: 0}
 --- !u!114 &114000013948960212
 MonoBehaviour:
