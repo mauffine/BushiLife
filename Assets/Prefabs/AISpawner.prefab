@@ -169,8 +169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnEnemy: 0
-  enemyPrefab: {fileID: 1000011910051264, guid: 6dc356b4d4ddc4b4e9dc92157869e4e6,
+  enemyPrefab: {fileID: 1000014034698358, guid: 21bbc8ff5b2c303448bd228fa98a1984,
     type: 2}
+  spawnDelay: 0
+  maxEnemies: 10
 --- !u!114 &114000011176588076
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -46,6 +46,6 @@
 		o.Alpha = texColor.a;
 	}
 	ENDCG
-	SetTexture[_MainTex]{ combine primary }
+	}
+		FallBack "Diffuse"
 }
-Fallback "Toon/Basic"
