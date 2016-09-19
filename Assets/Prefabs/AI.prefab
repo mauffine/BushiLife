@@ -221,8 +221,7 @@ GameObject:
   - 114: {fileID: 114000013003692572}
   - 82: {fileID: 82000012050373654}
   - 114: {fileID: 114000011667126938}
-  - 136: {fileID: 136000010010111326}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: AI
   m_TagString: AI
   m_Icon: {fileID: 0}
@@ -1313,7 +1312,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!65 &65000010304855896
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1516,19 +1515,6 @@ MonoBehaviour:
   jumpAttackHB: {fileID: 1000011312078756}
   blood: {fileID: 198000012188289600}
   heavyAttack: 0
---- !u!136 &136000010010111326
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011910051264}
-  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1.2694162
-  m_Height: 0.017734548
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.65, z: 0}
 --- !u!136 &136000011496940532
 CapsuleCollider:
   m_ObjectHideFlags: 1
