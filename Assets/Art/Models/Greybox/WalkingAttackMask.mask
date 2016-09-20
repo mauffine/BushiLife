@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1011 &101100000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: WalkingAttackMask
+  m_Mask: 01000000000000000000000001000000010000000000000000000000000000000000000001000000010000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Chibi_model2
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_LThigh_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_LThigh_JNT/Chibi_LKnee_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_LThigh_JNT/Chibi_LKnee_JNT/Chibi_Lfoot_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_RThigh_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_RThigh_JNT/Chibi_Rknee_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_RThigh_JNT/Chibi_Rknee_JNT/Chibi_Rfoot_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT/Chibi_LFingers_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT/Chibi_Top_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT
+    m_Weight: 1
+  - m_Path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT/Chibi_Rfinger_JNT
+    m_Weight: 1
+  - m_Path: firstlayer
+    m_Weight: 1
+  - m_Path: firstlayer/Belt
+    m_Weight: 1
+  - m_Path: firstlayer/Belt_Flap_l
+    m_Weight: 1
+  - m_Path: firstlayer/Belt_Flap_r
+    m_Weight: 1
+  - m_Path: firstlayer/Belt_Knot
+    m_Weight: 1
+  - m_Path: firstlayer/Leg_Pants
+    m_Weight: 1
+  - m_Path: firstlayer/Leg_Pants1
+    m_Weight: 1
+  - m_Path: secondlayer
+    m_Weight: 1
+  - m_Path: secondlayer/gloves_l
+    m_Weight: 1
+  - m_Path: secondlayer/gloves_l1
+    m_Weight: 1
+  - m_Path: secondlayer/Hair_Helmet
+    m_Weight: 1
+  - m_Path: secondlayer/Hair_Helmet/Hair_Dude
+    m_Weight: 1
+  - m_Path: secondlayer/Helmet
+    m_Weight: 1
+  - m_Path: thirdlayer
+    m_Weight: 1
+  - m_Path: thirdlayer/flaparmor01
+    m_Weight: 1
+  - m_Path: thirdlayer/flaparmor02
+    m_Weight: 1
+  - m_Path: thirdlayer/flaparmor03
+    m_Weight: 1
+  - m_Path: thirdlayer/flaparmor04
+    m_Weight: 1
+  - m_Path: thirdlayer/helmetthing01
+    m_Weight: 1
+  - m_Path: thirdlayer/helmetthing02
+    m_Weight: 1
+  - m_Path: thirdlayer/pCube10
+    m_Weight: 1
+  - m_Path: thirdlayer/pPlane1
+    m_Weight: 1
+  - m_Path: thirdlayer/pPlane2
+    m_Weight: 1
+  - m_Path: thirdlayer/shoulderpad_l
+    m_Weight: 1
+  - m_Path: thirdlayer/shoulderpad_r
+    m_Weight: 1

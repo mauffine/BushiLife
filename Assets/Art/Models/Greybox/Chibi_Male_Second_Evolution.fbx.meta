@@ -106,7 +106,13 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    animationImportErrors: 
+    animationImportErrors: '
+
+      Imported file ''Chibi_Male_Second_Evolution'' conversion failed: Required human
+      bone ''LeftFoot'' not found
+
+
+'
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
@@ -120,7 +126,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 20
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -340,97 +346,97 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Root_JNT
-      position: {x: 0.00008164291, y: 0.017590825, z: 0.00010785624}
+      position: {x: 0.0016328582, y: 0.35181648, z: 0.002157125}
       rotation: {x: 0.47686154, y: -0.55211717, z: -0.44705254, w: 0.5176039}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Spine_JNT
-      position: {x: -0.005485638, y: 0.0010885359, z: -0.00009790254}
+      position: {x: -0.109712765, y: 0.021770718, z: -0.0019580508}
       rotation: {x: 0.9910863, y: -0.09904953, z: 0.0041325754, w: -0.08899491}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Spint2_JNT
-      position: {x: -0.003549952, y: 0.00005681387, z: -0.000083003964}
+      position: {x: -0.07099904, y: 0.0011362775, z: -0.0016600792}
       rotation: {x: 0.4239898, y: -0.44717112, z: 0.5418872, w: 0.57151455}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_collar_JNT
-      position: {x: 0.000016749214, y: 0.004494654, z: -0.0002013329}
+      position: {x: 0.00033498427, y: 0.08989308, z: -0.004026658}
       rotation: {x: 0.49998555, y: -0.5000145, z: -0.49998555, w: 0.5000145}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Neck_JNT
-      position: {x: -0.0031203853, y: 3.6082247e-18, z: -3.5620106e-19}
+      position: {x: -0.062407706, y: 7.2164494e-17, z: -7.124021e-18}
       rotation: {x: 0.9909714, y: -0.13407364, z: -3.104324e-15, w: 2.2944823e-14}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Head_JNT
-      position: {x: -0.0024098565, y: 0.0006524077, z: -3.1860926e-15}
+      position: {x: -0.04819713, y: 0.013048154, z: -6.3721855e-14}
       rotation: {x: -1.3043488e-16, y: 9.5809134e-17, z: -0.0929766, w: 0.9956683}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Top_JNT
-      position: {x: -0.02832103, y: 0.0017475192, z: 1.18682e-13}
+      position: {x: -0.5664206, y: 0.034950383, z: 2.37364e-12}
       rotation: {x: 0, y: 0, z: 0.015347365, w: 0.9998822}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_LShoulder_JNT
-      position: {x: -0.00097417156, y: 0.00000005637827, z: 0.0066274838}
+      position: {x: -0.019483432, y: 0.0000011275654, z: 0.13254967}
       rotation: {x: -0.47962052, y: 0.5195807, z: 0.519553, w: 0.47965056}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_LElbow_JNT
-      position: {x: -0.00640595, y: -6.938361e-18, z: -9.534692e-19}
+      position: {x: -0.128119, y: -1.3876722e-16, z: -1.9069383e-17}
       rotation: {x: 0.043311972, y: -0.0044641783, z: -0.03252574, w: 0.99852204}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_LArtm_JNT
-      position: {x: -0.008296838, y: -0.00056195987, z: 0.000049310525}
+      position: {x: -0.16593677, y: -0.011239197, z: 0.0009862105}
       rotation: {x: 0.0040445635, y: 0.0226017, z: -0.036334638, w: 0.9990759}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_LFingers_JNT
-      position: {x: -0.0020484163, y: -0.00032226814, z: 0.00002992151}
+      position: {x: -0.040968325, y: -0.0064453627, z: 0.00059843017}
       rotation: {x: 0, y: 0, z: -0.7550692, w: 0.6556451}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Rshoulder_JNT
-      position: {x: -0.0010203724, y: 0.000000059052006, z: -0.006770775}
+      position: {x: -0.020407448, y: 0.0000011810401, z: -0.13541551}
       rotation: {x: -0.48075303, y: 0.5185331, z: -0.5185051, w: -0.4807832}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Relbow_JNT
-      position: {x: -0.0061745206, y: -1.3859388e-18, z: 7.671544e-19}
+      position: {x: -0.12349041, y: -2.7718776e-17, z: 1.5343089e-17}
       rotation: {x: 3.0872987e-15, y: -1.9898432e-17, z: -0.04610566, w: 0.9989366}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Rhand_JNT
-      position: {x: -0.0062070577, y: -4.3107877e-18, z: -1.110223e-18}
+      position: {x: -0.12414116, y: -8.621575e-17, z: -2.2204459e-17}
       rotation: {x: 2.9979793e-15, y: 1.1641621e-16, z: -0.0020175944, w: 0.999998}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Rfinger_JNT
-      position: {x: -0.004010009, y: 2.879641e-17, z: -5.551115e-19}
+      position: {x: -0.08020018, y: 5.759282e-16, z: -1.11022296e-17}
       rotation: {x: -0.43374243, y: 0.558451, z: 0.5063473, w: -0.4935711}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_LThigh_JNT
-      position: {x: 0.002425314, y: 0.00014531352, z: 0.0062621254}
+      position: {x: 0.04850628, y: 0.0029062703, z: 0.1252425}
       rotation: {x: -0.018199537, y: 0.769211, z: 0.629564, w: 0.10785376}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_LKnee_JNT
-      position: {x: -0.008823778, y: 0.000036300375, z: 0.0003052663}
+      position: {x: -0.17647555, y: 0.0007260075, z: 0.006105326}
       rotation: {x: -0.12819113, y: -0.06840699, z: 0.05435638, w: 0.9878932}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_RThigh_JNT
-      position: {x: 0.0024832592, y: -0.0006965519, z: -0.006501682}
+      position: {x: 0.049665183, y: -0.013931039, z: -0.13003364}
       rotation: {x: -0.00072588585, y: 0.7389773, z: -0.6664643, w: -0.09867845}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chibi_Rknee_JNT
-      position: {x: -0.008856371, y: 0.000047497404, z: -0.00030372618}
+      position: {x: -0.17712742, y: 0.0009499481, z: -0.0060745236}
       rotation: {x: 0.19096391, y: 0.028124146, z: 0.0017204206, w: 0.9811926}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
