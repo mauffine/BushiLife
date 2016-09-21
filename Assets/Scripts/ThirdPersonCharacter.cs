@@ -63,6 +63,7 @@ public class ThirdPersonCharacter : MonoBehaviour
 
     void Update()
     {
+        //this.rechargingStam = !blocking;
         if (this.rechargingStam && this.stamina.val <= 100)
         {
             this.stamina.Increase(Time.deltaTime * rechargeRate);

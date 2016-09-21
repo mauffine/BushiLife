@@ -156,7 +156,7 @@ Material:
       second: 20
     - first:
         name: _MaxHeight00
-      second: 0.7
+      second: 0.3
     - first:
         name: _MaxHeight01
       second: 1.5

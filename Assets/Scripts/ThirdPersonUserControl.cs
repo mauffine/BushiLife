@@ -105,7 +105,6 @@ public class ThirdPersonUserControl : MonoBehaviour
         m_Jump      = false;
         lAttack     = false;
         hAttack     = false;
-        blocking    = false;
         dodge       = false;
     }
     private void CheckActions()
@@ -118,8 +117,10 @@ public class ThirdPersonUserControl : MonoBehaviour
             dodge = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Dodge");
         if (!blocking)
             blocking = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Block");
+        else
+            blocking = !CrossPlatformInputManager.GetButtonUp(this.playerNumber + " Block");
         if (!run)
-            run = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Run");
+            run = CrossPlatformInputManager.GetAxis(this.playerNumber + " Run") > .1f;
 
     }
 
