@@ -2,21 +2,23 @@
 	Properties{
 		_Color("Color", Color) = (1, 1, 1, 1)
 		_MainTex("Albedo (RGBA)", 2D) = "white" {}
+		_Cutoff("Alpha cutoff", Range(0,1)) = 0.5
 	}
 		SubShader{
 		Tags{
 
 		"RenderType" = "Transparent"
+		"IgnoreProjector" = "True"
 		"Queue" = "Transparent"
 	}
+		ZWrite Off
 		Blend SrcAlpha OneMinusSrcAlpha
 		LOD 200
-
-
-
+		
 		CGPROGRAM 
 		#pragma surface surf CelShadingForward alpha
 		#pragma target 3.0
+		float _Cutoff;
 
 		half4 LightingCelShadingForward(SurfaceOutput s, half3 lightDir, half atten) {
 		half NdotL = dot(s.Normal, lightDir);
@@ -25,6 +27,7 @@
 		half4 c;
 		c.rgb = s.Albedo * _LightColor0.rgb * (NdotL * atten * 2);
 		c.a = s.Alpha;
+		if (c.a < _Cutoff) discard;
 		return c;
 	}
 

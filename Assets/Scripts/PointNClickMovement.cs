@@ -6,7 +6,7 @@ public class PointNClickMovement : MonoBehaviour {
 
 	void Start()
 	{
-		agent = GetComponent<NavMeshAgent>();
+        this.agent = GetComponent<NavMeshAgent>();
 	}
 
 	void Update()
@@ -16,7 +16,7 @@ public class PointNClickMovement : MonoBehaviour {
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit))
-				agent.SetDestination(hit.point);
+                this.agent.SetDestination(hit.point);
 
 		}
 	}
