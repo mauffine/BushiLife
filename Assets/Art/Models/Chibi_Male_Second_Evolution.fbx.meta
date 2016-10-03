@@ -1,0 +1,458 @@
+fileFormatVersion: 2
+guid: 2ccea9f949d874940b449796584266b3
+timeCreated: 1473813935
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Belt
+    100002: Belt_Flap_l
+    100004: Belt_Flap_r
+    100006: Belt_Knot
+    100008: Chibi_collar_JNT
+    100010: Chibi_Head_JNT
+    100012: Chibi_LArtm_JNT
+    100014: Chibi_LElbow_JNT
+    100016: Chibi_LFingers_JNT
+    100018: Chibi_LKnee_JNT
+    100020: Chibi_LShoulder_JNT
+    100022: Chibi_LThigh_JNT
+    100024: //RootNode
+    100026: Chibi_model2
+    100028: Chibi_Neck_JNT
+    100030: Chibi_Relbow_JNT
+    100032: Chibi_Rfinger_JNT
+    100034: Chibi_Rhand_JNT
+    100036: Chibi_Rknee_JNT
+    100038: Chibi_Root_JNT
+    100040: Chibi_Rshoulder_JNT
+    100042: Chibi_RThigh_JNT
+    100044: Chibi_Spine_JNT
+    100046: Chibi_Spint2_JNT
+    100048: Chibi_Top_JNT
+    100050: firstlayer
+    100052: gloves_l
+    100054: gloves_l1
+    100056: Hair_Dude
+    100058: Hair_Helmet
+    100060: Helmet
+    100062: Leg_Pants
+    100064: Leg_Pants1
+    100066: secondlayer
+    400000: Belt
+    400002: Belt_Flap_l
+    400004: Belt_Flap_r
+    400006: Belt_Knot
+    400008: Chibi_collar_JNT
+    400010: Chibi_Head_JNT
+    400012: Chibi_LArtm_JNT
+    400014: Chibi_LElbow_JNT
+    400016: Chibi_LFingers_JNT
+    400018: Chibi_LKnee_JNT
+    400020: Chibi_LShoulder_JNT
+    400022: Chibi_LThigh_JNT
+    400024: //RootNode
+    400026: Chibi_model2
+    400028: Chibi_Neck_JNT
+    400030: Chibi_Relbow_JNT
+    400032: Chibi_Rfinger_JNT
+    400034: Chibi_Rhand_JNT
+    400036: Chibi_Rknee_JNT
+    400038: Chibi_Root_JNT
+    400040: Chibi_Rshoulder_JNT
+    400042: Chibi_RThigh_JNT
+    400044: Chibi_Spine_JNT
+    400046: Chibi_Spint2_JNT
+    400048: Chibi_Top_JNT
+    400050: firstlayer
+    400052: gloves_l
+    400054: gloves_l1
+    400056: Hair_Dude
+    400058: Hair_Helmet
+    400060: Helmet
+    400062: Leg_Pants
+    400064: Leg_Pants1
+    400066: secondlayer
+    4300000: Belt_Knot
+    4300002: Belt_Flap_r
+    4300004: Belt_Flap_l
+    4300006: Belt
+    4300008: Leg_Pants
+    4300010: Leg_Pants1
+    4300012: Helmet
+    4300014: Hair_Dude
+    4300016: gloves_l
+    4300018: gloves_l1
+    4300020: Chibi_model2
+    9500000: //RootNode
+    13700000: Belt
+    13700002: Belt_Flap_l
+    13700004: Belt_Flap_r
+    13700006: Belt_Knot
+    13700008: Chibi_model2
+    13700010: gloves_l
+    13700012: gloves_l1
+    13700014: Hair_Dude
+    13700016: Helmet
+    13700018: Leg_Pants
+    13700020: Leg_Pants1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: '
+
+      Imported file ''Chibi_Male_Second_Evolution'' conversion failed: Required human
+      bone ''LeftFoot'' not found
+
+
+'
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Chibi_Root_JNT
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LThigh_JNT
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_RThigh_JNT
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LKnee_JNT
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Rknee_JNT
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Spine_JNT
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Spint2_JNT
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Neck_JNT
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Head_JNT
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LShoulder_JNT
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Rshoulder_JNT
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LElbow_JNT
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Relbow_JNT
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LArtm_JNT
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Rhand_JNT
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Chibi_Male_Second_Evolution(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_model2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: firstlayer
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Belt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Belt_Flap_l
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Belt_Flap_r
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Belt_Knot
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Leg_Pants
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Leg_Pants1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: secondlayer
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: gloves_l
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: gloves_l1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Hair_Helmet
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Hair_Dude
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Helmet
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Root_JNT
+      position: {x: 0.0016328582, y: 0.35181648, z: 0.002157125}
+      rotation: {x: 0.47686154, y: -0.55211717, z: -0.44705254, w: 0.5176039}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Spine_JNT
+      position: {x: -0.109712765, y: 0.021770718, z: -0.0019580508}
+      rotation: {x: 0.9910863, y: -0.09904953, z: 0.0041325754, w: -0.08899491}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Spint2_JNT
+      position: {x: -0.07099904, y: 0.0011362775, z: -0.0016600792}
+      rotation: {x: 0.4239898, y: -0.44717112, z: 0.5418872, w: 0.57151455}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_collar_JNT
+      position: {x: 0.00033498427, y: 0.08989308, z: -0.004026658}
+      rotation: {x: 0.49998555, y: -0.5000145, z: -0.49998555, w: 0.5000145}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Neck_JNT
+      position: {x: -0.062407706, y: 7.2164494e-17, z: -7.124021e-18}
+      rotation: {x: 0.9909714, y: -0.13407364, z: -3.104324e-15, w: 2.2944823e-14}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Head_JNT
+      position: {x: -0.04819713, y: 0.013048154, z: -6.3721855e-14}
+      rotation: {x: -1.3043488e-16, y: 9.5809134e-17, z: -0.0929766, w: 0.9956683}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Top_JNT
+      position: {x: -0.5664206, y: 0.034950383, z: 2.37364e-12}
+      rotation: {x: 0, y: 0, z: 0.015347365, w: 0.9998822}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_LShoulder_JNT
+      position: {x: -0.019483432, y: 0.0000011275654, z: 0.13254967}
+      rotation: {x: -0.47962052, y: 0.5195807, z: 0.519553, w: 0.47965056}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_LElbow_JNT
+      position: {x: -0.128119, y: -1.3876722e-16, z: -1.9069383e-17}
+      rotation: {x: 0.043311972, y: -0.0044641783, z: -0.03252574, w: 0.99852204}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_LArtm_JNT
+      position: {x: -0.16593677, y: -0.011239197, z: 0.0009862105}
+      rotation: {x: 0.0040445635, y: 0.0226017, z: -0.036334638, w: 0.9990759}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_LFingers_JNT
+      position: {x: -0.040968325, y: -0.0064453627, z: 0.00059843017}
+      rotation: {x: 0, y: 0, z: -0.7550692, w: 0.6556451}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Rshoulder_JNT
+      position: {x: -0.020407448, y: 0.0000011810401, z: -0.13541551}
+      rotation: {x: -0.48075303, y: 0.5185331, z: -0.5185051, w: -0.4807832}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Relbow_JNT
+      position: {x: -0.12349041, y: -2.7718776e-17, z: 1.5343089e-17}
+      rotation: {x: 3.0872987e-15, y: -1.9898432e-17, z: -0.04610566, w: 0.9989366}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Rhand_JNT
+      position: {x: -0.12414116, y: -8.621575e-17, z: -2.2204459e-17}
+      rotation: {x: 2.9979793e-15, y: 1.1641621e-16, z: -0.0020175944, w: 0.999998}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Rfinger_JNT
+      position: {x: -0.08020018, y: 5.759282e-16, z: -1.11022296e-17}
+      rotation: {x: -0.43374243, y: 0.558451, z: 0.5063473, w: -0.4935711}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_LThigh_JNT
+      position: {x: 0.04850628, y: 0.0029062703, z: 0.1252425}
+      rotation: {x: -0.018199537, y: 0.769211, z: 0.629564, w: 0.10785376}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_LKnee_JNT
+      position: {x: -0.17647555, y: 0.0007260075, z: 0.006105326}
+      rotation: {x: -0.12819113, y: -0.06840699, z: 0.05435638, w: 0.9878932}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_RThigh_JNT
+      position: {x: 0.049665183, y: -0.013931039, z: -0.13003364}
+      rotation: {x: -0.00072588585, y: 0.7389773, z: -0.6664643, w: -0.09867845}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Rknee_JNT
+      position: {x: -0.17712742, y: 0.0009499481, z: -0.0060745236}
+      rotation: {x: 0.19096391, y: 0.028124146, z: 0.0017204206, w: 0.9811926}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

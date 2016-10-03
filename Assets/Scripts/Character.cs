@@ -11,30 +11,47 @@ public class Character : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		stats = GetComponent<Stats>();
-        //stats.attack.use = UseAttack;
-
-        stats.health.recieve = TakeDamage;
+        this.stats = GetComponent<Stats>();
+        this.stats.health.recieve = this.TakeDamage;
+        this.stats.stamina.recieve = this.TakeDamage;
     }
     void Update()
     {
-        if (stats.health.val <= 0)
-        {
-            GetComponent<ThirdPerson>().Die();
-        }
     }
     void TakeDamage(Stat self, Stat other, Transform location)
     {
         self.val -= other.val;
     }
+    void TakeCritDamage(Stat self, Stat other, Transform location)
+    {
+        self.val -= other.val * 3;
+    }
     void OnTriggerEnter(Collider col)
     {
         Character otherCharacter = col.GetComponentInParent<Character>();
+        ThirdPersonCharacter otherThirdPerson = col.GetComponentInParent<ThirdPersonCharacter>();
 
-        if (col.CompareTag("HurtBox") && GetComponent<ThirdPerson>().CheckIFrames(col))
+        if (col.CompareTag("HurtBox") && !GetComponent<ThirdPersonCharacter>().CheckIFrames(col))
         {
-            stats.health.recieve(stats.health, otherCharacter.stats.attack, this.transform);  //col.GetComponent<Stats>().attack.val);
-            GetComponentInChildren<HealthCylinder>().UpdateHPBar(stats.health.val);
+            if (otherThirdPerson.heavyAttack)
+            {
+                this.stats.health.recieve = this.TakeCritDamage;
+                this.stats.health.recieve(this.stats.health, otherCharacter.stats.attack, this.transform);
+            }
+            else
+            {
+                this.stats.health.recieve = this.TakeDamage;
+                this.stats.health.recieve(this.stats.health, otherCharacter.stats.attack, this.transform);
+            }
+            HealthCylinder healthThing = GetComponentInChildren<HealthCylinder>();
+            if (healthThing != null)
+                healthThing.UpdateHPBar(this.stats.health.val);
+            GetComponent<ThirdPersonCharacter>().Bleed();
+
+            if (stats.health.val <= 0)
+            {
+                GetComponent<ThirdPersonCharacter>().Die();
+            }
         }
     }
 

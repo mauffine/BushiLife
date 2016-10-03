@@ -39,8 +39,7 @@ public class Player : MonoBehaviour
         HAttack = Input.GetButtonDown(this.playerNumber + " HAttack");
         blocking = Input.GetButtonDown(this.playerNumber + " Block");
         dodge = Input.GetButtonDown(this.playerNumber + " Dodge");
-
-
+        
         UpdateAnimator();
     }
 
@@ -70,7 +69,7 @@ public class Player : MonoBehaviour
 
         // pass all parameters to the character control script
         m_Character.Move(m_Move, m_Jump);
-        m_Jump = false;
+        m_Jump      = false;
     }
     void UpdateAnimator()
     {

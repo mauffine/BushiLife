@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+
 public class SpawnPlayer : MonoBehaviour {
     public GameObject[] respawns;
     public GameObject cameraGenerator;
@@ -18,8 +19,10 @@ public class SpawnPlayer : MonoBehaviour {
 	void Update () {
 	    if (Input.GetKeyDown(KeyCode.Return) && this.players.Count < respawns.Length)
         {
-            players.Add((GameObject)Instantiate(playerPrefab[this.players.Count], this.respawns[this.players.Count].transform.position, Quaternion.identity));//Random.Range(0, respawns.Length)].transform.position, Quaternion.identity));
-            players[players.Count - 1].GetComponent<Player>().SetPlayerNumber(this.players.Count);
+            players.Add((GameObject)Instantiate(playerPrefab[this.players.Count], this.respawns[this.players.Count].transform.position, Quaternion.identity));
+            var player = players[players.Count - 1].GetComponent<ThirdPersonUserControl>();
+            if (player != null)
+                player.SetPlayerNumber(this.players.Count);
             cameraGenerator.GetComponent<CameraCollection>().Add(players[players.Count - 1], this.players.Count);
         }
 	}
