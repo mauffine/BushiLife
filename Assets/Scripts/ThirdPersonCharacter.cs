@@ -43,12 +43,14 @@ public class ThirdPersonCharacter : MonoBehaviour
     float m_TurnAmount;
     float m_ForwardAmount;
     Vector3 m_GroundNormal;
+    Vector3 strafeMove;
     CapsuleCollider m_Capsule;
     
     bool invincible = false;
     bool blocking = false;
     bool canRoll = true;
     bool rechargingStam = true;
+    bool strafing = false;
     Stat stamina;
     void Start()
     {
@@ -70,35 +72,46 @@ public class ThirdPersonCharacter : MonoBehaviour
         }
         this.stamina.Validate();
     }
-    public void Move(Vector3 move, bool jump, bool lAttack = false, bool hAttack = false, bool block = false,
+    public void Move(Vector3 move, bool jump, bool lAttack = false, bool hAttack = false, bool _strafing = false, bool block = false,
         bool dodge = false, bool run = false)
     {
         // convert the world relative moveInput vector into a local-relative
         // turn amount and forward amount required to head in the desired
         // direction.
+        CheckGroundStatus();
+        strafing = _strafing;
+
         if (move.magnitude > 1f) move.Normalize();
         move = this.transform.InverseTransformDirection(move);
-        CheckGroundStatus();
+
         if (this.m_IsGrounded)
             move = Vector3.ProjectOnPlane(move, this.m_GroundNormal);
         else
             move = Vector3.ProjectOnPlane(move, Vector3.up);
+        if (!strafing)
+        {
+            
 
 #if UNITY_EDITOR
-        Debug.DrawLine(this.transform.position, this.transform.position + this.m_Rigidbody.velocity / 4, Color.white);
+            Debug.DrawLine(this.transform.position, this.transform.position + this.m_Rigidbody.velocity / 4, Color.white);
 #endif
-        this.m_TurnAmount = Mathf.Atan2(move.x, move.z);
-        this.m_ForwardAmount = move.z;
-        if (run && this.stamina.val > 0 && m_IsGrounded)
-        {
-            if (this.rechargingStam)
-                this.rechargingStam = false;
-            this.m_ForwardAmount *= 2;
-            this.stamina.Decrease(runStamDrain * Time.deltaTime);
+            this.m_TurnAmount = Mathf.Atan2(move.x, move.z);
+            this.m_ForwardAmount = move.z;
+            if (run && this.stamina.val > 0 && m_IsGrounded)
+            {
+                if (this.rechargingStam)
+                    this.rechargingStam = false;
+                this.m_ForwardAmount *= 2;
+                this.stamina.Decrease(runStamDrain * Time.deltaTime);
+            }
+            else if (!this.rechargingStam && m_IsGrounded && !run)
+                rechargingStam = true;
+            ApplyExtraTurnRotation();
         }
-        else if (!this.rechargingStam && m_IsGrounded && !run)
-            rechargingStam = true;
-        ApplyExtraTurnRotation();
+        else
+        {
+            this.strafeMove = move;
+        }
 
         // control and velocity handling is different when grounded and airborne:
         if (this.m_IsGrounded)
@@ -112,15 +125,23 @@ public class ThirdPersonCharacter : MonoBehaviour
 
 
         // send input and other state parameters to the animator
-        UpdateAnimator(move, dodge, lAttack, hAttack, block);
+        UpdateAnimator(move, dodge, lAttack, hAttack, block, _strafing);
     }
-
-    void UpdateAnimator(Vector3 move, bool dodge, bool lAttack, bool hAttack, bool block)
+    void UpdateAnimator(Vector3 move, bool dodge, bool lAttack, bool hAttack, bool block, bool _strafing)
     {
         // update the animator parameters
-        this.m_Animator.SetFloat("Speed", this.m_ForwardAmount, 0.1f, Time.deltaTime);
-        this.m_Animator.SetFloat("Rotation", this.m_TurnAmount, 0.1f, Time.deltaTime);
+        if (!_strafing)
+        {
+            this.m_Animator.SetFloat("Speed", this.m_ForwardAmount, 0.1f, Time.deltaTime);
+            this.m_Animator.SetFloat("Rotation", this.m_TurnAmount, 0.1f, Time.deltaTime);
+        }
+        else
+        {
+            this.m_Animator.SetFloat("StrafeXVel", this.strafeMove.x, 0.1f, Time.deltaTime);
+            this.m_Animator.SetFloat("StrafeZVel", this.strafeMove.z, 0.1f, Time.deltaTime);
+        }
         this.m_Animator.SetBool("OnGround", this.m_IsGrounded);
+        this.m_Animator.SetBool("Strafing", this.strafing);
 
         if (!this.m_IsGrounded)
         {
@@ -208,8 +229,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         float turnSpeed = Mathf.Lerp(this.m_StationaryTurnSpeed, this.m_MovingTurnSpeed, this.m_ForwardAmount);
         this.transform.Rotate(0, this.m_TurnAmount * turnSpeed * Time.deltaTime, 0);
     }
-
-
+    
     public void OnAnimatorMove()
     {
         // we implement this function to override the default root motion.
