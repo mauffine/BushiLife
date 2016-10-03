@@ -293,7 +293,6 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void ClearCombo()
     {
         this.m_Animator.SetInteger("Combo", 0);
-        this.trail.Deactivate();
         canRoll = true;
 
     }
@@ -322,6 +321,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.swordbox.SetActive(false);
         this.heavyAttack = false;
         this.rechargingStam = true;
+        this.trail.Deactivate();
     }
     public void StartIFrames()
     {
