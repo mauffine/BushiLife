@@ -21,6 +21,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] GameObject jumpAttackHB;
 
     [SerializeField] ParticleSystem blood;
+    [SerializeField] ParticleSystem groundSmash;
+    [SerializeField] ParticleSystem swordClash;
 
     [SerializeField] int blockAngle = 180;
 
@@ -71,6 +73,8 @@ public class ThirdPersonCharacter : MonoBehaviour
             this.stamina.Increase(Time.deltaTime * rechargeRate);
         }
         this.stamina.Validate();
+        if (Input.GetKeyDown(KeyCode.Space))
+            this.swordClash.Play();
     }
     public void Move(Vector3 move, bool jump, bool lAttack = false, bool hAttack = false, bool _strafing = false, bool block = false,
         bool dodge = false, bool run = false)
@@ -123,6 +127,7 @@ public class ThirdPersonCharacter : MonoBehaviour
             HandleAirborneMovement();
         }
 
+        m_Animator.SetLayerWeight(1, m_ForwardAmount);
 
         // send input and other state parameters to the animator
         UpdateAnimator(move, dodge, lAttack, hAttack, block, _strafing);
@@ -218,7 +223,7 @@ public class ThirdPersonCharacter : MonoBehaviour
             // jump!
             this.m_Rigidbody.velocity = new Vector3(this.m_Rigidbody.velocity.x, this.m_JumpPower, this.m_Rigidbody.velocity.z);
             this.m_IsGrounded = false;
-            this.m_Animator.applyRootMotion = false;
+            this.m_Animator.applyRootMotion = true;
             this.m_GroundCheckDistance = 0.1f;
         }
     }
@@ -258,7 +263,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             this.m_IsGrounded = false;
             this.m_GroundNormal = Vector3.up;
-            this.m_Animator.applyRootMotion = false;
+            this.m_Animator.applyRootMotion = true;
         }
 #if UNITY_EDITOR
         // helper to visualise the ground check ray in the scene view
@@ -281,7 +286,7 @@ public class ThirdPersonCharacter : MonoBehaviour
                 stamina.Decrease(_col.GetComponentInParent<Character>().stats.attack.val * 3);
             else
                 stamina.Decrease(_col.GetComponentInParent<Character>().stats.attack.val);
-
+            this.swordClash.Play();
             if (stamina.val <= 0)
             {
                 this.m_Animator.SetTrigger("Block Break");
@@ -340,6 +345,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         this.swordbox.SetActive(false);
         this.heavyAttack = false;
+        this.jumpAttackHB.SetActive(false);
         this.rechargingStam = true;
         this.trail.Deactivate();
     }
@@ -374,6 +380,11 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void BlockOff()
     {
         blocking = false;
+    }
+    public void SmashGround()
+    {
+        this.groundSmash.Play();
+        this.jumpAttackHB.SetActive(true);
     }
 }
 

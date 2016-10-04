@@ -88,10 +88,7 @@ public class ThirdPersonUserControl : MonoBehaviour
                 m_Move = rot;
             //}
         }
-        else
-        {
-        }
-
+       
      //   m_Move = v * Vector3.forward + h * Vector3.right;
 
             // calculate player relative direction to move:
@@ -117,10 +114,7 @@ public class ThirdPersonUserControl : MonoBehaviour
             hAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " HAttack");
         if (!dodge)
             dodge = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Dodge");
-        if (!blocking)
-            blocking = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Block");
-        else
-            blocking = !CrossPlatformInputManager.GetButtonUp(this.playerNumber + " Block");
+        blocking = CrossPlatformInputManager.GetButton(this.playerNumber + " Block");
         if (!run)
             run = CrossPlatformInputManager.GetAxis(this.playerNumber + " Run") > .1f;
 
