@@ -21,6 +21,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] GameObject jumpAttackHB;
 
     [SerializeField] ParticleSystem blood;
+    [SerializeField] ParticleSystem groundSmash;
+    [SerializeField] ParticleSystem swordClash;
 
     [SerializeField] int blockAngle = 180;
 
@@ -71,6 +73,8 @@ public class ThirdPersonCharacter : MonoBehaviour
             this.stamina.Increase(Time.deltaTime * rechargeRate);
         }
         this.stamina.Validate();
+        if (Input.GetKeyDown(KeyCode.Space))
+            this.swordClash.Play();
     }
     public void Move(Vector3 move, bool jump, bool lAttack = false, bool hAttack = false, bool _strafing = false, bool block = false,
         bool dodge = false, bool run = false)
@@ -281,7 +285,7 @@ public class ThirdPersonCharacter : MonoBehaviour
                 stamina.Decrease(_col.GetComponentInParent<Character>().stats.attack.val * 3);
             else
                 stamina.Decrease(_col.GetComponentInParent<Character>().stats.attack.val);
-
+            this.swordClash.Play();
             if (stamina.val <= 0)
             {
                 this.m_Animator.SetTrigger("Block Break");
@@ -374,6 +378,10 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void BlockOff()
     {
         blocking = false;
+    }
+    public void SmashGround()
+    {
+        this.groundSmash.Play();
     }
 }
 
