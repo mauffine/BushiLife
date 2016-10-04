@@ -211,7 +211,7 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'New_Anims22' has import animation warnings that
+    animationImportWarnings: "\nClip 'New_Anims23' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
       improve retargeting quality.\n\t'Chibi_collar_JNT' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\nEvent ClearCombo of Animation
@@ -3654,7 +3654,7 @@ ModelImporter:
       name: Ground Slam Start
       takeName: Take 001
       firstFrame: 555
-      lastFrame: 566
+      lastFrame: 570
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -3664,7 +3664,7 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
@@ -4521,8 +4521,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Ground Slam End
       takeName: Take 001
-      firstFrame: 566
-      lastFrame: 583
+      firstFrame: 571
+      lastFrame: 580
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
