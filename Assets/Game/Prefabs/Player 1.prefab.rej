@@ -1,0 +1,10 @@
+diff a/Assets/Game/Prefabs/Player 1.prefab b/Assets/Game/Prefabs/Player 1.prefab	(rejected hunks)
+@@ -216,7 +216,7 @@
+   serializedVersion: 4
+   m_Component:
+   - 4: {fileID: 472810}
+-  - 65: {fileID: 6517920}
++  - 135: {fileID: 135000012274387916}
+   m_Layer: 8
+   m_Name: JumpAttack Hurtbox
+   m_TagString: HurtBox

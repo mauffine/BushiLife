@@ -1,0 +1,19 @@
+﻿using UnityEngine;
+using System.Collections;
+public class Pickup : MonoBehaviour {
+    [SerializeField]
+    float rotationSpeed = 50;
+    [SerializeField]
+    float amplitude = 1;
+    [SerializeField]
+    float frequency = 1;
+    // Use this for initialization
+    void Start () {
+    }
+	
+	// Update is called once per frame
+	void Update () {
+        this.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+        this.transform.position += amplitude * (Mathf.Sin(2 * Mathf.PI * frequency * Time.time) - Mathf.Sin(2 * Mathf.PI * frequency * (Time.time - Time.deltaTime))) * transform.up;
+    }
+}

@@ -151,7 +151,15 @@ public class ThirdPersonCharacter : MonoBehaviour
         if (!this.m_IsGrounded)
         {
             this.m_Animator.SetFloat("Jump", this.m_Rigidbody.velocity.y);
-            if (hAttack && stamina.val > heavyAttackStamDrain)
+
+            if (lAttack && stamina.val > lightAtackStamDrain)
+            {
+                this.m_Animator.SetTrigger("Light Attack");
+                int comboNum = this.m_Animator.GetInteger("Combo");
+                if (comboNum < 1)
+                    this.m_Animator.SetInteger("Combo", comboNum + 1);
+            }
+            else if (hAttack && stamina.val > heavyAttackStamDrain)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
