@@ -127,6 +127,7 @@ public class ThirdPersonCharacter : MonoBehaviour
             HandleAirborneMovement();
         }
 
+        m_Animator.SetLayerWeight(1, m_ForwardAmount);
 
         // send input and other state parameters to the animator
         UpdateAnimator(move, dodge, lAttack, hAttack, block, _strafing);
@@ -222,7 +223,7 @@ public class ThirdPersonCharacter : MonoBehaviour
             // jump!
             this.m_Rigidbody.velocity = new Vector3(this.m_Rigidbody.velocity.x, this.m_JumpPower, this.m_Rigidbody.velocity.z);
             this.m_IsGrounded = false;
-            this.m_Animator.applyRootMotion = false;
+            this.m_Animator.applyRootMotion = true;
             this.m_GroundCheckDistance = 0.1f;
         }
     }
@@ -262,7 +263,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             this.m_IsGrounded = false;
             this.m_GroundNormal = Vector3.up;
-            this.m_Animator.applyRootMotion = false;
+            this.m_Animator.applyRootMotion = true;
         }
 #if UNITY_EDITOR
         // helper to visualise the ground check ray in the scene view

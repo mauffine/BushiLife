@@ -134,10 +134,22 @@ AnimatorController:
     - serializedVersion: 2
       m_State: {fileID: 0}
       m_Motion: {fileID: 7400004, guid: b944f163392cd6741a94ebeeb7ce027b, type: 3}
+    - serializedVersion: 2
+      m_State: {fileID: 1102000013293309030}
+      m_Motion: {fileID: 7400004, guid: b944f163392cd6741a94ebeeb7ce027b, type: 3}
+    - serializedVersion: 2
+      m_State: {fileID: 1102000013185088898}
+      m_Motion: {fileID: 7400004, guid: b944f163392cd6741a94ebeeb7ce027b, type: 3}
+    - serializedVersion: 2
+      m_State: {fileID: 1102000013222805710}
+      m_Motion: {fileID: 7400004, guid: b944f163392cd6741a94ebeeb7ce027b, type: 3}
+    - serializedVersion: 2
+      m_State: {fileID: 1102000013979019166}
+      m_Motion: {fileID: 7400004, guid: b944f163392cd6741a94ebeeb7ce027b, type: 3}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
-    m_DefaultWeight: 0
+    m_DefaultWeight: 1
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
@@ -1452,7 +1464,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.06125015
   m_TransitionOffset: 0.019215725
   m_ExitTime: 0.86636347
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -3227,7 +3239,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400098, guid: b944f163392cd6741a94ebeeb7ce027b, type: 3}
+  m_Motion: {fileID: 7400108, guid: b944f163392cd6741a94ebeeb7ce027b, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -3528,7 +3540,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Strafing
-  m_Speed: 1
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101000010124335890}
