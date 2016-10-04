@@ -344,6 +344,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         this.swordbox.SetActive(false);
         this.heavyAttack = false;
+        this.jumpAttackHB.SetActive(false);
         this.rechargingStam = true;
         this.trail.Deactivate();
     }
@@ -382,6 +383,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void SmashGround()
     {
         this.groundSmash.Play();
+        this.jumpAttackHB.SetActive(true);
     }
 }
 
