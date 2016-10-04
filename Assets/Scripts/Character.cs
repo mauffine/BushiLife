@@ -14,6 +14,7 @@ public class Character : MonoBehaviour
         this.stats = GetComponent<Stats>();
         this.stats.health.recieve = this.TakeDamage;
         this.stats.stamina.recieve = this.TakeDamage;
+        this.stats.health.onAboveMaximum = this.AboveMax;
     }
     void Update()
     {
@@ -25,6 +26,10 @@ public class Character : MonoBehaviour
     void TakeCritDamage(Stat self, Stat other, Transform location)
     {
         self.val -= other.val * 3;
+    }
+    void AboveMax(Stat _parent)
+    {
+        _parent.val = _parent.range.y;
     }
     void OnTriggerEnter(Collider col)
     {
@@ -52,6 +57,11 @@ public class Character : MonoBehaviour
             {
                 GetComponent<ThirdPersonCharacter>().Die();
             }
+        }
+        else if (col.CompareTag("Food") && this.CompareTag("Player"))
+        {
+            this.stats.health.Increase(10);
+            this.stats.health.Validate();
         }
     }
 

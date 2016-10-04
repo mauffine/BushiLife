@@ -16,4 +16,9 @@ public class Pickup : MonoBehaviour {
         this.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
         this.transform.position += amplitude * (Mathf.Sin(2 * Mathf.PI * frequency * Time.time) - Mathf.Sin(2 * Mathf.PI * frequency * (Time.time - Time.deltaTime))) * transform.up;
     }
+    void OnTriggerEnter(Collider _col)
+    {
+        if (_col.CompareTag("Player"))
+            Destroy(gameObject);
+    }
 }
