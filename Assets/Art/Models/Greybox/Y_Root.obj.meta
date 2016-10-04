@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d756f6d14e7fcc0489157744879ecc95
-timeCreated: 1474239123
+timeCreated: 1475561137
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -12,7 +12,6 @@ ModelImporter:
     2300000: pCube350
     3300000: pCube350
     4300000: pCube350
-    6400000: pCube350
   materials:
     importMaterials: 1
     materialName: 0
@@ -39,7 +38,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
