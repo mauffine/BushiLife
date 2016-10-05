@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Stix_Grass
   m_Shader: {fileID: 4800000, guid: 1902925be899f6c4794040c4a1c39b50, type: 3}
-  m_ShaderKeywords: SIMPLE_GRASS UNLIT_GRASS_LIGHTING
+  m_ShaderKeywords: ONE_GRASS_TYPE UNLIT_GRASS_LIGHTING
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -66,7 +66,7 @@ Material:
     - first:
         name: _GrassTex00
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 322ba906fd4ad504f81cef237a4741f3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -156,7 +156,7 @@ Material:
       second: 20
     - first:
         name: _MaxHeight00
-      second: 0.3
+      second: 0.96
     - first:
         name: _MaxHeight01
       second: 1.5
@@ -231,7 +231,7 @@ Material:
       second: 0
     - first:
         name: _Width00
-      second: 0.05
+      second: 0.41
     - first:
         name: _Width01
       second: 0.1
