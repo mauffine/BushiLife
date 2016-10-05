@@ -53,6 +53,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     bool canRoll = true;
     bool rechargingStam = true;
     bool strafing = false;
+    bool running = false;
     Stat stamina;
     void Start()
     {
@@ -108,8 +109,9 @@ public class ThirdPersonCharacter : MonoBehaviour
                 this.m_ForwardAmount *= 2;
                 this.stamina.Decrease(runStamDrain * Time.deltaTime);
             }
-            else if (!this.rechargingStam && m_IsGrounded && !run)
+            else if (!this.rechargingStam && m_IsGrounded && this.running && !run)
                 rechargingStam = true;
+            running = run;
             ApplyExtraTurnRotation();
         }
         else
