@@ -366,7 +366,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &65000010481014878
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -545,6 +545,8 @@ MonoBehaviour:
   jumpAttackHB: {fileID: 1000011312078756, guid: 6dc356b4d4ddc4b4e9dc92157869e4e6,
     type: 2}
   blood: {fileID: 198000013165437576}
+  groundSmash: {fileID: 0}
+  swordClash: {fileID: 0}
   blockAngle: 180
   lightAtackStamDrain: 5
   heavyAttackStamDrain: 25
