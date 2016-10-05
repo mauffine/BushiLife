@@ -7,6 +7,9 @@ TagManager:
   - HurtBox
   - Character
   - Player Spawner
+  - AI
+  - Dead
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -18,10 +21,15 @@ TagManager:
   - 
   - HurtBox
   - Environment
+  - Character
+  - Targeter
+  - Nodes
+  - HiddenUI
   - Player
-  - 
-  - 
-  - 
+  - P1GUI
+  - P2GUI
+  - P3GUI
+  - P4GUI
   - 
   - 
   - 

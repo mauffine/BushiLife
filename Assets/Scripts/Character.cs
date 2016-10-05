@@ -11,15 +11,12 @@ public class Character : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		stats = GetComponent<Stats>();
-        stats.health.recieve = TakeDamage;
+        this.stats = GetComponent<Stats>();
+        this.stats.health.recieve = this.TakeDamage;
+        this.stats.stamina.recieve = this.TakeDamage;
     }
     void Update()
     {
-        if (stats.health.val <= 0)
-        {
-            //GetComponent<ThirdPerson>().Die();
-        }
     }
     void TakeDamage(Stat self, Stat other, Transform location)
     {
@@ -38,16 +35,23 @@ public class Character : MonoBehaviour
         {
             if (otherThirdPerson.heavyAttack)
             {
-                stats.health.recieve = TakeCritDamage;
-                stats.health.recieve(stats.health, otherCharacter.stats.attack, this.transform);
+                this.stats.health.recieve = this.TakeCritDamage;
+                this.stats.health.recieve(this.stats.health, otherCharacter.stats.attack, this.transform);
             }
             else
             {
-                stats.health.recieve = TakeDamage;
-                stats.health.recieve(stats.health, otherCharacter.stats.attack, this.transform);
+                this.stats.health.recieve = this.TakeDamage;
+                this.stats.health.recieve(this.stats.health, otherCharacter.stats.attack, this.transform);
             }
-            GetComponentInChildren<HealthCylinder>().UpdateHPBar(stats.health.val);
+            HealthCylinder healthThing = GetComponentInChildren<HealthCylinder>();
+            if (healthThing != null)
+                healthThing.UpdateHPBar(this.stats.health.val);
             GetComponent<ThirdPersonCharacter>().Bleed();
+
+            if (stats.health.val <= 0)
+            {
+                GetComponent<ThirdPersonCharacter>().Die();
+            }
         }
     }
 

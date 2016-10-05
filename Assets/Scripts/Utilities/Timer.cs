@@ -8,7 +8,7 @@ public class Timer
 
 	private float startTime;
 	private float stopTime;
-	private bool running = false;
+	public bool running = false;
 
 
 	public void Start()
