@@ -126,8 +126,8 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             HandleAirborneMovement();
         }
-
-        m_Animator.SetLayerWeight(1, m_ForwardAmount);
+        if (gameObject.CompareTag("Player"))
+            m_Animator.SetLayerWeight(1, m_ForwardAmount);
 
         // send input and other state parameters to the animator
         UpdateAnimator(move, dodge, lAttack, hAttack, block, _strafing);
