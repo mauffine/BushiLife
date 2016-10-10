@@ -1011,6 +1011,7 @@ MonoBehaviour:
   stamRecharge: 2
   rechargeRate: 15
   runStamDrain: 15
+  jumpAttackStamDrain: 40
   trail: {fileID: 114000013639281706}
   heavyAttack: 0
 --- !u!114 &11457512

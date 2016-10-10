@@ -974,12 +974,13 @@ MonoBehaviour:
   groundSmash: {fileID: 198000014026110624}
   swordClash: {fileID: 198000011641794444}
   blockAngle: 180
-  lightAtackStamDrain: 5
+  lightAtackStamDrain: 10
   heavyAttackStamDrain: 25
   rollStamDrain: 10
   stamRecharge: 2
   rechargeRate: 15
   runStamDrain: 15
+  jumpAttackStamDrain: 40
   trail: {fileID: 114000011499698650}
   heavyAttack: 0
 --- !u!114 &11457512

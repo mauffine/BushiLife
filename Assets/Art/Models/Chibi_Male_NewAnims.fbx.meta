@@ -176,7 +176,7 @@ ModelImporter:
     7400100: Stand_Up
     7400102: Aerial_Slash
     7400104: Aerial_Slash2
-    7400106: New_Anims22
+    7400106: OutofStamina
     7400108: Block1_End
     7400110: Block2_End
     7400112: LeanForward_Walk
@@ -6913,10 +6913,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: New_Anims22
+      name: OutofStamina
       takeName: New_Anims22
-      firstFrame: 0
-      lastFrame: 1050
+      firstFrame: 934
+      lastFrame: 964
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

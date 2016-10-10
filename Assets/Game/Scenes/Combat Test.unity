@@ -574,7 +574,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450234, guid: 59f4e4ebd131663448274e67fa78d627, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 11451038, guid: 59f4e4ebd131663448274e67fa78d627, type: 2}
       propertyPath: lightAtackStamDrain
@@ -1170,7 +1170,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450234, guid: 19cce018751ffba47adac0d946f0a9df, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11451038, guid: 19cce018751ffba47adac0d946f0a9df, type: 2}
       propertyPath: lightAtackStamDrain
@@ -1277,7 +1277,7 @@ Transform:
   m_Children:
   - {fileID: 696902138}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
 --- !u!114 &1711147837
 MonoBehaviour:
   m_ObjectHideFlags: 0

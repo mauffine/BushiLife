@@ -37,7 +37,7 @@ public class Character : MonoBehaviour
         Character otherCharacter = col.GetComponentInParent<Character>();
         ThirdPersonCharacter otherThirdPerson = col.GetComponentInParent<ThirdPersonCharacter>();
 
-        if (col.CompareTag("HurtBox") && !GetComponent<ThirdPersonCharacter>().CheckIFrames(col) && col.gameObject.GetComponentInParent<Character>().tag != this.tag)
+        if (col.CompareTag("HurtBox") && !GetComponent<ThirdPersonCharacter>().CheckIFrames(col))//&& col.gameObject.GetComponentInParent<Character>().tag != this.tag)
         {
             if (otherThirdPerson.heavyAttack)
             {
