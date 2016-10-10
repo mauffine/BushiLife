@@ -50,6 +50,14 @@ public class ThirdPersonUserControl : MonoBehaviour
                 m_Jump = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Jump");
             }
         this.strafing = Input.GetButton(playerNumber + " Target");
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Renderer[] tmp = this.GetComponentsInChildren<Renderer>();
+            foreach (Renderer i in tmp)
+            {
+                i.enabled = false;
+            }
+        }
     }
 
 

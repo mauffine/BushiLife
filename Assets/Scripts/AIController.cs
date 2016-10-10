@@ -22,6 +22,7 @@ public class AIController : MonoBehaviour
     private bool hAttack;
     private bool run;
     public bool isPassive;
+    public int foodRate = 50;
     private bool hasDied = false;
     private EnemySpawner spawner;
     private Character character;
@@ -200,7 +201,8 @@ public class AIController : MonoBehaviour
 
     void OnDelete()
     {
-        Instantiate(this.foodDrops[Random.Range(0, 2)], this.transform.position + new Vector3(0, 0.5f), transform.rotation);
+        if (Random.Range(1, 101) < this.foodRate)
+            Instantiate(this.foodDrops[Random.Range(0, 2)], this.transform.position + new Vector3(0, 0.5f), transform.rotation);
         Instantiate(this.deathParticles, this.transform.position + new Vector3(0, 0.5f), deathParticles.transform.rotation);
         return;
     }

@@ -1,5 +1,4 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,7 +44,6 @@ public class ObjectPool : MonoBehaviour
             if (!this.objects[i].activeInHierarchy)
             {
                 this.objects[i].SetActive(true);
-                UnityEditor.PrefabUtility.ResetToPrefabState(this.objects[i]);
                 return this.objects[i];
             }
         }
