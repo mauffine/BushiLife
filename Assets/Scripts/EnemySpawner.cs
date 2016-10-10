@@ -8,10 +8,10 @@ public class EnemySpawner : MonoBehaviour
     Timer timer = new Timer();
     public float spawnDelay;
 
-    public ObjectPool enemyPool;
 
-    int numEnemies;
+    public ObjectPool enemyPool;
     public int maxEnemies;
+
 
 
 	// Use this for initialization
@@ -40,13 +40,12 @@ public class EnemySpawner : MonoBehaviour
 
 	void SpawnEnemy()
 	{
-        if (this.numEnemies < this.maxEnemies)
+        if (this.enemyPool.ActiveSize < this.maxEnemies)
         {
-            this.numEnemies++;
             var pos = this.spawnpointGenerator.RandomSpawnPoint();
 
             var enemy = this.enemyPool.Get();
-            enemy.GetComponent<AIController>().Init(pos);
+            enemy.GetComponent<AIController>().Init(pos, this);
         }
     }
 }

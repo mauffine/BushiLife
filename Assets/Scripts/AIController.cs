@@ -21,6 +21,7 @@ public class AIController : MonoBehaviour
     private bool run;
     public bool isPassive;
     private bool hasDied = false;
+    private EnemySpawner spawner;
 
     private bool IsNearPlayer
     {
@@ -166,9 +167,10 @@ public class AIController : MonoBehaviour
             this.nearbyPlayers--;
     }
 
-    public void Init(Vector3 pos)
+    public void Init(Vector3 pos, EnemySpawner parent)
     {
         this.transform.position = pos;
+        this.spawner = parent;
     }
 
     void OnDeath()
@@ -184,7 +186,7 @@ public class AIController : MonoBehaviour
 
     IEnumerator DeleteSoon()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(this.spawner.spawnDelay * 0.1f);
         this.OnDelete();
         this.gameObject.SetActive(false);
     }
