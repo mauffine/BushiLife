@@ -167,7 +167,16 @@ public class AIController : MonoBehaviour
         if (collision.collider.tag == "Player")
             this.nearbyPlayers--;
     }
-
+    void OnTriggerEnter(Collider _col)
+    {
+        if (_col.tag == "Player")
+            this.nearbyPlayers++;
+    }
+    void OnTriggerExit(Collider _col)
+    {
+        if (_col.tag == "Player")
+            this.nearbyPlayers--;
+    }
     public void Init(Vector3 pos, EnemySpawner parent)
     {
         // get the third person character ( this should never be null due to require component )
@@ -180,6 +189,7 @@ public class AIController : MonoBehaviour
         this.tag = "AI";
         this.m_Character.EndIFrames();
         this.nearbyPlayers = 0;
+        this.hasDied = false;
     }
 
     void OnDeath()
