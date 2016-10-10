@@ -178,6 +178,8 @@ public class AIController : MonoBehaviour
         this.spawner = parent;
         this.character.stats.health.val = this.character.stats.health.range.y;
         this.tag = "AI";
+        this.m_Character.EndIFrames();
+        this.nearbyPlayers = 0;
     }
 
     void OnDeath()
