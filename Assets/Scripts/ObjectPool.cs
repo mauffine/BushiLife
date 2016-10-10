@@ -2,50 +2,55 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ObjectPool : MonoBehaviour {
-    public static ObjectPool root = null;
+public class ObjectPool : MonoBehaviour
+{
     public GameObject template;
     public int size = 20;
     public bool willGrow = true;
 
-    List<GameObject> objects = nul;
+    List<GameObject> objects = null;
 
-    void Awake() {
-        if (root == null)
-        {
-            root = this;
-        }
-        else if (root ==)
+    void Awake()
+    {
     }
 
-	// Use this for initialization
-	void Start () {
-        if (root.objects == null) {
-            this.objects = new List<GameObject>();
-            for (int i = 0; i < this.size; i++) {
-                var item = (GameObject)Instantiate(this.template);
+    // Use this for initialization
+    void Start()
+    {
+        this.objects = new List<GameObject>();
+        for (int i = 0; i < this.size; i++)
+        {
+            var item = Instantiate(this.template) as GameObject;
 
-                item.SetActive(false);
-                this.objects.Add(item);
-            }
+            item.SetActive(false);
+            this.objects.Add(item);
         }
-	}
+    }
 
-    public GameObject Get() {
-        for (int i = 0; i < this.objects.Count; i++) {
-            if (!this.objects[i].activeInHierarchy) {
+    public GameObject Get()
+    {
+        for (int i = 0; i < this.objects.Count; i++)
+        {
+            if (!this.objects[i].activeInHierarchy)
+            {
+                UnityEditor.PrefabUtility.ResetToPrefabState(this.objects[i]);
+                this.objects[i].SetActive(true);
                 return this.objects[i];
             }
         }
 
-        if (this.willGrow) {
+        if (this.willGrow)
+        {
             var item = Instantiate(this.template) as GameObject;
+            this.objects.Add(item);
             return item;
         }
+
+        return null;
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
 }

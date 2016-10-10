@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010254451366}
   - 114: {fileID: 114000011541962234}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: X-WeaponTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - 4: {fileID: 4000010335658976}
   - 33: {fileID: 33000011874216364}
   - 23: {fileID: 23000014099160352}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Axe_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012396375444}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - 4: {fileID: 4000012355604298}
   - 198: {fileID: 198000013165437576}
   - 199: {fileID: 199000014248371970}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011195608200}
   - 137: {fileID: 137000012699591158}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: polySurface21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,13 +101,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012680120640}
   - 65: {fileID: 65000010481014878}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Swordbox
   m_TagString: HurtBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000012727072144
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011616762952}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bandit_Rfinger_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012440915822}
   - 137: {fileID: 137000010148115154}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: polySurface18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010352601400}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: StartPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - 114: {fileID: 114000011081883434}
   - 114: {fileID: 114000010428888470}
   - 82: {fileID: 82000011083444934}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AI Bandit
   m_TagString: AI
   m_Icon: {fileID: 0}
