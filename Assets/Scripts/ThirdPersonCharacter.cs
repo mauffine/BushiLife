@@ -373,6 +373,12 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.rechargingStam = true;
         this.canRoll = true;
     }
+    public void JumpAttackOn()
+    {
+        this.stamina.Decrease(jumpAttackStamDrain);
+        this.rechargingStam = false;
+        this.jumpAttackHB.SetActive(true);
+    }
     public void JumpAttackOff()
     {
         this.jumpAttackHB.SetActive(false);
@@ -389,8 +395,6 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void SmashGround()
     {
         this.groundSmash.Play();
-        this.stamina.Decrease(jumpAttackStamDrain);
-        this.jumpAttackHB.SetActive(true);
     }
 }
 
