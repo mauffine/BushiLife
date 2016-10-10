@@ -10,8 +10,7 @@ public class DeleteEmitter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        timer += Time.deltaTime;
-        if (timer > 5)
+        if (this.GetComponent<ParticleSystem>().isStopped)
             Destroy(gameObject);
 	}
 }
