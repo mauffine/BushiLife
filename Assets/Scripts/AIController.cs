@@ -26,6 +26,8 @@ public class AIController : MonoBehaviour
     private EnemySpawner spawner;
     private Character character;
 
+    public float deleteSpeed;
+
     private bool IsNearPlayer
     {
         get
@@ -193,7 +195,7 @@ public class AIController : MonoBehaviour
 
     IEnumerator DeleteSoon()
     {
-        yield return new WaitForSeconds(this.spawner.spawnDelay * 0.1f);
+        yield return new WaitForSeconds(this.spawner.spawnDelay * this.deleteSpeed);
         this.OnDelete();
         this.gameObject.SetActive(false);
     }
