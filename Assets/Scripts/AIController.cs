@@ -1,4 +1,4 @@
-﻿using System;
+﻿//using System;
 using System.Collections;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -8,6 +8,8 @@ public class AIController : MonoBehaviour
 {
     public string playerNumber;
     public Camera myCamera;
+    public GameObject[] foodDrops;
+    public GameObject deathParticles;
 
     private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
     private Transform m_Cam;                  // A reference to the main camera in the scenes transform
@@ -31,7 +33,6 @@ public class AIController : MonoBehaviour
             return this.nearbyPlayers > 0;
         }
     }
-
     private int nearbyPlayers;
 
     public GameObject navNodeTemplate;
@@ -185,6 +186,8 @@ public class AIController : MonoBehaviour
 
     void OnDelete()
     {
+        Instantiate(this.foodDrops[Random.Range(0, 2)], this.transform.position + new Vector3(0, 0.5f), transform.rotation);
+        Instantiate(this.deathParticles, this.transform.position + new Vector3(0, 0.5f), deathParticles.transform.rotation);
         return;
     }
 
