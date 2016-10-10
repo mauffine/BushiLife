@@ -81,8 +81,6 @@ public class Targeter : MonoBehaviour
 
     private float Score(Transform target, bool isOther = false)
     {
-        print(target);
-        print(look);
         var offset = target.position - this.look.position;
         var distance = offset.magnitude;
 

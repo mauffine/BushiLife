@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
@@ -19,6 +20,7 @@ public class AIController : MonoBehaviour
     private bool hAttack;
     private bool run;
     public bool isPassive;
+    private bool hasDied = false;
 
     private bool IsNearPlayer
     {
@@ -61,7 +63,11 @@ public class AIController : MonoBehaviour
     private void Update()
     {
         if (this.tag == "Dead")
+        {
+            if (!this.hasDied)
+                OnDeath();
             return;
+        }
         CheckActions();
         if (!this.m_Jump)
         {
@@ -118,6 +124,7 @@ public class AIController : MonoBehaviour
         this.hAttack = false;
         this.blocking = false;
         this.dodge = false;
+
     }
     private void CheckActions()
     {
@@ -147,15 +154,38 @@ public class AIController : MonoBehaviour
         this.m_Cam = this.myCamera.transform;
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnCollisionEnter(Collision collision)
     {
-        if (collider.tag == "Player")
+        if (collision.collider.tag == "Player")
             this.nearbyPlayers++;
     }
 
-    void OnTriggerExit(Collider collider)
+    void OnCollisionExit(Collision collision)
     {
-        if (collider.tag == "Player")
+        if (collision.collider.tag == "Player")
             this.nearbyPlayers--;
+    }
+
+    public void Init(Vector3 pos)
+    {
+        this.transform.position = pos;
+    }
+
+    void OnDeath()
+    {
+        this.hasDied = true;
+        StartCoroutine(DeleteSoon());
+    }
+
+    void OnDelete()
+    {
+        return;
+    }
+
+    IEnumerator DeleteSoon()
+    {
+        yield return new WaitForSeconds(5);
+        this.OnDelete();
+        this.gameObject.SetActive(false);
     }
 }
