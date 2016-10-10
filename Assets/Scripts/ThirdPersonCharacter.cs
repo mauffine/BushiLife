@@ -32,6 +32,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] float stamRecharge = 2;
     [SerializeField] float rechargeRate = 15;
     [SerializeField] float runStamDrain = 15;
+    [SerializeField] float jumpAttackStamDrain = 40;
 
     [SerializeField] XWeaponTrail trail;
 
@@ -161,7 +162,7 @@ public class ThirdPersonCharacter : MonoBehaviour
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
             }
-            else if (hAttack && stamina.val > heavyAttackStamDrain)
+            else if (hAttack && stamina.val > jumpAttackStamDrain)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
@@ -372,12 +373,6 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.rechargingStam = true;
         this.canRoll = true;
     }
-    public void JumpAttackOn()
-    {
-        this.jumpAttackHB.SetActive(true);
-        this.stamina.Decrease(heavyAttackStamDrain);
-        this.rechargingStam = false;
-    }
     public void JumpAttackOff()
     {
         this.jumpAttackHB.SetActive(false);
@@ -394,6 +389,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void SmashGround()
     {
         this.groundSmash.Play();
+        this.stamina.Decrease(jumpAttackStamDrain);
         this.jumpAttackHB.SetActive(true);
     }
 }
