@@ -22,6 +22,7 @@ public class AIController : MonoBehaviour
     public bool isPassive;
     private bool hasDied = false;
     private EnemySpawner spawner;
+    private Character character;
 
     private bool IsNearPlayer
     {
@@ -56,10 +57,7 @@ public class AIController : MonoBehaviour
 
         this.navNode.GetComponent<EnemyMovement>().Init(this);
 
-        // get the third person character ( this should never be null due to require component )
-        this.m_Character = GetComponent<ThirdPersonCharacter>();
     }
-
 
     private void Update()
     {
@@ -169,8 +167,14 @@ public class AIController : MonoBehaviour
 
     public void Init(Vector3 pos, EnemySpawner parent)
     {
+        // get the third person character ( this should never be null due to require component )
+        this.m_Character = GetComponent<ThirdPersonCharacter>();
+        this.character = GetComponent<Character>();
+
         this.transform.position = pos;
         this.spawner = parent;
+        this.character.stats.health.val = this.character.stats.health.range.y;
+        this.tag = "AI";
     }
 
     void OnDeath()
