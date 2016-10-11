@@ -915,6 +915,8 @@ MonoBehaviour:
   swordbox: {fileID: 190600}
   jumpAttackHB: {fileID: 1000011403434404}
   ghostPref: {fileID: 1000013088990814, guid: e04fdb0e24b23714e9e4d3cba11ef8a3, type: 2}
+  deathParticles: {fileID: 1000010156427006, guid: 84436d48510fb3843b87723a9e87a724,
+    type: 2}
   blood: {fileID: 198000012043500616}
   groundSmash: {fileID: 198000013080177528}
   swordClash: {fileID: 198000010126501416}

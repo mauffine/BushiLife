@@ -18,7 +18,17 @@ public class Pickup : MonoBehaviour {
     }
     void OnTriggerEnter(Collider _col)
     {
-        if (_col.CompareTag("Player") || _col.CompareTag("Ghost"))
+
+        if (_col.CompareTag("Player"))
             Destroy(gameObject);
+        else if (_col.CompareTag("Ghost"))
+        {
+            Animator[] tmp = _col.GetComponentsInChildren<Animator>();
+            foreach(Animator i in tmp)
+            {
+                i.SetTrigger("Eat");
+            }
+            Destroy(gameObject);
+        }
     }
 }

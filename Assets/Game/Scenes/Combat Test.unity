@@ -127,7 +127,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450234, guid: 50ff76a6ca269584c842317e6763b35e, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 184318, guid: 50ff76a6ca269584c842317e6763b35e, type: 2}
       propertyPath: m_IsActive
@@ -398,7 +398,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 20
 --- !u!1001 &466001843
 Prefab:
   m_ObjectHideFlags: 0
@@ -436,7 +436,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450234, guid: 19e4ba148cb34ad468290ee3f6876a0d, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 184318, guid: 19e4ba148cb34ad468290ee3f6876a0d, type: 2}
       propertyPath: m_IsActive
@@ -574,11 +574,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450234, guid: 59f4e4ebd131663448274e67fa78d627, type: 2}
       propertyPath: m_RootOrder
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 11451038, guid: 59f4e4ebd131663448274e67fa78d627, type: 2}
-      propertyPath: lightAtackStamDrain
-      value: 5
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 184318, guid: 59f4e4ebd131663448274e67fa78d627, type: 2}
       propertyPath: m_IsActive
@@ -665,7 +661,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 19
 --- !u!1 &696737567 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010473138778, guid: 9abb4e54801ed144ca3821a54ee8c43a,
@@ -1056,7 +1052,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 485632, guid: 3c72f2b67f20f7e4fafa82a2e9368d98, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c72f2b67f20f7e4fafa82a2e9368d98, type: 2}
@@ -1170,11 +1166,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450234, guid: 19cce018751ffba47adac0d946f0a9df, type: 2}
       propertyPath: m_RootOrder
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 11451038, guid: 19cce018751ffba47adac0d946f0a9df, type: 2}
-      propertyPath: lightAtackStamDrain
-      value: 5
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 184318, guid: 19cce018751ffba47adac0d946f0a9df, type: 2}
       propertyPath: m_IsActive
@@ -1468,7 +1460,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013143189228, guid: b73933126efe6d6499359c2372d1420d, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
         type: 2}
@@ -1585,4 +1577,4 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 21

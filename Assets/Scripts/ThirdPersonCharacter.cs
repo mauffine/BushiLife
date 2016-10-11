@@ -20,6 +20,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] GameObject swordbox;
     [SerializeField] GameObject jumpAttackHB;
     [SerializeField] GameObject ghostPref;
+    [SerializeField] GameObject deathParticles;
 
     [SerializeField] ParticleSystem blood;
     [SerializeField] ParticleSystem groundSmash;
@@ -83,9 +84,10 @@ public class ThirdPersonCharacter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
             this.swordClash.Play();
         
-        if (ghostTimer > 0 && CompareTag("Player"))
+        if (ghostTimer > 0 )
         {
-            ghostTimer -= Time.deltaTime;
+            if(gameObject.layer == 10)
+                ghostTimer -= Time.deltaTime;
         }
         else if (this.GetComponent<ThirdPersonUserControl>()!=null)
         {
@@ -102,6 +104,7 @@ public class ThirdPersonCharacter : MonoBehaviour
                 gameObject.GetComponent<ThirdPersonUserControl>().enabled = true;
                 gameObject.tag = "Ghost";
                 gameObject.layer = 19;
+                Instantiate(deathParticles, gameObject.transform.position, deathParticles.transform.rotation);
             }
         }
     }
