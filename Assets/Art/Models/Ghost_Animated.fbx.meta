@@ -109,7 +109,7 @@ ModelImporter:
       name: GhostEat_Animation
       takeName: BoAnimated
       firstFrame: 2
-      lastFrame: 16
+      lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -343,7 +343,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: Root_Joint
+    rootMotionBoneName: pCube22
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
