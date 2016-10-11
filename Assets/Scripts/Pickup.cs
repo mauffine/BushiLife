@@ -18,7 +18,7 @@ public class Pickup : MonoBehaviour {
     }
     void OnTriggerEnter(Collider _col)
     {
-        if (_col.CompareTag("Player"))
+        if (_col.CompareTag("Player") || _col.CompareTag("Ghost"))
             Destroy(gameObject);
     }
 }

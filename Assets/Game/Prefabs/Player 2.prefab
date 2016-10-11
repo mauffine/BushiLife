@@ -351,7 +351,7 @@ GameObject:
   - 114: {fileID: 11451038}
   - 114: {fileID: 11457512}
   - 114: {fileID: 11439868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player 2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -914,17 +914,19 @@ MonoBehaviour:
   maxArialSpeed: 10
   swordbox: {fileID: 190600}
   jumpAttackHB: {fileID: 1000011403434404}
+  ghostPref: {fileID: 1000013088990814, guid: e04fdb0e24b23714e9e4d3cba11ef8a3, type: 2}
   blood: {fileID: 198000012043500616}
   groundSmash: {fileID: 198000013080177528}
   swordClash: {fileID: 198000010126501416}
   blockAngle: 180
-  lightAtackStamDrain: 10
+  lightAtackStamDrain: 5
   heavyAttackStamDrain: 25
   rollStamDrain: 10
   stamRecharge: 2
   rechargeRate: 15
   runStamDrain: 15
   jumpAttackStamDrain: 40
+  ghostSpawnTime: 3
   trail: {fileID: 114000011515658086}
   heavyAttack: 0
 --- !u!114 &11457512

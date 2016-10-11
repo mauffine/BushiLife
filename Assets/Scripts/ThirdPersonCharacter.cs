@@ -19,6 +19,7 @@ public class ThirdPersonCharacter : MonoBehaviour
 
     [SerializeField] GameObject swordbox;
     [SerializeField] GameObject jumpAttackHB;
+    [SerializeField] GameObject ghostPref;
 
     [SerializeField] ParticleSystem blood;
     [SerializeField] ParticleSystem groundSmash;
@@ -33,6 +34,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] float rechargeRate = 15;
     [SerializeField] float runStamDrain = 15;
     [SerializeField] float jumpAttackStamDrain = 40;
+    [SerializeField] float ghostSpawnTime = 3;
 
     [SerializeField] XWeaponTrail trail;
 
@@ -55,7 +57,10 @@ public class ThirdPersonCharacter : MonoBehaviour
     bool rechargingStam = true;
     bool strafing = false;
     bool running = false;
+
+    private bool ghost = false;
     Stat stamina;
+    float ghostTimer = 3;
     void Start()
     {
         this.m_Animator = GetComponent<Animator>();
@@ -70,13 +75,35 @@ public class ThirdPersonCharacter : MonoBehaviour
     void Update()
     {
         //this.rechargingStam = !blocking;
-        if (this.rechargingStam && this.stamina.val <= 100)
+        if (this.rechargingStam && this.stamina.val <= 100 && !ghost)
         {
             this.stamina.Increase(Time.deltaTime * rechargeRate);
         }
         this.stamina.Validate();
         if (Input.GetKeyDown(KeyCode.Space))
             this.swordClash.Play();
+        
+        if (ghostTimer > 0 && CompareTag("Player"))
+        {
+            ghostTimer -= Time.deltaTime;
+        }
+        else if (this.GetComponent<ThirdPersonUserControl>()!=null)
+        {
+            if (!ghost && gameObject.CompareTag("Dead"))
+            {
+                Renderer[] tmp = this.GetComponentsInChildren<Renderer>();
+                foreach (Renderer i in tmp)
+                {
+                    i.enabled = false;
+                }
+                ghost = true;
+                Instantiate(ghostPref, transform.position + new Vector3(0, 0.5f), transform.rotation, transform);
+                this.m_Animator.SetTrigger("Ghost");
+                gameObject.GetComponent<ThirdPersonUserControl>().enabled = true;
+                gameObject.tag = "Ghost";
+                gameObject.layer = 19;
+            }
+        }
     }
     public void Move(Vector3 move, bool jump, bool lAttack = false, bool hAttack = false, bool _strafing = false, bool block = false,
         bool dodge = false, bool run = false)
@@ -103,7 +130,7 @@ public class ThirdPersonCharacter : MonoBehaviour
 #endif
             this.m_TurnAmount = Mathf.Atan2(move.x, move.z);
             this.m_ForwardAmount = move.z;
-            if (run && this.stamina.val > 0 && m_IsGrounded)
+            if (run && this.stamina.val > 0 && m_IsGrounded && !ghost)
             {
                 if (this.rechargingStam)
                     this.rechargingStam = false;
@@ -155,14 +182,14 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             this.m_Animator.SetFloat("Jump", this.m_Rigidbody.velocity.y);
 
-            if (lAttack && stamina.val > lightAtackStamDrain)
+            if (lAttack && stamina.val > lightAtackStamDrain && !ghost)
             {
                 this.m_Animator.SetTrigger("Light Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
             }
-            else if (hAttack && stamina.val > jumpAttackStamDrain)
+            else if (hAttack && stamina.val > jumpAttackStamDrain && !ghost)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
@@ -172,9 +199,9 @@ public class ThirdPersonCharacter : MonoBehaviour
         }
         else
         {
-            if (dodge && this.canRoll && this.stamina.val > this.rollStamDrain)
+            if (dodge && this.canRoll && this.stamina.val > this.rollStamDrain && !ghost)
                 this.m_Animator.SetTrigger("Dodge");
-            if (block)
+            if (block && !ghost)
             {
                 this.m_Animator.SetBool("Block", true);
             }
@@ -182,14 +209,14 @@ public class ThirdPersonCharacter : MonoBehaviour
             {
                 this.m_Animator.SetBool("Block", false);
             }
-            if (lAttack && stamina.val > lightAtackStamDrain)
+            if (lAttack && stamina.val > lightAtackStamDrain && !ghost)
             {
                 this.m_Animator.SetTrigger("Light Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
             }
-            else if (hAttack && this.stamina.val > heavyAttackStamDrain)
+            else if (hAttack && this.stamina.val > heavyAttackStamDrain && !ghost)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
@@ -229,7 +256,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     void HandleGroundedMovement(bool jump)
     {
         // check whether conditions are right to allow a jump:
-        if (jump && this.m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
+        if (jump && this.m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded") && !ghost)
         {
             // jump!
             this.m_Rigidbody.velocity = new Vector3(this.m_Rigidbody.velocity.x, this.m_JumpPower, this.m_Rigidbody.velocity.z);
@@ -323,7 +350,9 @@ public class ThirdPersonCharacter : MonoBehaviour
         if (script != null)
         {
             gameObject.GetComponent<ThirdPersonUserControl>().enabled = false;
+            ghostTimer = ghostSpawnTime;
         }
+        
     }
     //Mecanim events
     public void ClearCombo()
