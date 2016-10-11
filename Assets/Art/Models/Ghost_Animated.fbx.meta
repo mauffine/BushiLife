@@ -1,0 +1,354 @@
+fileFormatVersion: 2
+guid: bccf6666821311942b1172f3d00737f5
+timeCreated: 1476157968
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Chest_Joint
+    100002: //RootNode
+    100004: Head_Joint
+    100006: HeadTop_Joint
+    100008: Jaw_Joint
+    100010: joint1
+    100012: joint2
+    100014: joint3
+    100016: joint4
+    100018: joint5
+    100020: L_Arm_Joint
+    100022: L_Elbow_Joint
+    100024: L_FingerJoint
+    100026: L_Shoulder_Joint
+    100028: L_Wrist_Joint
+    100030: Mouth_End_Joint
+    100032: MouthBottom_Joint
+    100034: MouthbottomTip_Joint
+    100036: MouthTop_Joint
+    100038: pCube22
+    100040: Root_Joint
+    100042: Sackhead2_Joint
+    100044: Sackhead3_Joint
+    100046: Sackhead_Root_Joint
+    100048: SackheadTip_Joint
+    100050: Tail1_Joint
+    100052: Tail2_Joint
+    100054: Tail3_Joint
+    100056: Tail4_Joint
+    100058: Tail5_Joint
+    100060: Tail6_Joint
+    100062: Tongue1_Joint
+    100064: Tongue2_Joint
+    100066: Tongue3_Joint
+    100068: Tongue4_Joint
+    100070: Tongue5_Joint
+    100072: Tongue_Root_Joint
+    400000: Chest_Joint
+    400002: //RootNode
+    400004: Head_Joint
+    400006: HeadTop_Joint
+    400008: Jaw_Joint
+    400010: joint1
+    400012: joint2
+    400014: joint3
+    400016: joint4
+    400018: joint5
+    400020: L_Arm_Joint
+    400022: L_Elbow_Joint
+    400024: L_FingerJoint
+    400026: L_Shoulder_Joint
+    400028: L_Wrist_Joint
+    400030: Mouth_End_Joint
+    400032: MouthBottom_Joint
+    400034: MouthbottomTip_Joint
+    400036: MouthTop_Joint
+    400038: pCube22
+    400040: Root_Joint
+    400042: Sackhead2_Joint
+    400044: Sackhead3_Joint
+    400046: Sackhead_Root_Joint
+    400048: SackheadTip_Joint
+    400050: Tail1_Joint
+    400052: Tail2_Joint
+    400054: Tail3_Joint
+    400056: Tail4_Joint
+    400058: Tail5_Joint
+    400060: Tail6_Joint
+    400062: Tongue1_Joint
+    400064: Tongue2_Joint
+    400066: Tongue3_Joint
+    400068: Tongue4_Joint
+    400070: Tongue5_Joint
+    400072: Tongue_Root_Joint
+    4300000: pCube22
+    7400000: GhostEat_Animation
+    7400002: GhostIdle_Animation
+    9500000: //RootNode
+    13700000: pCube22
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: GhostEat_Animation
+      takeName: BoAnimated
+      firstFrame: 2
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube22
+        weight: 1
+      - path: Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/MouthBottom_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/MouthBottom_Joint/MouthbottomTip_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint/Sackhead3_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint/Sackhead3_Joint/SackheadTip_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/MouthTop_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/MouthTop_Joint/Mouth_End_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint/Tongue4_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint/Tongue4_Joint/Tongue5_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3/joint4
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3/joint4/joint5
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint/L_Wrist_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint/L_Wrist_Joint/L_FingerJoint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint/Tail5_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint/Tail5_Joint/Tail6_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: GhostIdle_Animation
+      takeName: BoAnimated
+      firstFrame: 17
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube22
+        weight: 1
+      - path: Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/MouthBottom_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/MouthBottom_Joint/MouthbottomTip_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint/Sackhead3_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint/Sackhead3_Joint/SackheadTip_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/MouthTop_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/MouthTop_Joint/Mouth_End_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint/Tongue4_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint/Tongue4_Joint/Tongue5_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3/joint4
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3/joint4/joint5
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint/L_Wrist_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint/L_Wrist_Joint/L_FingerJoint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint/Tail5_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint/Tail5_Joint/Tail6_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 6
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Root_Joint
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
