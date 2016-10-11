@@ -109,7 +109,7 @@ ModelImporter:
       name: GhostEat_Animation
       takeName: BoAnimated
       firstFrame: 2
-      lastFrame: 16
+      lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
