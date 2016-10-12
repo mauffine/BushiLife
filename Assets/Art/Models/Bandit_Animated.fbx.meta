@@ -135,7 +135,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 1
+    optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Bandit Animations2' has import animation warnings
@@ -149,8 +149,7 @@ ModelImporter:
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
-    extraExposedTransformPaths:
-    - Bandit_Root_JNT/Bandit_Spine_JNT/Bandit_Spine2_JNT/Bandit_collar_JNT/Bandit_Rshoulder_JNT/Bandit_Relbow_JNT/Bandit_Rhand_JNT/Bandit_Rfinger_JNT
+    extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
       name: Bandit_Run

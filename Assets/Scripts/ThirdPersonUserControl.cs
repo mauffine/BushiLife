@@ -18,6 +18,7 @@ public class ThirdPersonUserControl : MonoBehaviour
     private bool lAttack;
     private bool hAttack;
     private bool run;
+    private bool strafing;
     public float offset;
     public Targeter targeter;
 
@@ -48,6 +49,7 @@ public class ThirdPersonUserControl : MonoBehaviour
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Jump");
             }
+        this.strafing = Input.GetButton(playerNumber + " Target");
     }
 
 
@@ -86,10 +88,7 @@ public class ThirdPersonUserControl : MonoBehaviour
                 m_Move = rot;
             //}
         }
-        else
-        {
-        }
-
+       
      //   m_Move = v * Vector3.forward + h * Vector3.right;
 
             // calculate player relative direction to move:
@@ -98,14 +97,13 @@ public class ThirdPersonUserControl : MonoBehaviour
         
 
         // pass all parameters to the character control script
-        m_Character.Move(m_Move, m_Jump, this.lAttack, this.hAttack, this.blocking, this.dodge, this.run);
+        m_Character.Move(m_Move, m_Jump, this.lAttack, this.hAttack, this.strafing, this.blocking, this.dodge, this.run);
 
         if (this.m_Move == Vector3.zero)
             this.run = false;
         m_Jump      = false;
         lAttack     = false;
         hAttack     = false;
-        blocking    = false;
         dodge       = false;
     }
     private void CheckActions()
@@ -116,10 +114,9 @@ public class ThirdPersonUserControl : MonoBehaviour
             hAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " HAttack");
         if (!dodge)
             dodge = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Dodge");
-        if (!blocking)
-            blocking = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Block");
+        blocking = CrossPlatformInputManager.GetButton(this.playerNumber + " Block");
         if (!run)
-            run = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Run");
+            run = CrossPlatformInputManager.GetAxis(this.playerNumber + " Run") > .1f;
 
     }
 
