@@ -101,8 +101,7 @@ public class ThirdPersonUserControl : MonoBehaviour
         // pass all parameters to the character control script
         m_Character.Move(m_Move, m_Jump, this.lAttack, this.hAttack, this.strafing, this.blocking, this.dodge, this.run);
 
-        if (this.m_Move == Vector3.zero)
-            this.run = false;
+        this.run    = false;
         m_Jump      = false;
         lAttack     = false;
         hAttack     = false;

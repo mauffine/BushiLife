@@ -7,6 +7,8 @@ public class Character : MonoBehaviour
 	public Stats stats;
     public Stat.Transact UseAttack;
     public Stat.Transact ReceiveDamage;
+    [SerializeField]
+    float heavyAttackMultiplier = 2;
 
 	// Use this for initialization
 	void Start ()
@@ -25,7 +27,7 @@ public class Character : MonoBehaviour
     }
     void TakeCritDamage(Stat self, Stat other, Transform location)
     {
-        self.val -= other.val * 3;
+        self.val -= other.val * heavyAttackMultiplier;
     }
     void AboveMax(Stat _parent)
     {

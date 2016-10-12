@@ -978,6 +978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11457512}
+  heavyAttackMultiplier: 2
 --- !u!114 &11451038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -990,7 +991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 180
+  m_StationaryTurnSpeed: 360
   m_JumpPower: 12
   m_GravityMultiplier: 2
   m_RunCycleLegOffset: 0.2
@@ -1010,7 +1011,7 @@ MonoBehaviour:
   blockAngle: 180
   lightAtackStamDrain: 10
   heavyAttackStamDrain: 25
-  rollStamDrain: 10
+  rollStamDrain: 25
   stamRecharge: 2
   rechargeRate: 15
   runStamDrain: 15
@@ -1030,8 +1031,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack:
-    val: 10
-    range: {x: 0, y: 10}
+    val: 20
+    range: {x: 0, y: 20}
   health:
     val: 100
     range: {x: 0, y: 100}

@@ -490,6 +490,7 @@ MonoBehaviour:
   deathParticles: {fileID: 1000010156427006, guid: 84436d48510fb3843b87723a9e87a724,
     type: 2}
   isPassive: 0
+  foodRate: 50
   deleteSpeed: 0.5
   navNodeTemplate: {fileID: 1000010882527372, guid: 06aa818ef690ae445a1e5b41ca6f3472,
     type: 2}
@@ -551,6 +552,8 @@ MonoBehaviour:
   swordbox: {fileID: 1000012127298674}
   jumpAttackHB: {fileID: 1000011312078756, guid: 6dc356b4d4ddc4b4e9dc92157869e4e6,
     type: 2}
+  ghostPref: {fileID: 0}
+  deathParticles: {fileID: 0}
   blood: {fileID: 198000013165437576}
   groundSmash: {fileID: 0}
   swordClash: {fileID: 0}
@@ -562,6 +565,7 @@ MonoBehaviour:
   rechargeRate: 15
   runStamDrain: 15
   jumpAttackStamDrain: 40
+  ghostSpawnTime: 3
   trail: {fileID: 114000011541962234}
   heavyAttack: 0
 --- !u!114 &114000013156247904
@@ -576,10 +580,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack:
-    val: 5
-    range: {x: 0, y: 5}
+    val: 15
+    range: {x: 0, y: 15}
   health:
-    val: 30
+    val: 40
     range: {x: 0, y: 30}
   experience:
     val: 20

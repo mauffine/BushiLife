@@ -104,6 +104,7 @@ public class ThirdPersonCharacter : MonoBehaviour
                 gameObject.GetComponent<ThirdPersonUserControl>().enabled = true;
                 gameObject.tag = "Ghost";
                 gameObject.layer = 19;
+                this.trail.Deactivate();
                 Instantiate(deathParticles, gameObject.transform.position, deathParticles.transform.rotation);
             }
         }
@@ -180,7 +181,10 @@ public class ThirdPersonCharacter : MonoBehaviour
         }
         this.m_Animator.SetBool("OnGround", this.m_IsGrounded);
         this.m_Animator.SetBool("Strafing", this.strafing);
-
+        if (stamina.val <= 0 && gameObject.CompareTag("Player"))
+            this.m_Animator.SetBool("Tired", true);
+        else if (stamina.val > 0 && gameObject.CompareTag("Player"))
+            this.m_Animator.SetBool("Tired", false);
         if (!this.m_IsGrounded)
         {
             this.m_Animator.SetFloat("Jump", this.m_Rigidbody.velocity.y);
