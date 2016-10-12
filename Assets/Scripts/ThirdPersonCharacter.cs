@@ -365,6 +365,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void ClearCombo()
     {
         this.m_Animator.SetInteger("Combo", 0);
+        this.m_Animator.ResetTrigger("Light Attack");
+        this.m_Animator.ResetTrigger("HeavyAttack");
         canRoll = true;
 
     }
@@ -408,6 +410,8 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.invincible = false;
         this.rechargingStam = true;
         this.canRoll = true;
+        if (gameObject.CompareTag("Player"))
+            this.m_Animator.ResetTrigger("Dodge");
     }
     public void JumpAttackOn()
     {
