@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000011742639514}
   - 33: {fileID: 33000011304525784}
   - 23: {fileID: 23000010173940650}
+  - 64: {fileID: 64000012722276456}
   m_Layer: 0
   m_Name: rock_Wall_1
   m_TagString: Untagged
@@ -76,4 +77,16 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012865811078}
+  m_Mesh: {fileID: 4300374, guid: c8be5b05ddc80c648ac001468b2cd57e, type: 3}
+--- !u!64 &64000012722276456
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012865811078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300374, guid: c8be5b05ddc80c648ac001468b2cd57e, type: 3}

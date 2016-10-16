@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011857276930}
+  - 64: {fileID: 64000010213558796}
   m_Layer: 0
   m_Name: LogSpike_Mesh
   m_TagString: Untagged
@@ -106,3 +107,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012684866814}
   m_Mesh: {fileID: 4300000, guid: 2bd47b412b3b47b45a086dd82322cca3, type: 3}
+--- !u!64 &64000010213558796
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014132947506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 0}

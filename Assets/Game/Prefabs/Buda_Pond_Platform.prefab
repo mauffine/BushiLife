@@ -67,6 +67,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012843499940}
   - 95: {fileID: 95000013622865386}
+  - 64: {fileID: 64000012389311158}
   m_Layer: 9
   m_Name: Buda_Pond_Platform
   m_TagString: Untagged
@@ -224,6 +225,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010015408544}
   m_Mesh: {fileID: 4300000, guid: 356fc6d945362f6479a39bf6cd88e8d1, type: 3}
+--- !u!64 &64000012389311158
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011861525496}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 0}
 --- !u!95 &95000013622865386
 Animator:
   serializedVersion: 3
