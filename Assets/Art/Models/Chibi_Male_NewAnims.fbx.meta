@@ -176,7 +176,7 @@ ModelImporter:
     7400100: Stand_Up
     7400102: Aerial_Slash
     7400104: Aerial_Slash2
-    7400106: New_Anims22
+    7400106: OutofStamina
     7400108: Block1_End
     7400110: Block2_End
     7400112: LeanForward_Walk
@@ -3667,8 +3667,8 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -4401,7 +4401,7 @@ ModelImporter:
       name: Death
       takeName: Take 001
       firstFrame: 692
-      lastFrame: 729
+      lastFrame: 727
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -4534,9 +4534,9 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -4544,7 +4544,28 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.67097473
+        functionName: TurnSwordOff
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: SmashGround
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: JumpAttackOn
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -6652,7 +6673,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000000000000000000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.2801763
+        functionName: TurnSwordOn
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.99798584
+        functionName: TurnSwordOff
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -6878,10 +6913,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: New_Anims22
+      name: OutofStamina
       takeName: New_Anims22
-      firstFrame: 0
-      lastFrame: 1050
+      firstFrame: 934
+      lastFrame: 976
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -6890,10 +6925,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0

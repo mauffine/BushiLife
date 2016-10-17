@@ -25,4 +25,4 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.16652249, g: 0.24607745, b: 0.25735295, a: 1}
+      second: {r: 0.204, g: 0.24607745, b: 0.25735295, a: 1}

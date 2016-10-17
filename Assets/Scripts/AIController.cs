@@ -1,4 +1,5 @@
-﻿using System;
+﻿//using System;
+using System.Collections;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
@@ -7,6 +8,8 @@ public class AIController : MonoBehaviour
 {
     public string playerNumber;
     public Camera myCamera;
+    public GameObject[] foodDrops;
+    public GameObject deathParticles;
 
     private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
     private Transform m_Cam;                  // A reference to the main camera in the scenes transform
@@ -19,6 +22,12 @@ public class AIController : MonoBehaviour
     private bool hAttack;
     private bool run;
     public bool isPassive;
+    public int foodRate = 50;
+    private bool hasDied = false;
+    private EnemySpawner spawner;
+    private Character character;
+
+    public float deleteSpeed;
 
     private bool IsNearPlayer
     {
@@ -27,7 +36,6 @@ public class AIController : MonoBehaviour
             return this.nearbyPlayers > 0;
         }
     }
-
     private int nearbyPlayers;
 
     public GameObject navNodeTemplate;
@@ -53,15 +61,16 @@ public class AIController : MonoBehaviour
 
         this.navNode.GetComponent<EnemyMovement>().Init(this);
 
-        // get the third person character ( this should never be null due to require component )
-        this.m_Character = GetComponent<ThirdPersonCharacter>();
     }
-
 
     private void Update()
     {
         if (this.tag == "Dead")
+        {
+            if (!this.hasDied)
+                OnDeath();
             return;
+        }
         CheckActions();
         if (!this.m_Jump)
         {
@@ -118,6 +127,7 @@ public class AIController : MonoBehaviour
         this.hAttack = false;
         this.blocking = false;
         this.dodge = false;
+
     }
     private void CheckActions()
     {
@@ -147,15 +157,60 @@ public class AIController : MonoBehaviour
         this.m_Cam = this.myCamera.transform;
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnCollisionEnter(Collision collision)
     {
-        if (collider.tag == "Player")
+        if (collision.collider.tag == "Player")
             this.nearbyPlayers++;
     }
 
-    void OnTriggerExit(Collider collider)
+    void OnCollisionExit(Collision collision)
     {
-        if (collider.tag == "Player")
+        if (collision.collider.tag == "Player")
             this.nearbyPlayers--;
+    }
+    void OnTriggerEnter(Collider _col)
+    {
+        if (_col.tag == "Player")
+            this.nearbyPlayers++;
+    }
+    void OnTriggerExit(Collider _col)
+    {
+        if (_col.tag == "Player")
+            this.nearbyPlayers--;
+    }
+    public void Init(Vector3 pos, EnemySpawner parent)
+    {
+        // get the third person character ( this should never be null due to require component )
+        this.m_Character = GetComponent<ThirdPersonCharacter>();
+        this.character = GetComponent<Character>();
+
+        this.transform.position = pos;
+        this.spawner = parent;
+        this.character.stats.health.val = this.character.stats.health.range.y;
+        this.tag = "AI";
+        this.m_Character.EndIFrames();
+        this.nearbyPlayers = 0;
+        this.hasDied = false;
+    }
+
+    void OnDeath()
+    {
+        this.hasDied = true;
+        StartCoroutine(DeleteSoon());
+    }
+
+    void OnDelete()
+    {
+        if (Random.Range(1, 101) < this.foodRate)
+            Instantiate(this.foodDrops[Random.Range(0, 2)], this.transform.position + new Vector3(0, 0.5f), transform.rotation);
+        Instantiate(this.deathParticles, this.transform.position + new Vector3(0, 0.5f), deathParticles.transform.rotation);
+        return;
+    }
+
+    IEnumerator DeleteSoon()
+    {
+        yield return new WaitForSeconds(this.spawner.spawnDelay * this.deleteSpeed);
+        this.OnDelete();
+        this.gameObject.SetActive(false);
     }
 }

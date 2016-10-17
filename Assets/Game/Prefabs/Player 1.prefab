@@ -400,7 +400,7 @@ GameObject:
   - 114: {fileID: 11457512}
   - 114: {fileID: 11439868}
   - 82: {fileID: 82000013793976132}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.599068, y: -7.960638, z: -4.25531}
+  m_LocalPosition: {x: 0, y: 5.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -978,6 +978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11457512}
+  heavyAttackMultiplier: 2
 --- !u!114 &11451038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -990,7 +991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 180
+  m_StationaryTurnSpeed: 360
   m_JumpPower: 12
   m_GravityMultiplier: 2
   m_RunCycleLegOffset: 0.2
@@ -1001,16 +1002,21 @@ MonoBehaviour:
   maxArialSpeed: 10
   swordbox: {fileID: 190600}
   jumpAttackHB: {fileID: 144302}
+  ghostPref: {fileID: 1000013088990814, guid: e04fdb0e24b23714e9e4d3cba11ef8a3, type: 2}
+  deathParticles: {fileID: 1000010156427006, guid: 84436d48510fb3843b87723a9e87a724,
+    type: 2}
   blood: {fileID: 19896682}
   groundSmash: {fileID: 198000010161497334}
   swordClash: {fileID: 198000014072710868}
   blockAngle: 180
-  lightAtackStamDrain: 20
-  heavyAttackStamDrain: 30
-  rollStamDrain: 10
+  lightAtackStamDrain: 10
+  heavyAttackStamDrain: 25
+  rollStamDrain: 25
   stamRecharge: 2
   rechargeRate: 15
   runStamDrain: 15
+  jumpAttackStamDrain: 40
+  ghostSpawnTime: 3
   trail: {fileID: 114000013639281706}
   heavyAttack: 0
 --- !u!114 &11457512
@@ -1025,8 +1031,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack:
-    val: 10
-    range: {x: 0, y: 10}
+    val: 20
+    range: {x: 0, y: 20}
   health:
     val: 100
     range: {x: 0, y: 100}
@@ -3843,6 +3849,7 @@ GameObject:
   - 23: {fileID: 23000011818790828}
   - 135: {fileID: 135000013758302240}
   - 114: {fileID: 114000014079265732}
+  - 54: {fileID: 54000011428512232}
   m_Layer: 11
   m_Name: Targeter
   m_TagString: Untagged
@@ -4091,6 +4098,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011360341890}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54000011428512232
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011360341890}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!82 &82000013793976132
 AudioSource:
   m_ObjectHideFlags: 1

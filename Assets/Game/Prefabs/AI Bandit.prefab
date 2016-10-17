@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010254451366}
   - 114: {fileID: 114000011541962234}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: X-WeaponTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - 4: {fileID: 4000010335658976}
   - 33: {fileID: 33000011874216364}
   - 23: {fileID: 23000014099160352}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Axe_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012396375444}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - 4: {fileID: 4000012355604298}
   - 198: {fileID: 198000013165437576}
   - 199: {fileID: 199000014248371970}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011195608200}
   - 137: {fileID: 137000012699591158}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: polySurface21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012680120640}
   - 65: {fileID: 65000010481014878}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Swordbox
   m_TagString: HurtBox
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011616762952}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bandit_Rfinger_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012440915822}
   - 137: {fileID: 137000010148115154}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: polySurface18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010352601400}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: StartPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,8 @@ GameObject:
   - 114: {fileID: 114000011081883434}
   - 114: {fileID: 114000010428888470}
   - 82: {fileID: 82000011083444934}
-  m_Layer: 0
+  - 135: {fileID: 135000011042312170}
+  m_Layer: 10
   m_Name: AI Bandit
   m_TagString: AI
   m_Icon: {fileID: 0}
@@ -226,7 +227,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014034698358}
   m_LocalRotation: {x: -0, y: 0.67775893, z: -0, w: 0.73528415}
-  m_LocalPosition: {x: 12.710724, y: -10.180689, z: -3.2243805}
+  m_LocalPosition: {x: -39.121815, y: 3.1949494, z: -28.271168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 85.471, z: 0}
   m_Children:
@@ -366,7 +367,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &65000010481014878
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -483,7 +484,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: P1
   myCamera: {fileID: 0}
+  foodDrops:
+  - {fileID: 1000011125116344, guid: f6e5e924a5b05ae43930f9f579bbaa4c, type: 2}
+  - {fileID: 1000013888565168, guid: 99596365c34760f47a7ca567bfcd3dbd, type: 2}
+  deathParticles: {fileID: 1000010156427006, guid: 84436d48510fb3843b87723a9e87a724,
+    type: 2}
   isPassive: 0
+  foodRate: 50
+  deleteSpeed: 0.5
   navNodeTemplate: {fileID: 1000010882527372, guid: 06aa818ef690ae445a1e5b41ca6f3472,
     type: 2}
   target: {x: 0, y: 0, z: 0}
@@ -499,6 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 114000013156247904}
+  heavyAttackMultiplier: 2
 --- !u!114 &114000011541962234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -544,7 +553,11 @@ MonoBehaviour:
   swordbox: {fileID: 1000012127298674}
   jumpAttackHB: {fileID: 1000011312078756, guid: 6dc356b4d4ddc4b4e9dc92157869e4e6,
     type: 2}
+  ghostPref: {fileID: 0}
+  deathParticles: {fileID: 0}
   blood: {fileID: 198000013165437576}
+  groundSmash: {fileID: 0}
+  swordClash: {fileID: 0}
   blockAngle: 180
   lightAtackStamDrain: 5
   heavyAttackStamDrain: 25
@@ -552,6 +565,8 @@ MonoBehaviour:
   stamRecharge: 2
   rechargeRate: 15
   runStamDrain: 15
+  jumpAttackStamDrain: 40
+  ghostSpawnTime: 3
   trail: {fileID: 114000011541962234}
   heavyAttack: 0
 --- !u!114 &114000013156247904
@@ -566,11 +581,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack:
-    val: 5
-    range: {x: 0, y: 5}
+    val: 15
+    range: {x: 0, y: 15}
   health:
-    val: 30
-    range: {x: 0, y: 30}
+    val: 40
+    range: {x: 0, y: 40}
   experience:
     val: 20
     range: {x: 0, y: 100}
@@ -580,6 +595,18 @@ MonoBehaviour:
   stamina:
     val: 100
     range: {x: 0, y: 100}
+--- !u!135 &135000011042312170
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014034698358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0.61, z: 0}
 --- !u!136 &136000011857252342
 CapsuleCollider:
   m_ObjectHideFlags: 1

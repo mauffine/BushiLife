@@ -41,10 +41,10 @@ public class CameraController : MonoBehaviour
         //}
 
         this.transform.position = this.target.transform.position;
-        if (!controller.IsButtonDown("Target"))
+        if (true)//!controller.IsButtonDown("Target"))
         {
 
-            if ((controller.targeter.target == null))
+            if (true)//(controller.targeter.target == null))
             {
                 this.totalOffset = new Vector3(0, this.verticalOffset * 10, 0);
                 this.transform.position = this.target.transform.position + this.totalOffset;
@@ -63,7 +63,7 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-            ControlLook();
+            //ControlLook();
         }
 
 
