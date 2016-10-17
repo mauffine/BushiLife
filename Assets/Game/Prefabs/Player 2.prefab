@@ -904,12 +904,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovingTurnSpeed: 360
   m_StationaryTurnSpeed: 180
-  m_JumpPower: 12
-  m_GravityMultiplier: 2
+  m_JumpPower: 20
+  m_GravityMultiplier: 4
   m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1.5
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 1
+  m_MoveSpeedMultiplier: 1.7
+  m_AnimSpeedMultiplier: 2
+  m_GroundCheckDistance: 1.5
   airControl: 1000
   maxArialSpeed: 10
   swordbox: {fileID: 190600}
@@ -918,12 +918,12 @@ MonoBehaviour:
   groundSmash: {fileID: 198000013080177528}
   swordClash: {fileID: 198000010126501416}
   blockAngle: 180
-  lightAtackStamDrain: 5
+  lightAtackStamDrain: 10
   heavyAttackStamDrain: 25
   rollStamDrain: 10
   stamRecharge: 2
   rechargeRate: 15
-  runStamDrain: 15
+  runStamDrain: 10
   trail: {fileID: 114000011850448818}
   heavyAttack: 0
 --- !u!114 &11457512
