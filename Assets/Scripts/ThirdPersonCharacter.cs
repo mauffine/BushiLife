@@ -58,6 +58,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     bool rechargingStam = true;
     bool strafing = false;
     bool running = false;
+    bool inputBufferOpen = true;
 
     private bool ghost = false;
     Stat stamina;
@@ -189,19 +190,23 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             this.m_Animator.SetFloat("Jump", this.m_Rigidbody.velocity.y);
 
-            if (lAttack && stamina.val > lightAtackStamDrain && !ghost)
+            if (lAttack && stamina.val > lightAtackStamDrain
+                && !ghost && inputBufferOpen)
             {
                 this.m_Animator.SetTrigger("Light Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
+                this.inputBufferOpen = false;
             }
-            else if (hAttack && stamina.val > jumpAttackStamDrain && !ghost)
+            else if (hAttack && stamina.val > jumpAttackStamDrain
+                && !ghost && inputBufferOpen)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
+                this.inputBufferOpen = false;
             }
         }
         else
@@ -216,19 +221,23 @@ public class ThirdPersonCharacter : MonoBehaviour
             {
                 this.m_Animator.SetBool("Block", false);
             }
-            if (lAttack && stamina.val > lightAtackStamDrain && !ghost)
+            if (lAttack && stamina.val > lightAtackStamDrain
+                && !ghost && inputBufferOpen)
             {
                 this.m_Animator.SetTrigger("Light Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
+                this.inputBufferOpen = false;
             }
-            else if (hAttack && this.stamina.val > heavyAttackStamDrain && !ghost)
+            else if (hAttack && this.stamina.val > heavyAttackStamDrain
+                && !ghost && inputBufferOpen)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
+                this.inputBufferOpen = false;
             }
         }
 
@@ -368,6 +377,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.m_Animator.ResetTrigger("Light Attack");
         this.m_Animator.ResetTrigger("HeavyAttack");
         canRoll = true;
+        this.inputBufferOpen = true;
 
     }
     public void TurnSwordOn()
@@ -435,6 +445,14 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void SmashGround()
     {
         this.groundSmash.Play();
+    }
+    public void OpenBuffer()
+    {
+        this.inputBufferOpen = true;
+    }
+    public void CloseBuffer()
+    {
+        this.inputBufferOpen = false;
     }
 }
 

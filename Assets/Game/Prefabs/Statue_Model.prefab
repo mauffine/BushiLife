@@ -22,6 +22,7 @@ GameObject:
   - 33: {fileID: 33000014060244502}
   - 23: {fileID: 23000010688437506}
   - 95: {fileID: 95000012703250418}
+  - 64: {fileID: 64000011794100448}
   m_Layer: 0
   m_Name: Statue_Model
   m_TagString: Untagged
@@ -77,6 +78,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012377223924}
+  m_Mesh: {fileID: 4300000, guid: 57f781319c3daba4db2c9846edc0efc0, type: 3}
+--- !u!64 &64000011794100448
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012377223924}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 57f781319c3daba4db2c9846edc0efc0, type: 3}
 --- !u!95 &95000012703250418
 Animator:

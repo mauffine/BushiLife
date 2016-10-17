@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011284719948}
   - 95: {fileID: 95000013849921554}
+  - 64: {fileID: 64000013789421724}
   m_Layer: 9
   m_Name: Buda_Platform_Model
   m_TagString: Untagged
@@ -174,6 +175,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012298638054}
   m_Mesh: {fileID: 4300000, guid: 1727a0add654040408701dc1bb3b744a, type: 3}
+--- !u!64 &64000013789421724
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012783405028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 0}
 --- !u!95 &95000013849921554
 Animator:
   serializedVersion: 3
