@@ -485,8 +485,8 @@ MonoBehaviour:
   playerNumber: P1
   myCamera: {fileID: 0}
   foodDrops:
-  - {fileID: 1000011125116344, guid: f6e5e924a5b05ae43930f9f579bbaa4c, type: 2}
-  - {fileID: 1000013888565168, guid: 99596365c34760f47a7ca567bfcd3dbd, type: 2}
+  - {fileID: 1000011369236206, guid: f6e5e924a5b05ae43930f9f579bbaa4c, type: 2}
+  - {fileID: 1000010121284570, guid: 99596365c34760f47a7ca567bfcd3dbd, type: 2}
   deathParticles: {fileID: 1000010156427006, guid: 84436d48510fb3843b87723a9e87a724,
     type: 2}
   isPassive: 0

@@ -394,6 +394,12 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.rechargingStam = false;
         this.canRoll = false;
     }
+    public void LightSwordOff()
+    {
+        this.swordbox.SetActive(false);
+        this.rechargingStam = true;
+        this.trail.Deactivate();
+    }
     public void TurnSwordOff()
     {
         this.swordbox.SetActive(false);

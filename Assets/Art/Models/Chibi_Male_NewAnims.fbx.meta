@@ -1647,7 +1647,7 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.25886917
-        functionName: TurnSwordOff
+        functionName: LightSwordOff
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
           type: 3}
@@ -1795,7 +1795,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.60487807
-        functionName: TurnSwordOff
+        functionName: LightSwordOff
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
           type: 3}
@@ -1951,7 +1951,7 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.5414634
-        functionName: TurnSwordOff
+        functionName: LightSwordOff
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
           type: 3}
@@ -2099,7 +2099,7 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.60487807
-        functionName: TurnSwordOff
+        functionName: LightSwordOff
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
           type: 3}
@@ -2247,7 +2247,7 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.60487807
-        functionName: TurnSwordOff
+        functionName: LightSwordOff
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
           type: 3}
@@ -7848,7 +7848,7 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 1
+      loopBlendOrientation: 0
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
@@ -7993,10 +7993,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0

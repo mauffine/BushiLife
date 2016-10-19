@@ -478,6 +478,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9abb4e54801ed144ca3821a54ee8c43a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &323817252 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010473138778, guid: 9abb4e54801ed144ca3821a54ee8c43a,
+    type: 2}
+  m_PrefabInternal: {fileID: 238878855}
 --- !u!1 &456480092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,6 +1155,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010544758690, guid: 7b1fb6a711ad5f346a75ad51d5b0d112,
     type: 2}
   m_PrefabInternal: {fileID: 901693900}
+--- !u!1 &855785810 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010473138778, guid: 9abb4e54801ed144ca3821a54ee8c43a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1863068331}
 --- !u!1001 &901693900
 Prefab:
   m_ObjectHideFlags: 0
@@ -1809,12 +1819,12 @@ Prefab:
         type: 2}
       propertyPath: respawns.Array.data[2]
       value: 
-      objectReference: {fileID: 696737567}
+      objectReference: {fileID: 855785810}
     - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
         type: 2}
       propertyPath: respawns.Array.data[3]
       value: 
-      objectReference: {fileID: 696737567}
+      objectReference: {fileID: 323817252}
     - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
         type: 2}
       propertyPath: cameraGenerator
