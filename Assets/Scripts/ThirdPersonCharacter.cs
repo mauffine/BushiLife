@@ -370,7 +370,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         this.m_Animator.SetInteger("Combo", 0);
         this.m_Animator.ResetTrigger("Light Attack");
-        this.m_Animator.ResetTrigger("HeavyAttack");
+        this.m_Animator.ResetTrigger("Heavy Attack");
         canRoll = true;
 
     }
