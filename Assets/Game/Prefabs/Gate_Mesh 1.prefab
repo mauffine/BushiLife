@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000011266290082}
   - 33: {fileID: 33000012529352622}
   - 23: {fileID: 23000012813826530}
+  - 64: {fileID: 64000012834273238}
   m_Layer: 0
   m_Name: pCube235
   m_TagString: Untagged
@@ -36,7 +37,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011786604202}
-  - 64: {fileID: 64000013930215270}
   m_Layer: 0
   m_Name: Gate_Mesh 1
   m_TagString: Untagged
@@ -107,15 +107,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012272307784}
   m_Mesh: {fileID: 4300000, guid: 3e32b2a76cc9d9447905f14f73f9e983, type: 3}
---- !u!64 &64000013930215270
+--- !u!64 &64000012834273238
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013519197790}
+  m_GameObject: {fileID: 1000012272307784}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: 3e32b2a76cc9d9447905f14f73f9e983, type: 3}
