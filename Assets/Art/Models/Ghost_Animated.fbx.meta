@@ -82,6 +82,8 @@ ModelImporter:
     4300000: pCube22
     7400000: GhostEat_Animation
     7400002: GhostIdle_Animation
+    7400004: GhostScare_Animation
+    7400006: GhostLaugh_Animation
     9500000: //RootNode
     13700000: pCube22
   materials:
@@ -219,6 +221,210 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube22
+        weight: 1
+      - path: Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/MouthBottom_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/MouthBottom_Joint/MouthbottomTip_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint/Sackhead3_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint/Sackhead3_Joint/SackheadTip_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/MouthTop_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/MouthTop_Joint/Mouth_End_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint/Tongue4_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint/Tongue4_Joint/Tongue5_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3/joint4
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3/joint4/joint5
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint/L_Wrist_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint/L_Wrist_Joint/L_FingerJoint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint/Tail5_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint/Tail5_Joint/Tail6_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: GhostScare_Animation
+      takeName: BoAnimated34
+      firstFrame: 33
+      lastFrame: 62
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube22
+        weight: 1
+      - path: Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/MouthBottom_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/MouthBottom_Joint/MouthbottomTip_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint/Sackhead3_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/HeadTop_Joint/Sackhead_Root_Joint/Sackhead2_Joint/Sackhead3_Joint/SackheadTip_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/MouthTop_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Head_Joint/MouthTop_Joint/Mouth_End_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint/Tongue4_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/Jaw_Joint/Tongue_Root_Joint/Tongue1_Joint/Tongue2_Joint/Tongue3_Joint/Tongue4_Joint/Tongue5_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3/joint4
+        weight: 1
+      - path: Root_Joint/Chest_Joint/joint1/joint2/joint3/joint4/joint5
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint/L_Wrist_Joint
+        weight: 1
+      - path: Root_Joint/Chest_Joint/L_Shoulder_Joint/L_Arm_Joint/L_Elbow_Joint/L_Wrist_Joint/L_FingerJoint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint/Tail5_Joint
+        weight: 1
+      - path: Root_Joint/Tail1_Joint/Tail2_Joint/Tail3_Joint/Tail4_Joint/Tail5_Joint/Tail6_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: GhostLaugh_Animation
+      takeName: BoAnimated34
+      firstFrame: 63
+      lastFrame: 122
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
