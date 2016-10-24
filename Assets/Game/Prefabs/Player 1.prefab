@@ -595,7 +595,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.21, z: 0}
+  m_LocalPosition: {x: -41.342472, y: 3.1949494, z: -38.666275}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1019,6 +1019,7 @@ MonoBehaviour:
   ghostSpawnTime: 3
   trail: {fileID: 114000013639281706}
   heavyAttack: 0
+  m_Rigidbody: {fileID: 0}
 --- !u!114 &11457512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2065,7 +2066,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: 20
+      scalar: 25
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2408,7 +2409,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 10
+    type: 4
     radius: 1.6
     angle: 52.96
     length: 5
@@ -2426,11 +2427,11 @@ ParticleSystem:
     m_UseMeshColors: 1
     randomDirection: 0
   EmissionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 20
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2476,7 +2477,7 @@ ParticleSystem:
     time1: 0
     time2: 0
     time3: 0
-    m_BurstCount: 0
+    m_BurstCount: 1
   SizeModule:
     enabled: 0
     curve:

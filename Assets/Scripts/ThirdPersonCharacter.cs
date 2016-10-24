@@ -42,7 +42,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     public bool heavyAttack;
 
     Rigidbody m_Rigidbody;
-    Animator m_Animator;
+    public Animator m_Animator;
     bool m_IsGrounded;
     float m_OrigGroundCheckDistance;
     const float k_Half = 0.5f;
@@ -348,7 +348,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     }
     public void Bleed()
     {
-        this.blood.Emit(20);
+        this.blood.Play();
     }
     public void Die()
     {
@@ -446,5 +446,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         this.groundSmash.Play();
     }
+    public void ResetLayer(int _layerID)
+    {
+        m_Animator.SetLayerWeight(_layerID, 0);
+    }
 }
-
