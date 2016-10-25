@@ -102,7 +102,7 @@ public class HandlePlayers : MonoBehaviour {
                 var player = players[players.Count - 1].GetComponent<ThirdPersonUserControl>();
                 if (player != null)
                     player.SetPlayerNumber(i+1);
-                cameraGenerator.GetComponent<CameraCollection>().Add(players[players.Count - 1], this.players.Count);
+                cameraGenerator.GetComponent<CameraCollection>().Add(players[players.Count - 1], i+1);
             }
         }
     }
