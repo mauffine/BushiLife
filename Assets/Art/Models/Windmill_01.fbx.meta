@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: 42d57b739b345484d8aeb186d2a8c7d6
+timeCreated: 1477439823
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Fan_end_joint
+    100002: Fan_joint
+    100004: Main_Windmill_joint
+    100006: Mill_end_joint
+    100008: Mill_joint
+    100010: Stone_wheel_end_joint
+    100012: Stone_wheel_joint
+    100014: //RootNode
+    100016: Windmill_01
+    400000: Fan_end_joint
+    400002: Fan_joint
+    400004: Main_Windmill_joint
+    400006: Mill_end_joint
+    400008: Mill_joint
+    400010: Stone_wheel_end_joint
+    400012: Stone_wheel_joint
+    400014: //RootNode
+    400016: Windmill_01
+    4300000: Windmill_01
+    7400000: Windmill_Turn
+    9500000: //RootNode
+    13700000: Windmill_01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Windmill_Turn
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 380
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Windmill_joint
+        weight: 1
+      - path: Main_Windmill_joint/Fan_joint
+        weight: 1
+      - path: Main_Windmill_joint/Fan_joint/Fan_end_joint
+        weight: 1
+      - path: Main_Windmill_joint/Mill_joint
+        weight: 1
+      - path: Main_Windmill_joint/Mill_joint/Mill_end_joint
+        weight: 1
+      - path: Main_Windmill_joint/Mill_joint/Mill_end_joint/Stone_wheel_joint
+        weight: 1
+      - path: Main_Windmill_joint/Mill_joint/Mill_end_joint/Stone_wheel_joint/Stone_wheel_end_joint
+        weight: 1
+      - path: Windmill_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 70
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Windmill_01
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
