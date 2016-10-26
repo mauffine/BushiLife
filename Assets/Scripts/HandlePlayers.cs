@@ -15,7 +15,8 @@ public class HandlePlayers : MonoBehaviour {
     public List<GameObject> players;
     public PlayState currentState;
     public Text joinNotification;
-    public Text WinText;
+    public Image winText;
+    public Sprite[] victorySprites;
 
     public float endGameTimer = 5;
 
@@ -116,7 +117,35 @@ public class HandlePlayers : MonoBehaviour {
         }
         if (alivePlayers.Count > 1)
             return true;
-        WinText.text = "Player " + alivePlayers[0].GetComponent<ThirdPersonUserControl>().playerNumber + " Wins!!";
+        switch (alivePlayers[0].GetComponent<ThirdPersonUserControl>().playerNumber)
+        {
+            case ("P1"):
+                {
+                    winText.enabled = true;
+                    winText.sprite = victorySprites[0];
+                    break;
+                }
+            case ("P2"):
+                {
+                    winText.enabled = true;
+                    winText.sprite = victorySprites[1];
+                    break;
+                }
+            case ("P3"):
+                {
+                    winText.enabled = true;
+                    winText.sprite = victorySprites[2];
+                    break;
+                }
+            case ("P4"):
+                {
+                    winText.enabled = true;
+                    winText.sprite = victorySprites[3];
+                    break;
+                }
+            default:
+                break;
+        }
         return false;
     }
 }
