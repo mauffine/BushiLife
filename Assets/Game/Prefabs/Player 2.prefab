@@ -919,8 +919,8 @@ MonoBehaviour:
   deathParticles: {fileID: 1000010156427006, guid: 84436d48510fb3843b87723a9e87a724,
     type: 2}
   blood: {fileID: 198000012043500616}
-  groundSmash: {fileID: 198000013080177528}
-  swordClash: {fileID: 198000010126501416}
+  groundSmash: {fileID: 198000014017134730}
+  swordClash: {fileID: 198000011845824652}
   blockAngle: 180
   lightAtackStamDrain: 10
   heavyAttackStamDrain: 25
@@ -932,7 +932,7 @@ MonoBehaviour:
   ghostSpawnTime: 3
   trail: {fileID: 114000011515658086}
   heavyAttack: 0
-  m_Rigidbody: {fileID: 0}
+  m_Animator: {fileID: 9580488}
 --- !u!114 &11457512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -974,7 +974,7 @@ MonoBehaviour:
   myCamera: {fileID: 0}
   m_Cam: {fileID: 0}
   offset: 0
-  targeter: {fileID: 0}
+  targeter: {fileID: 114000012291263156}
 --- !u!136 &13671682
 CapsuleCollider:
   m_ObjectHideFlags: 1

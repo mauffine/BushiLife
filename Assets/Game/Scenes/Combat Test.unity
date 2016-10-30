@@ -1827,15 +1827,31 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1266a64b103e3540a1c1223f2a62a86, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &1407014802 stripped
+--- !u!1 &1407014802
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1000010383677636, guid: b73933126efe6d6499359c2372d1420d,
     type: 2}
-  m_PrefabInternal: {fileID: 2047953205}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1407014807}
+  - 114: {fileID: 1407014805}
+  - 81: {fileID: 1407014804}
+  - 114: {fileID: 1407014803}
+  - 114: {fileID: 1407014806}
+  m_Layer: 0
+  m_Name: Scene Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!114 &1407014803
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 114000013218244598, guid: b73933126efe6d6499359c2372d1420d,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1407014802}
   m_Enabled: 1
@@ -1843,10 +1859,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a21182f3dd2b1f47b6a9820c000e7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!81 &1407014804
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 81000011786994490, guid: b73933126efe6d6499359c2372d1420d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407014802}
+  m_Enabled: 1
+--- !u!114 &1407014805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407014802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922440b9bd99bed4aa71121c1a9661da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawns:
+  - {fileID: 696737567}
+  - {fileID: 746137713}
+  - {fileID: 855785810}
+  - {fileID: 323817252}
+  cameraGenerator: {fileID: 2069888880}
+  playerPrefab:
+  - {fileID: 184318, guid: 50ff76a6ca269584c842317e6763b35e, type: 2}
+  - {fileID: 184318, guid: 59f4e4ebd131663448274e67fa78d627, type: 2}
+  - {fileID: 184318, guid: 19e4ba148cb34ad468290ee3f6876a0d, type: 2}
+  - {fileID: 184318, guid: 19cce018751ffba47adac0d946f0a9df, type: 2}
+  players: []
+  currentState: 0
+  joinNotification: {fileID: 600557182}
+  winText: {fileID: 81418269}
+  victorySprites:
+  - {fileID: 21300000, guid: f78788814a663874c87eb9f74d7ecd17, type: 3}
+  - {fileID: 21300000, guid: f78788814a663874c87eb9f74d7ecd17, type: 3}
+  - {fileID: 21300000, guid: aadc3c6d7ef665941ad760e1cb972cea, type: 3}
+  - {fileID: 21300000, guid: 58f53ae2b6dfdaa45bd3d08f18839c46, type: 3}
+  endGameTimer: 5
 --- !u!114 &1407014806
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 114000010399913940, guid: b73933126efe6d6499359c2372d1420d,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1407014802}
   m_Enabled: 1
@@ -1854,6 +1912,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d0c8a7dbe524742be6b1794af0bd30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1407014807
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000013143189228, guid: b73933126efe6d6499359c2372d1420d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407014802}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
 --- !u!4 &1499640176 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010544758690, guid: 7b1fb6a711ad5f346a75ad51d5b0d112,
@@ -2255,132 +2327,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1266a64b103e3540a1c1223f2a62a86, type: 3}
-  m_IsPrefabParent: 0
---- !u!1001 &2047953205
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: respawns.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: victorySprites.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013143189228, guid: b73933126efe6d6499359c2372d1420d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013143189228, guid: b73933126efe6d6499359c2372d1420d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013143189228, guid: b73933126efe6d6499359c2372d1420d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013143189228, guid: b73933126efe6d6499359c2372d1420d, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013143189228, guid: b73933126efe6d6499359c2372d1420d, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013143189228, guid: b73933126efe6d6499359c2372d1420d, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013143189228, guid: b73933126efe6d6499359c2372d1420d, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013143189228, guid: b73933126efe6d6499359c2372d1420d, type: 2}
-      propertyPath: m_RootOrder
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: respawns.Array.data[0]
-      value: 
-      objectReference: {fileID: 696737567}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: respawns.Array.data[1]
-      value: 
-      objectReference: {fileID: 746137713}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: respawns.Array.data[2]
-      value: 
-      objectReference: {fileID: 855785810}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: respawns.Array.data[3]
-      value: 
-      objectReference: {fileID: 323817252}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: cameraGenerator
-      value: 
-      objectReference: {fileID: 2069888880}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: sceneState
-      value: 
-      objectReference: {fileID: 1407014803}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: joinNotification
-      value: 
-      objectReference: {fileID: 600557182}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: endGameTimer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: WinText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: victorySprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: f78788814a663874c87eb9f74d7ecd17,
-        type: 3}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: victorySprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: f78788814a663874c87eb9f74d7ecd17,
-        type: 3}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: victorySprites.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: aadc3c6d7ef665941ad760e1cb972cea,
-        type: 3}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: victorySprites.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 58f53ae2b6dfdaa45bd3d08f18839c46,
-        type: 3}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 81418269}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b73933126efe6d6499359c2372d1420d, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2069888880 stripped
 GameObject:

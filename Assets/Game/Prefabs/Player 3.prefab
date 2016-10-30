@@ -988,7 +988,7 @@ MonoBehaviour:
   ghostSpawnTime: 3
   trail: {fileID: 114000011499698650}
   heavyAttack: 0
-  m_Rigidbody: {fileID: 0}
+  m_Animator: {fileID: 9580488}
 --- !u!114 &11457512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1030,7 +1030,7 @@ MonoBehaviour:
   myCamera: {fileID: 0}
   m_Cam: {fileID: 0}
   offset: 0
-  targeter: {fileID: 0}
+  targeter: {fileID: 114000011701342612}
 --- !u!136 &13671682
 CapsuleCollider:
   m_ObjectHideFlags: 1
