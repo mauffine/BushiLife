@@ -13906,6 +13906,48 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012053029416, guid: 2ee6a9df6f4a4894da2fd348c92b20e4,
     type: 2}
   m_PrefabInternal: {fileID: 343239138}
+--- !u!1001 &1423645890
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013962979258, guid: fbd40871fefa1cc489f08c37448602a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 37.222145
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013962979258, guid: fbd40871fefa1cc489f08c37448602a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013962979258, guid: fbd40871fefa1cc489f08c37448602a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 19.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013962979258, guid: fbd40871fefa1cc489f08c37448602a3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013962979258, guid: fbd40871fefa1cc489f08c37448602a3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013962979258, guid: fbd40871fefa1cc489f08c37448602a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013962979258, guid: fbd40871fefa1cc489f08c37448602a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013962979258, guid: fbd40871fefa1cc489f08c37448602a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fbd40871fefa1cc489f08c37448602a3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1436009847
 Prefab:
   m_ObjectHideFlags: 0
@@ -15466,6 +15508,48 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011742639514, guid: e76927e76a3c0c548a3d65af76191c27,
     type: 2}
   m_PrefabInternal: {fileID: 1870923421}
+--- !u!1001 &1657934286
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000011076936958, guid: 52902b5ee10322f40b5c87cc81e25a24, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 37.222145
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011076936958, guid: 52902b5ee10322f40b5c87cc81e25a24, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 48.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011076936958, guid: 52902b5ee10322f40b5c87cc81e25a24, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 19.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011076936958, guid: 52902b5ee10322f40b5c87cc81e25a24, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011076936958, guid: 52902b5ee10322f40b5c87cc81e25a24, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011076936958, guid: 52902b5ee10322f40b5c87cc81e25a24, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011076936958, guid: 52902b5ee10322f40b5c87cc81e25a24, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011076936958, guid: 52902b5ee10322f40b5c87cc81e25a24, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 52902b5ee10322f40b5c87cc81e25a24, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1662941840 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011857276930, guid: c60e56b06276207478bd468c89801756,
