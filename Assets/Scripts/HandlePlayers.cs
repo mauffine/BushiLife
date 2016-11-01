@@ -17,8 +17,9 @@ public class HandlePlayers : MonoBehaviour {
     public Text joinNotification;
     public Image winText;
     public Sprite[] victorySprites;
+	private bool singlePlayer = true;
 
-    public float endGameTimer = 5;
+	public float endGameTimer = 5;
 
     private bool[] PlayerJoined = { false, false, false, false };
 
@@ -45,6 +46,7 @@ public class HandlePlayers : MonoBehaviour {
             {
                 joinNotification.GetComponent<TextFade>().SetText("Player" + 2 + " has Joined");
                 this.PlayerJoined[1] = true;
+
             }
             if (Input.GetButtonDown("P3 Join") && !PlayerJoined[2])
             {
@@ -115,6 +117,21 @@ public class HandlePlayers : MonoBehaviour {
             if (player.CompareTag("Player"))
                 alivePlayers.Add(player);
         }
+
+		if (this.singlePlayer)
+		{
+			if (alivePlayers.Count == 0)
+			{
+				winText.enabled = true;
+				winText.sprite = victorySprites[0];
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+
         if (alivePlayers.Count > 1)
             return true;
         switch (alivePlayers[0].GetComponent<ThirdPersonUserControl>().playerNumber)
