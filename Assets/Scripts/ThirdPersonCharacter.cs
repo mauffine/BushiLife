@@ -42,7 +42,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     public bool heavyAttack;
 
     Rigidbody m_Rigidbody;
-    Animator m_Animator;
+    public Animator m_Animator;
     bool m_IsGrounded;
     float m_OrigGroundCheckDistance;
     const float k_Half = 0.5f;
@@ -189,14 +189,16 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             this.m_Animator.SetFloat("Jump", this.m_Rigidbody.velocity.y);
 
-            if (lAttack && stamina.val > lightAtackStamDrain && !ghost)
+            if (lAttack && stamina.val > lightAtackStamDrain
+                && !ghost)
             {
                 this.m_Animator.SetTrigger("Light Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
             }
-            else if (hAttack && stamina.val > jumpAttackStamDrain && !ghost)
+            else if (hAttack && stamina.val > jumpAttackStamDrain
+                && !ghost)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
@@ -216,14 +218,16 @@ public class ThirdPersonCharacter : MonoBehaviour
             {
                 this.m_Animator.SetBool("Block", false);
             }
-            if (lAttack && stamina.val > lightAtackStamDrain && !ghost)
+            if (lAttack && stamina.val > lightAtackStamDrain
+                && !ghost)
             {
                 this.m_Animator.SetTrigger("Light Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
             }
-            else if (hAttack && this.stamina.val > heavyAttackStamDrain && !ghost)
+            else if (hAttack && this.stamina.val > heavyAttackStamDrain
+                && !ghost)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
@@ -344,7 +348,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     }
     public void Bleed()
     {
-        this.blood.Emit(20);
+        this.blood.Play();
     }
     public void Die()
     {
@@ -366,7 +370,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         this.m_Animator.SetInteger("Combo", 0);
         this.m_Animator.ResetTrigger("Light Attack");
-        this.m_Animator.ResetTrigger("HeavyAttack");
+        this.m_Animator.ResetTrigger("Heavy Attack");
         canRoll = true;
 
     }
@@ -389,6 +393,12 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.stamina.Decrease(this.heavyAttackStamDrain);
         this.rechargingStam = false;
         this.canRoll = false;
+    }
+    public void LightSwordOff()
+    {
+        this.swordbox.SetActive(false);
+        this.rechargingStam = true;
+        this.trail.Deactivate();
     }
     public void TurnSwordOff()
     {
@@ -436,5 +446,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         this.groundSmash.Play();
     }
+    public void ResetLayer(int _layerID)
+    {
+        m_Animator.SetLayerWeight(_layerID, 0);
+    }
 }
-
