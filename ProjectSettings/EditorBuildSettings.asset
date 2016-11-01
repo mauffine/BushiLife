@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/Combat Test.unity
   - enabled: 1
     path: Assets/Game/Scenes/Final_Level_KaisVersion.unity
+  - enabled: 1
+    path: Assets/Game/Scenes/Menu.unity
