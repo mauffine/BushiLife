@@ -168,6 +168,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: aadc3c6d7ef665941ad760e1cb972cea, type: 3}
   - {fileID: 21300000, guid: 58f53ae2b6dfdaa45bd3d08f18839c46, type: 3}
   victoryAudio: {fileID: 8300000, guid: e6ca2c03a9747014e9578266b947fc67, type: 3}
+  startFight: {fileID: 8300000, guid: e431a9f9ee84dcb4a893a2a612845dc6, type: 3}
+  winVoice:
+  - {fileID: 8300000, guid: ba061437bd2ccfd4f85ff3adbd7d8493, type: 3}
+  - {fileID: 8300000, guid: c00291786b3c14348b19b6c8867ffcb4, type: 3}
+  - {fileID: 8300000, guid: 0b6f14549ec71d2419e41020f0ca251e, type: 3}
+  - {fileID: 8300000, guid: c1320fbcceb2bbc4cb64bd967abf7a96, type: 3}
   endGameTimer: 5
 --- !u!114 &114000013218244598
 MonoBehaviour:

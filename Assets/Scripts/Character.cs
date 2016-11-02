@@ -39,7 +39,7 @@ public class Character : MonoBehaviour
         Character otherCharacter = col.GetComponentInParent<Character>();
         ThirdPersonCharacter otherThirdPerson = col.GetComponentInParent<ThirdPersonCharacter>();
 
-        if (col.CompareTag("HurtBox") && !GetComponent<ThirdPersonCharacter>().CheckIFrames(col))//&& col.gameObject.GetComponentInParent<Character>().tag != this.tag)
+        if (col.CompareTag("HurtBox") && !GetComponent<ThirdPersonCharacter>().CheckIFrames(col))// && (col.gameObject.GetComponentInParent<Character>().tag != this.tag && this.tag == "AI"))
         {
             if (otherThirdPerson.heavyAttack)
             {
@@ -67,14 +67,14 @@ public class Character : MonoBehaviour
             if (healthThing != null)
                 healthThing.UpdateHPBar(this.stats.health.val);
             GetComponent<ThirdPersonCharacter>().Bleed();
-
-            if (stats.health.val <= 0)
-            {
-                GetComponent<ThirdPersonCharacter>().Die();
-            }
+        }
+        if (stats.health.val <= 0 && !this.CompareTag("Dead"))
+        {
+            GetComponent<ThirdPersonCharacter>().Die();
         }
         else if (col.CompareTag("Food") && this.CompareTag("Player"))
         {
+            GetComponent<ThirdPersonCharacter>().Eat();
             this.stats.health.Increase(10);
             this.stats.health.Validate();
         }

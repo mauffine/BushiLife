@@ -109,6 +109,7 @@ public class ThirdPersonUserControl : MonoBehaviour
     {
         if (!lAttack)
             lAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " LAttack");
+        if (!hAttack)
             hAttack = CrossPlatformInputManager.GetAxis(this.playerNumber + " HAttack") > .1f;
         if (!dodge)
             dodge = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Dodge");

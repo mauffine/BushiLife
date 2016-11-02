@@ -18,6 +18,8 @@ public class HandlePlayers : MonoBehaviour {
     public Image winText;
     public Sprite[] victorySprites;
     public AudioClip victoryAudio;
+    public AudioClip startFight;
+    public AudioClip[] winVoice;
 	private bool singlePlayer = true;
 
 	public float endGameTimer = 5;
@@ -109,6 +111,8 @@ public class HandlePlayers : MonoBehaviour {
                 cameraGenerator.GetComponent<CameraCollection>().Add(players[players.Count - 1], i+1);
             }
         }
+        GetComponent<AudioSource>().PlayOneShot(startFight);
+        GetComponent<AudioSource>().Play();
     }
     bool PlayersAlive()
     {
@@ -142,30 +146,35 @@ public class HandlePlayers : MonoBehaviour {
                 {
                     winText.enabled = true;
                     winText.sprite = victorySprites[0];
+                    //GetComponent<AudioSource>().PlayOneShot(winVoice[0]);
                     break;
                 }
             case ("P2"):
                 {
                     winText.enabled = true;
                     winText.sprite = victorySprites[1];
+                    //GetComponent<AudioSource>().PlayOneShot(winVoice[1]);
                     break;
                 }
             case ("P3"):
                 {
                     winText.enabled = true;
                     winText.sprite = victorySprites[2];
+                    //GetComponent<AudioSource>().PlayOneShot(winVoice[2]);
                     break;
                 }
             case ("P4"):
                 {
                     winText.enabled = true;
                     winText.sprite = victorySprites[3];
+                    //GetComponent<AudioSource>().PlayOneShot(winVoice[3]);
                     break;
                 }
             default:
                 break;
         }
-        GetComponent<AudioSource>().PlayOneShot(victoryAudio);
+        GetComponent<AudioSource>().Stop();
+        GetComponent<AudioSource>().PlayOneShot(victoryAudio, 0.2f);
         return false;
     }
 }

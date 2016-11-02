@@ -26064,21 +26064,6 @@ Prefab:
       objectReference: {fileID: 1189001821}
     - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
         type: 2}
-      propertyPath: cameraGenerator
-      value: 
-      objectReference: {fileID: 1616480808}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: joinNotification
-      value: 
-      objectReference: {fileID: 1682190547}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1408070433}
-    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
-        type: 2}
       propertyPath: respawns.Array.data[1]
       value: 
       objectReference: {fileID: 942187251}
@@ -26092,6 +26077,41 @@ Prefab:
       propertyPath: respawns.Array.data[3]
       value: 
       objectReference: {fileID: 2040160361}
+    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
+        type: 2}
+      propertyPath: cameraGenerator
+      value: 
+      objectReference: {fileID: 1616480808}
+    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
+        type: 2}
+      propertyPath: joinNotification
+      value: 
+      objectReference: {fileID: 1682190547}
+    - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
+        type: 2}
+      propertyPath: winText
+      value: 
+      objectReference: {fileID: 1408070433}
+    - target: {fileID: 82000010241357762, guid: b73933126efe6d6499359c2372d1420d,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000010241357762, guid: b73933126efe6d6499359c2372d1420d,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000010241357762, guid: b73933126efe6d6499359c2372d1420d,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 33f5f21b5d351a9468ae7d9b55af6023, type: 3}
+    - target: {fileID: 82000010241357762, guid: b73933126efe6d6499359c2372d1420d,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b73933126efe6d6499359c2372d1420d, type: 2}
   m_IsPrefabParent: 0
@@ -32496,6 +32516,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 223000013199343064, guid: dfb5cece9634e17478272c095f9c2f6b,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2137950431}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dfb5cece9634e17478272c095f9c2f6b, type: 2}
   m_IsPrefabParent: 0
@@ -41726,6 +41751,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012260087164, guid: 7f860c8ae5130da41bf7c0ca5f48626d,
     type: 2}
   m_PrefabInternal: {fileID: 1357720569}
+--- !u!20 &2137950431 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20000010333415710, guid: d406ff19c3a744f48a9f49fe44f6c1c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 439593298}
 --- !u!1001 &2138873360
 Prefab:
   m_ObjectHideFlags: 0
