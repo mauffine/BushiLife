@@ -17,6 +17,7 @@ public class HandlePlayers : MonoBehaviour {
     public Text joinNotification;
     public Image winText;
     public Sprite[] victorySprites;
+    public AudioClip victoryAudio;
 	private bool singlePlayer = true;
 
 	public float endGameTimer = 5;
@@ -118,19 +119,20 @@ public class HandlePlayers : MonoBehaviour {
                 alivePlayers.Add(player);
         }
 
-		if (this.singlePlayer)
-		{
-			if (alivePlayers.Count == 0)
-			{
-				winText.enabled = true;
-				winText.sprite = victorySprites[0];
-				return false;
-			}
-			else
-			{
-				return true;
-			}
-		}
+		//if (this.singlePlayer)
+		//{
+		//	if (alivePlayers.Count == 0)
+		//	{
+		//		winText.enabled = true;
+		//		winText.sprite = victorySprites[0];
+  //              GetComponent<AudioSource>().PlayOneShot(victoryAudio);
+  //              return false;
+		//	}
+		//	else
+		//	{
+		//		return true;
+		//	}
+		//}
 
         if (alivePlayers.Count > 1)
             return true;
@@ -163,6 +165,7 @@ public class HandlePlayers : MonoBehaviour {
             default:
                 break;
         }
+        GetComponent<AudioSource>().PlayOneShot(victoryAudio);
         return false;
     }
 }

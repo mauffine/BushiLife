@@ -41,8 +41,6 @@ public class ThirdPersonUserControl : MonoBehaviour
         m_Character = GetComponent<ThirdPersonCharacter>();
         this.targeter = GetComponentInChildren<Targeter>();
     }
-
-
     private void Update()
     {
         CheckActions();

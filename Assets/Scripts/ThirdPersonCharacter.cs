@@ -39,6 +39,19 @@ public class ThirdPersonCharacter : MonoBehaviour
 
     [SerializeField] XWeaponTrail trail;
 
+    [SerializeField]
+    AudioClip swing;
+    [SerializeField]
+    AudioClip[] normalAttackLines;
+    [SerializeField]
+    AudioClip[] stabbingSpreeLines;
+    [SerializeField]
+    AudioClip[] deathClips;
+    [SerializeField]
+    AudioClip[] groundSmashClip;
+    [SerializeField]
+    AudioClip[] hit;
+
     public bool heavyAttack;
 
     Rigidbody m_Rigidbody;
@@ -349,6 +362,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void Bleed()
     {
         this.blood.Play();
+        GetComponent<AudioSource>().PlayOneShot(this.hit[Random.Range(0, this.hit.Length)]);
     }
     public void Die()
     {
@@ -356,6 +370,9 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.swordbox.SetActive(false);
         this.jumpAttackHB.SetActive(false);
         this.invincible = true;
+
+        if (this.CompareTag("Player"))
+            GetComponent<AudioSource>().PlayOneShot(this.deathClips[Random.Range(0, this.deathClips.Length)]);
         this.tag = "Dead";
         var script = gameObject.GetComponent<ThirdPersonUserControl>();
         if (script != null)
@@ -363,7 +380,6 @@ public class ThirdPersonCharacter : MonoBehaviour
             gameObject.GetComponent<ThirdPersonUserControl>().enabled = false;
             ghostTimer = ghostSpawnTime;
         }
-        
     }
     //Mecanim events
     public void ClearCombo()
