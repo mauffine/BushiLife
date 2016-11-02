@@ -39,23 +39,10 @@ public class ThirdPersonCharacter : MonoBehaviour
 
     [SerializeField] XWeaponTrail trail;
 
-    [SerializeField]
-    AudioClip swing;
-    [SerializeField]
-    AudioClip[] normalAttackLines;
-    [SerializeField]
-    AudioClip[] stabbingSpreeLines;
-    [SerializeField]
-    AudioClip[] deathClips;
-    [SerializeField]
-    AudioClip[] groundSmashClip;
-    [SerializeField]
-    AudioClip[] hit;
-
     public bool heavyAttack;
 
     Rigidbody m_Rigidbody;
-    public Animator m_Animator;
+    Animator m_Animator;
     bool m_IsGrounded;
     float m_OrigGroundCheckDistance;
     const float k_Half = 0.5f;
@@ -202,16 +189,14 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             this.m_Animator.SetFloat("Jump", this.m_Rigidbody.velocity.y);
 
-            if (lAttack && stamina.val > lightAtackStamDrain
-                && !ghost)
+            if (lAttack && stamina.val > lightAtackStamDrain && !ghost)
             {
                 this.m_Animator.SetTrigger("Light Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
             }
-            else if (hAttack && stamina.val > jumpAttackStamDrain
-                && !ghost)
+            else if (hAttack && stamina.val > jumpAttackStamDrain && !ghost)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
@@ -231,16 +216,14 @@ public class ThirdPersonCharacter : MonoBehaviour
             {
                 this.m_Animator.SetBool("Block", false);
             }
-            if (lAttack && stamina.val > lightAtackStamDrain
-                && !ghost)
+            if (lAttack && stamina.val > lightAtackStamDrain && !ghost)
             {
                 this.m_Animator.SetTrigger("Light Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
                 if (comboNum < 1)
                     this.m_Animator.SetInteger("Combo", comboNum + 1);
             }
-            else if (hAttack && this.stamina.val > heavyAttackStamDrain
-                && !ghost)
+            else if (hAttack && this.stamina.val > heavyAttackStamDrain && !ghost)
             {
                 this.m_Animator.SetTrigger("Heavy Attack");
                 int comboNum = this.m_Animator.GetInteger("Combo");
@@ -361,8 +344,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     }
     public void Bleed()
     {
-        this.blood.Play();
-        GetComponent<AudioSource>().PlayOneShot(this.hit[Random.Range(0, this.hit.Length)]);
+        this.blood.Emit(20);
     }
     public void Die()
     {
@@ -370,9 +352,6 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.swordbox.SetActive(false);
         this.jumpAttackHB.SetActive(false);
         this.invincible = true;
-
-        if (this.CompareTag("Player"))
-            GetComponent<AudioSource>().PlayOneShot(this.deathClips[Random.Range(0, this.deathClips.Length)]);
         this.tag = "Dead";
         var script = gameObject.GetComponent<ThirdPersonUserControl>();
         if (script != null)
@@ -380,13 +359,14 @@ public class ThirdPersonCharacter : MonoBehaviour
             gameObject.GetComponent<ThirdPersonUserControl>().enabled = false;
             ghostTimer = ghostSpawnTime;
         }
+        
     }
     //Mecanim events
     public void ClearCombo()
     {
         this.m_Animator.SetInteger("Combo", 0);
         this.m_Animator.ResetTrigger("Light Attack");
-        this.m_Animator.ResetTrigger("Heavy Attack");
+        this.m_Animator.ResetTrigger("HeavyAttack");
         canRoll = true;
 
     }
@@ -409,12 +389,6 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.stamina.Decrease(this.heavyAttackStamDrain);
         this.rechargingStam = false;
         this.canRoll = false;
-    }
-    public void LightSwordOff()
-    {
-        this.swordbox.SetActive(false);
-        this.rechargingStam = true;
-        this.trail.Deactivate();
     }
     public void TurnSwordOff()
     {
@@ -462,8 +436,5 @@ public class ThirdPersonCharacter : MonoBehaviour
     {
         this.groundSmash.Play();
     }
-    public void ResetLayer(int _layerID)
-    {
-        m_Animator.SetLayerWeight(_layerID, 0);
-    }
 }
+

@@ -382,7 +382,6 @@ GameObject:
   - 114: {fileID: 11451038}
   - 114: {fileID: 11457512}
   - 114: {fileID: 11439868}
-  - 82: {fileID: 82000013423384520}
   m_Layer: 10
   m_Name: Player 3
   m_TagString: Player
@@ -565,7 +564,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.75216, y: 3.1949494, z: -46.44048}
+  m_LocalPosition: {x: 0, y: 5.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -906,7 +905,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!65 &6512898
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -988,32 +987,7 @@ MonoBehaviour:
   jumpAttackStamDrain: 40
   ghostSpawnTime: 3
   trail: {fileID: 114000011499698650}
-  swing: {fileID: 0}
-  normalAttackLines:
-  - {fileID: 8300000, guid: 9f6f877dc60791f468da4013672275c9, type: 3}
-  - {fileID: 8300000, guid: 6af7ef225917ce64dbad6d305cdf31ab, type: 3}
-  - {fileID: 8300000, guid: 1580d2a217df88a47aecf4354b72c3d0, type: 3}
-  - {fileID: 8300000, guid: fd1c69cd3def3994c8df63797803a1d8, type: 3}
-  - {fileID: 8300000, guid: 295d8e9bee515ed4da144b6efbd5dbfc, type: 3}
-  - {fileID: 8300000, guid: a0d33438119bd524b82a7bdeb758f189, type: 3}
-  - {fileID: 8300000, guid: bef0435663a707b4d8aaf8c270760c2d, type: 3}
-  - {fileID: 8300000, guid: abb28c28573036a4fbff5d09d83938a3, type: 3}
-  - {fileID: 8300000, guid: 9f5d175e9bab5a74487a73caa248d064, type: 3}
-  - {fileID: 8300000, guid: 916bdb557cfc3e84a95c217b67efed45, type: 3}
-  stabbingSpreeLines:
-  - {fileID: 8300000, guid: 633e7e047a457174f88201e4b659f0ad, type: 3}
-  - {fileID: 8300000, guid: 39bf467147c1a864f92209e3bea02d45, type: 3}
-  deathClips:
-  - {fileID: 8300000, guid: 8d0853c17f0aed8468bce2f84db5616d, type: 3}
-  - {fileID: 8300000, guid: dd0ce7e5dfff486459cc1f6af4bce561, type: 3}
-  - {fileID: 8300000, guid: 96ab3ed48c9391846a268b80cf9fe910, type: 3}
-  - {fileID: 8300000, guid: 78ba8096a3f87f84a909d42ffbbbbd1f, type: 3}
-  groundSmashClip:
-  - {fileID: 8300000, guid: 76d1b7560006de146962459e7d39c64b, type: 3}
-  hit:
-  - {fileID: 8300000, guid: 443484a33e7a32448b9b395f327dd4b4, type: 3}
   heavyAttack: 0
-  m_Animator: {fileID: 9580488}
 --- !u!114 &11457512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1055,7 +1029,7 @@ MonoBehaviour:
   myCamera: {fileID: 0}
   m_Cam: {fileID: 0}
   offset: 0
-  targeter: {fileID: 114000011701342612}
+  targeter: {fileID: 0}
 --- !u!136 &13671682
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2342,80 +2316,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 2
---- !u!82 &82000013423384520
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184318}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 0
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 2
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0.002
-      value: 1
-      inSlope: 0.024062876
-      outSlope: 0.024062876
-      tangentMode: 0
-    - time: 1
-      value: 1.0083333
-      inSlope: 0.061805498
-      outSlope: 0.061805498
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!114 &114000010423649808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2630,7 +2530,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: 25
+      scalar: 20
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2973,7 +2873,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 4
+    type: 10
     radius: 1.6
     angle: 52.96
     length: 5
@@ -2991,11 +2891,11 @@ ParticleSystem:
     m_UseMeshColors: 1
     randomDirection: 0
   EmissionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 0
+      scalar: 20
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3041,7 +2941,7 @@ ParticleSystem:
     time1: 0
     time2: 0
     time3: 0
-    m_BurstCount: 1
+    m_BurstCount: 0
   SizeModule:
     enabled: 0
     curve:

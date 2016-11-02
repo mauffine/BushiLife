@@ -41,6 +41,8 @@ public class ThirdPersonUserControl : MonoBehaviour
         m_Character = GetComponent<ThirdPersonCharacter>();
         this.targeter = GetComponentInChildren<Targeter>();
     }
+
+
     private void Update()
     {
         CheckActions();
@@ -99,7 +101,7 @@ public class ThirdPersonUserControl : MonoBehaviour
         // pass all parameters to the character control script
         m_Character.Move(m_Move, m_Jump, this.lAttack, this.hAttack, this.strafing, this.blocking, this.dodge, this.run);
 
-        //this.run    = false;
+        this.run    = false;
         m_Jump      = false;
         lAttack     = false;
         hAttack     = false;
@@ -109,11 +111,12 @@ public class ThirdPersonUserControl : MonoBehaviour
     {
         if (!lAttack)
             lAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " LAttack");
-            hAttack = CrossPlatformInputManager.GetAxis(this.playerNumber + " HAttack") > .1f;
+        if (!hAttack)
+            hAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " HAttack");
         if (!dodge)
             dodge = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Dodge");
         blocking = CrossPlatformInputManager.GetButton(this.playerNumber + " Block");
-        //if (!run)
+        if (!run)
             run = CrossPlatformInputManager.GetAxis(this.playerNumber + " Run") > .1f;
 
     }
