@@ -442,7 +442,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -568,6 +568,15 @@ MonoBehaviour:
   jumpAttackStamDrain: 40
   ghostSpawnTime: 3
   trail: {fileID: 114000011541962234}
+  swing: {fileID: 0}
+  normalAttackLines: []
+  stabbingSpreeLines: []
+  deathClips: []
+  groundSmashClip: []
+  hit:
+  - {fileID: 8300000, guid: be64e272320ef9a4c9030323d078542c, type: 3}
+  heavyHit:
+  - {fileID: 8300000, guid: eaed7195b634db34880d0e0edc081ce1, type: 3}
   heavyAttack: 0
   m_Animator: {fileID: 95000013553216704}
 --- !u!114 &114000013156247904

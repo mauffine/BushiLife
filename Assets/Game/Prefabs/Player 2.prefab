@@ -956,6 +956,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76d1b7560006de146962459e7d39c64b, type: 3}
   hit:
   - {fileID: 8300000, guid: 443484a33e7a32448b9b395f327dd4b4, type: 3}
+  heavyHit:
+  - {fileID: 8300000, guid: eaed7195b634db34880d0e0edc081ce1, type: 3}
   heavyAttack: 0
   m_Animator: {fileID: 9580488}
 --- !u!114 &11457512

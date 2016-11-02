@@ -51,6 +51,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     AudioClip[] groundSmashClip;
     [SerializeField]
     AudioClip[] hit;
+    [SerializeField]
+    AudioClip[] heavyHit;
 
     public bool heavyAttack;
 
@@ -362,7 +364,6 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void Bleed()
     {
         this.blood.Play();
-        GetComponent<AudioSource>().PlayOneShot(this.hit[Random.Range(0, this.hit.Length)]);
     }
     public void Die()
     {
@@ -380,6 +381,13 @@ public class ThirdPersonCharacter : MonoBehaviour
             gameObject.GetComponent<ThirdPersonUserControl>().enabled = false;
             ghostTimer = ghostSpawnTime;
         }
+    }
+    public void playHit(bool _heavy)
+    {
+        if (_heavy)
+            GetComponent<AudioSource>().PlayOneShot(this.heavyHit[Random.Range(0, this.heavyHit.Length)]);
+        else
+            GetComponent<AudioSource>().PlayOneShot(this.hit[Random.Range(0, this.hit.Length)]);
     }
     //Mecanim events
     public void ClearCombo()

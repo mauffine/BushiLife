@@ -50,6 +50,7 @@ public class Character : MonoBehaviour
                 }
                 this.stats.health.recieve = this.TakeCritDamage;
                 this.stats.health.recieve(this.stats.health, otherCharacter.stats.attack, this.transform);
+                GetComponent<ThirdPersonCharacter>().playHit(true);
             }
             else
             {
@@ -60,6 +61,7 @@ public class Character : MonoBehaviour
                 }
                 this.stats.health.recieve = this.TakeDamage;
                 this.stats.health.recieve(this.stats.health, otherCharacter.stats.attack, this.transform);
+                GetComponent<ThirdPersonCharacter>().playHit(false);
             }
             HealthCylinder healthThing = GetComponentInChildren<HealthCylinder>();
             if (healthThing != null)
