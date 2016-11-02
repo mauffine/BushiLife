@@ -1518,7 +1518,7 @@ ModelImporter:
       - path: 
         weight: 1
       - path: Chibi_model2
-        weight: 1
+        weight: 0
       - path: Chibi_Root_JNT
         weight: 1
       - path: Chibi_Root_JNT/Chibi_LThigh_JNT
@@ -1546,13 +1546,13 @@ ModelImporter:
       - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT
         weight: 1
       - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_LShoulder_JNT/Chibi_LElbow_JNT/Chibi_LArtm_JNT/Chibi_LFingers_JNT
-        weight: 1
+        weight: 0
       - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT
         weight: 1
       - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT
         weight: 1
       - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Neck_JNT/Chibi_Head_JNT/Chibi_Top_JNT
-        weight: 1
+        weight: 0
       - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT
         weight: 1
       - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT
@@ -1560,57 +1560,57 @@ ModelImporter:
       - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT
         weight: 1
       - path: Chibi_Root_JNT/Chibi_Spine_JNT/Chibi_Spint2_JNT/Chibi_collar_JNT/Chibi_Rshoulder_JNT/Chibi_Relbow_JNT/Chibi_Rhand_JNT/Chibi_Rfinger_JNT
-        weight: 1
+        weight: 0
       - path: firstlayer
-        weight: 1
+        weight: 0
       - path: firstlayer/Belt
-        weight: 1
+        weight: 0
       - path: firstlayer/Belt_Flap_l
-        weight: 1
+        weight: 0
       - path: firstlayer/Belt_Flap_r
-        weight: 1
+        weight: 0
       - path: firstlayer/Belt_Knot
-        weight: 1
+        weight: 0
       - path: firstlayer/Leg_Pants
-        weight: 1
+        weight: 0
       - path: firstlayer/Leg_Pants1
-        weight: 1
-      - path: pCube10
-        weight: 1
-      - path: pPlane1
-        weight: 1
-      - path: pPlane2
-        weight: 1
+        weight: 0
       - path: secondlayer
-        weight: 1
+        weight: 0
       - path: secondlayer/gloves_l
-        weight: 1
+        weight: 0
       - path: secondlayer/gloves_l1
-        weight: 1
+        weight: 0
       - path: secondlayer/Hair_Helmet
-        weight: 1
+        weight: 0
       - path: secondlayer/Hair_Helmet/Hair_Dude
-        weight: 1
+        weight: 0
       - path: secondlayer/Helmet
-        weight: 1
+        weight: 0
       - path: thirdlayer
-        weight: 1
+        weight: 0
       - path: thirdlayer/flaparmor01
-        weight: 1
+        weight: 0
       - path: thirdlayer/flaparmor02
-        weight: 1
+        weight: 0
       - path: thirdlayer/flaparmor03
-        weight: 1
+        weight: 0
       - path: thirdlayer/flaparmor04
-        weight: 1
+        weight: 0
       - path: thirdlayer/helmetthing01
-        weight: 1
+        weight: 0
       - path: thirdlayer/helmetthing02
-        weight: 1
+        weight: 0
+      - path: thirdlayer/pCube10
+        weight: 0
+      - path: thirdlayer/pPlane1
+        weight: 0
+      - path: thirdlayer/pPlane2
+        weight: 0
       - path: thirdlayer/shoulderpad_l
-        weight: 1
+        weight: 0
       - path: thirdlayer/shoulderpad_r
-        weight: 1
+        weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
@@ -1638,7 +1638,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000000000000000000000100000001000000
       curves: []
       events:
-      - time: 0.19113922
+      - time: 0.028260434
         functionName: TurnSwordOn
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
@@ -1646,8 +1646,8 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.46341464
-        functionName: TurnSwordOff
+      - time: 0.25886917
+        functionName: LightSwordOff
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
           type: 3}
@@ -1655,6 +1655,14 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 1
+        functionName: ClearCombo
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.028260434
         functionName: ClearCombo
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
@@ -1787,7 +1795,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.60487807
-        functionName: TurnSwordOff
+        functionName: LightSwordOff
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
           type: 3}
@@ -1943,7 +1951,7 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.5414634
-        functionName: TurnSwordOff
+        functionName: LightSwordOff
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
           type: 3}
@@ -2091,7 +2099,7 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.60487807
-        functionName: TurnSwordOff
+        functionName: LightSwordOff
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
           type: 3}
@@ -2239,7 +2247,7 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.60487807
-        functionName: TurnSwordOff
+        functionName: LightSwordOff
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173,
           type: 3}
@@ -4177,7 +4185,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 1
+        functionName: ResetLayer
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 2
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -7548,19 +7563,40 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.22263591
+        functionName: HeavySword
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.47077432
+        functionName: TurnSwordOff
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9977078
+        functionName: ClearCombo
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -7675,16 +7711,37 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.39570066
+        functionName: HeavySword
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.545559
+        functionName: TurnSwordOff
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9936966
+        functionName: ClearCombo
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -7798,8 +7855,8 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -7808,7 +7865,28 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.4406874
+        functionName: HeavySword
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.6260749
+        functionName: TurnSwordOff
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9974196
+        functionName: ClearCombo
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -7923,16 +8001,37 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.24745835
+        functionName: TurnSwordOn
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.66590303
+        functionName: TurnSwordOff
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.99513066
+        functionName: ClearCombo
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

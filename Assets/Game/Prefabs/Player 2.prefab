@@ -533,7 +533,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.21, z: 0}
+  m_LocalPosition: {x: -33.36638, y: 3.1949494, z: -40.708355}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -849,7 +849,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &6512898
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -919,8 +919,8 @@ MonoBehaviour:
   deathParticles: {fileID: 1000010156427006, guid: 84436d48510fb3843b87723a9e87a724,
     type: 2}
   blood: {fileID: 198000012043500616}
-  groundSmash: {fileID: 198000013080177528}
-  swordClash: {fileID: 198000010126501416}
+  groundSmash: {fileID: 198000014017134730}
+  swordClash: {fileID: 198000011845824652}
   blockAngle: 180
   lightAtackStamDrain: 10
   heavyAttackStamDrain: 25
@@ -932,6 +932,7 @@ MonoBehaviour:
   ghostSpawnTime: 3
   trail: {fileID: 114000011515658086}
   heavyAttack: 0
+  m_Animator: {fileID: 9580488}
 --- !u!114 &11457512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -973,7 +974,7 @@ MonoBehaviour:
   myCamera: {fileID: 0}
   m_Cam: {fileID: 0}
   offset: 0
-  targeter: {fileID: 0}
+  targeter: {fileID: 114000012291263156}
 --- !u!136 &13671682
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2382,8 +2383,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013679061164}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7249999, z: 0.6890001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.725, z: 0.689}
   m_LocalScale: {x: 0.24042791, y: 0.24042815, z: 0.24042815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -13046,7 +13047,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: 20
+      scalar: 25
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -13389,7 +13390,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 10
+    type: 4
     radius: 1.6
     angle: 52.96
     length: 5
@@ -13407,11 +13408,11 @@ ParticleSystem:
     m_UseMeshColors: 1
     randomDirection: 0
   EmissionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 20
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -13457,7 +13458,7 @@ ParticleSystem:
     time1: 0
     time2: 0
     time3: 0
-    m_BurstCount: 0
+    m_BurstCount: 1
   SizeModule:
     enabled: 0
     curve:
