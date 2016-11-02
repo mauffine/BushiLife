@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 70bd0a0d9117b0f498cca95cb199769a
-timeCreated: 1473662922
+guid: 5071b45067cbb274aa7cde250afaef73
+timeCreated: 1478046834
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: pCube232
+    100000: default
     100002: //RootNode
-    400000: pCube232
+    400000: default
     400002: //RootNode
-    2300000: pCube232
-    3300000: pCube232
-    4300000: pCube232
+    2300000: default
+    3300000: default
+    4300000: default
   materials:
     importMaterials: 1
     materialName: 0
