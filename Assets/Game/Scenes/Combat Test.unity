@@ -1404,6 +1404,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: aadc3c6d7ef665941ad760e1cb972cea, type: 3}
   - {fileID: 21300000, guid: 58f53ae2b6dfdaa45bd3d08f18839c46, type: 3}
   victoryAudio: {fileID: 8300000, guid: e6ca2c03a9747014e9578266b947fc67, type: 3}
+  startFight: {fileID: 0}
+  winVoice: []
   endGameTimer: 5
 --- !u!114 &1407014806
 MonoBehaviour:
@@ -1441,8 +1443,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 33f5f21b5d351a9468ae7d9b55af6023, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 0

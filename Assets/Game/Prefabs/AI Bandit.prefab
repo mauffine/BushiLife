@@ -574,7 +574,7 @@ MonoBehaviour:
   deathClips: []
   groundSmashClip: []
   hit:
-  - {fileID: 8300000, guid: be64e272320ef9a4c9030323d078542c, type: 3}
+  - {fileID: 8300000, guid: 443484a33e7a32448b9b395f327dd4b4, type: 3}
   heavyHit:
   - {fileID: 8300000, guid: eaed7195b634db34880d0e0edc081ce1, type: 3}
   heavyAttack: 0

@@ -36,7 +36,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] float runStamDrain = 15;
     [SerializeField] float jumpAttackStamDrain = 40;
     [SerializeField] float ghostSpawnTime = 3;
-
+    [SerializeField] float voiceCooldown = 2;
+    float voicetimer;
     [SerializeField] XWeaponTrail trail;
 
     [SerializeField]
@@ -53,6 +54,11 @@ public class ThirdPersonCharacter : MonoBehaviour
     AudioClip[] hit;
     [SerializeField]
     AudioClip[] heavyHit;
+    [SerializeField]
+    AudioClip[] eat;
+    [SerializeField] AudioClip[] hurtLines;
+    [SerializeField]
+    AudioClip[] outOfBreathLines;
 
     public bool heavyAttack;
 
@@ -66,7 +72,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     Vector3 m_GroundNormal;
     Vector3 strafeMove;
     CapsuleCollider m_Capsule;
-    
+
     bool invincible = false;
     bool blocking = false;
     bool canRoll = true;
@@ -91,6 +97,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     void Update()
     {
         //this.rechargingStam = !blocking;
+        if (voicetimer >= 0)
+            voicetimer -= Time.deltaTime;
         if (this.rechargingStam && this.stamina.val <= 100 && !ghost)
         {
             this.stamina.Increase(Time.deltaTime * rechargeRate);
@@ -98,13 +106,13 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.stamina.Validate();
         if (Input.GetKeyDown(KeyCode.Space))
             this.swordClash.Play();
-        
-        if (ghostTimer > 0 )
+
+        if (ghostTimer > 0)
         {
-            if(gameObject.layer == 10)
+            if (gameObject.layer == 10)
                 ghostTimer -= Time.deltaTime;
         }
-        else if (this.GetComponent<ThirdPersonUserControl>()!=null)
+        else if (this.GetComponent<ThirdPersonUserControl>() != null)
         {
             if (!ghost && gameObject.CompareTag("Dead"))
             {
@@ -142,7 +150,7 @@ public class ThirdPersonCharacter : MonoBehaviour
             move = Vector3.ProjectOnPlane(move, Vector3.up);
         if (!strafing)
         {
-            
+
 
 #if UNITY_EDITOR
             Debug.DrawLine(this.transform.position, this.transform.position + this.m_Rigidbody.velocity / 4, Color.white);
@@ -197,7 +205,10 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.m_Animator.SetBool("OnGround", this.m_IsGrounded);
         this.m_Animator.SetBool("Strafing", this.strafing);
         if (stamina.val <= 0 && gameObject.CompareTag("Player"))
+        {
             this.m_Animator.SetBool("Tired", true);
+            PlayVoiceLine(this.outOfBreathLines);
+        }
         else if (stamina.val > 0 && gameObject.CompareTag("Player"))
             this.m_Animator.SetBool("Tired", false);
         if (!this.m_IsGrounded)
@@ -298,7 +309,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         float turnSpeed = Mathf.Lerp(this.m_StationaryTurnSpeed, this.m_MovingTurnSpeed, this.m_ForwardAmount);
         this.transform.Rotate(0, this.m_TurnAmount * turnSpeed * Time.deltaTime, 0);
     }
-    
+
     public void OnAnimatorMove()
     {
         // we implement this function to override the default root motion.
@@ -388,6 +399,26 @@ public class ThirdPersonCharacter : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(this.heavyHit[Random.Range(0, this.heavyHit.Length)]);
         else
             GetComponent<AudioSource>().PlayOneShot(this.hit[Random.Range(0, this.hit.Length)]);
+        if (voicetimer < 0 && this.CompareTag("Player"))
+        {
+            GetComponent<AudioSource>().PlayOneShot(hurtLines[Random.Range(0, hurtLines.Length)]);
+            voicetimer = voiceCooldown;
+        }
+    }
+    public void Eat()
+    {
+        PlayVoiceLine(eat);
+    }
+    private void PlayVoiceLine(AudioClip[] _audioArr = null, AudioClip _audio = null)
+    {
+        if (voicetimer < 0)
+        {
+            if (_audioArr != null)
+                GetComponent<AudioSource>().PlayOneShot(_audioArr[Random.Range(0, _audioArr.Length)]);
+            else if (_audio != null)
+                GetComponent<AudioSource>().PlayOneShot(_audio);
+            voicetimer = voiceCooldown;
+        }
     }
     //Mecanim events
     public void ClearCombo()
@@ -456,7 +487,8 @@ public class ThirdPersonCharacter : MonoBehaviour
     public void JumpAttackOff()
     {
         this.jumpAttackHB.SetActive(false);
-        this.rechargingStam = true; 
+        this.rechargingStam = true;
+        GetComponent<AudioSource>().PlayOneShot(groundSmashClip[0]);
     }
     public void BlockOn()
     {

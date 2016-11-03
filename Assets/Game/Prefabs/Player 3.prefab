@@ -987,6 +987,7 @@ MonoBehaviour:
   runStamDrain: 15
   jumpAttackStamDrain: 40
   ghostSpawnTime: 3
+  voiceCooldown: 2
   trail: {fileID: 114000011499698650}
   swing: {fileID: 0}
   normalAttackLines:
@@ -1014,6 +1015,26 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 443484a33e7a32448b9b395f327dd4b4, type: 3}
   heavyHit:
   - {fileID: 8300000, guid: eaed7195b634db34880d0e0edc081ce1, type: 3}
+  eat:
+  - {fileID: 8300000, guid: fd542bf39ada2d343bc00d0d0989a155, type: 3}
+  - {fileID: 8300000, guid: 68992671c37795745ab9ad0ef8b1b3c4, type: 3}
+  - {fileID: 8300000, guid: 46d514d6cccadfa4ba30ed73ff7bc073, type: 3}
+  - {fileID: 8300000, guid: e000d57b81318ea44950e72844961ed8, type: 3}
+  hurtLines:
+  - {fileID: 8300000, guid: 72c98e61c586ff741b56f8d7f58327ff, type: 3}
+  - {fileID: 8300000, guid: a9cc3de053c18184bb6b54a84bba96bf, type: 3}
+  - {fileID: 8300000, guid: fc8506d7c31e6cf49923ab6bde43a1ae, type: 3}
+  - {fileID: 8300000, guid: 44db185f8e299f944a98ccecc980aaf2, type: 3}
+  - {fileID: 8300000, guid: 977d4e3f4237d544fbd982be09b81ee4, type: 3}
+  - {fileID: 8300000, guid: 1a329919f261daf47ac7f30da8782a5e, type: 3}
+  - {fileID: 8300000, guid: b045fae95233d02459dd9779615eeb40, type: 3}
+  - {fileID: 8300000, guid: b3f7dfe480c493f4184e1a9aac85a0df, type: 3}
+  - {fileID: 8300000, guid: 7c03d8379b69db14190de19dcec34888, type: 3}
+  - {fileID: 8300000, guid: cfb36376800794d4cad296cfcdd14dcf, type: 3}
+  - {fileID: 8300000, guid: 3418ce69933d4f24198d8eec7bd66f76, type: 3}
+  outOfBreathLines:
+  - {fileID: 8300000, guid: 1de103e351a197f4eb767518ed1f6245, type: 3}
+  - {fileID: 8300000, guid: babff4378703b3c48a5f4cbd15499f30, type: 3}
   heavyAttack: 0
   m_Animator: {fileID: 9580488}
 --- !u!114 &11457512
