@@ -157,6 +157,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.8780003
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -373,7 +378,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012260087164, guid: 7f860c8ae5130da41bf7c0ca5f48626d, type: 2}
       propertyPath: m_RootOrder
-      value: 258
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 4000012260087164, guid: 7f860c8ae5130da41bf7c0ca5f48626d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1010,6 +1015,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 86.212006
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -1166,6 +1176,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -1206,7 +1221,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013381483974, guid: 3e6719830ed80bf4b9e4045371af889b, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4000013381483974, guid: 3e6719830ed80bf4b9e4045371af889b, type: 2}
       propertyPath: m_LocalScale.x
@@ -1373,6 +1388,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -2549,7 +2569,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013289820186, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
       propertyPath: m_RootOrder
-      value: 250
+      value: 248
       objectReference: {fileID: 0}
     - target: {fileID: 4000013289820186, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
       propertyPath: m_LocalScale.x
@@ -2579,6 +2599,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -2619,7 +2644,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010014504388, guid: e0db02802594c0646a4eab28ce64bcde, type: 2}
       propertyPath: m_RootOrder
-      value: 272
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 4000010014504388, guid: e0db02802594c0646a4eab28ce64bcde, type: 2}
       propertyPath: m_LocalScale.x
@@ -2936,7 +2961,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013381483974, guid: 3e6719830ed80bf4b9e4045371af889b, type: 2}
       propertyPath: m_RootOrder
-      value: 278
+      value: 276
       objectReference: {fileID: 0}
     - target: {fileID: 1000012493317532, guid: 3e6719830ed80bf4b9e4045371af889b, type: 2}
       propertyPath: m_Name
@@ -3033,6 +3058,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 84.953
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -3432,6 +3462,23 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4000012032317120, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012032317120, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012032317120, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -4113,7 +4160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012260087164, guid: 7f860c8ae5130da41bf7c0ca5f48626d, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4000012260087164, guid: 7f860c8ae5130da41bf7c0ca5f48626d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4383,6 +4430,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -4778,6 +4830,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 84.953
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -5012,11 +5069,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011742639514, guid: e76927e76a3c0c548a3d65af76191c27,
     type: 2}
   m_PrefabInternal: {fileID: 2130665570}
---- !u!4 &238206440 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad,
-    type: 2}
-  m_PrefabInternal: {fileID: 1375214990}
 --- !u!4 &238669665 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 1fd0ed702079f1f4da3d2554fe591ee0, type: 3}
@@ -5424,6 +5476,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 84.953
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -5741,7 +5798,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013289820186, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
       propertyPath: m_RootOrder
-      value: 249
+      value: 247
       objectReference: {fileID: 0}
     - target: {fileID: 4000013289820186, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
       propertyPath: m_LocalScale.x
@@ -5771,6 +5828,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -6017,6 +6079,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -6152,7 +6219,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 485632, guid: 3c72f2b67f20f7e4fafa82a2e9368d98, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 199236, guid: 3c72f2b67f20f7e4fafa82a2e9368d98, type: 2}
       propertyPath: m_Icon
@@ -6705,7 +6772,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013381483974, guid: 3e6719830ed80bf4b9e4045371af889b, type: 2}
       propertyPath: m_RootOrder
-      value: 252
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1000012493317532, guid: 3e6719830ed80bf4b9e4045371af889b, type: 2}
       propertyPath: m_Name
@@ -6953,7 +7020,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010588600046, guid: 908283c55d6afb14a8cb28250b46f929, type: 2}
       propertyPath: m_RootOrder
-      value: 259
+      value: 257
       objectReference: {fileID: 0}
     - target: {fileID: 4000010588600046, guid: 908283c55d6afb14a8cb28250b46f929, type: 2}
       propertyPath: m_LocalScale.x
@@ -8283,6 +8350,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.6878746
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -8444,7 +8516,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011418805366, guid: d406ff19c3a744f48a9f49fe44f6c1c8, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4000011418805366, guid: d406ff19c3a744f48a9f49fe44f6c1c8, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8613,6 +8685,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 84.953
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -8715,7 +8792,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011453766414, guid: 8277426868058dd4aa7f72d05481fab7, type: 2}
       propertyPath: m_RootOrder
-      value: 268
+      value: 266
       objectReference: {fileID: 0}
     - target: {fileID: 1000013838857854, guid: 8277426868058dd4aa7f72d05481fab7, type: 2}
       propertyPath: m_Name
@@ -9118,6 +9195,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.1350001
       objectReference: {fileID: 0}
+    - target: {fileID: 4000013169770344, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013169770344, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013169770344, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
   m_IsPrefabParent: 0
@@ -9299,7 +9388,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 18
 --- !u!1001 &488863580
 Prefab:
   m_ObjectHideFlags: 0
@@ -9554,7 +9643,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014168953006, guid: a10f7c60ff9c3c24fb9f5087d5766fb7, type: 2}
       propertyPath: m_RootOrder
-      value: 263
+      value: 261
       objectReference: {fileID: 0}
     - target: {fileID: 1000013467505652, guid: a10f7c60ff9c3c24fb9f5087d5766fb7, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -10114,6 +10203,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -10261,7 +10355,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011140114474, guid: 2a494e6902270f949a9988c4d7ad8f84, type: 2}
       propertyPath: m_RootOrder
-      value: 255
+      value: 253
       objectReference: {fileID: 0}
     - target: {fileID: 4000011140114474, guid: 2a494e6902270f949a9988c4d7ad8f84, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -10530,6 +10624,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -10906,7 +11005,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013267378224, guid: c0df59a5d5c7fdf4d9b17a0708d69139, type: 2}
       propertyPath: m_RootOrder
-      value: 257
+      value: 255
       objectReference: {fileID: 0}
     - target: {fileID: 4000013267378224, guid: c0df59a5d5c7fdf4d9b17a0708d69139, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11395,7 +11494,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 7.4730005, z: 28.854002}
   m_Children: []
   m_Father: {fileID: 1825497632}
-  m_RootOrder: 260
+  m_RootOrder: 258
 --- !u!1 &599254406
 GameObject:
   m_ObjectHideFlags: 0
@@ -11457,7 +11556,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 12
 --- !u!1001 &603729089
 Prefab:
   m_ObjectHideFlags: 0
@@ -11663,6 +11762,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 96.48801
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -11876,6 +11980,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.513
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -12964,6 +13073,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.5234141
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -13741,7 +13855,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013381483974, guid: 3e6719830ed80bf4b9e4045371af889b, type: 2}
       propertyPath: m_RootOrder
-      value: 279
+      value: 277
       objectReference: {fileID: 0}
     - target: {fileID: 1000012493317532, guid: 3e6719830ed80bf4b9e4045371af889b, type: 2}
       propertyPath: m_Name
@@ -13833,6 +13947,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -14097,6 +14216,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.8735716
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -14252,7 +14376,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: -0.193, y: -80.083, z: 30.357002}
   m_Children: []
   m_Father: {fileID: 1825497632}
-  m_RootOrder: 261
+  m_RootOrder: 259
 --- !u!4 &734634535 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011857276930, guid: c60e56b06276207478bd468c89801756,
@@ -14325,6 +14449,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.6878753
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -14412,7 +14541,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 21.012966
+      value: 20.79
       objectReference: {fileID: 0}
     - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -14420,7 +14549,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -76.548645
+      value: -75.52
       objectReference: {fileID: 0}
     - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
       propertyPath: m_LocalRotation.x
@@ -14532,6 +14661,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -15874,7 +16008,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010612521872, guid: 6ebd8d97d9939be48ad98c4631be3136, type: 2}
       propertyPath: m_RootOrder
-      value: 271
+      value: 269
       objectReference: {fileID: 0}
     - target: {fileID: 1000013610115914, guid: 6ebd8d97d9939be48ad98c4631be3136, type: 2}
       propertyPath: m_Name
@@ -16198,7 +16332,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011453766414, guid: 8277426868058dd4aa7f72d05481fab7, type: 2}
       propertyPath: m_RootOrder
-      value: 265
+      value: 263
       objectReference: {fileID: 0}
     - target: {fileID: 1000013838857854, guid: 8277426868058dd4aa7f72d05481fab7, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -16342,6 +16476,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -16470,6 +16609,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -16478,11 +16622,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011857276930, guid: c60e56b06276207478bd468c89801756,
     type: 2}
   m_PrefabInternal: {fileID: 2027222763}
---- !u!4 &871986474 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52,
-    type: 2}
-  m_PrefabInternal: {fileID: 1160667200}
 --- !u!1001 &875620154
 Prefab:
   m_ObjectHideFlags: 0
@@ -17926,7 +18065,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 15
 --- !u!4 &945603134 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013289820186, guid: 2feade6dac11ec24cbbf25d57aca55b5,
@@ -18111,6 +18250,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -19451,7 +19595,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011453766414, guid: 8277426868058dd4aa7f72d05481fab7, type: 2}
       propertyPath: m_RootOrder
-      value: 267
+      value: 265
       objectReference: {fileID: 0}
     - target: {fileID: 1000013838857854, guid: 8277426868058dd4aa7f72d05481fab7, type: 2}
       propertyPath: m_Name
@@ -20512,6 +20656,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.2812903
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -20950,6 +21099,36 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e38e68d4c0839664fb1db687134ae0f9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1098179641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000011226647788, guid: 307057f01f7d025429e5bec97f1a3cb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1098179642}
+  m_Layer: 0
+  m_Name: RockTower_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1098179642
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000013903307524, guid: 307057f01f7d025429e5bec97f1a3cb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1098179641}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 62.85799, y: 6.214277, z: 0.2863388}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1001 &1099565807
 Prefab:
   m_ObjectHideFlags: 0
@@ -21005,6 +21184,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.175403
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -21488,6 +21672,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -22309,60 +22498,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013267378224, guid: c0df59a5d5c7fdf4d9b17a0708d69139,
     type: 2}
   m_PrefabInternal: {fileID: 1722274755}
---- !u!1001 &1160667200
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1825497632}
-    m_Modifications:
-    - target: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 52.412968
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 19.777454
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -145.14864
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-      propertyPath: m_RootOrder
-      value: 245
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 17.76509
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 17.765081
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010512534680, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 17.765081
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 652bc067e42836e4a861f7fa9d4f8a52, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1161009167
 Prefab:
   m_ObjectHideFlags: 0
@@ -23113,6 +23248,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -23158,7 +23298,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010497317300, guid: 37fd2023087aac341a2209bc3058725a, type: 2}
       propertyPath: m_RootOrder
-      value: 277
+      value: 275
       objectReference: {fileID: 0}
     - target: {fileID: 1000011677377500, guid: 37fd2023087aac341a2209bc3058725a, type: 2}
       propertyPath: m_Name
@@ -23797,6 +23937,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.1350001
       objectReference: {fileID: 0}
+    - target: {fileID: 4000013169770344, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013169770344, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013169770344, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
   m_IsPrefabParent: 0
@@ -23910,7 +24062,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011453766414, guid: 8277426868058dd4aa7f72d05481fab7, type: 2}
       propertyPath: m_RootOrder
-      value: 275
+      value: 273
       objectReference: {fileID: 0}
     - target: {fileID: 1000013838857854, guid: 8277426868058dd4aa7f72d05481fab7, type: 2}
       propertyPath: m_Name
@@ -24641,6 +24793,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -25168,6 +25325,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 3.0166712
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -25305,7 +25467,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010497317300, guid: 37fd2023087aac341a2209bc3058725a, type: 2}
       propertyPath: m_RootOrder
-      value: 253
+      value: 251
       objectReference: {fileID: 0}
     - target: {fileID: 1000011677377500, guid: 37fd2023087aac341a2209bc3058725a, type: 2}
       propertyPath: m_Name
@@ -26159,7 +26321,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1825497632}
-  m_RootOrder: 262
+  m_RootOrder: 260
 --- !u!1001 &1365835605
 Prefab:
   m_ObjectHideFlags: 0
@@ -26277,7 +26439,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013143189228, guid: b73933126efe6d6499359c2372d1420d, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114000012193897910, guid: b73933126efe6d6499359c2372d1420d,
         type: 2}
@@ -26436,7 +26598,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013289820186, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
       propertyPath: m_RootOrder
-      value: 251
+      value: 249
       objectReference: {fileID: 0}
     - target: {fileID: 4000013289820186, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
       propertyPath: m_LocalScale.x
@@ -26466,6 +26628,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -26629,60 +26796,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c60e56b06276207478bd468c89801756, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1375214990
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1825497632}
-    m_Modifications:
-    - target: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 21.012966
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.22254562
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -134.44864
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-      propertyPath: m_RootOrder
-      value: 246
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 9.676878
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 9.676877
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010717759962, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 9.676877
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 083210dfae61cdd42af39c130314dfad, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &1375881868 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013289820186, guid: 2feade6dac11ec24cbbf25d57aca55b5,
@@ -26760,6 +26873,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -26830,6 +26948,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.6878746
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -27028,6 +27151,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.8735709
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -27098,6 +27226,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -27740,7 +27873,7 @@ Prefab:
     - target: {fileID: 224000013921853958, guid: 58f5e2836d696a8489687e3dcc5c44ef,
         type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224000013921853958, guid: 58f5e2836d696a8489687e3dcc5c44ef,
         type: 2}
@@ -27890,6 +28023,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -28241,6 +28379,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.946678
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -28668,6 +28811,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -29980,6 +30128,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.9948591
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -30239,7 +30392,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013289820186, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
       propertyPath: m_RootOrder
-      value: 248
+      value: 246
       objectReference: {fileID: 0}
     - target: {fileID: 4000013289820186, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
       propertyPath: m_LocalScale.x
@@ -30269,6 +30422,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -31058,6 +31216,11 @@ Prefab:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -31380,6 +31543,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -31631,15 +31799,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012905441242, guid: 547c0bdb1f47ac14ba4dd04a0b37f69a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 25.11758
+      value: 23.16
       objectReference: {fileID: 0}
     - target: {fileID: 4000012905441242, guid: 547c0bdb1f47ac14ba4dd04a0b37f69a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -28.019405
+      value: -27.95
       objectReference: {fileID: 0}
     - target: {fileID: 4000012905441242, guid: 547c0bdb1f47ac14ba4dd04a0b37f69a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -81.01752
+      value: -80.31
       objectReference: {fileID: 0}
     - target: {fileID: 4000012905441242, guid: 547c0bdb1f47ac14ba4dd04a0b37f69a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -31861,6 +32029,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.0587342
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -31959,7 +32132,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010864679234, guid: 030df58082c03884f860dc27da854dd5, type: 2}
       propertyPath: m_RootOrder
-      value: 270
+      value: 268
       objectReference: {fileID: 0}
     - target: {fileID: 1000012558303330, guid: 030df58082c03884f860dc27da854dd5, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -32149,6 +32322,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 84.953
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -32234,6 +32412,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 84.953
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -32651,7 +32834,7 @@ Prefab:
     - target: {fileID: 224000012026542294, guid: dfb5cece9634e17478272c095f9c2f6b,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224000012026542294, guid: dfb5cece9634e17478272c095f9c2f6b,
         type: 2}
@@ -32759,7 +32942,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010612521872, guid: 6ebd8d97d9939be48ad98c4631be3136, type: 2}
       propertyPath: m_RootOrder
-      value: 269
+      value: 267
       objectReference: {fileID: 0}
     - target: {fileID: 1000013610115914, guid: 6ebd8d97d9939be48ad98c4631be3136, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -32809,7 +32992,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013267378224, guid: c0df59a5d5c7fdf4d9b17a0708d69139, type: 2}
       propertyPath: m_RootOrder
-      value: 254
+      value: 252
       objectReference: {fileID: 0}
     - target: {fileID: 4000013267378224, guid: c0df59a5d5c7fdf4d9b17a0708d69139, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -33167,6 +33350,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -33388,7 +33576,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013267378224, guid: c0df59a5d5c7fdf4d9b17a0708d69139, type: 2}
       propertyPath: m_RootOrder
-      value: 256
+      value: 254
       objectReference: {fileID: 0}
     - target: {fileID: 4000013267378224, guid: c0df59a5d5c7fdf4d9b17a0708d69139, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -33918,6 +34106,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -34570,6 +34763,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -35494,8 +35692,6 @@ Transform:
   - {fileID: 309237835}
   - {fileID: 162056458}
   - {fileID: 2108746301}
-  - {fileID: 871986474}
-  - {fileID: 238206440}
   - {fileID: 11438156}
   - {fileID: 1179612972}
   - {fileID: 1108730950}
@@ -35530,7 +35726,7 @@ Transform:
   - {fileID: 360516698}
   - {fileID: 504895595}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 14
 --- !u!4 &1827109841 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012053029416, guid: 2ee6a9df6f4a4894da2fd348c92b20e4,
@@ -35656,6 +35852,34 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012905441242, guid: 547c0bdb1f47ac14ba4dd04a0b37f69a,
     type: 2}
   m_PrefabInternal: {fileID: 1141375496}
+--- !u!1 &1838155357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 9d63947627fb14e4d86335107ed155c9, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1838155358}
+  m_Layer: 0
+  m_Name: RockTower_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1838155358
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 9d63947627fb14e4d86335107ed155c9, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1838155357}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 53.988796, y: 6.2142773, z: -12.783295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1 &1839736760 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000014051421912, guid: c0df59a5d5c7fdf4d9b17a0708d69139,
@@ -35986,6 +36210,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -36118,7 +36347,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013381483974, guid: 3e6719830ed80bf4b9e4045371af889b, type: 2}
       propertyPath: m_RootOrder
-      value: 276
+      value: 274
       objectReference: {fileID: 0}
     - target: {fileID: 1000012493317532, guid: 3e6719830ed80bf4b9e4045371af889b, type: 2}
       propertyPath: m_Name
@@ -36678,7 +36907,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010546602794, guid: fc928e3f7996e0445bacae55a493b5b0, type: 2}
       propertyPath: m_RootOrder
-      value: 247
+      value: 245
       objectReference: {fileID: 0}
     - target: {fileID: 4000010546602794, guid: fc928e3f7996e0445bacae55a493b5b0, type: 2}
       propertyPath: m_LocalScale.x
@@ -37973,7 +38202,7 @@ Transform:
   m_Children:
   - {fileID: 1310308833}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 13
 --- !u!4 &1948433894 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013289820186, guid: 2feade6dac11ec24cbbf25d57aca55b5,
@@ -38003,7 +38232,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -57.187035
+      value: -56.03
       objectReference: {fileID: 0}
     - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -38011,7 +38240,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -43.868645
+      value: -42.37
       objectReference: {fileID: 0}
     - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
       propertyPath: m_LocalRotation.x
@@ -38576,6 +38805,11 @@ Prefab:
       propertyPath: m_Name
       value: RockBoulder1 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -38754,7 +38988,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010302068466, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
       propertyPath: m_RootOrder
-      value: 273
+      value: 271
       objectReference: {fileID: 0}
     - target: {fileID: 1000013871014482, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
       propertyPath: m_Name
@@ -39021,8 +39255,55 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 95.031006
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2017942615
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 42.078068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 8.041423
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.916443
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.9914453
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.13052304
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013799333188, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5cf235f87d945ec49a685c25ec1a38fb, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2022142154
 Prefab:
@@ -39075,6 +39356,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 8.8165045
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -39366,7 +39652,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 17
 --- !u!1 &2041748360 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010364242326, guid: 7eeeb685f2a31044e8cd7b5b23cbe202,
@@ -39775,7 +40061,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011453766414, guid: 8277426868058dd4aa7f72d05481fab7, type: 2}
       propertyPath: m_RootOrder
-      value: 266
+      value: 264
       objectReference: {fileID: 0}
     - target: {fileID: 1000013838857854, guid: 8277426868058dd4aa7f72d05481fab7, type: 2}
       propertyPath: m_Name
@@ -39858,7 +40144,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010302068466, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
       propertyPath: m_RootOrder
-      value: 274
+      value: 272
       objectReference: {fileID: 0}
     - target: {fileID: 1000013871014482, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
       propertyPath: m_Name
@@ -39924,7 +40210,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010302068466, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
       propertyPath: m_RootOrder
-      value: 264
+      value: 262
       objectReference: {fileID: 0}
     - target: {fileID: 1000013871014482, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -40119,6 +40405,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.9444718
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011872255478, guid: 2feade6dac11ec24cbbf25d57aca55b5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22b83bff1a6a083439e8e7acb87f2dce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2feade6dac11ec24cbbf25d57aca55b5, type: 2}
   m_IsPrefabParent: 0
@@ -41260,7 +41551,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 16
 --- !u!4 &2113680873 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011857276930, guid: c60e56b06276207478bd468c89801756,
@@ -41950,7 +42241,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011486629810, guid: 0eae6a2ae440d8047ade30780b7269b9, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0eae6a2ae440d8047ade30780b7269b9, type: 2}
