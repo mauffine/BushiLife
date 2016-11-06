@@ -8,7 +8,8 @@ public class Pause : MonoBehaviour {
 	private bool isPaused;								//Boolean to check if the game is paused or not
 	private StartOptions startScript;					//Reference to the StartButton script
     public float pauseSpeed = 1;
-	
+	public static bool inPlayerSelect;
+
 	//Awake is called before Start()
 	void Awake()
 	{
@@ -22,13 +23,13 @@ public class Pause : MonoBehaviour {
 	void Update () {
 
 		//Check if the Cancel button in Input Manager is down this frame (default is Escape key) and that game is not paused, and that we're not in main menu
-		if (Input.GetButtonDown ("Cancel") && !isPaused && !startScript.inMainMenu) 
+		if (IsPauseToggle() && !isPaused) 
 		{
 			//Call the DoPause function to pause the game
 			DoPause();
 		} 
 		//If the button is pressed and the game is paused and not in main menu
-		else if (Input.GetButtonDown ("Cancel") && isPaused && !startScript.inMainMenu) 
+		else if (IsPauseToggle() && isPaused) 
 		{
 			//Call the UnPause function to unpause the game
 			UnPause ();
@@ -36,6 +37,14 @@ public class Pause : MonoBehaviour {
 	
 	}
 
+	public bool IsPauseToggle()
+	{
+		return (Input.GetButtonDown("Cancel") ||
+					((Input.GetButtonDown("P1 Join") || Input.GetButtonDown("P2 Join") || Input.GetButtonDown("P3 Join") || Input.GetButtonDown("P4 Join"))
+						&& !Pause.inPlayerSelect)
+				)
+			&& !startScript.inMainMenu;
+	}
 
 	public void DoPause()
 	{
