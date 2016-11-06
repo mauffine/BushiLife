@@ -33,6 +33,7 @@ public class HandlePlayers : MonoBehaviour {
             this.respawns = GameObject.FindGameObjectsWithTag("Respawn");
         }
         this.currentState = PlayState.Start;
+		Pause.inPlayerSelect = true;
     }
 	
 	// Update is called once per frame
@@ -44,6 +45,7 @@ public class HandlePlayers : MonoBehaviour {
             {
                 joinNotification.GetComponent<TextFade>().SetText("Player" + 1 + " has Joined");
                 this.PlayerJoined[0] = true;
+				GameObject.Destroy(Camera.main.gameObject);
             }
             if (Input.GetButtonDown("P2 Join") && !PlayerJoined[1])
             {
@@ -64,22 +66,26 @@ public class HandlePlayers : MonoBehaviour {
             //spawn the players and start the game
             if (Input.GetButtonDown("P1 Jump") && PlayerJoined[0])
             {
+				Pause.inPlayerSelect = false;
                 SpawnPlayers();
                 this.currentState = PlayState.Playing;
             }
             if (Input.GetButtonDown("P2 Jump") && PlayerJoined[1])
-            {
-                SpawnPlayers();
+			{
+				Pause.inPlayerSelect = false;
+				SpawnPlayers();
                 this.currentState = PlayState.Playing;
             }
             if (Input.GetButtonDown("P3 Jump") && PlayerJoined[2])
-            {
-                SpawnPlayers();
+			{
+				Pause.inPlayerSelect = false;
+				SpawnPlayers();
                 this.currentState = PlayState.Playing;
             }
             if (Input.GetButtonDown("P4 Jump") && PlayerJoined[3])
-            {
-                SpawnPlayers();
+			{
+				Pause.inPlayerSelect = false;
+				SpawnPlayers();
                 this.currentState = PlayState.Playing;
             }
         }
