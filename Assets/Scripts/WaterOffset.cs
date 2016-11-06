@@ -18,7 +18,7 @@ public class WaterOffset : MonoBehaviour {
 	
 	void Update () 
 	{
-		//curX += Time.deltaTime * speedX;
+		curX += Time.deltaTime * speedX;
 		curY += Time.deltaTime * speedY;
 		GetComponent<Renderer>().material.SetTextureOffset ("_MainTex", new Vector2(curX, curY));
 	}
