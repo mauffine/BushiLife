@@ -19,5 +19,5 @@ public class ReloadLevel : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-}
 
+}
