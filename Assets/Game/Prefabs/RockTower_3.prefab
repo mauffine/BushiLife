@@ -36,7 +36,6 @@ GameObject:
   - 4: {fileID: 4000013169770344}
   - 33: {fileID: 33000011121970196}
   - 23: {fileID: 23000010545166250}
-  - 64: {fileID: 64000011342103436}
   m_Layer: 0
   m_Name: pCube31
   m_TagString: Untagged
@@ -52,7 +51,7 @@ Transform:
   m_GameObject: {fileID: 1000013505680276}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013799333188}
@@ -106,16 +105,4 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013505680276}
-  m_Mesh: {fileID: 4300000, guid: 0d239f6b9b3604d4bb35e73442b58fbd, type: 3}
---- !u!64 &64000011342103436
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013505680276}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 0d239f6b9b3604d4bb35e73442b58fbd, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d2bf18d9449b66543ae5741040491c67, type: 3}

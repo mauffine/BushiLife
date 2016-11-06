@@ -21,7 +21,6 @@ GameObject:
   - 4: {fileID: 4000011417807884}
   - 33: {fileID: 33000010378425074}
   - 23: {fileID: 23000011950606234}
-  - 64: {fileID: 64000011766158966}
   m_Layer: 0
   m_Name: pCube30
   m_TagString: Untagged
@@ -52,7 +51,7 @@ Transform:
   m_GameObject: {fileID: 1000011863861140}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000012905441242}
@@ -84,7 +83,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 45368fad6357b17418eac8ff9f4a2939, type: 2}
+  - {fileID: 2100000, guid: b18ff2baae1cd3b4c84afcd462b7cb53, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -106,16 +105,4 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011863861140}
-  m_Mesh: {fileID: 4300000, guid: 2e58e78ddf2c01248a3974619b283a70, type: 3}
---- !u!64 &64000011766158966
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011863861140}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 2e58e78ddf2c01248a3974619b283a70, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 4858c0ee3ab744e4c9ceb67a285564c9, type: 3}
