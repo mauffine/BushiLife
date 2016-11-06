@@ -43,22 +43,12 @@ public class Character : MonoBehaviour
         {
             if (otherThirdPerson.heavyAttack)
             {
-                if (this.CompareTag("Player"))
-                {
-                    this.GetComponent<ThirdPersonCharacter>().m_Animator.SetTrigger("Hurt");
-                    this.GetComponent<ThirdPersonCharacter>().m_Animator.SetLayerWeight(2, 1);
-                }
                 this.stats.health.recieve = this.TakeCritDamage;
                 this.stats.health.recieve(this.stats.health, otherCharacter.stats.attack, this.transform);
                 GetComponent<ThirdPersonCharacter>().playHit(true);
             }
             else
             {
-                if (this.CompareTag("Player"))
-                {
-                    this.GetComponent<ThirdPersonCharacter>().m_Animator.SetTrigger("Hurt");
-                    this.GetComponent<ThirdPersonCharacter>().m_Animator.SetLayerWeight(2, 1);
-                }
                 this.stats.health.recieve = this.TakeDamage;
                 this.stats.health.recieve(this.stats.health, otherCharacter.stats.attack, this.transform);
                 GetComponent<ThirdPersonCharacter>().playHit(false);
