@@ -45,7 +45,6 @@ public class HandlePlayers : MonoBehaviour {
             {
                 joinNotification.GetComponent<TextFade>().SetText("Player" + 1 + " has Joined");
                 this.PlayerJoined[0] = true;
-				GameObject.Destroy(Camera.main.gameObject);
             }
             if (Input.GetButtonDown("P2 Join") && !PlayerJoined[1])
             {
