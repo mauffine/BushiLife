@@ -24,6 +24,9 @@ public class HandlePlayers : MonoBehaviour {
 
 	public float endGameTimer = 5;
 
+    public Sprite green;
+    public Image[] joinNotifications;
+
     private bool[] PlayerJoined = { false, false, false, false };
 
 	// Use this for initialization
