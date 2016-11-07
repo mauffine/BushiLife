@@ -40,10 +40,11 @@ public class Pause : MonoBehaviour {
 	public bool IsPauseToggle()
 	{
 		return (Input.GetButtonDown("Cancel") ||
-					((Input.GetButtonDown("P1 Join") || Input.GetButtonDown("P2 Join") || Input.GetButtonDown("P3 Join") || Input.GetButtonDown("P4 Join"))
-						&& !Pause.inPlayerSelect)
-				)
-			&& !startScript.inMainMenu;
+					((Input.GetButtonDown("P1 Join")
+					|| Input.GetButtonDown("P2 Join") 
+					|| Input.GetButtonDown("P3 Join") 
+					|| Input.GetButtonDown("P4 Join"))))
+				&& !Pause.inPlayerSelect && !startScript.inMainMenu;
 	}
 
 	public void DoPause()
