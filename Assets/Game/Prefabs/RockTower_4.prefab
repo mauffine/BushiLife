@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000013681113342}
   - 33: {fileID: 33000012384675598}
   - 23: {fileID: 23000010938967644}
+  - 64: {fileID: 64000010550690434}
   m_Layer: 0
   m_Name: pCube32
   m_TagString: Untagged
@@ -105,4 +106,16 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010519876368}
+  m_Mesh: {fileID: 4300000, guid: 781ca06f75448c041a112316cb7a3144, type: 3}
+--- !u!64 &64000010550690434
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010519876368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 781ca06f75448c041a112316cb7a3144, type: 3}

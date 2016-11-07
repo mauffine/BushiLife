@@ -36,6 +36,7 @@ GameObject:
   - 4: {fileID: 4000013506039804}
   - 33: {fileID: 33000013036128018}
   - 23: {fileID: 23000011621489022}
+  - 64: {fileID: 64000012900049860}
   m_Layer: 0
   m_Name: pCube29
   m_TagString: Untagged
@@ -53,6 +54,7 @@ GameObject:
   - 4: {fileID: 4000012462596546}
   - 33: {fileID: 33000011588491576}
   - 23: {fileID: 23000013749712796}
+  - 64: {fileID: 64000014269730674}
   m_Layer: 0
   m_Name: pCube28
   m_TagString: Untagged
@@ -173,3 +175,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011388833760}
   m_Mesh: {fileID: 4300002, guid: 29b7e2d93f08fb948a800c12cdeecf14, type: 3}
+--- !u!64 &64000012900049860
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011388833760}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300002, guid: 29b7e2d93f08fb948a800c12cdeecf14, type: 3}
+--- !u!64 &64000014269730674
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011874619406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 29b7e2d93f08fb948a800c12cdeecf14, type: 3}

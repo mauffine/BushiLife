@@ -37,11 +37,12 @@ public class StartOptions : MonoBehaviour {
 
 	public void StartButtonClicked()
 	{
+        gameObject.GetComponent<AudioSource>().enabled = false;
 		//If changeMusicOnStart is true, fade out volume of music group of AudioMixer by calling FadeDown function of PlayMusic, using length of fadeColorAnimationClip as time. 
 		//To change fade time, change length of animation "FadeToColor"
 		if (changeMusicOnStart) 
 		{
-			playMusic.FadeDown(fadeColorAnimationClip.length);
+		//	playMusic.FadeDown(fadeColorAnimationClip.length);
 		}
 
 		//If changeScenes is true, start fading and change scenes halfway through animation when screen is blocked by FadeImage
@@ -67,10 +68,10 @@ public class StartOptions : MonoBehaviour {
 	void OnLevelWasLoaded()
 	{
 		//if changeMusicOnStart is true, call the PlayLevelMusic function of playMusic
-		if (changeMusicOnStart)
-		{
-			playMusic.PlayLevelMusic ();
-		}	
+	//	if (changeMusicOnStart)
+	//	{
+	//		playMusic.PlayLevelMusic ();
+	//	}	
 	}
 
 

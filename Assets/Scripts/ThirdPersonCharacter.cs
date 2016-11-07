@@ -483,6 +483,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         this.stamina.Decrease(jumpAttackStamDrain);
         this.rechargingStam = false;
         this.jumpAttackHB.SetActive(true);
+        ClearCombo();
     }
     public void JumpAttackOff()
     {

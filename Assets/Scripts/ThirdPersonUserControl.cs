@@ -102,15 +102,13 @@ public class ThirdPersonUserControl : MonoBehaviour
         //this.run    = false;
         m_Jump      = false;
         lAttack     = false;
-        hAttack     = false;
         dodge       = false;
     }
     private void CheckActions()
     {
         if (!lAttack)
             lAttack = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " LAttack");
-        if (!hAttack)
-            hAttack = CrossPlatformInputManager.GetAxis(this.playerNumber + " HAttack") > .1f;
+        hAttack = CrossPlatformInputManager.GetAxis(this.playerNumber + " HAttack") > 0.0f;
         if (!dodge)
             dodge = CrossPlatformInputManager.GetButtonDown(this.playerNumber + " Dodge");
         blocking = CrossPlatformInputManager.GetButton(this.playerNumber + " Block");
