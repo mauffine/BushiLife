@@ -9,9 +9,11 @@ public class scrolltutorial : MonoBehaviour {
     float timer;
     int tutorialIndex;
     // Use this for initialization
-	void Start () {
-	
-	}
+	void Start ()
+    {
+        timer = swapTime;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
