@@ -17,6 +17,7 @@ public class Pause : MonoBehaviour {
 		showPanels = GetComponent<ShowPanels> ();
 		//Get a component reference to StartButton attached to this object, store in startScript variable
 		startScript = GetComponent<StartOptions> ();
+
 	}
 
 	// Update is called once per frame
@@ -39,11 +40,10 @@ public class Pause : MonoBehaviour {
 
 	public bool IsPauseToggle()
 	{
-		return (Input.GetButtonDown("Cancel") ||
-					((Input.GetButtonDown("P1 Join")
+		return (Input.GetButtonDown("P1 Join")
 					|| Input.GetButtonDown("P2 Join") 
 					|| Input.GetButtonDown("P3 Join") 
-					|| Input.GetButtonDown("P4 Join"))))
+					|| Input.GetButtonDown("P4 Join"))
 				&& !Pause.inPlayerSelect && !startScript.inMainMenu;
 	}
 
@@ -55,6 +55,8 @@ public class Pause : MonoBehaviour {
 		Time.timeScale = 1f - this.pauseSpeed;
 		//call the ShowPausePanel function of the ShowPanels script
 		showPanels.ShowPausePanel ();
+
+
 	}
 
 
