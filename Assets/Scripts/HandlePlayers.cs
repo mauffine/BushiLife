@@ -148,38 +148,41 @@ public class HandlePlayers : MonoBehaviour {
 
         if (alivePlayers.Count > 1)
             return true;
-        switch (alivePlayers[0].GetComponent<ThirdPersonUserControl>().playerNumber)
+        if (alivePlayers.Count > 0)
         {
-            case ("P1"):
-                {
-                    winText.enabled = true;
-                    winText.sprite = victorySprites[0];
-                    //GetComponent<AudioSource>().PlayOneShot(winVoice[0]);
+            switch (alivePlayers[0].GetComponent<ThirdPersonUserControl>().playerNumber)
+            {
+                case ("P1"):
+                    {
+                        winText.enabled = true;
+                        winText.sprite = victorySprites[0];
+                        //GetComponent<AudioSource>().PlayOneShot(winVoice[0]);
+                        break;
+                    }
+                case ("P2"):
+                    {
+                        winText.enabled = true;
+                        winText.sprite = victorySprites[1];
+                        //GetComponent<AudioSource>().PlayOneShot(winVoice[1]);
+                        break;
+                    }
+                case ("P3"):
+                    {
+                        winText.enabled = true;
+                        winText.sprite = victorySprites[2];
+                        //GetComponent<AudioSource>().PlayOneShot(winVoice[2]);
+                        break;
+                    }
+                case ("P4"):
+                    {
+                        winText.enabled = true;
+                        winText.sprite = victorySprites[3];
+                        //GetComponent<AudioSource>().PlayOneShot(winVoice[3]);
+                        break;
+                    }
+                default:
                     break;
-                }
-            case ("P2"):
-                {
-                    winText.enabled = true;
-                    winText.sprite = victorySprites[1];
-                    //GetComponent<AudioSource>().PlayOneShot(winVoice[1]);
-                    break;
-                }
-            case ("P3"):
-                {
-                    winText.enabled = true;
-                    winText.sprite = victorySprites[2];
-                    //GetComponent<AudioSource>().PlayOneShot(winVoice[2]);
-                    break;
-                }
-            case ("P4"):
-                {
-                    winText.enabled = true;
-                    winText.sprite = victorySprites[3];
-                    //GetComponent<AudioSource>().PlayOneShot(winVoice[3]);
-                    break;
-                }
-            default:
-                break;
+            }
         }
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().PlayOneShot(victoryAudio, 0.2f);

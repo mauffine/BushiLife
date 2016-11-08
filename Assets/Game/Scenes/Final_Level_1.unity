@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.40004075, g: 0.63422716, b: 0.8384082, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -13549,7 +13549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &533669658
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29677,7 +29677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1169361931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34866,7 +34866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1376464013
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47549,7 +47549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1864071746
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52736,26 +52736,6 @@ Prefab:
     - target: {fileID: 1000013871014482, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
       propertyPath: m_Name
       value: Box_Closed (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010302068466, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 53.600002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010302068466, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 2.561
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013871014482, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013871014482, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010302068466, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75d4b92cdb499b84a8ead1860320c22e, type: 2}
