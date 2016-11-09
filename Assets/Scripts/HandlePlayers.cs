@@ -120,7 +120,7 @@ public class HandlePlayers : MonoBehaviour {
             }
         }
         GetComponent<AudioSource>().PlayOneShot(startFight);
-        GetComponent<AudioSource>().Play();
+        //GetComponent<AudioSource>().Play();
     }
     bool PlayersAlive()
     {
