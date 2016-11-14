@@ -58,7 +58,7 @@ public class Character : MonoBehaviour
                 healthThing.UpdateHPBar(this.stats.health.val);
             GetComponent<ThirdPersonCharacter>().Bleed();
         }
-        if (stats.health.val <= 0 && !this.CompareTag("Dead"))
+        if (stats.health.val <= 0 && !this.CompareTag("Dead") && !this.CompareTag("Ghost"))
         {
             GetComponent<ThirdPersonCharacter>().Die();
         }
